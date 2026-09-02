@@ -1,7 +1,5 @@
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 import {
-  FaBriefcase,
   FaCalendarAlt,
   FaCheckCircle,
   FaArrowDown,
@@ -10,58 +8,18 @@ import { portfolio } from "../../data/portfolio";
 import SectionTitle from "./SectionTitle";
 
 const Experience = () => {
-  const sectionRef = useRef<HTMLElement | null>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start end", "end start"],
-  });
-
-  const sceneY = useTransform(scrollYProgress, [0, 0.5, 1], [80, 0, -80]);
-  const sceneScale = useTransform(
-    scrollYProgress,
-    [0, 0.45, 1],
-    [0.88, 1, 0.92]
-  );
-  const sceneRotateX = useTransform(
-    scrollYProgress,
-    [0, 0.5, 1],
-    [8, 0, -5]
-  );
-
   return (
-    <section
-      id="experience"
-      ref={sectionRef}
-      className="experience-video-section"
-    >
+    <section id="experience" className="experience-video-section">
       <SectionTitle
         title="Experience"
         subtitle="My professional journey and responsibilities."
       />
 
       <div className="experience-video-stage">
-        {/* cinematic background */}
         <div className="experience-video-grid" />
         <div className="experience-video-vignette" />
-        <div className="experience-video-orb experience-orb-one" />
-        <div className="experience-video-orb experience-orb-two" />
 
-        {/* vertical progress line */}
-        <motion.div
-          className="experience-scroll-line"
-          style={{ scaleY: scrollYProgress }}
-        />
-
-        <motion.div
-          className="experience-video-scene"
-          style={{
-            y: sceneY,
-            scale: sceneScale,
-            rotateX: sceneRotateX,
-          }}
-        >
-          {/* top cinematic label */}
+        <div className="experience-video-scene">
           <div className="experience-scene-label">
             <span>CAREER TIMELINE</span>
             <span>01 — 0{portfolio.experience.length}</span>
@@ -73,36 +31,29 @@ const Experience = () => {
               className="experience-video-frame"
               initial={{
                 opacity: 0,
-                y: 100,
-                rotateY: index % 2 === 0 ? -10 : 10,
+                y: 45,
               }}
               whileInView={{
                 opacity: 1,
                 y: 0,
-                rotateY: 0,
               }}
               viewport={{
                 once: true,
-                amount: 0.3,
+                amount: 0.15,
               }}
               transition={{
-                duration: 1,
-                delay: index * 0.15,
-                ease: [0.16, 1, 0.3, 1],
+                duration: 0.65,
+                delay: index * 0.08,
+                ease: "easeOut",
               }}
             >
-              {/* frame number */}
-              <div className="experience-frame-number">
-                0{index + 1}
-              </div>
-
-              {/* animated light */}
-              <div className="experience-frame-light" />
-
-              {/* glow */}
-              <div className="experience-frame-glow" />
-
               <div className="experience-frame-content">
+                <div className="experience-frame-number">
+                  0{index + 1}
+                </div>
+
+                <div className="experience-frame-light" />
+
                 <div className="experience-frame-header">
                   <div className="experience-role-block">
                     <span className="experience-overline">
@@ -134,12 +85,20 @@ const Experience = () => {
                       <motion.div
                         key={i}
                         className="experience-point"
-                        initial={{ opacity: 0, x: -30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        initial={{
+                          opacity: 0,
+                          x: -12,
+                        }}
+                        whileInView={{
+                          opacity: 1,
+                          x: 0,
+                        }}
+                        viewport={{
+                          once: true,
+                        }}
                         transition={{
-                          delay: 0.3 + i * 0.08,
-                          duration: 0.5,
+                          delay: 0.15 + i * 0.04,
+                          duration: 0.35,
                         }}
                       >
                         <span className="experience-point-icon">
@@ -153,7 +112,9 @@ const Experience = () => {
                 )}
 
                 <div className="experience-frame-bottom">
-                  <span>IT / INFRASTRUCTURE / SECURITY</span>
+                  <span>
+                    IT / INFRASTRUCTURE / SECURITY
+                  </span>
 
                   <span className="experience-frame-arrow">
                     <FaArrowDown />
@@ -163,13 +124,12 @@ const Experience = () => {
             </motion.article>
           ))}
 
-          {/* bottom cinematic marker */}
           <div className="experience-scene-end">
             <span />
             <p>END OF EXPERIENCE</p>
             <span />
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
