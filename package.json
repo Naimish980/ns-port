@@ -2,7 +2,7 @@
   "name": "naimish-portfolio",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://Naimish980.github.io/portfolio",
+ "homepage": "https://Naimish980.github.io/ns-port",
   "type": "module",
   "scripts": {
     "dev": "vite",
