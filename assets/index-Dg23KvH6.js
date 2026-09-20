@@ -855,13 +855,13 @@ to {
   I enjoy solving technical problems, improving IT infrastructure, and delivering
   fast support to end users. My goal is to grow as a System Administrator and
   Cloud Engineer while continuously learning new technologies.
-  `,location:`India`,email:`naimishsingh855@gmail.com`,phone:`+91 8009464355`,resume:`/ns-port/resume.pdf`,profileImage:`/ns-port/profile.jpeg`,socials:{linkedin:`https://www.linkedin.com/in/naimish-singh-aws`,github:`https://github.com/Naimish980`,instagram:`https://www.instagram.com/naimish_353`},skills:[`Windows 10/11`,`Desktop Support`,`Hardware Troubleshooting`,`Networking`,`TCP/IP`,`DNS`,`DHCP`,`Active Directory`,`Office 365`,`Microsoft Outlook`,`Linux`,`AWS`,`VMware`,`VirtualBox`,`Remote Support`,`LAN/WAN`,`Printer Support`,`Ticketing System`],experience:[{company:`Indira IVF`,role:`IT Engineer`,duration:`May 2026 - Present`,description:`Managing desktop support, networking, hardware troubleshooting, Windows systems, user support, and IT infrastructure.`,responsibilities:[`Provided L1 IT support for hardware, software, and network-related issues.`,`Troubleshot Windows OS, application, and login-related problems.`,`Managed Active Directory user accounts and password resets.`,`Diagnosed and resolved LAN, Wi-Fi, DNS, DHCP and VPN connectivity issues.`,`Installed and configured Microsoft Office, Outlook and business applications.`,`Supported printers, desktops, laptops and peripheral devices.`,`Maintained SLA through ticketing system.`,`Provided remote support and collaborated with infrastructure teams.`]},{company:`CM Solutions`,role:`Desktop Support Engineer`,duration:`Sep 2024 - Jan 2026`,description:`Provided desktop support, OS installation, hardware maintenance, networking, printer support, and software troubleshooting.`,responsibilities:[`Installed and configured Windows desktops and laptops.`,`Performed hardware troubleshooting and preventive maintenance.`,`Resolved LAN, Wi-Fi, DNS, DHCP and TCP/IP issues.`,`Supported Microsoft Office 365 and Outlook.`,`Installed software, drivers and security updates.`,`Provided remote and onsite technical support.`,`Maintained IT asset inventory.`,`Resolved incidents through ticketing system.`]}],projects:[{title:`Enterprise IT Infrastructure Support`,description:`Provided end-to-end IT support for desktops, laptops, printers, scanners and peripherals.`,technologies:[`Windows 11`,`Active Directory`,`Office 365`,`Outlook`,`Networking`]},{title:`Active Directory & User Management`,description:`Managed Active Directory users, password resets, account unlocks and domain joining.`,technologies:[`Active Directory`,`Windows Server`,`Group Policy`,`User Management`]},{title:`Microsoft 365 & Outlook Administration`,description:`Configured Outlook profiles, resolved mailbox issues and supported Microsoft 365 applications.`,technologies:[`Microsoft 365`,`Outlook`,`Exchange`,`Office Apps`]},{title:`Enterprise Network Infrastructure`,description:`Resolved LAN/WAN, DNS, DHCP, TCP/IP, VPN and Wi-Fi connectivity issues.`,technologies:[`Networking`,`TCP/IP`,`DNS`,`DHCP`,`VPN`]},{title:`Windows Deployment & System Administration`,description:`Installed Windows 10/11, drivers, security patches and optimized systems.`,technologies:[`Windows 10`,`Windows 11`,`Drivers`,`System Administration`]},{title:`IT Asset Management System`,description:`Managed desktops, laptops, printers and maintained IT inventory records.`,technologies:[`Asset Management`,`Hardware`,`Inventory`]},{title:`AWS Cloud Learning Lab`,description:`Hands-on practice with EC2, IAM, S3, VPC, Security Groups and CloudWatch.`,technologies:[`AWS EC2`,`IAM`,`S3`,`VPC`,`CloudWatch`]},{title:`Virtualization Lab`,description:`Created Windows and Linux virtual machines using VMware Workstation and VirtualBox.`,technologies:[`VMware`,`VirtualBox`,`Windows`,`Linux`]}],certifications:[{title:`Hardware & Networking`,issuer:`CM Solutions`,year:`2024`},{title:`AWS Solutions Architecture Job Simulation`,issuer:`AWS | Forage`,year:`2024`,link:`/ns-port/certificates/aws-solution-architecture.pdf`},{title:`Linux Administration`,issuer:`Udemy`,year:`2025`},{title:`Microsoft Office`,issuer:`Microsoft`,year:`2024`},{title:`Software Engineering Job Simulation`,issuer:`Goldman Sachs | Forage`,year:`December 2024`,description:`Completed Goldman Sachs' Software Engineering Job Simulation through Forage. Performed a cybersecurity task involving analysis of a leaked password database and gained exposure to secure software engineering and enterprise information security practices.`,link:`/ns-port/certificates/Goaldman.pdf`},{title:`Network Security Engineer`,issuer:`Skill India Digital Hub / NASSCOM`,year:`2026`,description:`Successfully completed the Network Security Engineer online skilling course through Skill India Digital Hub.`,link:`/ns-port/certificates/network-security-engineer.pdf`}]},kp=()=>{let e=Z(0),t=Z(0),n=Pf(e,{stiffness:80,damping:20,mass:.6}),r=Pf(t,{stiffness:80,damping:20,mass:.6}),i=Af(n,[-1,1],[-7,7]),a=Af(r,[-1,1],[7,-7]);(0,b.useEffect)(()=>{let n=n=>{let r=n.clientX/window.innerWidth,i=n.clientY/window.innerHeight;e.set((r-.5)*2),t.set((i-.5)*2)};return window.addEventListener(`mousemove`,n),()=>{window.removeEventListener(`mousemove`,n)}},[e,t]);let o=e=>{document.getElementById(e)?.scrollIntoView({behavior:`smooth`})};return(0,V.jsxs)(`section`,{id:`home`,className:`reel-hero`,children:[(0,V.jsx)(`div`,{className:`reel-noise`}),(0,V.jsx)(`div`,{className:`hero-ambient hero-ambient-one`}),(0,V.jsx)(`div`,{className:`hero-ambient hero-ambient-two`}),(0,V.jsx)(X.div,{className:`hero-light-beam`,animate:{x:[`-20%`,`120%`],opacity:[0,.7,0]},transition:{duration:8,repeat:1/0,ease:`easeInOut`}}),(0,V.jsxs)(`div`,{className:`reel-hero-grid`,children:[(0,V.jsxs)(X.div,{className:`reel-copy`,initial:{opacity:0,x:-70},animate:{opacity:1,x:0},transition:{duration:1,ease:[.16,1,.3,1]},children:[(0,V.jsx)(X.p,{className:`reel-kicker`,initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{delay:.2,duration:.7},children:`IT ENGINEER · CYBERSECURITY · INFRASTRUCTURE`}),(0,V.jsxs)(`h1`,{className:`reel-title`,children:[(0,V.jsx)(X.span,{initial:{opacity:0,y:50},animate:{opacity:1,y:0},transition:{delay:.25,duration:.8},children:`NAIMISH`}),(0,V.jsx)(X.span,{initial:{opacity:0,y:50},animate:{opacity:1,y:0},transition:{delay:.38,duration:.8},children:`SINGH`}),(0,V.jsx)(X.span,{className:`reel-outline`,initial:{opacity:0,y:50},animate:{opacity:1,y:0},transition:{delay:.51,duration:.8},children:`ENGINEER.`})]}),(0,V.jsx)(X.p,{className:`reel-intro`,initial:{opacity:0,y:25},animate:{opacity:1,y:0},transition:{delay:.65,duration:.8},children:$.tagline}),(0,V.jsxs)(X.div,{className:`reel-actions`,initial:{opacity:0,y:25},animate:{opacity:1,y:0},transition:{delay:.8,duration:.7},children:[(0,V.jsxs)(`a`,{href:$.resume,target:`_blank`,rel:`noreferrer`,className:`reel-btn reel-btn-primary`,children:[(0,V.jsx)(hp,{}),`Download Resume`]}),(0,V.jsxs)(`button`,{onClick:()=>o(`contact`),className:`reel-btn reel-btn-secondary`,children:[(0,V.jsx)(mp,{}),`Contact Me`]})]}),(0,V.jsxs)(X.div,{className:`reel-stats`,initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{delay:1,duration:.8},children:[(0,V.jsxs)(`div`,{children:[(0,V.jsx)(`strong`,{children:`2.5+`}),(0,V.jsx)(`span`,{children:`YEARS EXPERIENCE`})]}),(0,V.jsxs)(`div`,{children:[(0,V.jsx)(`strong`,{children:`18+`}),(0,V.jsx)(`span`,{children:`TECHNOLOGIES`})]}),(0,V.jsxs)(`div`,{children:[(0,V.jsx)(`strong`,{children:`8+`}),(0,V.jsx)(`span`,{children:`PROJECTS`})]})]})]}),(0,V.jsxs)(X.div,{className:`reel-portrait`,style:{rotateX:a,rotateY:i},initial:{opacity:0,scale:.75,y:50},animate:{opacity:1,scale:1,y:0},transition:{duration:1.2,delay:.2,ease:[.16,1,.3,1]},children:[(0,V.jsx)(X.div,{className:`portrait-aura`,animate:{scale:[.9,1.08,.9],opacity:[.55,1,.55]},transition:{duration:4,repeat:1/0,ease:`easeInOut`}}),(0,V.jsxs)(X.div,{className:`hero-floating-card hero-card-one`,animate:{y:[-8,8,-8]},transition:{duration:4,repeat:1/0,ease:`easeInOut`},children:[(0,V.jsx)(cp,{}),(0,V.jsx)(`span`,{children:`INFRASTRUCTURE`})]}),(0,V.jsxs)(X.div,{className:`hero-floating-card hero-card-two`,animate:{y:[8,-8,8]},transition:{duration:4.5,repeat:1/0,ease:`easeInOut`},children:[(0,V.jsx)(sp,{}),(0,V.jsx)(`span`,{children:`SECURITY`})]}),(0,V.jsxs)(`div`,{className:`orbit orbit-one`,children:[(0,V.jsx)(`i`,{}),(0,V.jsx)(`i`,{}),(0,V.jsx)(`i`,{})]}),(0,V.jsxs)(`div`,{className:`orbit orbit-two`,children:[(0,V.jsx)(`i`,{}),(0,V.jsx)(`i`,{})]}),(0,V.jsx)(`div`,{className:`orbit orbit-three`}),(0,V.jsxs)(X.div,{className:`portrait-frame`,animate:{y:[-5,5,-5]},transition:{duration:5,repeat:1/0,ease:`easeInOut`},children:[(0,V.jsx)(`img`,{src:$.profileImage,alt:$.name}),(0,V.jsx)(`div`,{className:`portrait-scan`})]}),(0,V.jsxs)(`div`,{className:`portrait-caption`,children:[(0,V.jsx)(`span`,{children:`01`}),(0,V.jsx)(`span`,{children:`NAIMISH SINGH`})]})]})]}),(0,V.jsxs)(X.div,{className:`reel-footer`,initial:{opacity:0},animate:{opacity:1},transition:{delay:1.2,duration:.8},children:[(0,V.jsxs)(`button`,{onClick:()=>o(`about`),className:`scroll-label`,children:[(0,V.jsx)(`span`,{children:`SCROLL TO EXPLORE`}),(0,V.jsx)(Dp,{})]}),(0,V.jsx)(`div`,{className:`footer-line`,children:(0,V.jsx)(`span`,{})}),(0,V.jsxs)(`span`,{children:[`INDIA · `,new Date().getFullYear()]})]})]})},Ap=({title:e,subtitle:t})=>(0,V.jsxs)(X.div,{className:`mb-14 text-center`,initial:{opacity:0,y:30},whileInView:{opacity:1,y:0},transition:{duration:.6},viewport:{once:!0},children:[(0,V.jsx)(`h2`,{className:`text-4xl md:text-5xl font-bold text-white`,children:e}),t&&(0,V.jsx)(`p`,{className:`mt-4 max-w-2xl mx-auto text-zinc-400`,children:t})]}),jp=()=>{let[e,t]=(0,b.useState)(!1),[n,r]=(0,b.useState)(!1),i=(0,b.useRef)(null),a=Lf(i,{amount:.12,once:!0});(0,b.useEffect)(()=>{let e=()=>{let e=window.matchMedia(`(max-width: 650px)`).matches,n=window.matchMedia(`(prefers-reduced-motion: reduce)`).matches;t(e),r(n)};return e(),window.addEventListener(`resize`,e),()=>{window.removeEventListener(`resize`,e)}},[]);let o=n||e;return(0,V.jsxs)(V.Fragment,{children:[(0,V.jsxs)(`section`,{ref:i,id:`about`,className:`ns-about-section`,children:[(0,V.jsx)(X.div,{initial:o?!1:{opacity:0,y:20},animate:o||a?{opacity:1,y:0}:{opacity:0,y:20},transition:{duration:.65,ease:[.22,1,.36,1]},children:(0,V.jsx)(Ap,{title:`About Me`,subtitle:`A closer look at the person behind the systems.`})}),(0,V.jsxs)(`div`,{className:`ns-about-container`,children:[(0,V.jsxs)(X.div,{className:`ns-profile-column`,initial:o?!1:{opacity:0,x:-25},animate:o||a?{opacity:1,x:0}:{opacity:0,x:-25},transition:{duration:.75,delay:.08,ease:[.22,1,.36,1]},children:[!e&&(0,V.jsx)(`div`,{className:`ns-profile-aura`}),!e&&!n&&(0,V.jsx)(`div`,{className:`\r
-                  ns-profile-orbit\r
-                  ns-profile-orbit-one\r
-                `}),!e&&!n&&(0,V.jsx)(`div`,{className:`\r
-                  ns-profile-orbit\r
-                  ns-profile-orbit-two\r
-                `}),(0,V.jsx)(`div`,{className:`ns-profile-float`,children:(0,V.jsxs)(`div`,{className:`ns-profile-frame`,children:[(0,V.jsx)(`div`,{className:`ns-profile-border`}),(0,V.jsxs)(`div`,{className:`ns-profile-image-wrap`,children:[(0,V.jsx)(`img`,{src:`/ns-port/profile-cinematic.png`,alt:`Naimish Singh - IT Engineer`,className:`ns-profile-image`,draggable:!1}),(0,V.jsx)(`div`,{className:`ns-profile-overlay`}),!e&&!n&&(0,V.jsx)(`div`,{className:`ns-profile-light-sweep`}),!e&&!n&&(0,V.jsx)(`div`,{className:`ns-profile-scan`}),!e&&(0,V.jsx)(`div`,{className:`ns-profile-noise`}),(0,V.jsx)(`span`,{className:`\r
+  `,location:`India`,email:`naimishsingh855@gmail.com`,phone:`+91 8009464355`,resume:`/ns-port/resume.pdf`,profileImage:`/ns-port/profile.jpeg`,socials:{linkedin:`https://www.linkedin.com/in/naimish-singh-aws`,github:`https://github.com/Naimish980`,instagram:`https://www.instagram.com/naimish_353`},skills:[`Windows 10/11`,`Desktop Support`,`Hardware Troubleshooting`,`Networking`,`TCP/IP`,`DNS`,`DHCP`,`Active Directory`,`Office 365`,`Microsoft Outlook`,`Linux`,`AWS`,`VMware`,`VirtualBox`,`Remote Support`,`LAN/WAN`,`Printer Support`,`Ticketing System`],experience:[{company:`Indira IVF`,role:`IT Engineer`,duration:`May 2026 - Present`,description:`Managing desktop support, networking, hardware troubleshooting, Windows systems, user support, and IT infrastructure.`,responsibilities:[`Provided L1 IT support for hardware, software, and network-related issues.`,`Troubleshot Windows OS, application, and login-related problems.`,`Managed Active Directory user accounts and password resets.`,`Diagnosed and resolved LAN, Wi-Fi, DNS, DHCP and VPN connectivity issues.`,`Installed and configured Microsoft Office, Outlook and business applications.`,`Supported printers, desktops, laptops and peripheral devices.`,`Maintained SLA through ticketing system.`,`Provided remote support and collaborated with infrastructure teams.`]},{company:`CM Solutions`,role:`Desktop Support Engineer`,duration:`Sep 2024 - Jan 2026`,description:`Provided desktop support, OS installation, hardware maintenance, networking, printer support, and software troubleshooting.`,responsibilities:[`Installed and configured Windows desktops and laptops.`,`Performed hardware troubleshooting and preventive maintenance.`,`Resolved LAN, Wi-Fi, DNS, DHCP and TCP/IP issues.`,`Supported Microsoft Office 365 and Outlook.`,`Installed software, drivers and security updates.`,`Provided remote and onsite technical support.`,`Maintained IT asset inventory.`,`Resolved incidents through ticketing system.`]}],projects:[{title:`Enterprise IT Infrastructure Support`,description:`Provided end-to-end IT support for desktops, laptops, printers, scanners and peripherals.`,technologies:[`Windows 11`,`Active Directory`,`Office 365`,`Outlook`,`Networking`]},{title:`Active Directory & User Management`,description:`Managed Active Directory users, password resets, account unlocks and domain joining.`,technologies:[`Active Directory`,`Windows Server`,`Group Policy`,`User Management`]},{title:`Microsoft 365 & Outlook Administration`,description:`Configured Outlook profiles, resolved mailbox issues and supported Microsoft 365 applications.`,technologies:[`Microsoft 365`,`Outlook`,`Exchange`,`Office Apps`]},{title:`Enterprise Network Infrastructure`,description:`Resolved LAN/WAN, DNS, DHCP, TCP/IP, VPN and Wi-Fi connectivity issues.`,technologies:[`Networking`,`TCP/IP`,`DNS`,`DHCP`,`VPN`]},{title:`Windows Deployment & System Administration`,description:`Installed Windows 10/11, drivers, security patches and optimized systems.`,technologies:[`Windows 10`,`Windows 11`,`Drivers`,`System Administration`]},{title:`IT Asset Management System`,description:`Managed desktops, laptops, printers and maintained IT inventory records.`,technologies:[`Asset Management`,`Hardware`,`Inventory`]},{title:`AWS Cloud Learning Lab`,description:`Hands-on practice with EC2, IAM, S3, VPC, Security Groups and CloudWatch.`,technologies:[`AWS EC2`,`IAM`,`S3`,`VPC`,`CloudWatch`]},{title:`Virtualization Lab`,description:`Created Windows and Linux virtual machines using VMware Workstation and VirtualBox.`,technologies:[`VMware`,`VirtualBox`,`Windows`,`Linux`]}],certifications:[{title:`Hardware & Networking`,issuer:`CM Solutions`,year:`2024`},{title:`AWS Solutions Architecture Job Simulation`,issuer:`AWS | Forage`,year:`2024`,link:`/ns-port/certificates/aws-solution-architecture.pdf`},{title:`Linux Administration`,issuer:`Udemy`,year:`2025`},{title:`Microsoft Office`,issuer:`Microsoft`,year:`2024`},{title:`Software Engineering Job Simulation`,issuer:`Goldman Sachs | Forage`,year:`December 2024`,description:`Completed Goldman Sachs' Software Engineering Job Simulation through Forage. Performed a cybersecurity task involving analysis of a leaked password database and gained exposure to secure software engineering and enterprise information security practices.`,link:`/ns-port/certificates/Goaldman.pdf`},{title:`Network Security Engineer`,issuer:`Skill India Digital Hub / NASSCOM`,year:`2026`,description:`Successfully completed the Network Security Engineer online skilling course through Skill India Digital Hub.`,link:`/ns-port/certificates/network-security-engineer.pdf`}]},kp=()=>{let e=Z(0),t=Z(0),n=Pf(e,{stiffness:80,damping:20,mass:.6}),r=Pf(t,{stiffness:80,damping:20,mass:.6}),i=Af(n,[-1,1],[-7,7]),a=Af(r,[-1,1],[7,-7]);(0,b.useEffect)(()=>{let n=n=>{let r=n.clientX/window.innerWidth,i=n.clientY/window.innerHeight;e.set((r-.5)*2),t.set((i-.5)*2)};return window.addEventListener(`mousemove`,n),()=>{window.removeEventListener(`mousemove`,n)}},[e,t]);let o=e=>{document.getElementById(e)?.scrollIntoView({behavior:`smooth`})};return(0,V.jsxs)(`section`,{id:`home`,className:`reel-hero`,children:[(0,V.jsx)(`div`,{className:`reel-noise`}),(0,V.jsx)(`div`,{className:`hero-ambient hero-ambient-one`}),(0,V.jsx)(`div`,{className:`hero-ambient hero-ambient-two`}),(0,V.jsx)(X.div,{className:`hero-light-beam`,animate:{x:[`-20%`,`120%`],opacity:[0,.7,0]},transition:{duration:8,repeat:1/0,ease:`easeInOut`}}),(0,V.jsxs)(`div`,{className:`reel-hero-grid`,children:[(0,V.jsxs)(X.div,{className:`reel-copy`,initial:{opacity:0,x:-70},animate:{opacity:1,x:0},transition:{duration:1,ease:[.16,1,.3,1]},children:[(0,V.jsx)(X.p,{className:`reel-kicker`,initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{delay:.2,duration:.7},children:`IT ENGINEER · CYBERSECURITY · INFRASTRUCTURE`}),(0,V.jsxs)(`h1`,{className:`reel-title`,children:[(0,V.jsx)(X.span,{initial:{opacity:0,y:50},animate:{opacity:1,y:0},transition:{delay:.25,duration:.8},children:`NAIMISH`}),(0,V.jsx)(X.span,{initial:{opacity:0,y:50},animate:{opacity:1,y:0},transition:{delay:.38,duration:.8},children:`SINGH`}),(0,V.jsx)(X.span,{className:`reel-outline`,initial:{opacity:0,y:50},animate:{opacity:1,y:0},transition:{delay:.51,duration:.8},children:`ENGINEER.`})]}),(0,V.jsx)(X.p,{className:`reel-intro`,initial:{opacity:0,y:25},animate:{opacity:1,y:0},transition:{delay:.65,duration:.8},children:$.tagline}),(0,V.jsxs)(X.div,{className:`reel-actions`,initial:{opacity:0,y:25},animate:{opacity:1,y:0},transition:{delay:.8,duration:.7},children:[(0,V.jsxs)(`a`,{href:$.resume,target:`_blank`,rel:`noreferrer`,className:`reel-btn reel-btn-primary`,children:[(0,V.jsx)(hp,{}),`Download Resume`]}),(0,V.jsxs)(`button`,{onClick:()=>o(`contact`),className:`reel-btn reel-btn-secondary`,children:[(0,V.jsx)(mp,{}),`Contact Me`]})]}),(0,V.jsxs)(X.div,{className:`reel-stats`,initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{delay:1,duration:.8},children:[(0,V.jsxs)(`div`,{children:[(0,V.jsx)(`strong`,{children:`2.5+`}),(0,V.jsx)(`span`,{children:`YEARS EXPERIENCE`})]}),(0,V.jsxs)(`div`,{children:[(0,V.jsx)(`strong`,{children:`18+`}),(0,V.jsx)(`span`,{children:`TECHNOLOGIES`})]}),(0,V.jsxs)(`div`,{children:[(0,V.jsx)(`strong`,{children:`8+`}),(0,V.jsx)(`span`,{children:`PROJECTS`})]})]})]}),(0,V.jsxs)(X.div,{className:`reel-portrait`,style:{rotateX:a,rotateY:i},initial:{opacity:0,scale:.75,y:50},animate:{opacity:1,scale:1,y:0},transition:{duration:1.2,delay:.2,ease:[.16,1,.3,1]},children:[(0,V.jsx)(X.div,{className:`portrait-aura`,animate:{scale:[.9,1.08,.9],opacity:[.55,1,.55]},transition:{duration:4,repeat:1/0,ease:`easeInOut`}}),(0,V.jsxs)(X.div,{className:`hero-floating-card hero-card-one`,animate:{y:[-8,8,-8]},transition:{duration:4,repeat:1/0,ease:`easeInOut`},children:[(0,V.jsx)(cp,{}),(0,V.jsx)(`span`,{children:`INFRASTRUCTURE`})]}),(0,V.jsxs)(X.div,{className:`hero-floating-card hero-card-two`,animate:{y:[8,-8,8]},transition:{duration:4.5,repeat:1/0,ease:`easeInOut`},children:[(0,V.jsx)(sp,{}),(0,V.jsx)(`span`,{children:`SECURITY`})]}),(0,V.jsxs)(`div`,{className:`orbit orbit-one`,children:[(0,V.jsx)(`i`,{}),(0,V.jsx)(`i`,{}),(0,V.jsx)(`i`,{})]}),(0,V.jsxs)(`div`,{className:`orbit orbit-two`,children:[(0,V.jsx)(`i`,{}),(0,V.jsx)(`i`,{})]}),(0,V.jsx)(`div`,{className:`orbit orbit-three`}),(0,V.jsxs)(X.div,{className:`portrait-frame`,animate:{y:[-5,5,-5]},transition:{duration:5,repeat:1/0,ease:`easeInOut`},children:[(0,V.jsx)(`img`,{src:$.profileImage,alt:$.name}),(0,V.jsx)(`div`,{className:`portrait-scan`})]}),(0,V.jsxs)(`div`,{className:`portrait-caption`,children:[(0,V.jsx)(`span`,{children:`01`}),(0,V.jsx)(`span`,{children:`NAIMISH SINGH`})]})]})]}),(0,V.jsxs)(X.div,{className:`reel-footer`,initial:{opacity:0},animate:{opacity:1},transition:{delay:1.2,duration:.8},children:[(0,V.jsxs)(`button`,{onClick:()=>o(`about`),className:`scroll-label`,children:[(0,V.jsx)(`span`,{children:`SCROLL TO EXPLORE`}),(0,V.jsx)(Dp,{})]}),(0,V.jsx)(`div`,{className:`footer-line`,children:(0,V.jsx)(`span`,{})}),(0,V.jsxs)(`span`,{children:[`INDIA · `,new Date().getFullYear()]})]})]})},Ap=({title:e,subtitle:t})=>(0,V.jsxs)(X.div,{className:`mb-14 text-center`,initial:{opacity:0,y:30},whileInView:{opacity:1,y:0},transition:{duration:.6},viewport:{once:!0},children:[(0,V.jsx)(`h2`,{className:`text-4xl md:text-5xl font-bold text-white`,children:e}),t&&(0,V.jsx)(`p`,{className:`mt-4 max-w-2xl mx-auto text-zinc-400`,children:t})]}),jp=()=>{let[e,t]=(0,b.useState)(!1),[n,r]=(0,b.useState)(!1),i=(0,b.useRef)(null),a=Lf(i,{amount:.12,once:!0});(0,b.useEffect)(()=>{let e=()=>{let e=window.matchMedia(`(max-width: 650px)`).matches,n=window.matchMedia(`(prefers-reduced-motion: reduce)`).matches;t(e),r(n)};return e(),window.addEventListener(`resize`,e),()=>{window.removeEventListener(`resize`,e)}},[]);let o=n||e;return(0,V.jsxs)(V.Fragment,{children:[(0,V.jsxs)(`section`,{ref:i,id:`about`,className:`ns-about-section`,children:[(0,V.jsx)(X.div,{initial:o?!1:{opacity:0,y:20},animate:o||a?{opacity:1,y:0}:{opacity:0,y:20},transition:{duration:.65,ease:[.22,1,.36,1]},children:(0,V.jsx)(Ap,{title:`About Me`,subtitle:`A closer look at the person behind the systems.`})}),(0,V.jsxs)(`div`,{className:`ns-about-container`,children:[(0,V.jsxs)(X.div,{className:`ns-profile-column`,initial:o?!1:{opacity:0,x:-25},animate:o||a?{opacity:1,x:0}:{opacity:0,x:-25},transition:{duration:.75,delay:.08,ease:[.22,1,.36,1]},children:[!e&&(0,V.jsx)(`div`,{className:`ns-profile-aura`}),!e&&!n&&(0,V.jsxs)(V.Fragment,{children:[(0,V.jsx)(`div`,{className:`\r
+                    ns-profile-orbit\r
+                    ns-profile-orbit-one\r
+                  `}),(0,V.jsx)(`div`,{className:`\r
+                    ns-profile-orbit\r
+                    ns-profile-orbit-two\r
+                  `})]}),(0,V.jsx)(`div`,{className:`ns-profile-float`,children:(0,V.jsxs)(`div`,{className:`ns-profile-frame`,children:[(0,V.jsx)(`div`,{className:`ns-profile-border`}),(0,V.jsxs)(`div`,{className:`ns-profile-image-wrap`,children:[(0,V.jsx)(`img`,{src:`/ns-port/profile-cinematic.png`,alt:`Naimish Singh - IT Engineer`,className:`ns-profile-image`,draggable:!1}),(0,V.jsx)(`div`,{className:`ns-profile-overlay`}),!e&&!n&&(0,V.jsx)(`div`,{className:`ns-profile-light-sweep`}),!e&&!n&&(0,V.jsx)(`div`,{className:`ns-profile-scan`}),!e&&(0,V.jsx)(`div`,{className:`ns-profile-noise`}),(0,V.jsx)(`span`,{className:`\r
                       ns-corner\r
                       ns-corner-tl\r
                     `}),(0,V.jsx)(`span`,{className:`\r
@@ -938,8 +938,9 @@ to {
         }
 
 
+
         /* =================================================
-           MAIN GRID
+           MAIN DESKTOP GRID
         ================================================= */
 
         .ns-about-container {
@@ -965,12 +966,19 @@ to {
           gap:
             clamp(55px, 7vw, 110px);
 
-          align-items: center;
+          /*
+            IMPORTANT:
+            Keep both columns aligned from top.
+            This prevents the photo from dropping down.
+          */
+
+          align-items: flex-start;
         }
 
 
+
         /* =================================================
-           PROFILE
+           PROFILE COLUMN
         ================================================= */
 
         .ns-profile-column {
@@ -984,7 +992,9 @@ to {
 
           align-items: center;
 
-          justify-content: center;
+          justify-content: flex-start;
+
+          padding-top: 5px;
 
           contain: layout paint;
         }
@@ -994,6 +1004,7 @@ to {
           position: absolute;
 
           width: 410px;
+
           height: 520px;
 
           border-radius: 50%;
@@ -1012,6 +1023,7 @@ to {
 
           opacity: 0.8;
         }
+
 
 
         /* =================================================
@@ -1035,9 +1047,11 @@ to {
 
         .ns-profile-orbit-one {
           width: 420px;
+
           height: 555px;
 
-          transform: rotate(24deg);
+          transform:
+            rotate(24deg);
 
           animation:
             nsOrbitOne
@@ -1049,12 +1063,14 @@ to {
 
         .ns-profile-orbit-two {
           width: 455px;
+
           height: 505px;
 
           border-color:
             rgba(239,197,102,0.07);
 
-          transform: rotate(-34deg);
+          transform:
+            rotate(-34deg);
 
           animation:
             nsOrbitTwo
@@ -1067,11 +1083,13 @@ to {
         @keyframes nsOrbitOne {
 
           from {
-            transform: rotate(24deg);
+            transform:
+              rotate(24deg);
           }
 
           to {
-            transform: rotate(384deg);
+            transform:
+              rotate(384deg);
           }
 
         }
@@ -1080,18 +1098,21 @@ to {
         @keyframes nsOrbitTwo {
 
           from {
-            transform: rotate(-34deg);
+            transform:
+              rotate(-34deg);
           }
 
           to {
-            transform: rotate(-394deg);
+            transform:
+              rotate(-394deg);
           }
 
         }
 
 
+
         /* =================================================
-           FLOAT
+           PROFILE FRAME
         ================================================= */
 
         .ns-profile-float {
@@ -1100,10 +1121,6 @@ to {
           z-index: 4;
         }
 
-
-        /* =================================================
-           PROFILE FRAME
-        ================================================= */
 
         .ns-profile-frame {
           position: relative;
@@ -1114,7 +1131,8 @@ to {
           aspect-ratio:
             2 / 3;
 
-          background: #080808;
+          background:
+            #080808;
 
           border:
             1px solid
@@ -1132,7 +1150,8 @@ to {
 
           overflow: hidden;
 
-          transform: translateZ(0);
+          transform:
+            translateZ(0);
 
           backface-visibility: hidden;
 
@@ -1155,6 +1174,7 @@ to {
         }
 
 
+
         /* =================================================
            IMAGE
         ================================================= */
@@ -1166,7 +1186,8 @@ to {
 
           overflow: hidden;
 
-          background: #080808;
+          background:
+            #080808;
         }
 
 
@@ -1176,6 +1197,7 @@ to {
           inset: 0;
 
           width: 100%;
+
           height: 100%;
 
           object-fit: cover;
@@ -1216,6 +1238,7 @@ to {
         }
 
 
+
         /* =================================================
            LIGHT SWEEP
         ================================================= */
@@ -1224,9 +1247,11 @@ to {
           position: absolute;
 
           top: -25%;
+
           left: -40%;
 
           width: 28%;
+
           height: 150%;
 
           background:
@@ -1238,7 +1263,8 @@ to {
               transparent
             );
 
-          filter: blur(9px);
+          filter:
+            blur(9px);
 
           transform:
             rotate(18deg)
@@ -1252,7 +1278,8 @@ to {
 
           pointer-events: none;
 
-          will-change: transform;
+          will-change:
+            transform;
         }
 
 
@@ -1283,6 +1310,7 @@ to {
           }
 
         }
+
 
 
         /* =================================================
@@ -1320,14 +1348,16 @@ to {
 
           pointer-events: none;
 
-          will-change: transform;
+          will-change:
+            transform;
         }
 
 
         @keyframes nsScan {
 
           0% {
-            transform: translateY(0);
+            transform:
+              translateY(0);
 
             opacity: 0;
           }
@@ -1345,12 +1375,14 @@ to {
           }
 
           100% {
-            transform: translateY(330px);
+            transform:
+              translateY(330px);
 
             opacity: 0;
           }
 
         }
+
 
 
         /* =================================================
@@ -1369,8 +1401,10 @@ to {
           background-image:
             url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.3'/%3E%3C/svg%3E");
 
-          mix-blend-mode: overlay;
+          mix-blend-mode:
+            overlay;
         }
+
 
 
         /* =================================================
@@ -1383,6 +1417,7 @@ to {
           z-index: 12;
 
           width: 20px;
+
           height: 20px;
 
           pointer-events: none;
@@ -1402,44 +1437,54 @@ to {
 
         .ns-corner::before {
           width: 100%;
+
           height: 1px;
         }
 
 
         .ns-corner::after {
           width: 1px;
+
           height: 100%;
         }
 
 
         .ns-corner-tl {
           top: 18px;
+
           left: 18px;
         }
 
 
         .ns-corner-tr {
           top: 18px;
+
           right: 18px;
 
-          transform: rotate(90deg);
+          transform:
+            rotate(90deg);
         }
 
 
         .ns-corner-bl {
           bottom: 18px;
+
           left: 18px;
 
-          transform: rotate(-90deg);
+          transform:
+            rotate(-90deg);
         }
 
 
         .ns-corner-br {
-          right: 18px;
           bottom: 18px;
 
-          transform: rotate(180deg);
+          right: 18px;
+
+          transform:
+            rotate(180deg);
         }
+
 
 
         /* =================================================
@@ -1472,23 +1517,27 @@ to {
 
         .ns-profile-meta-top {
           top: 22px;
+
           left: 30px;
         }
 
 
         .ns-profile-meta-bottom {
           right: 30px;
+
           bottom: 22px;
         }
 
 
         .ns-meta-dot {
           width: 5px;
+
           height: 5px;
 
           border-radius: 50%;
 
-          background: #d5aa50;
+          background:
+            #d5aa50;
 
           box-shadow:
             0 0 7px
@@ -1498,11 +1547,13 @@ to {
 
         .ns-meta-line {
           width: 28px;
+
           height: 1px;
 
           background:
             rgba(213,170,80,0.5);
         }
+
 
 
         /* =================================================
@@ -1519,9 +1570,11 @@ to {
 
           display: flex;
 
-          justify-content: space-between;
+          justify-content:
+            space-between;
 
-          align-items: flex-end;
+          align-items:
+            flex-end;
 
           border-top:
             1px solid
@@ -1536,7 +1589,8 @@ to {
 
           font-size: 9px;
 
-          letter-spacing: 0.25em;
+          letter-spacing:
+            0.25em;
 
           color:
             rgba(245,241,232,0.48);
@@ -1550,7 +1604,8 @@ to {
 
           font-size: 10px;
 
-          letter-spacing: 0.12em;
+          letter-spacing:
+            0.12em;
 
           color:
             rgba(245,241,232,0.86);
@@ -1566,7 +1621,8 @@ to {
 
           font-size: 8px;
 
-          letter-spacing: 0.16em;
+          letter-spacing:
+            0.16em;
 
           color:
             rgba(245,241,232,0.45);
@@ -1576,8 +1632,10 @@ to {
         .ns-caption-status svg {
           font-size: 5px;
 
-          color: #d5aa50;
+          color:
+            #d5aa50;
         }
+
 
 
         /* =================================================
@@ -1590,6 +1648,8 @@ to {
           max-width: 760px;
 
           min-width: 0;
+
+          padding-top: 0;
         }
 
 
@@ -1606,6 +1666,7 @@ to {
 
         .ns-about-overline span {
           width: 35px;
+
           height: 1px;
 
           background:
@@ -1618,7 +1679,8 @@ to {
 
           font-size: 10px;
 
-          letter-spacing: 0.25em;
+          letter-spacing:
+            0.25em;
 
           color:
             rgba(245,241,232,0.48);
@@ -1631,9 +1693,11 @@ to {
           font-size:
             clamp(42px, 5vw, 76px);
 
-          line-height: 0.94;
+          line-height:
+            0.94;
 
-          font-weight: 700;
+          font-weight:
+            700;
 
           letter-spacing:
             -0.055em;
@@ -1644,7 +1708,8 @@ to {
 
 
         .ns-about-outline {
-          color: transparent;
+          color:
+            transparent;
 
           -webkit-text-stroke:
             1px
@@ -1662,7 +1727,8 @@ to {
 
           font-size: 15px;
 
-          line-height: 1.85;
+          line-height:
+            1.85;
 
           color:
             rgba(245,241,232,0.68);
@@ -1677,6 +1743,7 @@ to {
         }
 
 
+
         /* =================================================
            CARDS
         ================================================= */
@@ -1685,7 +1752,10 @@ to {
           display: grid;
 
           grid-template-columns:
-            repeat(2, minmax(0, 1fr));
+            repeat(
+              2,
+              minmax(0, 1fr)
+            );
 
           gap: 12px;
 
@@ -1726,9 +1796,11 @@ to {
           position: absolute;
 
           top: 0;
+
           left: 0;
 
           width: 100%;
+
           height: 1px;
 
           background:
@@ -1738,7 +1810,8 @@ to {
               transparent 75%
             );
 
-          opacity: 0.35;
+          opacity:
+            0.35;
         }
 
 
@@ -1758,21 +1831,26 @@ to {
         .ns-about-item-top {
           display: flex;
 
-          justify-content: space-between;
+          justify-content:
+            space-between;
 
-          align-items: center;
+          align-items:
+            center;
         }
 
 
         .ns-about-icon {
           width: 34px;
+
           height: 34px;
 
           display: flex;
 
-          align-items: center;
+          align-items:
+            center;
 
-          justify-content: center;
+          justify-content:
+            center;
 
           border:
             1px solid
@@ -1791,7 +1869,8 @@ to {
         .ns-about-item-top > span {
           font-size: 9px;
 
-          letter-spacing: 0.15em;
+          letter-spacing:
+            0.15em;
 
           color:
             rgba(245,241,232,0.28);
@@ -1818,7 +1897,8 @@ to {
 
           font-size: 11px;
 
-          line-height: 1.7;
+          line-height:
+            1.7;
 
           color:
             rgba(245,241,232,0.43);
@@ -1829,16 +1909,20 @@ to {
           position: absolute;
 
           bottom: 0;
+
           left: 20px;
 
           width: 28px;
+
           height: 1px;
 
           background:
             #d5aa50;
 
-          opacity: 0.45;
+          opacity:
+            0.45;
         }
+
 
 
         /* =================================================
@@ -1848,9 +1932,11 @@ to {
         .ns-about-footer {
           display: flex;
 
-          justify-content: space-between;
+          justify-content:
+            space-between;
 
-          align-items: center;
+          align-items:
+            center;
 
           margin-top: 26px;
 
@@ -1865,7 +1951,8 @@ to {
         .ns-about-footer-left {
           display: flex;
 
-          align-items: center;
+          align-items:
+            center;
 
           gap: 14px;
         }
@@ -1877,7 +1964,8 @@ to {
           color:
             #d5aa50;
 
-          letter-spacing: 0.15em;
+          letter-spacing:
+            0.15em;
         }
 
 
@@ -1886,9 +1974,11 @@ to {
 
           font-size: 9px;
 
-          letter-spacing: 0.18em;
+          letter-spacing:
+            0.18em;
 
-          font-weight: 500;
+          font-weight:
+            500;
 
           color:
             rgba(245,241,232,0.7);
@@ -1909,13 +1999,16 @@ to {
 
         .ns-about-arrow {
           width: 38px;
+
           height: 38px;
 
           display: flex;
 
-          align-items: center;
+          align-items:
+            center;
 
-          justify-content: center;
+          justify-content:
+            center;
 
           border:
             1px solid
@@ -1935,6 +2028,7 @@ to {
         }
 
 
+
         /* =================================================
            TABLET
         ================================================= */
@@ -1942,24 +2036,36 @@ to {
         @media (max-width: 1050px) {
 
           .ns-about-container {
-            grid-template-columns: 1fr;
+            grid-template-columns:
+              1fr;
 
-            max-width: 800px;
+            max-width:
+              800px;
 
-            gap: 75px;
+            gap:
+              70px;
+
+            align-items:
+              flex-start;
           }
 
 
           .ns-profile-column {
-            min-height: auto;
+            min-height:
+              auto;
+
+            padding-top:
+              0;
           }
 
 
           .ns-about-content {
-            max-width: 800px;
+            max-width:
+              800px;
           }
 
         }
+
 
 
         /* =================================================
@@ -1969,95 +2075,127 @@ to {
         @media (max-width: 650px) {
 
           .ns-about-section {
-            min-height: auto;
+            min-height:
+              auto;
 
             padding:
               80px
               20px
               90px;
 
-            scroll-margin-top: 70px;
+            scroll-margin-top:
+              70px;
 
-            overflow: hidden;
+            overflow:
+              hidden;
           }
 
 
           .ns-about-container {
-            margin-top: 45px;
+            margin-top:
+              45px;
 
-            gap: 52px;
-          }
+            gap:
+              52px;
 
+            grid-template-columns:
+              1fr;
 
-          .ns-profile-column {
-            min-height: auto;
-
-            width: 100%;
-
-            justify-content:
+            align-items:
               flex-start;
           }
 
 
-          /* Small mobile profile */
+          .ns-profile-column {
+            min-height:
+              auto;
+
+            width:
+              100%;
+
+            justify-content:
+              flex-start;
+
+            padding-top:
+              0;
+          }
+
+
+          /* Small mobile photo */
 
           .ns-profile-float {
-            width: 180px !important;
+            width:
+              180px !important;
 
-            max-width: 180px !important;
+            max-width:
+              180px !important;
 
-            animation: none !important;
+            animation:
+              none !important;
           }
 
 
           .ns-profile-frame {
-            width: 180px !important;
+            width:
+              180px !important;
 
-            max-width: 180px !important;
+            max-width:
+              180px !important;
 
-            height: 270px !important;
+            height:
+              270px !important;
 
-            aspect-ratio: auto !important;
+            aspect-ratio:
+              auto !important;
 
-            transform: none !important;
+            transform:
+              none !important;
 
             box-shadow:
               0 20px 50px
               rgba(0,0,0,0.65);
 
-            cursor: default;
+            cursor:
+              default;
           }
 
 
           .ns-profile-image {
-            transform: none !important;
+            transform:
+              none !important;
 
-            animation: none !important;
+            animation:
+              none !important;
           }
 
 
           .ns-profile-caption {
-            width: 180px !important;
+            width:
+              180px !important;
 
-            max-width: 180px !important;
+            max-width:
+              180px !important;
 
-            margin-top: 17px;
+            margin-top:
+              17px;
           }
 
 
-          /* Disable heavy mobile effects */
+          /* Heavy effects OFF */
 
           .ns-profile-orbit,
           .ns-profile-aura,
           .ns-profile-light-sweep,
           .ns-profile-scan,
           .ns-profile-noise {
-            display: none !important;
+            display:
+              none !important;
           }
 
 
           .ns-profile-meta {
-            font-size: 7px;
+            font-size:
+              7px;
 
             letter-spacing:
               0.12em;
@@ -2065,49 +2203,71 @@ to {
 
 
           .ns-profile-meta-top {
-            top: 17px;
-            left: 21px;
+            top:
+              17px;
+
+            left:
+              21px;
           }
 
 
           .ns-profile-meta-bottom {
-            right: 21px;
-            bottom: 17px;
+            right:
+              21px;
+
+            bottom:
+              17px;
           }
 
 
           .ns-corner {
-            width: 16px;
-            height: 16px;
+            width:
+              16px;
+
+            height:
+              16px;
           }
 
 
           .ns-corner-tl {
-            top: 14px;
-            left: 14px;
+            top:
+              14px;
+
+            left:
+              14px;
           }
 
 
           .ns-corner-tr {
-            top: 14px;
-            right: 14px;
+            top:
+              14px;
+
+            right:
+              14px;
           }
 
 
           .ns-corner-bl {
-            bottom: 14px;
-            left: 14px;
+            bottom:
+              14px;
+
+            left:
+              14px;
           }
 
 
           .ns-corner-br {
-            bottom: 14px;
-            right: 14px;
+            bottom:
+              14px;
+
+            right:
+              14px;
           }
 
 
           .ns-caption-small {
-            font-size: 7px;
+            font-size:
+              7px;
 
             letter-spacing:
               0.18em;
@@ -2115,7 +2275,8 @@ to {
 
 
           .ns-caption-main {
-            font-size: 7px;
+            font-size:
+              7px;
 
             letter-spacing:
               0.08em;
@@ -2123,42 +2284,55 @@ to {
 
 
           .ns-caption-status {
-            font-size: 6px;
+            font-size:
+              6px;
 
-            gap: 5px;
+            gap:
+              5px;
           }
 
 
           .ns-caption-status svg {
-            font-size: 4px;
+            font-size:
+              4px;
           }
 
 
-          /* Content */
+          /* About content */
 
           .ns-about-content {
-            width: 100%;
+            width:
+              100%;
 
-            max-width: none;
+            max-width:
+              none;
 
-            min-width: 0;
+            min-width:
+              0;
+
+            padding-top:
+              0;
           }
 
 
           .ns-about-overline {
-            margin-bottom: 18px;
+            margin-bottom:
+              18px;
 
-            gap: 9px;
+            gap:
+              9px;
           }
 
 
           .ns-about-overline span {
-            width: 28px;
+            width:
+              28px;
           }
 
 
           .ns-about-overline p {
-            font-size: 8px;
+            font-size:
+              8px;
 
             letter-spacing:
               0.18em;
@@ -2167,41 +2341,55 @@ to {
 
           .ns-about-heading {
             font-size:
-              clamp(38px, 10.5vw, 54px);
+              clamp(
+                38px,
+                10.5vw,
+                54px
+              );
 
-            line-height: 0.95;
+            line-height:
+              0.95;
           }
 
 
           .ns-about-description {
-            margin-top: 23px;
+            margin-top:
+              23px;
 
-            font-size: 12px;
+            font-size:
+              12px;
 
-            line-height: 1.75;
+            line-height:
+              1.75;
           }
 
 
           .ns-about-description.secondary {
-            margin-top: 10px;
+            margin-top:
+              10px;
           }
 
 
           /* Cards */
 
           .ns-about-grid {
-            grid-template-columns: 1fr;
+            grid-template-columns:
+              1fr;
 
-            gap: 10px;
+            gap:
+              10px;
 
-            margin-top: 28px;
+            margin-top:
+              28px;
           }
 
 
           .ns-about-item {
-            min-height: 145px;
+            min-height:
+              145px;
 
-            padding: 17px;
+            padding:
+              17px;
           }
 
 
@@ -2211,65 +2399,84 @@ to {
               0
               7px;
 
-            font-size: 14px;
+            font-size:
+              14px;
           }
 
 
           .ns-about-item p {
-            font-size: 10px;
+            font-size:
+              10px;
 
-            line-height: 1.65;
+            line-height:
+              1.65;
           }
 
 
           .ns-about-icon {
-            width: 30px;
-            height: 30px;
+            width:
+              30px;
 
-            font-size: 11px;
+            height:
+              30px;
+
+            font-size:
+              11px;
           }
 
 
           .ns-about-item-top > span {
-            font-size: 8px;
+            font-size:
+              8px;
           }
 
 
           .ns-about-footer {
-            margin-top: 20px;
+            margin-top:
+              20px;
 
-            padding-top: 15px;
+            padding-top:
+              15px;
           }
 
 
           .ns-about-footer-left {
-            gap: 10px;
+            gap:
+              10px;
           }
 
 
           .ns-footer-number {
-            font-size: 8px;
+            font-size:
+              8px;
           }
 
 
           .ns-about-footer-left strong {
-            font-size: 7px;
+            font-size:
+              7px;
           }
 
 
           .ns-about-footer-left small {
-            font-size: 7px;
+            font-size:
+              7px;
           }
 
 
           .ns-about-arrow {
-            width: 32px;
-            height: 32px;
+            width:
+              32px;
 
-            font-size: 9px;
+            height:
+              32px;
+
+            font-size:
+              9px;
           }
 
         }
+
 
 
         /* =================================================
@@ -2287,59 +2494,75 @@ to {
 
 
           .ns-about-container {
-            margin-top: 38px;
+            margin-top:
+              38px;
 
-            gap: 42px;
+            gap:
+              42px;
           }
 
 
           .ns-profile-float {
-            width: 160px !important;
+            width:
+              160px !important;
 
-            max-width: 160px !important;
+            max-width:
+              160px !important;
           }
 
 
           .ns-profile-frame {
-            width: 160px !important;
+            width:
+              160px !important;
 
-            max-width: 160px !important;
+            max-width:
+              160px !important;
 
-            height: 240px !important;
+            height:
+              240px !important;
           }
 
 
           .ns-profile-caption {
-            width: 160px !important;
+            width:
+              160px !important;
 
-            max-width: 160px !important;
+            max-width:
+              160px !important;
           }
 
 
           .ns-about-heading {
-            font-size: 35px;
+            font-size:
+              35px;
           }
 
 
           .ns-about-description {
-            font-size: 11px;
+            font-size:
+              11px;
 
-            line-height: 1.7;
+            line-height:
+              1.7;
           }
 
 
           .ns-about-item {
-            min-height: 135px;
+            min-height:
+              135px;
 
-            padding: 15px;
+            padding:
+              15px;
           }
 
 
           .ns-about-item p {
-            font-size: 9.5px;
+            font-size:
+              9.5px;
           }
 
         }
+
 
 
         /* =================================================
@@ -2351,7 +2574,8 @@ to {
           .ns-profile-orbit,
           .ns-profile-light-sweep,
           .ns-profile-scan {
-            animation: none !important;
+            animation:
+              none !important;
           }
 
         }
