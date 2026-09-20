@@ -1052,195 +1052,379 @@ to {
   I enjoy solving technical problems, improving IT infrastructure, and delivering
   fast support to end users. My goal is to grow as a System Administrator and
   Cloud Engineer while continuously learning new technologies.
-  `,location:`India`,email:`naimishsingh855@gmail.com`,phone:`+91 8009464355`,resume:`/ns-port/resume.pdf`,profileImage:`/ns-port/profile.jpeg`,socials:{linkedin:`https://www.linkedin.com/in/naimish-singh-aws`,github:`https://github.com/Naimish980`,instagram:`https://www.instagram.com/naimish_353`},skills:[`Windows 10/11`,`Desktop Support`,`Hardware Troubleshooting`,`Networking`,`TCP/IP`,`DNS`,`DHCP`,`Active Directory`,`Office 365`,`Microsoft Outlook`,`Linux`,`AWS`,`VMware`,`VirtualBox`,`Remote Support`,`LAN/WAN`,`Printer Support`,`Ticketing System`],experience:[{company:`Indira IVF`,role:`IT Engineer`,duration:`May 2026 - Present`,description:`Managing desktop support, networking, hardware troubleshooting, Windows systems, user support, and IT infrastructure.`,responsibilities:[`Provided L1 IT support for hardware, software, and network-related issues.`,`Troubleshot Windows OS, application, and login-related problems.`,`Managed Active Directory user accounts and password resets.`,`Diagnosed and resolved LAN, Wi-Fi, DNS, DHCP and VPN connectivity issues.`,`Installed and configured Microsoft Office, Outlook and business applications.`,`Supported printers, desktops, laptops and peripheral devices.`,`Maintained SLA through ticketing system.`,`Provided remote support and collaborated with infrastructure teams.`]},{company:`CM Solutions`,role:`Desktop Support Engineer`,duration:`Sep 2024 - Jan 2026`,description:`Provided desktop support, OS installation, hardware maintenance, networking, printer support, and software troubleshooting.`,responsibilities:[`Installed and configured Windows desktops and laptops.`,`Performed hardware troubleshooting and preventive maintenance.`,`Resolved LAN, Wi-Fi, DNS, DHCP and TCP/IP issues.`,`Supported Microsoft Office 365 and Outlook.`,`Installed software, drivers and security updates.`,`Provided remote and onsite technical support.`,`Maintained IT asset inventory.`,`Resolved incidents through ticketing system.`]}],projects:[{title:`Enterprise IT Infrastructure Support`,description:`Provided end-to-end IT support for desktops, laptops, printers, scanners and peripherals.`,technologies:[`Windows 11`,`Active Directory`,`Office 365`,`Outlook`,`Networking`]},{title:`Active Directory & User Management`,description:`Managed Active Directory users, password resets, account unlocks and domain joining.`,technologies:[`Active Directory`,`Windows Server`,`Group Policy`,`User Management`]},{title:`Microsoft 365 & Outlook Administration`,description:`Configured Outlook profiles, resolved mailbox issues and supported Microsoft 365 applications.`,technologies:[`Microsoft 365`,`Outlook`,`Exchange`,`Office Apps`]},{title:`Enterprise Network Infrastructure`,description:`Resolved LAN/WAN, DNS, DHCP, TCP/IP, VPN and Wi-Fi connectivity issues.`,technologies:[`Networking`,`TCP/IP`,`DNS`,`DHCP`,`VPN`]},{title:`Windows Deployment & System Administration`,description:`Installed Windows 10/11, drivers, security patches and optimized systems.`,technologies:[`Windows 10`,`Windows 11`,`Drivers`,`System Administration`]},{title:`IT Asset Management System`,description:`Managed desktops, laptops, printers and maintained IT inventory records.`,technologies:[`Asset Management`,`Hardware`,`Inventory`]},{title:`AWS Cloud Learning Lab`,description:`Hands-on practice with EC2, IAM, S3, VPC, Security Groups and CloudWatch.`,technologies:[`AWS EC2`,`IAM`,`S3`,`VPC`,`CloudWatch`]},{title:`Virtualization Lab`,description:`Created Windows and Linux virtual machines using VMware Workstation and VirtualBox.`,technologies:[`VMware`,`VirtualBox`,`Windows`,`Linux`]}],certifications:[{title:`Hardware & Networking`,issuer:`CM Solutions`,year:`2024`},{title:`AWS Solutions Architecture Job Simulation`,issuer:`AWS | Forage`,year:`2024`,link:`/ns-port/certificates/aws-solution-architecture.pdf`},{title:`Linux Administration`,issuer:`Udemy`,year:`2025`},{title:`Microsoft Office`,issuer:`Microsoft`,year:`2024`},{title:`Software Engineering Job Simulation`,issuer:`Goldman Sachs | Forage`,year:`December 2024`,description:`Completed Goldman Sachs' Software Engineering Job Simulation through Forage. Performed a cybersecurity task involving analysis of a leaked password database and gained exposure to secure software engineering and enterprise information security practices.`,link:`/ns-port/certificates/Goaldman.pdf`},{title:`Network Security Engineer`,issuer:`Skill India Digital Hub / NASSCOM`,year:`2026`,description:`Successfully completed the Network Security Engineer online skilling course through Skill India Digital Hub.`,link:`/ns-port/certificates/network-security-engineer.pdf`}]},kp=()=>{let e=Z(0),t=Z(0),n=Pf(e,{stiffness:80,damping:20,mass:.6}),r=Pf(t,{stiffness:80,damping:20,mass:.6}),i=Af(n,[-1,1],[-7,7]),a=Af(r,[-1,1],[7,-7]);(0,b.useEffect)(()=>{let n=n=>{let r=n.clientX/window.innerWidth,i=n.clientY/window.innerHeight;e.set((r-.5)*2),t.set((i-.5)*2)};return window.addEventListener(`mousemove`,n),()=>{window.removeEventListener(`mousemove`,n)}},[e,t]);let o=e=>{let t=document.getElementById(e);if(!t)return;let n=document.querySelector(`.ns-navbar`),r=n?n.getBoundingClientRect().height:70,i=t.getBoundingClientRect().top+window.scrollY,a=e===`home`?0:Math.max(0,i-r-8);window.scrollTo({top:a,behavior:`smooth`})};return(0,V.jsxs)(V.Fragment,{children:[(0,V.jsxs)(`section`,{id:`home`,className:`reel-hero`,children:[(0,V.jsx)(`div`,{className:`reel-noise`}),(0,V.jsx)(`div`,{className:`hero-ambient hero-ambient-one`}),(0,V.jsx)(`div`,{className:`hero-ambient hero-ambient-two`}),(0,V.jsx)(X.div,{className:`hero-light-beam`,animate:{x:[`-20%`,`120%`],opacity:[0,.7,0]},transition:{duration:8,repeat:1/0,ease:`easeInOut`}}),(0,V.jsxs)(`div`,{className:`reel-hero-grid`,children:[(0,V.jsxs)(X.div,{className:`reel-copy`,initial:{opacity:0,x:-70},animate:{opacity:1,x:0},transition:{duration:1,ease:[.16,1,.3,1]},children:[(0,V.jsx)(X.p,{className:`reel-kicker`,initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{delay:.2,duration:.7},children:`IT ENGINEER · CYBERSECURITY · INFRASTRUCTURE`}),(0,V.jsxs)(`h1`,{className:`reel-title`,children:[(0,V.jsx)(X.span,{initial:{opacity:0,y:50},animate:{opacity:1,y:0},transition:{delay:.25,duration:.8},children:`NAIMISH`}),(0,V.jsx)(X.span,{initial:{opacity:0,y:50},animate:{opacity:1,y:0},transition:{delay:.38,duration:.8},children:`SINGH`}),(0,V.jsx)(X.span,{className:`reel-outline`,initial:{opacity:0,y:50},animate:{opacity:1,y:0},transition:{delay:.51,duration:.8},children:`ENGINEER.`})]}),(0,V.jsx)(X.p,{className:`reel-intro`,initial:{opacity:0,y:25},animate:{opacity:1,y:0},transition:{delay:.65,duration:.8},children:$.tagline}),(0,V.jsxs)(X.div,{className:`reel-actions`,initial:{opacity:0,y:25},animate:{opacity:1,y:0},transition:{delay:.8,duration:.7},children:[(0,V.jsxs)(`a`,{href:$.resume,target:`_blank`,rel:`noreferrer`,className:`reel-btn reel-btn-primary`,children:[(0,V.jsx)(hp,{}),`Download Resume`]}),(0,V.jsxs)(`button`,{onClick:()=>o(`contact`),className:`reel-btn reel-btn-secondary`,children:[(0,V.jsx)(mp,{}),`Contact Me`]})]}),(0,V.jsxs)(X.div,{className:`reel-stats`,initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{delay:1,duration:.8},children:[(0,V.jsxs)(`div`,{children:[(0,V.jsx)(`strong`,{children:`2.5+`}),(0,V.jsx)(`span`,{children:`YEARS EXPERIENCE`})]}),(0,V.jsxs)(`div`,{children:[(0,V.jsx)(`strong`,{children:`18+`}),(0,V.jsx)(`span`,{children:`TECHNOLOGIES`})]}),(0,V.jsxs)(`div`,{children:[(0,V.jsx)(`strong`,{children:`8+`}),(0,V.jsx)(`span`,{children:`PROJECTS`})]})]})]}),(0,V.jsxs)(X.div,{className:`reel-portrait hero-portrait-right`,style:{rotateX:a,rotateY:i},initial:{opacity:0,scale:.75,y:50},animate:{opacity:1,scale:1,y:0},transition:{duration:1.2,delay:.2,ease:[.16,1,.3,1]},children:[(0,V.jsx)(X.div,{className:`portrait-aura`,animate:{scale:[.9,1.08,.9],opacity:[.55,1,.55]},transition:{duration:4,repeat:1/0,ease:`easeInOut`}}),(0,V.jsxs)(X.div,{className:`hero-floating-card hero-card-one`,animate:{y:[-8,8,-8]},transition:{duration:4,repeat:1/0,ease:`easeInOut`},children:[(0,V.jsx)(cp,{}),(0,V.jsx)(`span`,{children:`INFRASTRUCTURE`})]}),(0,V.jsxs)(X.div,{className:`hero-floating-card hero-card-two`,animate:{y:[8,-8,8]},transition:{duration:4.5,repeat:1/0,ease:`easeInOut`},children:[(0,V.jsx)(sp,{}),(0,V.jsx)(`span`,{children:`SECURITY`})]}),(0,V.jsxs)(`div`,{className:`orbit orbit-one`,children:[(0,V.jsx)(`i`,{}),(0,V.jsx)(`i`,{}),(0,V.jsx)(`i`,{})]}),(0,V.jsxs)(`div`,{className:`orbit orbit-two`,children:[(0,V.jsx)(`i`,{}),(0,V.jsx)(`i`,{})]}),(0,V.jsx)(`div`,{className:`orbit orbit-three`}),(0,V.jsxs)(X.div,{className:`portrait-frame`,animate:{y:[-5,5,-5]},transition:{duration:5,repeat:1/0,ease:`easeInOut`},children:[(0,V.jsx)(`img`,{src:$.profileImage,alt:$.name}),(0,V.jsx)(`div`,{className:`portrait-scan`})]}),(0,V.jsxs)(`div`,{className:`portrait-caption`,children:[(0,V.jsx)(`span`,{children:`01`}),(0,V.jsx)(`span`,{children:`NAIMISH SINGH`})]})]})]}),(0,V.jsxs)(X.div,{className:`reel-footer`,initial:{opacity:0},animate:{opacity:1},transition:{delay:1.2,duration:.8},children:[(0,V.jsxs)(`button`,{onClick:()=>o(`about`),className:`scroll-label`,children:[(0,V.jsx)(`span`,{children:`SCROLL TO EXPLORE`}),(0,V.jsx)(Dp,{})]}),(0,V.jsx)(`div`,{className:`footer-line`,children:(0,V.jsx)(`span`,{})}),(0,V.jsxs)(`span`,{children:[`INDIA · `,new Date().getFullYear()]})]})]}),(0,V.jsx)(`style`,{children:`
-      /*
-       * RESPONSIVE CINEMATIC HERO
-       * Keep the desktop composition on ALL screen sizes:
-       * text stays LEFT, complete portrait system stays RIGHT.
-       */
+  `,location:`India`,email:`naimishsingh855@gmail.com`,phone:`+91 8009464355`,resume:`/ns-port/resume.pdf`,profileImage:`/ns-port/profile.jpeg`,socials:{linkedin:`https://www.linkedin.com/in/naimish-singh-aws`,github:`https://github.com/Naimish980`,instagram:`https://www.instagram.com/naimish_353`},skills:[`Windows 10/11`,`Desktop Support`,`Hardware Troubleshooting`,`Networking`,`TCP/IP`,`DNS`,`DHCP`,`Active Directory`,`Office 365`,`Microsoft Outlook`,`Linux`,`AWS`,`VMware`,`VirtualBox`,`Remote Support`,`LAN/WAN`,`Printer Support`,`Ticketing System`],experience:[{company:`Indira IVF`,role:`IT Engineer`,duration:`May 2026 - Present`,description:`Managing desktop support, networking, hardware troubleshooting, Windows systems, user support, and IT infrastructure.`,responsibilities:[`Provided L1 IT support for hardware, software, and network-related issues.`,`Troubleshot Windows OS, application, and login-related problems.`,`Managed Active Directory user accounts and password resets.`,`Diagnosed and resolved LAN, Wi-Fi, DNS, DHCP and VPN connectivity issues.`,`Installed and configured Microsoft Office, Outlook and business applications.`,`Supported printers, desktops, laptops and peripheral devices.`,`Maintained SLA through ticketing system.`,`Provided remote support and collaborated with infrastructure teams.`]},{company:`CM Solutions`,role:`Desktop Support Engineer`,duration:`Sep 2024 - Jan 2026`,description:`Provided desktop support, OS installation, hardware maintenance, networking, printer support, and software troubleshooting.`,responsibilities:[`Installed and configured Windows desktops and laptops.`,`Performed hardware troubleshooting and preventive maintenance.`,`Resolved LAN, Wi-Fi, DNS, DHCP and TCP/IP issues.`,`Supported Microsoft Office 365 and Outlook.`,`Installed software, drivers and security updates.`,`Provided remote and onsite technical support.`,`Maintained IT asset inventory.`,`Resolved incidents through ticketing system.`]}],projects:[{title:`Enterprise IT Infrastructure Support`,description:`Provided end-to-end IT support for desktops, laptops, printers, scanners and peripherals.`,technologies:[`Windows 11`,`Active Directory`,`Office 365`,`Outlook`,`Networking`]},{title:`Active Directory & User Management`,description:`Managed Active Directory users, password resets, account unlocks and domain joining.`,technologies:[`Active Directory`,`Windows Server`,`Group Policy`,`User Management`]},{title:`Microsoft 365 & Outlook Administration`,description:`Configured Outlook profiles, resolved mailbox issues and supported Microsoft 365 applications.`,technologies:[`Microsoft 365`,`Outlook`,`Exchange`,`Office Apps`]},{title:`Enterprise Network Infrastructure`,description:`Resolved LAN/WAN, DNS, DHCP, TCP/IP, VPN and Wi-Fi connectivity issues.`,technologies:[`Networking`,`TCP/IP`,`DNS`,`DHCP`,`VPN`]},{title:`Windows Deployment & System Administration`,description:`Installed Windows 10/11, drivers, security patches and optimized systems.`,technologies:[`Windows 10`,`Windows 11`,`Drivers`,`System Administration`]},{title:`IT Asset Management System`,description:`Managed desktops, laptops, printers and maintained IT inventory records.`,technologies:[`Asset Management`,`Hardware`,`Inventory`]},{title:`AWS Cloud Learning Lab`,description:`Hands-on practice with EC2, IAM, S3, VPC, Security Groups and CloudWatch.`,technologies:[`AWS EC2`,`IAM`,`S3`,`VPC`,`CloudWatch`]},{title:`Virtualization Lab`,description:`Created Windows and Linux virtual machines using VMware Workstation and VirtualBox.`,technologies:[`VMware`,`VirtualBox`,`Windows`,`Linux`]}],certifications:[{title:`Hardware & Networking`,issuer:`CM Solutions`,year:`2024`},{title:`AWS Solutions Architecture Job Simulation`,issuer:`AWS | Forage`,year:`2024`,link:`/ns-port/certificates/aws-solution-architecture.pdf`},{title:`Linux Administration`,issuer:`Udemy`,year:`2025`},{title:`Microsoft Office`,issuer:`Microsoft`,year:`2024`},{title:`Software Engineering Job Simulation`,issuer:`Goldman Sachs | Forage`,year:`December 2024`,description:`Completed Goldman Sachs' Software Engineering Job Simulation through Forage. Performed a cybersecurity task involving analysis of a leaked password database and gained exposure to secure software engineering and enterprise information security practices.`,link:`/ns-port/certificates/Goaldman.pdf`},{title:`Network Security Engineer`,issuer:`Skill India Digital Hub / NASSCOM`,year:`2026`,description:`Successfully completed the Network Security Engineer online skilling course through Skill India Digital Hub.`,link:`/ns-port/certificates/network-security-engineer.pdf`}]},kp=()=>{let[e,t]=(0,b.useState)(!1),n=Z(0),r=Z(0),i=Pf(n,{stiffness:80,damping:20,mass:.6}),a=Pf(r,{stiffness:80,damping:20,mass:.6}),o=Af(i,[-1,1],[-7,7]),s=Af(a,[-1,1],[7,-7]);(0,b.useEffect)(()=>{let e=()=>{t(window.matchMedia(`(max-width: 650px)`).matches||window.matchMedia(`(pointer: coarse)`).matches)};return e(),window.addEventListener(`resize`,e),()=>{window.removeEventListener(`resize`,e)}},[]),(0,b.useEffect)(()=>{if(e){n.set(0),r.set(0);return}let t=e=>{let t=e.clientX/window.innerWidth,i=e.clientY/window.innerHeight;n.set((t-.5)*2),r.set((i-.5)*2)};return window.addEventListener(`mousemove`,t),()=>{window.removeEventListener(`mousemove`,t)}},[e,n,r]);let c=e=>{let t=document.getElementById(e);if(!t)return;let n=document.querySelector(`.reel-navbar`),r=n?n.getBoundingClientRect().height:68,i=t.getBoundingClientRect().top+window.scrollY,a=e===`home`?0:Math.max(0,i-r-8);window.scrollTo({top:a,behavior:`smooth`})};return(0,V.jsxs)(V.Fragment,{children:[(0,V.jsxs)(`section`,{id:`home`,className:`reel-hero ${e?`hero-mobile-stable`:``}`,children:[(0,V.jsx)(`div`,{className:`reel-noise`}),(0,V.jsx)(`div`,{className:`hero-ambient hero-ambient-one`}),(0,V.jsx)(`div`,{className:`hero-ambient hero-ambient-two`}),!e&&(0,V.jsx)(X.div,{className:`hero-light-beam`,animate:{x:[`-20%`,`120%`],opacity:[0,.7,0]},transition:{duration:8,repeat:1/0,ease:`easeInOut`}}),(0,V.jsxs)(`div`,{className:`reel-hero-grid`,children:[(0,V.jsxs)(X.div,{className:`reel-copy`,initial:e?!1:{opacity:0,x:-70},animate:e?!1:{opacity:1,x:0},transition:{duration:1,ease:[.16,1,.3,1]},children:[(0,V.jsx)(X.p,{className:`reel-kicker`,initial:e?!1:{opacity:0,y:20},animate:e?!1:{opacity:1,y:0},transition:{delay:.2,duration:.7},children:`IT ENGINEER · CYBERSECURITY · INFRASTRUCTURE`}),(0,V.jsxs)(`h1`,{className:`reel-title`,children:[(0,V.jsx)(X.span,{initial:e?!1:{opacity:0,y:50},animate:e?!1:{opacity:1,y:0},transition:{delay:.25,duration:.8},children:`NAIMISH`}),(0,V.jsx)(X.span,{initial:e?!1:{opacity:0,y:50},animate:e?!1:{opacity:1,y:0},transition:{delay:.38,duration:.8},children:`SINGH`}),(0,V.jsx)(X.span,{className:`reel-outline`,initial:e?!1:{opacity:0,y:50},animate:e?!1:{opacity:1,y:0},transition:{delay:.51,duration:.8},children:`ENGINEER.`})]}),(0,V.jsx)(X.p,{className:`reel-intro`,initial:e?!1:{opacity:0,y:25},animate:e?!1:{opacity:1,y:0},transition:{delay:.65,duration:.8},children:$.tagline}),(0,V.jsxs)(X.div,{className:`reel-actions`,initial:e?!1:{opacity:0,y:25},animate:e?!1:{opacity:1,y:0},transition:{delay:.8,duration:.7},children:[(0,V.jsxs)(`a`,{href:$.resume,target:`_blank`,rel:`noreferrer`,className:`reel-btn reel-btn-primary`,children:[(0,V.jsx)(hp,{}),`Download Resume`]}),(0,V.jsxs)(`button`,{onClick:()=>c(`contact`),className:`reel-btn reel-btn-secondary`,children:[(0,V.jsx)(mp,{}),`Contact Me`]})]}),(0,V.jsxs)(X.div,{className:`reel-stats`,initial:e?!1:{opacity:0,y:20},animate:e?!1:{opacity:1,y:0},transition:{delay:1,duration:.8},children:[(0,V.jsxs)(`div`,{children:[(0,V.jsx)(`strong`,{children:`2.5+`}),(0,V.jsx)(`span`,{children:`YEARS EXPERIENCE`})]}),(0,V.jsxs)(`div`,{children:[(0,V.jsx)(`strong`,{children:`18+`}),(0,V.jsx)(`span`,{children:`TECHNOLOGIES`})]}),(0,V.jsxs)(`div`,{children:[(0,V.jsx)(`strong`,{children:`8+`}),(0,V.jsx)(`span`,{children:`PROJECTS`})]})]})]}),(0,V.jsxs)(X.div,{className:`reel-portrait hero-portrait-right`,style:e?void 0:{rotateX:s,rotateY:o},initial:e?!1:{opacity:0,scale:.75,y:50},animate:e?!1:{opacity:1,scale:1,y:0},transition:{duration:1.2,delay:.2,ease:[.16,1,.3,1]},children:[(0,V.jsx)(`div`,{className:`portrait-aura`}),!e&&(0,V.jsxs)(V.Fragment,{children:[(0,V.jsxs)(X.div,{className:`hero-floating-card hero-card-one`,animate:{y:[-8,8,-8]},transition:{duration:4,repeat:1/0,ease:`easeInOut`},children:[(0,V.jsx)(cp,{}),(0,V.jsx)(`span`,{children:`INFRASTRUCTURE`})]}),(0,V.jsxs)(X.div,{className:`hero-floating-card hero-card-two`,animate:{y:[8,-8,8]},transition:{duration:4.5,repeat:1/0,ease:`easeInOut`},children:[(0,V.jsx)(sp,{}),(0,V.jsx)(`span`,{children:`SECURITY`})]})]}),(0,V.jsxs)(`div`,{className:`orbit orbit-one`,children:[(0,V.jsx)(`i`,{}),(0,V.jsx)(`i`,{}),(0,V.jsx)(`i`,{})]}),(0,V.jsxs)(`div`,{className:`orbit orbit-two`,children:[(0,V.jsx)(`i`,{}),(0,V.jsx)(`i`,{})]}),(0,V.jsx)(`div`,{className:`orbit orbit-three`}),(0,V.jsxs)(`div`,{className:`portrait-frame`,children:[(0,V.jsx)(`img`,{src:$.profileImage,alt:$.name,draggable:!1}),!e&&(0,V.jsx)(`div`,{className:`portrait-scan`})]}),(0,V.jsxs)(`div`,{className:`portrait-caption`,children:[(0,V.jsx)(`span`,{children:`01`}),(0,V.jsx)(`span`,{children:`NAIMISH SINGH`})]})]})]}),(0,V.jsxs)(X.div,{className:`reel-footer`,initial:e?!1:{opacity:0},animate:e?!1:{opacity:1},transition:{delay:1.2,duration:.8},children:[(0,V.jsxs)(`button`,{onClick:()=>c(`about`),className:`scroll-label`,children:[(0,V.jsx)(`span`,{children:`SCROLL TO EXPLORE`}),(0,V.jsx)(Dp,{})]}),(0,V.jsx)(`div`,{className:`footer-line`,children:(0,V.jsx)(`span`,{})}),(0,V.jsxs)(`span`,{children:[`INDIA · `,new Date().getFullYear()]})]})]}),(0,V.jsx)(`style`,{children:`
 
-      .reel-hero-grid {
-        width: 100% !important;
-        display: grid !important;
-        grid-template-columns: minmax(0, 1.08fr) minmax(230px, 0.92fr) !important;
-        align-items: center !important;
-        column-gap: clamp(12px, 3vw, 70px) !important;
-      }
-
-      .reel-copy {
-        min-width: 0 !important;
-        position: relative !important;
-        z-index: 5 !important;
-      }
-
-      .reel-portrait.hero-portrait-right {
-        justify-self: end !important;
-        align-self: center !important;
-        width: min(100%, 720px) !important;
-        max-width: none !important;
-        margin: 0 !important;
-        transform-origin: center right !important;
-      }
-
-      /* Keep the complete portrait system together. */
-      .reel-portrait.hero-portrait-right .portrait-frame,
-      .reel-portrait.hero-portrait-right .portrait-aura,
-      .reel-portrait.hero-portrait-right .orbit,
-      .reel-portrait.hero-portrait-right .hero-floating-card,
-      .reel-portrait.hero-portrait-right .portrait-caption {
-        box-sizing: border-box;
-      }
-
-      /* TABLET — same left/right composition, just scaled down. */
-      @media (max-width: 950px) {
-        .reel-hero {
-          min-height: 100svh !important;
-          overflow: hidden !important;
-        }
+        /* ===================================================
+           HERO BASE
+        =================================================== */
 
         .reel-hero-grid {
-          grid-template-columns: minmax(0, 1.05fr) minmax(205px, 0.95fr) !important;
-          column-gap: 8px !important;
-          padding-left: 5vw !important;
-          padding-right: 4vw !important;
+          width: 100%;
+          position: relative;
         }
 
-        .reel-title {
-          font-size: clamp(42px, 8vw, 76px) !important;
-          line-height: 0.94 !important;
+
+        /* ===================================================
+           MOBILE
+        =================================================== */
+
+        @media (max-width: 650px) {
+
+          .hero-mobile-stable {
+            min-height: calc(100svh - 68px) !important;
+            height: auto !important;
+
+            display: block !important;
+
+            padding:
+              82px
+              16px
+              35px !important;
+
+            overflow: hidden !important;
+          }
+
+
+          .hero-mobile-stable .reel-hero-grid {
+            display: grid !important;
+
+            grid-template-columns:
+              minmax(0, 1.08fr)
+              minmax(125px, 0.92fr) !important;
+
+            align-items: center !important;
+
+            column-gap: 4px !important;
+
+            padding: 0 !important;
+
+            margin: 0 !important;
+          }
+
+
+          /* -----------------------------------------------
+             TEXT
+          ----------------------------------------------- */
+
+          .hero-mobile-stable .reel-copy {
+            width: 100% !important;
+
+            padding: 0 !important;
+
+            margin: 0 !important;
+
+            transform: none !important;
+          }
+
+
+          .hero-mobile-stable .reel-kicker {
+            margin-bottom: 15px !important;
+
+            font-size: 7px !important;
+
+            line-height: 1.4 !important;
+
+            white-space: nowrap !important;
+          }
+
+
+          .hero-mobile-stable .reel-title {
+            margin: 0 !important;
+
+            font-size:
+              clamp(31px, 11.8vw, 48px) !important;
+
+            line-height: 0.9 !important;
+
+            letter-spacing:
+              -0.055em !important;
+          }
+
+
+          .hero-mobile-stable .reel-title span {
+            display: block !important;
+
+            transform: none !important;
+          }
+
+
+          .hero-mobile-stable .reel-intro {
+            margin-top: 15px !important;
+
+            font-size: 8.5px !important;
+
+            line-height: 1.55 !important;
+
+            max-width: 100% !important;
+          }
+
+
+          /* -----------------------------------------------
+             BUTTONS
+          ----------------------------------------------- */
+
+          .hero-mobile-stable .reel-actions {
+            display: flex !important;
+
+            flex-direction: column !important;
+
+            align-items: flex-start !important;
+
+            gap: 7px !important;
+
+            margin-top: 15px !important;
+          }
+
+
+          .hero-mobile-stable .reel-btn {
+            min-height: 34px !important;
+
+            padding:
+              7px 10px !important;
+
+            font-size: 7px !important;
+
+            white-space: nowrap !important;
+          }
+
+
+          /* -----------------------------------------------
+             STATS
+          ----------------------------------------------- */
+
+          .hero-mobile-stable .reel-stats {
+            gap: 11px !important;
+
+            margin-top: 21px !important;
+          }
+
+
+          .hero-mobile-stable .reel-stats strong {
+            font-size: 18px !important;
+          }
+
+
+          .hero-mobile-stable .reel-stats span {
+            font-size: 5px !important;
+
+            letter-spacing: 0.06em !important;
+          }
+
+
+          /* -----------------------------------------------
+             PORTRAIT
+          ----------------------------------------------- */
+
+          .hero-mobile-stable
+          .reel-portrait.hero-portrait-right {
+
+            width:
+              min(100%, 205px) !important;
+
+            max-width: 205px !important;
+
+            margin: 0 !important;
+
+            justify-self: end !important;
+
+            align-self: center !important;
+
+            transform: none !important;
+
+            min-height: 0 !important;
+
+            perspective: none !important;
+
+            transform-style: flat !important;
+          }
+
+
+          /* -----------------------------------------------
+             PORTRAIT FRAME
+          ----------------------------------------------- */
+
+          .hero-mobile-stable
+          .portrait-frame {
+
+            width: 63% !important;
+
+            animation: none !important;
+
+            transform: none !important;
+
+            will-change: auto !important;
+          }
+
+
+          .hero-mobile-stable
+          .portrait-aura {
+
+            animation: none !important;
+
+            transform: none !important;
+
+            opacity: 0.75 !important;
+
+            will-change: auto !important;
+          }
+
+
+          /* -----------------------------------------------
+             ORBITS
+          ----------------------------------------------- */
+
+          .hero-mobile-stable .orbit {
+
+            animation: none !important;
+
+            transform: none !important;
+
+            will-change: auto !important;
+          }
+
+
+          .hero-mobile-stable .orbit-one {
+            width: 82% !important;
+            height: 82% !important;
+          }
+
+
+          .hero-mobile-stable .orbit-two {
+            width: 94% !important;
+            height: 65% !important;
+
+            transform: rotate(-22deg) !important;
+          }
+
+
+          .hero-mobile-stable .orbit-three {
+            width: 105% !important;
+            height: 105% !important;
+          }
+
+
+          /* -----------------------------------------------
+             CAPTION
+          ----------------------------------------------- */
+
+          .hero-mobile-stable .portrait-caption {
+
+            font-size: 5.5px !important;
+
+            transform: none !important;
+
+            white-space: nowrap !important;
+          }
+
+
+          /* -----------------------------------------------
+             BACKGROUND EFFECTS
+          ----------------------------------------------- */
+
+          .hero-mobile-stable .hero-ambient {
+
+            animation: none !important;
+
+            transform: none !important;
+
+            opacity: 0.45 !important;
+          }
+
+
+          /* -----------------------------------------------
+             FOOTER
+          ----------------------------------------------- */
+
+          .hero-mobile-stable .reel-footer {
+
+            position: relative !important;
+
+            left: auto !important;
+
+            right: auto !important;
+
+            bottom: auto !important;
+
+            margin-top: 28px !important;
+
+            padding:
+              0 !important;
+
+            transform: none !important;
+          }
+
+
+          .hero-mobile-stable
+          .reel-footer > span:last-child {
+            display: none !important;
+          }
+
         }
 
-        .reel-intro {
-          max-width: 95% !important;
-          font-size: 12px !important;
-          line-height: 1.65 !important;
+
+        /* ===================================================
+           VERY SMALL PHONES
+        =================================================== */
+
+        @media (max-width: 400px) {
+
+          .hero-mobile-stable {
+
+            padding:
+              78px
+              12px
+              30px !important;
+          }
+
+
+          .hero-mobile-stable
+          .reel-hero-grid {
+
+            grid-template-columns:
+              minmax(0, 1.1fr)
+              minmax(112px, 0.9fr) !important;
+
+            column-gap: 2px !important;
+          }
+
+
+          .hero-mobile-stable .reel-title {
+
+            font-size: 29px !important;
+          }
+
+
+          .hero-mobile-stable
+          .reel-portrait.hero-portrait-right {
+
+            width:
+              min(100%, 175px) !important;
+
+            max-width: 175px !important;
+          }
+
+
+          .hero-mobile-stable .reel-intro {
+
+            font-size: 8px !important;
+          }
+
+
+          .hero-mobile-stable .reel-stats {
+
+            gap: 7px !important;
+          }
+
+
+          .hero-mobile-stable
+          .reel-stats strong {
+
+            font-size: 17px !important;
+          }
+
         }
 
-        .reel-portrait.hero-portrait-right {
-          width: min(100%, 430px) !important;
-        }
-
-        .hero-floating-card {
-          transform-origin: center !important;
-        }
-      }
-
-      /* PHONE — do NOT stack. Preserve the exact visual direction:
-         text on left + portrait on right. */
-      @media (max-width: 650px) {
-        .reel-hero {
-          min-height: 100svh !important;
-          overflow: hidden !important;
-        }
-
-        .reel-hero-grid {
-          grid-template-columns: minmax(0, 1.08fr) minmax(125px, 0.92fr) !important;
-          column-gap: 2px !important;
-          padding-left: 16px !important;
-          padding-right: 8px !important;
-          align-items: center !important;
-        }
-
-        .reel-copy {
-          width: 100% !important;
-        }
-
-        .reel-kicker {
-          font-size: 7px !important;
-          letter-spacing: 0.14em !important;
-          white-space: nowrap !important;
-        }
-
-        .reel-title {
-          font-size: clamp(30px, 11.8vw, 48px) !important;
-          line-height: 0.91 !important;
-          letter-spacing: -0.055em !important;
-        }
-
-        .reel-intro {
-          margin-top: 16px !important;
-          max-width: 100% !important;
-          font-size: 8.5px !important;
-          line-height: 1.55 !important;
-        }
-
-        .reel-actions {
-          gap: 5px !important;
-          margin-top: 14px !important;
-        }
-
-        .reel-btn {
-          min-height: 34px !important;
-          padding: 8px 9px !important;
-          font-size: 7px !important;
-          letter-spacing: 0.08em !important;
-        }
-
-        .reel-stats {
-          gap: 10px !important;
-          margin-top: 20px !important;
-        }
-
-        .reel-stats strong {
-          font-size: 20px !important;
-        }
-
-        .reel-stats span {
-          font-size: 5px !important;
-        }
-
-        .reel-portrait.hero-portrait-right {
-          width: min(100%, 205px) !important;
-          justify-self: end !important;
-          margin-right: 0 !important;
-        }
-
-        /* Scale the decorative labels without moving the group. */
-        .hero-floating-card {
-          font-size: 6px !important;
-          padding: 7px 8px !important;
-          gap: 5px !important;
-        }
-
-        .portrait-caption {
-          font-size: 6px !important;
-        }
-
-        .reel-footer {
-          padding-left: 16px !important;
-          padding-right: 16px !important;
-        }
-      }
-
-      /* Very small phones: still keep LEFT + RIGHT composition. */
-      @media (max-width: 400px) {
-        .reel-hero-grid {
-          grid-template-columns: minmax(0, 1.1fr) minmax(112px, 0.9fr) !important;
-          padding-left: 12px !important;
-          padding-right: 5px !important;
-        }
-
-        .reel-title {
-          font-size: 29px !important;
-        }
-
-        .reel-portrait.hero-portrait-right {
-          width: min(100%, 175px) !important;
-        }
-
-        .reel-intro {
-          font-size: 8px !important;
-        }
-
-        .reel-stats {
-          gap: 7px !important;
-        }
-
-        .reel-stats strong {
-          font-size: 17px !important;
-        }
-      }
-    `})]})},Ap=({title:e,subtitle:t})=>(0,V.jsxs)(X.div,{className:`mb-14 text-center`,initial:{opacity:0,y:30},whileInView:{opacity:1,y:0},transition:{duration:.6},viewport:{once:!0},children:[(0,V.jsx)(`h2`,{className:`text-4xl md:text-5xl font-bold text-white`,children:e}),t&&(0,V.jsx)(`p`,{className:`mt-4 max-w-2xl mx-auto text-zinc-400`,children:t})]}),jp={hidden:{opacity:0,y:34,filter:`blur(8px)`},visible:{opacity:1,y:0,filter:`blur(0px)`,transition:{duration:.8,ease:[.22,1,.36,1]}}},Mp={hidden:{},visible:{transition:{staggerChildren:.11,delayChildren:.18}}},Np={hidden:{opacity:0,y:28,scale:.97,filter:`blur(5px)`},visible:{opacity:1,y:0,scale:1,filter:`blur(0px)`,transition:{duration:.65,ease:[.22,1,.36,1]}}},Pp=()=>{let[e,t]=(0,b.useState)(!1),[n,r]=(0,b.useState)(!1),i=(0,b.useRef)(null),a=Lf(i,{amount:.12,once:!0});(0,b.useEffect)(()=>{let e=()=>{let e=window.matchMedia(`(max-width: 650px)`).matches,n=window.matchMedia(`(prefers-reduced-motion: reduce)`).matches;t(e),r(n)};return e(),window.addEventListener(`resize`,e),()=>{window.removeEventListener(`resize`,e)}},[]);let o=n;return(0,V.jsxs)(V.Fragment,{children:[(0,V.jsxs)(`section`,{ref:i,id:`about`,className:`ns-about-section`,children:[(0,V.jsx)(X.div,{initial:o?!1:{opacity:0,y:20},animate:o||a?{opacity:1,y:0}:{opacity:0,y:20},transition:{duration:.65,ease:[.22,1,.36,1]},children:(0,V.jsx)(Ap,{title:`About Me`,subtitle:`A closer look at the person behind the systems.`})}),(0,V.jsxs)(`div`,{className:`ns-about-container`,children:[(0,V.jsxs)(X.div,{className:`ns-profile-column`,initial:o?!1:{opacity:0,x:-25},animate:o||a?{opacity:1,x:0}:{opacity:0,x:-25},transition:{duration:.75,delay:.08,ease:[.22,1,.36,1]},children:[!e&&(0,V.jsx)(`div`,{className:`ns-profile-aura`}),!e&&!n&&(0,V.jsxs)(V.Fragment,{children:[(0,V.jsx)(`div`,{className:`\r
+      `})]})},Ap=({title:e,subtitle:t})=>(0,V.jsxs)(X.div,{className:`mb-14 text-center`,initial:{opacity:0,y:30},whileInView:{opacity:1,y:0},transition:{duration:.6},viewport:{once:!0},children:[(0,V.jsx)(`h2`,{className:`text-4xl md:text-5xl font-bold text-white`,children:e}),t&&(0,V.jsx)(`p`,{className:`mt-4 max-w-2xl mx-auto text-zinc-400`,children:t})]}),jp={hidden:{opacity:0,y:34,filter:`blur(8px)`},visible:{opacity:1,y:0,filter:`blur(0px)`,transition:{duration:.8,ease:[.22,1,.36,1]}}},Mp={hidden:{},visible:{transition:{staggerChildren:.11,delayChildren:.18}}},Np={hidden:{opacity:0,y:28,scale:.97,filter:`blur(5px)`},visible:{opacity:1,y:0,scale:1,filter:`blur(0px)`,transition:{duration:.65,ease:[.22,1,.36,1]}}},Pp=()=>{let[e,t]=(0,b.useState)(!1),[n,r]=(0,b.useState)(!1),i=(0,b.useRef)(null),a=Lf(i,{amount:.12,once:!0});(0,b.useEffect)(()=>{let e=()=>{let e=window.matchMedia(`(max-width: 650px)`).matches,n=window.matchMedia(`(prefers-reduced-motion: reduce)`).matches;t(e),r(n)};return e(),window.addEventListener(`resize`,e),()=>{window.removeEventListener(`resize`,e)}},[]);let o=n;return(0,V.jsxs)(V.Fragment,{children:[(0,V.jsxs)(`section`,{ref:i,id:`about`,className:`ns-about-section`,children:[(0,V.jsx)(X.div,{initial:o?!1:{opacity:0,y:20},animate:o||a?{opacity:1,y:0}:{opacity:0,y:20},transition:{duration:.65,ease:[.22,1,.36,1]},children:(0,V.jsx)(Ap,{title:`About Me`,subtitle:`A closer look at the person behind the systems.`})}),(0,V.jsxs)(`div`,{className:`ns-about-container`,children:[(0,V.jsxs)(X.div,{className:`ns-profile-column`,initial:o?!1:{opacity:0,x:-25},animate:o||a?{opacity:1,x:0}:{opacity:0,x:-25},transition:{duration:.75,delay:.08,ease:[.22,1,.36,1]},children:[!e&&(0,V.jsx)(`div`,{className:`ns-profile-aura`}),!e&&!n&&(0,V.jsxs)(V.Fragment,{children:[(0,V.jsx)(`div`,{className:`\r
                     ns-profile-orbit\r
                     ns-profile-orbit-one\r
                   `}),(0,V.jsx)(`div`,{className:`\r
