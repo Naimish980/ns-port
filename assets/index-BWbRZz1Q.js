@@ -1187,7 +1187,7 @@ to {
 
           flex-direction: column;
 
-          align-items: center;
+          align-items: flex-end;
 
           justify-content: flex-start;
 
@@ -2340,6 +2340,9 @@ to {
 
             width:
               100%;
+
+            align-items:
+              center;
 
             justify-content:
               flex-start;
