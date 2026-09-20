@@ -195,10 +195,25 @@ to {
            NAVBAR
         ===================================================== */
 
+        @keyframes nsNavbarIn {
+          from {
+            opacity: 0;
+            transform: translateY(-14px);
+          }
+
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
         .ns-navbar {
           position: fixed;
 
           top: 0;
+
+          animation:
+            nsNavbarIn 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
           left: 0;
           right: 0;
 
@@ -291,6 +306,18 @@ to {
         }
 
 
+        @keyframes nsNavItemIn {
+          from {
+            opacity: 0;
+            transform: translateY(-6px);
+          }
+
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
         /* =====================================================
            LOGO
         ===================================================== */
@@ -299,6 +326,9 @@ to {
           position: relative;
 
           display: inline-flex;
+
+          animation:
+            nsNavItemIn 0.55s 0.12s cubic-bezier(0.22, 1, 0.36, 1) both;
           align-items: center;
 
           gap: 8px;
@@ -414,6 +444,9 @@ to {
 
           left: 50%;
 
+          animation:
+            nsNavItemIn 0.55s 0.18s cubic-bezier(0.22, 1, 0.36, 1) both;
+
           transform:
             translateX(-50%);
 
@@ -459,6 +492,11 @@ to {
 
         .ns-nav-link.active {
           color: #efc566;
+
+          background:
+            rgba(213, 170, 80, 0.045);
+
+          border-radius: 6px;
         }
 
         .ns-nav-link::before {
@@ -532,6 +570,9 @@ to {
           display: flex;
 
           align-items: center;
+
+          animation:
+            nsNavItemIn 0.55s 0.24s cubic-bezier(0.22, 1, 0.36, 1) both;
 
           gap: 20px;
         }
@@ -843,6 +884,51 @@ to {
             background 0.25s ease;
         }
 
+        .ns-mobile-link {
+          animation:
+            nsMobileLinkIn 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+
+        .ns-mobile-link:nth-child(1) {
+          animation-delay: 0.03s;
+        }
+
+        .ns-mobile-link:nth-child(2) {
+          animation-delay: 0.06s;
+        }
+
+        .ns-mobile-link:nth-child(3) {
+          animation-delay: 0.09s;
+        }
+
+        .ns-mobile-link:nth-child(4) {
+          animation-delay: 0.12s;
+        }
+
+        .ns-mobile-link:nth-child(5) {
+          animation-delay: 0.15s;
+        }
+
+        .ns-mobile-link:nth-child(6) {
+          animation-delay: 0.18s;
+        }
+
+        .ns-mobile-link:nth-child(7) {
+          animation-delay: 0.21s;
+        }
+
+        @keyframes nsMobileLinkIn {
+          from {
+            opacity: 0;
+            transform: translateY(-5px);
+          }
+
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
         .ns-mobile-link:hover,
         .ns-mobile-link.active {
           color: #efc566;
@@ -1033,6 +1119,14 @@ to {
         ===================================================== */
 
         @media (prefers-reduced-motion: reduce) {
+          .ns-navbar,
+          .ns-nav-logo,
+          .ns-nav-center,
+          .ns-nav-right,
+          .ns-mobile-link {
+            animation: none !important;
+          }
+
           .ns-nav-logo-dot {
             animation: none;
           }
