@@ -1473,39 +1473,18 @@ to {
             padding-right: 12px !important;
           }
         }
-      `})]})},Dp=({title:e,subtitle:t})=>(0,V.jsxs)(Z.div,{className:`mb-14 text-center`,initial:{opacity:0,y:30},whileInView:{opacity:1,y:0},transition:{duration:.6},viewport:{once:!0},children:[(0,V.jsx)(`h2`,{className:`text-4xl md:text-5xl font-bold text-white`,children:e}),t&&(0,V.jsx)(`p`,{className:`mt-4 max-w-2xl mx-auto text-zinc-400`,children:t})]}),Op=()=>{let[e,t]=(0,b.useState)(!1),[n,r]=(0,b.useState)(!1);(0,b.useEffect)(()=>{let e=()=>{t(window.matchMedia(`(hover: hover) and (pointer: fine)`).matches),r(window.matchMedia(`(prefers-reduced-motion: reduce)`).matches)};return e(),window.addEventListener(`resize`,e),()=>{window.removeEventListener(`resize`,e)}},[]);let i=Q(0),a=Q(0),o=Nf(i,{stiffness:180,damping:22,mass:.7}),s=Nf(a,{stiffness:180,damping:22,mass:.7});return(0,V.jsxs)(V.Fragment,{children:[(0,V.jsxs)(`section`,{id:`about`,className:`ns-about-section`,children:[(0,V.jsx)(Dp,{title:`About Me`,subtitle:`A closer look at the person behind the systems.`}),(0,V.jsxs)(`div`,{className:`ns-about-container`,children:[(0,V.jsxs)(`div`,{className:`ns-profile-column`,children:[(0,V.jsx)(`div`,{className:`ns-profile-aura`}),(0,V.jsx)(Z.div,{className:`\r
-                ns-profile-orbit\r
-                ns-profile-orbit-one\r
-              `,animate:n?void 0:{rotate:360},transition:{duration:25,repeat:1/0,ease:`linear`}}),(0,V.jsx)(Z.div,{className:`\r
-                ns-profile-orbit\r
-                ns-profile-orbit-two\r
-              `,animate:n?void 0:{rotate:-360},transition:{duration:32,repeat:1/0,ease:`linear`}}),(0,V.jsx)(`div`,{className:n?`ns-profile-float ns-no-motion`:`ns-profile-float`,children:(0,V.jsxs)(Z.div,{className:`ns-profile-frame`,onMouseMove:t=>{if(!e||n)return;let r=t.currentTarget.getBoundingClientRect(),o=t.clientX-r.left,s=t.clientY-r.top,c=o/r.width-.5,l=s/r.height-.5;i.set(c*9),a.set(l*-9)},onMouseLeave:()=>{i.set(0),a.set(0)},style:{rotateX:s,rotateY:o,transformPerspective:1e3},children:[(0,V.jsx)(`div`,{className:`ns-profile-border`}),(0,V.jsxs)(`div`,{className:`ns-profile-image-wrap`,children:[(0,V.jsx)(Z.img,{src:`/ns-port/profile-cinematic.png`,alt:`Naimish Singh - IT Engineer`,className:`ns-profile-image`,draggable:!1,animate:n?{scale:1}:{scale:[1,1.018,1]},transition:{duration:8,repeat:1/0,ease:`easeInOut`}}),(0,V.jsx)(`div`,{className:`ns-profile-overlay`}),!n&&(0,V.jsx)(Z.div,{className:`ns-profile-light-sweep`,animate:{x:[`-130%`,`230%`],opacity:[0,.7,0]},transition:{duration:5.5,repeat:1/0,repeatDelay:2,ease:`easeInOut`}}),!n&&(0,V.jsx)(Z.div,{className:`ns-profile-scan`,animate:{y:[`-20%`,`120%`],opacity:[0,.75,0]},transition:{duration:4.5,repeat:1/0,repeatDelay:3,ease:`linear`}}),(0,V.jsx)(`div`,{className:`ns-profile-noise`}),(0,V.jsx)(`span`,{className:`ns-corner ns-corner-tl`}),(0,V.jsx)(`span`,{className:`ns-corner ns-corner-tr`}),(0,V.jsx)(`span`,{className:`ns-corner ns-corner-bl`}),(0,V.jsx)(`span`,{className:`ns-corner ns-corner-br`}),(0,V.jsxs)(`div`,{className:`\r
-                    ns-profile-meta\r
-                    ns-profile-meta-top\r
-                  `,children:[(0,V.jsx)(`span`,{className:`ns-meta-dot`}),(0,V.jsx)(`span`,{children:`PROFILE / 01`})]}),(0,V.jsxs)(`div`,{className:`\r
-                    ns-profile-meta\r
-                    ns-profile-meta-bottom\r
-                  `,children:[(0,V.jsx)(`span`,{children:`NS — IT`}),(0,V.jsx)(`span`,{className:`ns-meta-line`}),(0,V.jsx)(`span`,{children:`INDIA`})]})]})]})}),(0,V.jsxs)(`div`,{className:`ns-profile-caption`,children:[(0,V.jsxs)(`div`,{children:[(0,V.jsx)(`span`,{className:`ns-caption-small`,children:`IT ENGINEER`}),(0,V.jsx)(`span`,{className:`ns-caption-main`,children:`SYSTEMS / NETWORK / CLOUD`})]}),(0,V.jsxs)(`div`,{className:`ns-caption-status`,children:[(0,V.jsx)(pp,{}),(0,V.jsx)(`span`,{children:`AVAILABLE`})]})]})]}),(0,V.jsxs)(`div`,{className:`ns-about-content`,children:[(0,V.jsxs)(`div`,{className:`ns-about-overline`,children:[(0,V.jsx)(`span`,{}),(0,V.jsx)(`p`,{children:`WHO I AM`})]}),(0,V.jsxs)(`h2`,{className:`ns-about-heading`,children:[`BUILDING`,(0,V.jsx)(`br`,{}),(0,V.jsx)(`span`,{className:`ns-about-outline`,children:`RELIABLE`}),(0,V.jsx)(`br`,{}),`DIGITAL SYSTEMS.`]}),(0,V.jsx)(`p`,{className:`ns-about-description`,children:`I'm an IT Engineer focused on desktop support, hardware & networking, system administration and cloud technologies. I enjoy solving technical problems, improving infrastructure and building reliable environments that keep businesses moving.`}),(0,V.jsx)(`p`,{className:`\r
-              ns-about-description\r
-              ns-about-secondary\r
-            `,children:`My approach is simple — understand the problem, find the root cause, fix it properly and keep the system stable.`}),(0,V.jsxs)(`div`,{className:`ns-about-grid`,children:[(0,V.jsxs)(Z.div,{className:`ns-about-item`,whileHover:n?void 0:{y:-5},transition:{duration:.25},children:[(0,V.jsxs)(`div`,{className:`ns-about-item-top`,children:[(0,V.jsx)(`div`,{className:`ns-about-icon`,children:(0,V.jsx)(ip,{})}),(0,V.jsx)(`span`,{children:`01`})]}),(0,V.jsx)(`h3`,{children:`IT Infrastructure`}),(0,V.jsx)(`p`,{children:`Systems, Windows environments, hardware, endpoint support and infrastructure operations.`}),(0,V.jsx)(`div`,{className:`ns-about-item-line`})]}),(0,V.jsxs)(Z.div,{className:`ns-about-item`,whileHover:n?void 0:{y:-5},transition:{duration:.25},children:[(0,V.jsxs)(`div`,{className:`ns-about-item-top`,children:[(0,V.jsx)(`div`,{className:`ns-about-icon`,children:(0,V.jsx)(sp,{})}),(0,V.jsx)(`span`,{children:`02`})]}),(0,V.jsx)(`h3`,{children:`Networking`}),(0,V.jsx)(`p`,{children:`LAN, WAN, Wi-Fi, connectivity, troubleshooting and network-level problem solving.`}),(0,V.jsx)(`div`,{className:`ns-about-item-line`})]}),(0,V.jsxs)(Z.div,{className:`ns-about-item`,whileHover:n?void 0:{y:-5},transition:{duration:.25},children:[(0,V.jsxs)(`div`,{className:`ns-about-item-top`,children:[(0,V.jsx)(`div`,{className:`ns-about-icon`,children:(0,V.jsx)(fp,{})}),(0,V.jsx)(`span`,{children:`03`})]}),(0,V.jsx)(`h3`,{children:`AWS Cloud`}),(0,V.jsx)(`p`,{children:`Cloud fundamentals, EC2, S3, IAM, VPC, CloudWatch and infrastructure services.`}),(0,V.jsx)(`div`,{className:`ns-about-item-line`})]}),(0,V.jsxs)(Z.div,{className:`ns-about-item`,whileHover:n?void 0:{y:-5},transition:{duration:.25},children:[(0,V.jsxs)(`div`,{className:`ns-about-item-top`,children:[(0,V.jsx)(`div`,{className:`ns-about-icon`,children:(0,V.jsx)(tp,{})}),(0,V.jsx)(`span`,{children:`04`})]}),(0,V.jsx)(`h3`,{children:`Troubleshooting`}),(0,V.jsx)(`p`,{children:`Root-cause analysis, user support, incident resolution and system diagnostics.`}),(0,V.jsx)(`div`,{className:`ns-about-item-line`})]})]}),(0,V.jsxs)(`div`,{className:`ns-about-footer`,children:[(0,V.jsxs)(`div`,{className:`ns-about-footer-left`,children:[(0,V.jsx)(`span`,{className:`ns-footer-number`,children:`01`}),(0,V.jsxs)(`div`,{children:[(0,V.jsx)(`strong`,{children:`ALWAYS LEARNING`}),(0,V.jsx)(`small`,{children:`Technology never stands still.`})]})]}),(0,V.jsx)(Z.div,{className:`ns-about-arrow`,animate:n?void 0:{y:[0,5,0]},transition:{duration:1.8,repeat:1/0,ease:`easeInOut`},children:(0,V.jsx)(Cp,{})})]})]})]})]}),(0,V.jsx)(`style`,{children:`
+      `})]})},Dp=({title:e,subtitle:t})=>(0,V.jsxs)(Z.div,{className:`mb-14 text-center`,initial:{opacity:0,y:30},whileInView:{opacity:1,y:0},transition:{duration:.6},viewport:{once:!0},children:[(0,V.jsx)(`h2`,{className:`text-4xl md:text-5xl font-bold text-white`,children:e}),t&&(0,V.jsx)(`p`,{className:`mt-4 max-w-2xl mx-auto text-zinc-400`,children:t})]}),Op=()=>(0,V.jsxs)(V.Fragment,{children:[(0,V.jsxs)(`section`,{id:`about`,className:`ns-about-section`,children:[(0,V.jsx)(Dp,{title:`About Me`,subtitle:`A closer look at the person behind the systems.`}),(0,V.jsxs)(`div`,{className:`ns-about-container`,children:[(0,V.jsxs)(`div`,{className:`ns-profile-column`,children:[(0,V.jsx)(`div`,{className:`ns-profile-aura`}),(0,V.jsx)(`div`,{className:`ns-profile-orbit ns-profile-orbit-one`}),(0,V.jsx)(`div`,{className:`ns-profile-orbit ns-profile-orbit-two`}),(0,V.jsx)(`div`,{className:`ns-profile-float`,children:(0,V.jsxs)(`div`,{className:`ns-profile-frame`,children:[(0,V.jsx)(`div`,{className:`ns-profile-border`}),(0,V.jsxs)(`div`,{className:`ns-profile-image-wrap`,children:[(0,V.jsx)(`img`,{src:`/ns-port/profile-cinematic.png`,alt:`Naimish Singh - IT Engineer`,className:`ns-profile-image`,draggable:!1}),(0,V.jsx)(`div`,{className:`ns-profile-overlay`}),(0,V.jsx)(`div`,{className:`ns-profile-light-sweep`}),(0,V.jsx)(`div`,{className:`ns-profile-scan`}),(0,V.jsx)(`div`,{className:`ns-profile-noise`}),(0,V.jsx)(`span`,{className:`ns-corner ns-corner-tl`}),(0,V.jsx)(`span`,{className:`ns-corner ns-corner-tr`}),(0,V.jsx)(`span`,{className:`ns-corner ns-corner-bl`}),(0,V.jsx)(`span`,{className:`ns-corner ns-corner-br`}),(0,V.jsxs)(`div`,{className:`ns-profile-meta ns-profile-meta-top`,children:[(0,V.jsx)(`span`,{className:`ns-meta-dot`}),(0,V.jsx)(`span`,{children:`PROFILE / 01`})]}),(0,V.jsxs)(`div`,{className:`ns-profile-meta ns-profile-meta-bottom`,children:[(0,V.jsx)(`span`,{children:`NS — IT`}),(0,V.jsx)(`span`,{className:`ns-meta-line`}),(0,V.jsx)(`span`,{children:`INDIA`})]})]})]})}),(0,V.jsxs)(`div`,{className:`ns-profile-caption`,children:[(0,V.jsxs)(`div`,{children:[(0,V.jsx)(`span`,{className:`ns-caption-small`,children:`IT ENGINEER`}),(0,V.jsx)(`span`,{className:`ns-caption-main`,children:`SYSTEMS / NETWORK / CLOUD`})]}),(0,V.jsxs)(`div`,{className:`ns-caption-status`,children:[(0,V.jsx)(pp,{}),(0,V.jsx)(`span`,{children:`AVAILABLE`})]})]})]}),(0,V.jsxs)(`div`,{className:`ns-about-content`,children:[(0,V.jsxs)(`div`,{className:`ns-about-overline`,children:[(0,V.jsx)(`span`,{}),(0,V.jsx)(`p`,{children:`WHO I AM`})]}),(0,V.jsxs)(`h2`,{className:`ns-about-heading`,children:[`BUILDING`,(0,V.jsx)(`br`,{}),(0,V.jsx)(`span`,{className:`ns-about-outline`,children:`RELIABLE`}),(0,V.jsx)(`br`,{}),`DIGITAL SYSTEMS.`]}),(0,V.jsx)(`p`,{className:`ns-about-description`,children:`I'm an IT Engineer focused on desktop support, hardware & networking, system administration and cloud technologies. I enjoy solving technical problems, improving infrastructure and building reliable environments that keep businesses moving.`}),(0,V.jsx)(`p`,{className:`ns-about-description ns-about-secondary`,children:`My approach is simple — understand the problem, find the root cause, fix it properly and keep the system stable.`}),(0,V.jsxs)(`div`,{className:`ns-about-grid`,children:[(0,V.jsxs)(`div`,{className:`ns-about-item`,children:[(0,V.jsxs)(`div`,{className:`ns-about-item-top`,children:[(0,V.jsx)(`div`,{className:`ns-about-icon`,children:(0,V.jsx)(ip,{})}),(0,V.jsx)(`span`,{children:`01`})]}),(0,V.jsx)(`h3`,{children:`IT Infrastructure`}),(0,V.jsx)(`p`,{children:`Systems, Windows environments, hardware, endpoint support and infrastructure operations.`}),(0,V.jsx)(`div`,{className:`ns-about-item-line`})]}),(0,V.jsxs)(`div`,{className:`ns-about-item`,children:[(0,V.jsxs)(`div`,{className:`ns-about-item-top`,children:[(0,V.jsx)(`div`,{className:`ns-about-icon`,children:(0,V.jsx)(sp,{})}),(0,V.jsx)(`span`,{children:`02`})]}),(0,V.jsx)(`h3`,{children:`Networking`}),(0,V.jsx)(`p`,{children:`LAN, WAN, Wi-Fi, connectivity, troubleshooting and network-level problem solving.`}),(0,V.jsx)(`div`,{className:`ns-about-item-line`})]}),(0,V.jsxs)(`div`,{className:`ns-about-item`,children:[(0,V.jsxs)(`div`,{className:`ns-about-item-top`,children:[(0,V.jsx)(`div`,{className:`ns-about-icon`,children:(0,V.jsx)(fp,{})}),(0,V.jsx)(`span`,{children:`03`})]}),(0,V.jsx)(`h3`,{children:`AWS Cloud`}),(0,V.jsx)(`p`,{children:`Cloud fundamentals, EC2, S3, IAM, VPC, CloudWatch and infrastructure services.`}),(0,V.jsx)(`div`,{className:`ns-about-item-line`})]}),(0,V.jsxs)(`div`,{className:`ns-about-item`,children:[(0,V.jsxs)(`div`,{className:`ns-about-item-top`,children:[(0,V.jsx)(`div`,{className:`ns-about-icon`,children:(0,V.jsx)(tp,{})}),(0,V.jsx)(`span`,{children:`04`})]}),(0,V.jsx)(`h3`,{children:`Troubleshooting`}),(0,V.jsx)(`p`,{children:`Root-cause analysis, user support, incident resolution and system diagnostics.`}),(0,V.jsx)(`div`,{className:`ns-about-item-line`})]})]}),(0,V.jsxs)(`div`,{className:`ns-about-footer`,children:[(0,V.jsxs)(`div`,{className:`ns-about-footer-left`,children:[(0,V.jsx)(`span`,{className:`ns-footer-number`,children:`01`}),(0,V.jsxs)(`div`,{children:[(0,V.jsx)(`strong`,{children:`ALWAYS LEARNING`}),(0,V.jsx)(`small`,{children:`Technology never stands still.`})]})]}),(0,V.jsx)(`div`,{className:`ns-about-arrow`,children:(0,V.jsx)(Cp,{})})]})]})]})]}),(0,V.jsx)(`style`,{children:`
 
         /* =====================================================
-           SECTION
+           ABOUT SECTION
         ===================================================== */
 
         .ns-about-section {
           position: relative;
           width: 100%;
           min-height: 100vh;
-
-          padding:
-            115px
-            6vw
-            100px;
-
+          padding: 115px 6vw 100px;
           overflow: hidden;
-
           background:
             radial-gradient(
               circle at 15% 50%,
@@ -1513,21 +1492,16 @@ to {
               transparent 32%
             ),
             #070707;
-
           scroll-margin-top: 80px;
         }
 
         .ns-about-section::before {
           content: "";
-
           position: absolute;
-
           top: 0;
           left: 6vw;
           right: 6vw;
-
           height: 1px;
-
           background:
             linear-gradient(
               90deg,
@@ -1537,7 +1511,6 @@ to {
             );
         }
 
-
         /* =====================================================
            CONTAINER
         ===================================================== */
@@ -1546,15 +1519,8 @@ to {
           position: relative;
           z-index: 2;
 
-          width: min(
-            1400px,
-            100%
-          );
-
-          margin:
-            65px
-            auto
-            0;
+          width: min(1400px, 100%);
+          margin: 65px auto 0;
 
           display: grid;
 
@@ -1562,15 +1528,13 @@ to {
             minmax(330px, 0.85fr)
             minmax(450px, 1.15fr);
 
-          gap:
-            clamp(50px, 7vw, 110px);
+          gap: clamp(50px, 7vw, 110px);
 
           align-items: center;
         }
 
-
         /* =====================================================
-           PROFILE
+           PROFILE COLUMN
         ===================================================== */
 
         .ns-profile-column {
@@ -1579,13 +1543,14 @@ to {
           min-height: 620px;
 
           display: flex;
-
           flex-direction: column;
-
           align-items: center;
-
           justify-content: center;
         }
+
+        /* =====================================================
+           AURA
+        ===================================================== */
 
         .ns-profile-aura {
           position: absolute;
@@ -1608,7 +1573,6 @@ to {
           pointer-events: none;
         }
 
-
         /* =====================================================
            ORBITS
         ===================================================== */
@@ -1626,11 +1590,16 @@ to {
           border-radius: 50%;
 
           pointer-events: none;
+
+          animation:
+            nsOrbitOne
+            25s
+            linear
+            infinite;
         }
 
         .ns-profile-orbit-one {
-          transform:
-            rotate(24deg);
+          transform: rotate(24deg);
         }
 
         .ns-profile-orbit-two {
@@ -1640,46 +1609,50 @@ to {
           border-color:
             rgba(239,197,102,0.07);
 
-          transform:
-            rotate(-34deg);
+          transform: rotate(-34deg);
+
+          animation:
+            nsOrbitTwo
+            32s
+            linear
+            infinite;
         }
 
+        @keyframes nsOrbitOne {
+          from {
+            transform:
+              rotate(24deg);
+          }
+
+          to {
+            transform:
+              rotate(384deg);
+          }
+        }
+
+        @keyframes nsOrbitTwo {
+          from {
+            transform:
+              rotate(-34deg);
+          }
+
+          to {
+            transform:
+              rotate(-394deg);
+          }
+        }
 
         /* =====================================================
-           FLOAT
+           PROFILE FLOAT
+           IMPORTANT:
+           No transform animation here.
+           This prevents scroll/compositing glitches.
         ===================================================== */
 
         .ns-profile-float {
           position: relative;
           z-index: 4;
-
-          animation:
-            nsProfileFloat
-            7s
-            ease-in-out
-            infinite;
         }
-
-        .ns-profile-float.ns-no-motion {
-          animation: none;
-        }
-
-        @keyframes nsProfileFloat {
-
-          0%,
-          100% {
-            transform:
-              translate3d(0,0,0)
-              rotateZ(0deg);
-          }
-
-          50% {
-            transform:
-              translate3d(0,-8px,0)
-              rotateZ(0.3deg);
-          }
-        }
-
 
         /* =====================================================
            FRAME
@@ -1688,14 +1661,10 @@ to {
         .ns-profile-frame {
           position: relative;
 
-          width:
-            min(360px, 72vw);
+          width: min(360px, 72vw);
+          aspect-ratio: 2 / 3;
 
-          aspect-ratio:
-            2 / 3;
-
-          background:
-            #080808;
+          background: #080808;
 
           border:
             1px solid
@@ -1703,22 +1672,25 @@ to {
 
           box-shadow:
             0 0 0 1px
-            rgba(255,255,255,0.025),
+              rgba(255,255,255,0.025),
 
             0 30px 75px
-            rgba(0,0,0,0.75),
+              rgba(0,0,0,0.75),
 
             0 0 70px
-            rgba(213,170,80,0.08);
+              rgba(213,170,80,0.08);
 
-          transform-style:
-            preserve-3d;
+          overflow: hidden;
 
-          will-change:
-            transform;
+          cursor: default;
 
-          cursor:
-            crosshair;
+          transform: translateZ(0);
+
+          backface-visibility: hidden;
+
+          -webkit-backface-visibility: hidden;
+
+          isolation: isolate;
         }
 
         .ns-profile-border {
@@ -1735,7 +1707,6 @@ to {
           pointer-events: none;
         }
 
-
         /* =====================================================
            IMAGE
         ===================================================== */
@@ -1747,12 +1718,17 @@ to {
 
           overflow: hidden;
 
-          background:
-            #080808;
+          background: #080808;
+
+          transform: translateZ(0);
+
+          backface-visibility: hidden;
         }
 
         .ns-profile-image {
           position: absolute;
+
+          inset: 0;
 
           width: 100%;
           height: 100%;
@@ -1767,11 +1743,21 @@ to {
             brightness(0.94);
 
           user-select: none;
+
           pointer-events: none;
 
-          will-change:
-            transform;
+          transform:
+            translateZ(0)
+            scale(1.01);
+
+          backface-visibility: hidden;
+
+          -webkit-backface-visibility: hidden;
         }
+
+        /* =====================================================
+           IMAGE OVERLAY
+        ===================================================== */
 
         .ns-profile-overlay {
           position: absolute;
@@ -1790,7 +1776,6 @@ to {
           pointer-events: none;
         }
 
-
         /* =====================================================
            LIGHT SWEEP
         ===================================================== */
@@ -1805,6 +1790,7 @@ to {
           height: 170%;
 
           transform:
+            translateX(-140%)
             rotate(18deg);
 
           background:
@@ -1816,24 +1802,56 @@ to {
               transparent
             );
 
-          filter:
-            blur(10px);
+          filter: blur(10px);
 
-          mix-blend-mode:
-            screen;
+          mix-blend-mode: screen;
 
           pointer-events: none;
+
+          animation:
+            nsLightSweep
+            6s
+            ease-in-out
+            infinite;
         }
 
+        @keyframes nsLightSweep {
+
+          0% {
+            transform:
+              translateX(-140%)
+              rotate(18deg);
+
+            opacity: 0;
+          }
+
+          20% {
+            opacity: 0.7;
+          }
+
+          55% {
+            opacity: 0;
+          }
+
+          100% {
+            transform:
+              translateX(720%)
+              rotate(18deg);
+
+            opacity: 0;
+          }
+        }
 
         /* =====================================================
-           SCAN
+           SCAN LINE
         ===================================================== */
 
         .ns-profile-scan {
           position: absolute;
 
           left: 0;
+
+          top: -5%;
 
           width: 100%;
           height: 1px;
@@ -1851,8 +1869,34 @@ to {
             rgba(213,170,80,0.4);
 
           pointer-events: none;
+
+          animation:
+            nsScan
+            5s
+            linear
+            infinite;
         }
 
+        @keyframes nsScan {
+
+          0% {
+            top: -5%;
+            opacity: 0;
+          }
+
+          15% {
+            opacity: 0.75;
+          }
+
+          70% {
+            opacity: 0.3;
+          }
+
+          100% {
+            top: 105%;
+            opacity: 0;
+          }
+        }
 
         /* =====================================================
            NOISE
@@ -1870,10 +1914,8 @@ to {
           background-image:
             url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
 
-          mix-blend-mode:
-            overlay;
+          mix-blend-mode: overlay;
         }
-
 
         /* =====================================================
            CORNER MARKS
@@ -1918,27 +1960,20 @@ to {
         .ns-corner-tr {
           top: 18px;
           right: 18px;
-
-          transform:
-            rotate(90deg);
+          transform: rotate(90deg);
         }
 
         .ns-corner-bl {
           bottom: 18px;
           left: 18px;
-
-          transform:
-            rotate(-90deg);
+          transform: rotate(-90deg);
         }
 
         .ns-corner-br {
           right: 18px;
           bottom: 18px;
-
-          transform:
-            rotate(180deg);
+          transform: rotate(180deg);
         }
-
 
         /* =====================================================
            IMAGE META
@@ -1950,19 +1985,15 @@ to {
           z-index: 20;
 
           display: flex;
-
           align-items: center;
 
           gap: 8px;
 
-          font-family:
-            Inter,
-            sans-serif;
+          font-family: Inter, sans-serif;
 
           font-size: 9px;
 
-          letter-spacing:
-            0.18em;
+          letter-spacing: 0.18em;
 
           color:
             rgba(245,241,232,0.72);
@@ -1988,8 +2019,7 @@ to {
 
           border-radius: 50%;
 
-          background:
-            #d5aa50;
+          background: #d5aa50;
 
           box-shadow:
             0 0 8px
@@ -2004,26 +2034,22 @@ to {
             rgba(213,170,80,0.5);
         }
 
-
         /* =====================================================
-           PROFILE CAPTION
+           CAPTION
         ===================================================== */
 
         .ns-profile-caption {
           position: relative;
 
-          width:
-            min(360px, 72vw);
+          width: min(360px, 72vw);
 
           margin-top: 20px;
 
           display: flex;
 
-          justify-content:
-            space-between;
+          justify-content: space-between;
 
-          align-items:
-            flex-end;
+          align-items: flex-end;
 
           border-top:
             1px solid
@@ -2037,8 +2063,7 @@ to {
 
           font-size: 9px;
 
-          letter-spacing:
-            0.25em;
+          letter-spacing: 0.25em;
 
           color:
             rgba(245,241,232,0.48);
@@ -2051,8 +2076,7 @@ to {
 
           font-size: 10px;
 
-          letter-spacing:
-            0.12em;
+          letter-spacing: 0.12em;
 
           color:
             rgba(245,241,232,0.86);
@@ -2067,8 +2091,7 @@ to {
 
           font-size: 8px;
 
-          letter-spacing:
-            0.16em;
+          letter-spacing: 0.16em;
 
           color:
             rgba(245,241,232,0.45);
@@ -2077,10 +2100,8 @@ to {
         .ns-caption-status svg {
           font-size: 5px;
 
-          color:
-            #d5aa50;
+          color: #d5aa50;
         }
-
 
         /* =====================================================
            CONTENT
@@ -2100,7 +2121,6 @@ to {
           visibility: visible;
         }
 
-
         /* =====================================================
            WHO I AM
         ===================================================== */
@@ -2119,8 +2139,7 @@ to {
           width: 35px;
           height: 1px;
 
-          background:
-            #d5aa50;
+          background: #d5aa50;
 
           box-shadow:
             0 0 10px
@@ -2132,13 +2151,11 @@ to {
 
           font-size: 10px;
 
-          letter-spacing:
-            0.25em;
+          letter-spacing: 0.25em;
 
           color:
             rgba(245,241,232,0.48);
         }
-
 
         /* =====================================================
            HEADING
@@ -2147,35 +2164,27 @@ to {
         .ns-about-heading {
           margin: 0;
 
-          font-family:
-            Inter,
-            sans-serif;
+          font-family: Inter, sans-serif;
 
           font-size:
             clamp(42px, 5vw, 76px);
 
-          line-height:
-            0.94;
+          line-height: 0.94;
 
-          font-weight:
-            700;
+          font-weight: 700;
 
-          letter-spacing:
-            -0.055em;
+          letter-spacing: -0.055em;
 
-          color:
-            #f5f1e8;
+          color: #f5f1e8;
         }
 
         .ns-about-outline {
-          color:
-            transparent;
+          color: transparent;
 
           -webkit-text-stroke:
             1px
             rgba(213,170,80,0.82);
         }
-
 
         /* =====================================================
            DESCRIPTION
@@ -2184,92 +2193,90 @@ to {
         .ns-about-description {
           max-width: 670px;
 
-          margin:
-            28px
-            0
-            0;
+          margin: 28px 0 0;
 
           font-size: 15px;
 
-          line-height:
-            1.85;
+          line-height: 1.85;
 
           color:
             rgba(245,241,232,0.68);
         }
 
         .ns-about-secondary {
-          margin-top:
-            12px;
+          margin-top: 12px;
 
           color:
             rgba(245,241,232,0.42);
         }
-
 
         /* =====================================================
            CARDS
         ===================================================== */
 
         .ns-about-grid {
-          display: grid !important;
+          display: grid;
 
           grid-template-columns:
-            repeat(2, minmax(0,1fr)) !important;
+            repeat(2, minmax(0, 1fr));
 
-          gap: 12px !important;
+          gap: 12px;
 
-          width: 100% !important;
+          width: 100%;
 
-          height: auto !important;
-
-          min-height: 0 !important;
-
-          margin-top: 34px !important;
-
-          opacity: 1 !important;
-
-          visibility: visible !important;
+          margin-top: 34px;
         }
 
         .ns-about-item {
-          position: relative !important;
+          position: relative;
 
-          display: block !important;
+          display: block;
 
-          width: 100% !important;
+          width: 100%;
 
-          min-height: 180px !important;
+          min-height: 180px;
 
-          height: auto !important;
+          box-sizing: border-box;
 
-          box-sizing: border-box !important;
-
-          padding: 20px !important;
-
-          opacity: 1 !important;
-
-          visibility: visible !important;
-
-          transform: none;
+          padding: 20px;
 
           background:
             linear-gradient(
               135deg,
               rgba(255,255,255,0.035),
               rgba(255,255,255,0.008)
-            ) !important;
+            );
 
           border:
             1px solid
-            rgba(213,170,80,0.22) !important;
+            rgba(213,170,80,0.22);
 
-          overflow: hidden !important;
+          overflow: hidden;
 
           transition:
             border-color 0.35s ease,
             background 0.35s ease,
-            box-shadow 0.35s ease;
+            box-shadow 0.35s ease,
+            transform 0.35s ease;
+        }
+
+        .ns-about-item:hover {
+          border-color:
+            rgba(213,170,80,0.5);
+
+          background:
+            linear-gradient(
+              135deg,
+              rgba(213,170,80,0.07),
+              rgba(255,255,255,0.01)
+            );
+
+          box-shadow:
+            0 20px 45px
+            rgba(0,0,0,0.25);
+
+          transform:
+            translateY(-5px);
         }
 
         .ns-about-item::before {
@@ -2291,22 +2298,6 @@ to {
             );
 
           opacity: 0.5;
-        }
-
-        .ns-about-item:hover {
-          border-color:
-            rgba(213,170,80,0.5) !important;
-
-          background:
-            linear-gradient(
-              135deg,
-              rgba(213,170,80,0.07),
-              rgba(255,255,255,0.01)
-            ) !important;
-
-          box-shadow:
-            0 20px 45px
-            rgba(0,0,0,0.25);
         }
 
         .ns-about-item-top {
@@ -2331,8 +2322,7 @@ to {
             1px solid
             rgba(213,170,80,0.28);
 
-          color:
-            #d5aa50;
+          color: #d5aa50;
 
           font-size: 13px;
 
@@ -2343,26 +2333,20 @@ to {
         .ns-about-item-top > span {
           font-size: 9px;
 
-          letter-spacing:
-            0.15em;
+          letter-spacing: 0.15em;
 
           color:
             rgba(245,241,232,0.28);
         }
 
         .ns-about-item h3 {
-          margin:
-            20px
-            0
-            8px;
+          margin: 20px 0 8px;
 
           font-size: 15px;
 
-          font-weight:
-            600;
+          font-weight: 600;
 
-          color:
-            #f5f1e8;
+          color: #f5f1e8;
         }
 
         .ns-about-item p {
@@ -2370,8 +2354,7 @@ to {
 
           font-size: 11px;
 
-          line-height:
-            1.7;
+          line-height: 1.7;
 
           color:
             rgba(245,241,232,0.52);
@@ -2386,12 +2369,10 @@ to {
           width: 28px;
           height: 1px;
 
-          background:
-            #d5aa50;
+          background: #d5aa50;
 
           opacity: 0.6;
         }
-
 
         /* =====================================================
            FOOTER
@@ -2403,12 +2384,9 @@ to {
           justify-content:
             space-between;
 
-          align-items:
-            center;
+          align-items: center;
 
           width: 100%;
-
-          height: auto;
 
           min-height: 55px;
 
@@ -2424,8 +2402,7 @@ to {
         .ns-about-footer-left {
           display: flex;
 
-          align-items:
-            center;
+          align-items: center;
 
           gap: 14px;
         }
@@ -2433,11 +2410,9 @@ to {
         .ns-footer-number {
           font-size: 10px;
 
-          color:
-            #d5aa50;
+          color: #d5aa50;
 
-          letter-spacing:
-            0.15em;
+          letter-spacing: 0.15em;
         }
 
         .ns-about-footer-left strong {
@@ -2445,11 +2420,9 @@ to {
 
           font-size: 9px;
 
-          letter-spacing:
-            0.18em;
+          letter-spacing: 0.18em;
 
-          font-weight:
-            500;
+          font-weight: 500;
 
           color:
             rgba(245,241,232,0.7);
@@ -2479,12 +2452,30 @@ to {
             1px solid
             rgba(213,170,80,0.25);
 
-          color:
-            #d5aa50;
+          color: #d5aa50;
 
           font-size: 11px;
+
+          animation:
+            nsArrow
+            1.8s
+            ease-in-out
+            infinite;
         }
 
+        @keyframes nsArrow {
+
+          0%,
+          100% {
+            transform:
+              translateY(0);
+          }
+
+          50% {
+            transform:
+              translateY(5px);
+          }
+        }
 
         /* =====================================================
            TABLET
@@ -2493,33 +2484,24 @@ to {
         @media (max-width: 1050px) {
 
           .ns-about-container {
-            grid-template-columns:
-              1fr;
+            grid-template-columns: 1fr;
 
-            width:
-              min(800px, 100%);
+            width: min(800px, 100%);
 
-            gap:
-              55px;
+            gap: 55px;
 
-            margin-top:
-              55px;
+            margin-top: 55px;
           }
 
           .ns-profile-column {
-            min-height:
-              auto;
+            min-height: auto;
           }
 
           .ns-about-content {
-            max-width:
-              800px;
-
-            width:
-              100%;
+            max-width: 800px;
+            width: 100%;
           }
         }
-
 
         /* =====================================================
            MOBILE
@@ -2528,438 +2510,308 @@ to {
         @media (max-width: 650px) {
 
           .ns-about-section {
-            min-height:
-              0 !important;
+            min-height: 0;
 
-            height:
-              auto !important;
+            height: auto;
 
-            max-height:
-              none !important;
+            max-height: none;
 
             padding:
-              65px
-              18px
-              55px !important;
+              65px 18px 55px;
 
-            overflow:
-              hidden !important;
+            overflow: hidden;
           }
 
           .ns-about-container {
-            display:
-              flex !important;
+            display: flex;
 
-            flex-direction:
-              column !important;
+            flex-direction: column;
 
-            width:
-              100% !important;
+            width: 100%;
 
-            height:
-              auto !important;
+            height: auto;
 
-            min-height:
-              0 !important;
+            min-height: 0;
 
-            max-height:
-              none !important;
+            max-height: none;
 
             margin:
-              35px
-              auto
-              0 !important;
+              35px auto 0;
 
-            gap:
-              38px !important;
+            gap: 38px;
           }
-
 
           /* PROFILE */
 
           .ns-profile-column {
-            width:
-              100% !important;
+            width: 100%;
 
-            min-height:
-              0 !important;
+            min-height: 0;
 
-            height:
-              auto !important;
+            height: auto;
 
-            max-height:
-              none !important;
+            display: flex;
 
-            display:
-              flex !important;
+            align-items: center;
 
-            align-items:
-              center !important;
+            justify-content: flex-start;
 
-            justify-content:
-              flex-start !important;
+            margin: 0;
 
-            margin:
-              0 !important;
-
-            padding:
-              0 !important;
+            padding: 0;
           }
 
           .ns-profile-aura {
-            width:
-              205px !important;
+            width: 205px;
+            height: 300px;
 
-            height:
-              300px !important;
-
-            filter:
-              blur(25px) !important;
+            filter: blur(25px);
           }
 
           .ns-profile-orbit {
-            width:
-              220px !important;
-
-            height:
-              315px !important;
+            width: 220px;
+            height: 315px;
           }
 
           .ns-profile-orbit-two {
-            width:
-              240px !important;
-
-            height:
-              295px !important;
+            width: 240px;
+            height: 295px;
           }
 
           .ns-profile-float {
-            width:
-              175px !important;
+            width: 175px;
 
-            max-width:
-              175px !important;
+            max-width: 175px;
 
-            height:
-              auto !important;
+            height: auto;
 
-            min-height:
-              0 !important;
+            min-height: 0;
 
-            margin:
-              0 auto !important;
+            margin: 0 auto;
           }
 
           .ns-profile-frame {
-            width:
-              175px !important;
+            width: 175px;
 
-            max-width:
-              175px !important;
+            max-width: 175px;
 
-            height:
-              263px !important;
+            height: 263px;
 
-            aspect-ratio:
-              auto !important;
+            aspect-ratio: auto;
 
-            margin:
-              0 auto !important;
-
-            transform:
-              none !important;
-
-            cursor:
-              default !important;
+            margin: 0 auto;
           }
 
           .ns-profile-caption {
-            width:
-              175px !important;
+            width: 175px;
 
-            max-width:
-              175px !important;
+            max-width: 175px;
 
-            margin-top:
-              15px !important;
+            margin-top: 15px;
 
-            padding-top:
-              9px !important;
+            padding-top: 9px;
           }
 
           .ns-caption-small {
-            font-size:
-              7px !important;
+            font-size: 7px;
           }
 
           .ns-caption-main {
-            font-size:
-              7px !important;
+            font-size: 7px;
 
-            letter-spacing:
-              0.08em !important;
+            letter-spacing: 0.08em;
           }
 
           .ns-caption-status {
-            font-size:
-              6px !important;
+            font-size: 6px;
 
-            gap:
-              5px !important;
+            gap: 5px;
           }
-
 
           /* CONTENT */
 
           .ns-about-content {
-            width:
-              100% !important;
+            width: 100%;
 
-            max-width:
-              none !important;
+            max-width: none;
 
-            height:
-              auto !important;
+            height: auto;
 
-            min-height:
-              0 !important;
+            min-height: 0;
 
-            max-height:
-              none !important;
+            max-height: none;
 
-            margin:
-              0 !important;
+            margin: 0;
 
-            padding:
-              0 !important;
+            padding: 0;
 
-            opacity:
-              1 !important;
+            opacity: 1;
 
-            visibility:
-              visible !important;
+            visibility: visible;
           }
 
           .ns-about-overline {
-            margin-bottom:
-              18px !important;
+            margin-bottom: 18px;
           }
 
           .ns-about-overline span {
-            width:
-              30px !important;
+            width: 30px;
           }
 
           .ns-about-overline p {
-            font-size:
-              8px !important;
+            font-size: 8px;
 
-            letter-spacing:
-              0.2em !important;
+            letter-spacing: 0.2em;
           }
 
           .ns-about-heading {
-            margin:
-              0 !important;
+            margin: 0;
 
             font-size:
               clamp(
                 34px,
                 10.5vw,
                 48px
-              ) !important;
+              );
 
-            line-height:
-              0.95 !important;
+            line-height: 0.95;
           }
 
           .ns-about-description {
-            margin-top:
-              18px !important;
+            margin-top: 18px;
 
-            font-size:
-              12px !important;
+            font-size: 12px;
 
-            line-height:
-              1.7 !important;
+            line-height: 1.7;
           }
 
           .ns-about-secondary {
-            margin-top:
-              10px !important;
+            margin-top: 10px;
           }
-
 
           /* CARDS */
 
           .ns-about-grid {
-            display:
-              grid !important;
+            display: grid;
 
-            grid-template-columns:
-              1fr !important;
+            grid-template-columns: 1fr;
 
-            gap:
-              10px !important;
+            gap: 10px;
 
-            width:
-              100% !important;
+            width: 100%;
 
-            height:
-              auto !important;
+            height: auto;
 
-            min-height:
-              0 !important;
+            min-height: 0;
 
-            max-height:
-              none !important;
+            max-height: none;
 
-            margin-top:
-              28px !important;
+            margin-top: 28px;
 
-            opacity:
-              1 !important;
+            opacity: 1;
 
-            visibility:
-              visible !important;
+            visibility: visible;
           }
 
           .ns-about-item {
-            display:
-              block !important;
+            display: block;
 
-            position:
-              relative !important;
+            position: relative;
 
-            width:
-              100% !important;
+            width: 100%;
 
-            height:
-              auto !important;
+            height: auto;
 
-            min-height:
-              135px !important;
+            min-height: 135px;
 
-            max-height:
-              none !important;
+            max-height: none;
 
-            margin:
-              0 !important;
+            margin: 0;
 
-            padding:
-              17px !important;
+            padding: 17px;
 
-            opacity:
-              1 !important;
+            opacity: 1;
 
-            visibility:
-              visible !important;
+            visibility: visible;
 
-            transform:
-              none !important;
+            transform: none;
 
-            box-sizing:
-              border-box !important;
+            box-sizing: border-box;
+          }
+
+          .ns-about-item:hover {
+            transform: none;
           }
 
           .ns-about-item-top {
-            width:
-              100% !important;
+            width: 100%;
           }
 
           .ns-about-item h3 {
             margin:
-              15px
-              0
-              7px !important;
+              15px 0 7px;
 
-            font-size:
-              14px !important;
+            font-size: 14px;
           }
 
           .ns-about-item p {
-            font-size:
-              10.5px !important;
+            font-size: 10.5px;
 
-            line-height:
-              1.6 !important;
+            line-height: 1.6;
           }
 
           .ns-about-icon {
-            width:
-              30px !important;
+            width: 30px;
+            height: 30px;
 
-            height:
-              30px !important;
-
-            font-size:
-              11px !important;
+            font-size: 11px;
           }
-
 
           /* FOOTER */
 
           .ns-about-footer {
-            position:
-              relative !important;
+            position: relative;
 
-            width:
-              100% !important;
+            width: 100%;
 
-            height:
-              auto !important;
+            height: auto;
 
-            min-height:
-              55px !important;
+            min-height: 55px;
 
-            max-height:
-              none !important;
+            max-height: none;
 
-            margin-top:
-              20px !important;
+            margin-top: 20px;
 
-            padding-top:
-              15px !important;
+            padding-top: 15px;
 
-            opacity:
-              1 !important;
+            opacity: 1;
 
-            visibility:
-              visible !important;
+            visibility: visible;
           }
 
           .ns-about-footer-left {
-            gap:
-              10px !important;
+            gap: 10px;
           }
 
           .ns-footer-number {
-            font-size:
-              8px !important;
+            font-size: 8px;
           }
 
           .ns-about-footer-left strong {
-            font-size:
-              8px !important;
+            font-size: 8px;
           }
 
           .ns-about-footer-left small {
-            font-size:
-              8px !important;
+            font-size: 8px;
           }
 
           .ns-about-arrow {
-            width:
-              34px !important;
+            width: 34px;
+            height: 34px;
 
-            height:
-              34px !important;
-
-            font-size:
-              10px !important;
+            font-size: 10px;
           }
         }
-
 
         /* =====================================================
            VERY SMALL PHONES
@@ -2969,86 +2821,62 @@ to {
 
           .ns-about-section {
             padding:
-              55px
-              15px
-              45px !important;
+              55px 15px 45px;
           }
 
           .ns-about-container {
-            margin-top:
-              30px !important;
+            margin-top: 30px;
 
-            gap:
-              30px !important;
+            gap: 30px;
           }
 
           .ns-profile-float {
-            width:
-              160px !important;
+            width: 160px;
 
-            max-width:
-              160px !important;
+            max-width: 160px;
           }
 
           .ns-profile-frame {
-            width:
-              160px !important;
+            width: 160px;
 
-            max-width:
-              160px !important;
+            max-width: 160px;
 
-            height:
-              240px !important;
+            height: 240px;
           }
 
           .ns-profile-caption {
-            width:
-              160px !important;
+            width: 160px;
 
-            max-width:
-              160px !important;
+            max-width: 160px;
           }
 
           .ns-profile-orbit {
-            width:
-              180px !important;
-
-            height:
-              260px !important;
+            width: 180px;
+            height: 260px;
           }
 
           .ns-profile-orbit-two {
-            width:
-              195px !important;
-
-            height:
-              245px !important;
+            width: 195px;
+            height: 245px;
           }
 
           .ns-profile-aura {
-            width:
-              175px !important;
-
-            height:
-              255px !important;
+            width: 175px;
+            height: 255px;
           }
 
           .ns-about-heading {
-            font-size:
-              31px !important;
+            font-size: 31px;
           }
 
           .ns-about-description {
-            font-size:
-              11px !important;
+            font-size: 11px;
           }
 
           .ns-about-item {
-            min-height:
-              125px !important;
+            min-height: 125px;
           }
         }
-
 
         /* =====================================================
            REDUCED MOTION
@@ -3056,19 +2884,16 @@ to {
 
         @media (prefers-reduced-motion: reduce) {
 
-          .ns-profile-float {
-            animation:
-              none !important;
-          }
-
-          .ns-profile-image {
-            animation:
-              none !important;
+          .ns-profile-orbit,
+          .ns-profile-light-sweep,
+          .ns-profile-scan,
+          .ns-about-arrow {
+            animation: none !important;
           }
 
         }
 
-      `})]})},kp=[{name:`Windows 10/11`,level:95,icon:`🪟`},{name:`Desktop Support`,level:96,icon:`🖥️`},{name:`Hardware Troubleshooting`,level:92,icon:`🛠️`},{name:`Networking`,level:90,icon:`🌐`},{name:`TCP/IP`,level:88,icon:`📡`},{name:`DNS / DHCP`,level:90,icon:`🌍`},{name:`Active Directory`,level:90,icon:`👤`},{name:`Office 365`,level:90,icon:`📧`},{name:`Outlook`,level:89,icon:`📨`},{name:`Linux`,level:80,icon:`🐧`},{name:`AWS`,level:85,icon:`☁️`},{name:`VMware`,level:82,icon:`💻`}],Ap=()=>(0,V.jsxs)(`section`,{id:`skills`,className:`section`,children:[(0,V.jsx)(Dp,{title:`Technical Skills`,subtitle:`Technologies and tools I use to deliver reliable IT solutions.`}),(0,V.jsx)(`div`,{className:`grid gap-6 md:grid-cols-2`,children:kp.map((e,t)=>(0,V.jsxs)(Z.div,{initial:{opacity:0,y:40},whileInView:{opacity:1,y:0},transition:{delay:t*.08,duration:.5},viewport:{once:!0},whileHover:{scale:1.03},className:`group rounded-3xl border border-zinc-800 bg-white/5 backdrop-blur-xl p-6 transition-all duration-300 hover:border-red-500 hover:shadow-[0_0_35px_rgba(239,68,68,0.35)]`,children:[(0,V.jsxs)(`div`,{className:`mb-5 flex items-center justify-between`,children:[(0,V.jsxs)(`div`,{className:`flex items-center gap-3`,children:[(0,V.jsx)(`span`,{className:`text-3xl`,children:e.icon}),(0,V.jsx)(`h3`,{className:`text-lg font-semibold text-white`,children:e.name})]}),(0,V.jsxs)(`span`,{className:`font-bold text-red-400`,children:[e.level,`%`]})]}),(0,V.jsx)(`div`,{className:`h-3 overflow-hidden rounded-full bg-zinc-800`,children:(0,V.jsx)(Z.div,{initial:{width:0},whileInView:{width:`${e.level}%`},transition:{duration:1.2,delay:t*.08},viewport:{once:!0},className:`h-full rounded-full bg-gradient-to-r from-red-600 via-pink-500 to-orange-400`})})]},e.name))})]}),jp=()=>(0,V.jsxs)(`section`,{id:`experience`,className:`experience-video-section`,children:[(0,V.jsx)(Dp,{title:`Experience`,subtitle:`My professional journey and responsibilities.`}),(0,V.jsxs)(`div`,{className:`experience-video-stage`,children:[(0,V.jsx)(`div`,{className:`experience-video-grid`}),(0,V.jsx)(`div`,{className:`experience-video-vignette`}),(0,V.jsxs)(`div`,{className:`experience-video-scene`,children:[(0,V.jsxs)(`div`,{className:`experience-scene-label`,children:[(0,V.jsx)(`span`,{children:`CAREER TIMELINE`}),(0,V.jsxs)(`span`,{children:[`01 — 0`,Tp.experience.length]})]}),Tp.experience.map((e,t)=>(0,V.jsx)(Z.article,{className:`experience-video-frame`,initial:{opacity:0,y:45},whileInView:{opacity:1,y:0},viewport:{once:!0,amount:.15},transition:{duration:.65,delay:t*.08,ease:`easeOut`},children:(0,V.jsxs)(`div`,{className:`experience-frame-content`,children:[(0,V.jsxs)(`div`,{className:`experience-frame-number`,children:[`0`,t+1]}),(0,V.jsx)(`div`,{className:`experience-frame-light`}),(0,V.jsxs)(`div`,{className:`experience-frame-header`,children:[(0,V.jsxs)(`div`,{className:`experience-role-block`,children:[(0,V.jsx)(`span`,{className:`experience-overline`,children:`PROFESSIONAL EXPERIENCE`}),(0,V.jsx)(`h3`,{children:e.role}),(0,V.jsx)(`div`,{className:`experience-company-line`,children:(0,V.jsx)(`span`,{children:e.company})})]}),(0,V.jsxs)(`div`,{className:`experience-date`,children:[(0,V.jsx)(vp,{}),(0,V.jsx)(`span`,{children:e.duration})]})]}),(0,V.jsx)(`div`,{className:`experience-frame-divider`}),(0,V.jsx)(`p`,{className:`experience-frame-description`,children:e.description}),e.responsibilities&&(0,V.jsx)(`div`,{className:`experience-points`,children:e.responsibilities.map((e,t)=>(0,V.jsxs)(Z.div,{className:`experience-point`,initial:{opacity:0,x:-12},whileInView:{opacity:1,x:0},viewport:{once:!0},transition:{delay:.15+t*.04,duration:.35},children:[(0,V.jsx)(`span`,{className:`experience-point-icon`,children:(0,V.jsx)(gp,{})}),(0,V.jsx)(`span`,{children:e})]},t))}),(0,V.jsxs)(`div`,{className:`experience-frame-bottom`,children:[(0,V.jsx)(`span`,{children:`IT / INFRASTRUCTURE / SECURITY`}),(0,V.jsx)(`span`,{className:`experience-frame-arrow`,children:(0,V.jsx)(Cp,{})})]})]})},t)),(0,V.jsxs)(`div`,{className:`experience-scene-end`,children:[(0,V.jsx)(`span`,{}),(0,V.jsx)(`p`,{children:`END OF EXPERIENCE`}),(0,V.jsx)(`span`,{})]})]})]})]}),Mp=()=>{let e=Tp.projects;return Array.isArray(e)?e.filter(e=>typeof e==`object`&&!!e):[]},Np=()=>{let e=(0,b.useMemo)(()=>Mp(),[]),[t,n]=(0,b.useState)(0),r=Q(0),i=Q(0),a=Nf(r,{stiffness:90,damping:18,mass:.7}),o=Nf(i,{stiffness:90,damping:18,mass:.7}),s=e[t]??{title:`Enterprise IT Infrastructure Support`,description:`A practical IT infrastructure project focused on Windows environments, networking, endpoint support and cloud technologies.`,tech:[`Windows 11`,`Active Directory`,`Networking`,`AWS`]},c=s.title||s.name||`Enterprise IT Infrastructure Support`,l=s.description||s.details||`A practical IT infrastructure project focused on Windows environments, networking, endpoint support and cloud technologies.`,u=s.technologies||s.tech||s.stack||[],d=s.github||s.githubUrl||``,f=s.live||s.liveUrl||s.demo||s.url||``,p=s.image||s.imageUrl||``,m=e.length||1;return(0,V.jsx)(`section`,{id:`projects`,className:`projects-reel-section`,children:(0,V.jsxs)(`div`,{className:`projects-reel`,children:[(0,V.jsx)(`div`,{className:`projects-reel-bg`}),(0,V.jsx)(`div`,{className:`projects-reel-grid`}),(0,V.jsxs)(Z.div,{className:`projects-reel-heading`,initial:{opacity:0,y:30},whileInView:{opacity:1,y:0},viewport:{once:!0,amount:.2},transition:{duration:.8,ease:[.16,1,.3,1]},children:[(0,V.jsx)(`span`,{children:`SELECTED WORK / PROJECTS`}),(0,V.jsxs)(`strong`,{children:[String(t+1).padStart(2,`0`),` /`,` `,String(m).padStart(2,`0`)]})]}),(0,V.jsx)(`div`,{className:`projects-reel-list`,children:(0,V.jsxs)(Z.article,{className:`project-reel-item`,initial:{opacity:0,y:55},whileInView:{opacity:1,y:0},viewport:{once:!0,amount:.12},transition:{duration:.9,ease:[.16,1,.3,1]},children:[(0,V.jsxs)(`div`,{className:`project-reel-index`,children:[`PROJECT`,` `,String(t+1).padStart(2,`0`)]}),(0,V.jsxs)(`div`,{className:`project-reel-frame`,onMouseMove:e=>{let t=e.currentTarget.getBoundingClientRect(),n=e.clientX-t.left,a=e.clientY-t.top,o=n/t.width-.5,s=a/t.height-.5;r.set(o*5),i.set(s*-4)},onMouseLeave:()=>{r.set(0),i.set(0)},children:[(0,V.jsxs)(Z.div,{className:`project-device`,style:{rotateX:o,rotateY:a,transformPerspective:1400},children:[(0,V.jsxs)(`div`,{className:`project-device-top`,children:[(0,V.jsxs)(`div`,{className:`project-browser-dots`,children:[(0,V.jsx)(`span`,{}),(0,V.jsx)(`span`,{}),(0,V.jsx)(`span`,{})]}),(0,V.jsxs)(`div`,{className:`project-browser-address`,children:[`naimishsingh.dev /`,` `,c.toLowerCase().replace(/[^a-z0-9]+/g,`-`).replace(/^-|-$|/g,``)]}),(0,V.jsx)(`div`,{className:`project-browser-status`,children:`LIVE PREVIEW`})]}),(0,V.jsxs)(`div`,{className:`project-screen`,style:p?{backgroundImage:`
+      `})]}),kp=[{name:`Windows 10/11`,level:95,icon:`🪟`},{name:`Desktop Support`,level:96,icon:`🖥️`},{name:`Hardware Troubleshooting`,level:92,icon:`🛠️`},{name:`Networking`,level:90,icon:`🌐`},{name:`TCP/IP`,level:88,icon:`📡`},{name:`DNS / DHCP`,level:90,icon:`🌍`},{name:`Active Directory`,level:90,icon:`👤`},{name:`Office 365`,level:90,icon:`📧`},{name:`Outlook`,level:89,icon:`📨`},{name:`Linux`,level:80,icon:`🐧`},{name:`AWS`,level:85,icon:`☁️`},{name:`VMware`,level:82,icon:`💻`}],Ap=()=>(0,V.jsxs)(`section`,{id:`skills`,className:`section`,children:[(0,V.jsx)(Dp,{title:`Technical Skills`,subtitle:`Technologies and tools I use to deliver reliable IT solutions.`}),(0,V.jsx)(`div`,{className:`grid gap-6 md:grid-cols-2`,children:kp.map((e,t)=>(0,V.jsxs)(Z.div,{initial:{opacity:0,y:40},whileInView:{opacity:1,y:0},transition:{delay:t*.08,duration:.5},viewport:{once:!0},whileHover:{scale:1.03},className:`group rounded-3xl border border-zinc-800 bg-white/5 backdrop-blur-xl p-6 transition-all duration-300 hover:border-red-500 hover:shadow-[0_0_35px_rgba(239,68,68,0.35)]`,children:[(0,V.jsxs)(`div`,{className:`mb-5 flex items-center justify-between`,children:[(0,V.jsxs)(`div`,{className:`flex items-center gap-3`,children:[(0,V.jsx)(`span`,{className:`text-3xl`,children:e.icon}),(0,V.jsx)(`h3`,{className:`text-lg font-semibold text-white`,children:e.name})]}),(0,V.jsxs)(`span`,{className:`font-bold text-red-400`,children:[e.level,`%`]})]}),(0,V.jsx)(`div`,{className:`h-3 overflow-hidden rounded-full bg-zinc-800`,children:(0,V.jsx)(Z.div,{initial:{width:0},whileInView:{width:`${e.level}%`},transition:{duration:1.2,delay:t*.08},viewport:{once:!0},className:`h-full rounded-full bg-gradient-to-r from-red-600 via-pink-500 to-orange-400`})})]},e.name))})]}),jp=()=>(0,V.jsxs)(`section`,{id:`experience`,className:`experience-video-section`,children:[(0,V.jsx)(Dp,{title:`Experience`,subtitle:`My professional journey and responsibilities.`}),(0,V.jsxs)(`div`,{className:`experience-video-stage`,children:[(0,V.jsx)(`div`,{className:`experience-video-grid`}),(0,V.jsx)(`div`,{className:`experience-video-vignette`}),(0,V.jsxs)(`div`,{className:`experience-video-scene`,children:[(0,V.jsxs)(`div`,{className:`experience-scene-label`,children:[(0,V.jsx)(`span`,{children:`CAREER TIMELINE`}),(0,V.jsxs)(`span`,{children:[`01 — 0`,Tp.experience.length]})]}),Tp.experience.map((e,t)=>(0,V.jsx)(Z.article,{className:`experience-video-frame`,initial:{opacity:0,y:45},whileInView:{opacity:1,y:0},viewport:{once:!0,amount:.15},transition:{duration:.65,delay:t*.08,ease:`easeOut`},children:(0,V.jsxs)(`div`,{className:`experience-frame-content`,children:[(0,V.jsxs)(`div`,{className:`experience-frame-number`,children:[`0`,t+1]}),(0,V.jsx)(`div`,{className:`experience-frame-light`}),(0,V.jsxs)(`div`,{className:`experience-frame-header`,children:[(0,V.jsxs)(`div`,{className:`experience-role-block`,children:[(0,V.jsx)(`span`,{className:`experience-overline`,children:`PROFESSIONAL EXPERIENCE`}),(0,V.jsx)(`h3`,{children:e.role}),(0,V.jsx)(`div`,{className:`experience-company-line`,children:(0,V.jsx)(`span`,{children:e.company})})]}),(0,V.jsxs)(`div`,{className:`experience-date`,children:[(0,V.jsx)(vp,{}),(0,V.jsx)(`span`,{children:e.duration})]})]}),(0,V.jsx)(`div`,{className:`experience-frame-divider`}),(0,V.jsx)(`p`,{className:`experience-frame-description`,children:e.description}),e.responsibilities&&(0,V.jsx)(`div`,{className:`experience-points`,children:e.responsibilities.map((e,t)=>(0,V.jsxs)(Z.div,{className:`experience-point`,initial:{opacity:0,x:-12},whileInView:{opacity:1,x:0},viewport:{once:!0},transition:{delay:.15+t*.04,duration:.35},children:[(0,V.jsx)(`span`,{className:`experience-point-icon`,children:(0,V.jsx)(gp,{})}),(0,V.jsx)(`span`,{children:e})]},t))}),(0,V.jsxs)(`div`,{className:`experience-frame-bottom`,children:[(0,V.jsx)(`span`,{children:`IT / INFRASTRUCTURE / SECURITY`}),(0,V.jsx)(`span`,{className:`experience-frame-arrow`,children:(0,V.jsx)(Cp,{})})]})]})},t)),(0,V.jsxs)(`div`,{className:`experience-scene-end`,children:[(0,V.jsx)(`span`,{}),(0,V.jsx)(`p`,{children:`END OF EXPERIENCE`}),(0,V.jsx)(`span`,{})]})]})]})]}),Mp=()=>{let e=Tp.projects;return Array.isArray(e)?e.filter(e=>typeof e==`object`&&!!e):[]},Np=()=>{let e=(0,b.useMemo)(()=>Mp(),[]),[t,n]=(0,b.useState)(0),r=Q(0),i=Q(0),a=Nf(r,{stiffness:90,damping:18,mass:.7}),o=Nf(i,{stiffness:90,damping:18,mass:.7}),s=e[t]??{title:`Enterprise IT Infrastructure Support`,description:`A practical IT infrastructure project focused on Windows environments, networking, endpoint support and cloud technologies.`,tech:[`Windows 11`,`Active Directory`,`Networking`,`AWS`]},c=s.title||s.name||`Enterprise IT Infrastructure Support`,l=s.description||s.details||`A practical IT infrastructure project focused on Windows environments, networking, endpoint support and cloud technologies.`,u=s.technologies||s.tech||s.stack||[],d=s.github||s.githubUrl||``,f=s.live||s.liveUrl||s.demo||s.url||``,p=s.image||s.imageUrl||``,m=e.length||1;return(0,V.jsx)(`section`,{id:`projects`,className:`projects-reel-section`,children:(0,V.jsxs)(`div`,{className:`projects-reel`,children:[(0,V.jsx)(`div`,{className:`projects-reel-bg`}),(0,V.jsx)(`div`,{className:`projects-reel-grid`}),(0,V.jsxs)(Z.div,{className:`projects-reel-heading`,initial:{opacity:0,y:30},whileInView:{opacity:1,y:0},viewport:{once:!0,amount:.2},transition:{duration:.8,ease:[.16,1,.3,1]},children:[(0,V.jsx)(`span`,{children:`SELECTED WORK / PROJECTS`}),(0,V.jsxs)(`strong`,{children:[String(t+1).padStart(2,`0`),` /`,` `,String(m).padStart(2,`0`)]})]}),(0,V.jsx)(`div`,{className:`projects-reel-list`,children:(0,V.jsxs)(Z.article,{className:`project-reel-item`,initial:{opacity:0,y:55},whileInView:{opacity:1,y:0},viewport:{once:!0,amount:.12},transition:{duration:.9,ease:[.16,1,.3,1]},children:[(0,V.jsxs)(`div`,{className:`project-reel-index`,children:[`PROJECT`,` `,String(t+1).padStart(2,`0`)]}),(0,V.jsxs)(`div`,{className:`project-reel-frame`,onMouseMove:e=>{let t=e.currentTarget.getBoundingClientRect(),n=e.clientX-t.left,a=e.clientY-t.top,o=n/t.width-.5,s=a/t.height-.5;r.set(o*5),i.set(s*-4)},onMouseLeave:()=>{r.set(0),i.set(0)},children:[(0,V.jsxs)(Z.div,{className:`project-device`,style:{rotateX:o,rotateY:a,transformPerspective:1400},children:[(0,V.jsxs)(`div`,{className:`project-device-top`,children:[(0,V.jsxs)(`div`,{className:`project-browser-dots`,children:[(0,V.jsx)(`span`,{}),(0,V.jsx)(`span`,{}),(0,V.jsx)(`span`,{})]}),(0,V.jsxs)(`div`,{className:`project-browser-address`,children:[`naimishsingh.dev /`,` `,c.toLowerCase().replace(/[^a-z0-9]+/g,`-`).replace(/^-|-$|/g,``)]}),(0,V.jsx)(`div`,{className:`project-browser-status`,children:`LIVE PREVIEW`})]}),(0,V.jsxs)(`div`,{className:`project-screen`,style:p?{backgroundImage:`
                             linear-gradient(
                               180deg,
                               rgba(5,5,5,0.12),
