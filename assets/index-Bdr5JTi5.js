@@ -4748,7 +4748,7 @@ to {
             transition: none !important;
           }
         }
-      `})]}),Bp=()=>{let e=$.projects;return Array.isArray(e)?e.filter(e=>typeof e==`object`&&!!e):[]},Vp=()=>{let e=(0,b.useMemo)(()=>Bp(),[]),[t,n]=(0,b.useState)(0),r=e[t]??{title:`Enterprise IT Infrastructure Support`,description:`A practical IT infrastructure project focused on Windows environments, networking, endpoint support and cloud technologies.`,tech:[`Windows 11`,`Active Directory`,`Networking`,`AWS`]},i=r.title||r.name||`Enterprise IT Infrastructure Support`,a=r.description||r.details||`A practical IT infrastructure project focused on Windows environments, networking, endpoint support and cloud technologies.`,o=r.technologies||r.tech||r.stack||[],s=r.github||r.githubUrl||``,c=r.live||r.liveUrl||r.demo||r.url||``,l=r.image||r.imageUrl||``,u=e.length||1;return(0,V.jsxs)(`section`,{id:`projects`,className:`projects-section`,children:[(0,V.jsx)(`div`,{className:`projects-bg-glow projects-glow-one`}),(0,V.jsx)(`div`,{className:`projects-bg-glow projects-glow-two`}),(0,V.jsx)(`div`,{className:`projects-grid-bg`}),(0,V.jsxs)(`div`,{className:`projects-container`,children:[(0,V.jsx)(`div`,{className:`projects-section-title`,children:(0,V.jsx)(jp,{title:`Projects`,subtitle:`A selection of practical IT, infrastructure, networking, and cloud work.`})}),(0,V.jsxs)(Z.div,{className:`projects-header`,initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0,amount:.2},transition:{duration:.55,ease:`easeOut`},children:[(0,V.jsxs)(`div`,{className:`projects-header-left`,children:[(0,V.jsx)(`span`,{className:`projects-header-line`}),(0,V.jsx)(`span`,{children:`04 / SELECTED WORK`})]}),(0,V.jsxs)(`div`,{className:`projects-counter`,children:[String(t+1).padStart(2,`0`),(0,V.jsx)(`span`,{children:`/`}),String(u).padStart(2,`0`)]})]}),(0,V.jsx)(Wl,{mode:`wait`,children:(0,V.jsxs)(Z.article,{className:`project-layout`,initial:{opacity:0,y:25},animate:{opacity:1,y:0},exit:{opacity:0,y:-15},transition:{duration:.45,ease:`easeOut`},children:[(0,V.jsxs)(`div`,{className:`project-visual-column`,children:[(0,V.jsxs)(`div`,{className:`project-number`,children:[`PROJECT`,` `,String(t+1).padStart(2,`0`)]}),(0,V.jsx)(`div`,{className:`laptop-wrapper`,children:(0,V.jsxs)(`div`,{className:`laptop`,children:[(0,V.jsxs)(`div`,{className:`laptop-lid`,children:[(0,V.jsxs)(`div`,{className:`browser-bar`,children:[(0,V.jsxs)(`div`,{className:`browser-dots`,children:[(0,V.jsx)(`span`,{}),(0,V.jsx)(`span`,{}),(0,V.jsx)(`span`,{})]}),(0,V.jsxs)(`div`,{className:`browser-address`,children:[`naimishsingh.dev /`,` `,i.toLowerCase().replace(/[^a-z0-9]+/g,`-`).replace(/^-+|-+$/g,``)]}),(0,V.jsx)(`div`,{className:`browser-status`,children:`LIVE`})]}),(0,V.jsxs)(`div`,{className:`laptop-screen`,style:l?{backgroundImage:`
+      `})]}),Bp=()=>{let e=$.projects;return Array.isArray(e)?e.filter(e=>typeof e==`object`&&!!e):[]},Vp=()=>{let e=(0,b.useMemo)(()=>Bp(),[]),[t,n]=(0,b.useState)(0),r=e[t]??{title:`Enterprise IT Infrastructure Support`,description:`A practical IT infrastructure project focused on Windows environments, networking, endpoint support and cloud technologies.`,tech:[`Windows 11`,`Active Directory`,`Networking`,`AWS`]},i=r.title||r.name||`Enterprise IT Infrastructure Support`,a=r.description||r.details||`A practical IT infrastructure project focused on Windows environments, networking, endpoint support and cloud technologies.`,o=r.technologies||r.tech||r.stack||[],s=r.github||r.githubUrl||``,c=r.live||r.liveUrl||r.demo||r.url||``,l=r.image||r.imageUrl||``,u=e.length||1;return(0,V.jsxs)(`section`,{id:`projects`,className:`projects-section`,children:[(0,V.jsx)(`div`,{className:`projects-bg-glow projects-glow-one`}),(0,V.jsx)(`div`,{className:`projects-bg-glow projects-glow-two`}),(0,V.jsx)(`div`,{className:`projects-grid-bg`}),(0,V.jsxs)(`div`,{className:`projects-container`,children:[(0,V.jsx)(`div`,{className:`projects-section-title`,children:(0,V.jsx)(jp,{title:`Projects`,subtitle:`A selection of practical IT, infrastructure, networking, and cloud work.`})}),(0,V.jsxs)(Z.div,{className:`projects-header`,initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0,amount:.2},transition:{duration:.55,ease:`easeOut`},children:[(0,V.jsxs)(`div`,{className:`projects-header-left`,children:[(0,V.jsx)(`span`,{className:`projects-header-line`}),(0,V.jsx)(`span`,{children:`04 / SELECTED WORK`})]}),(0,V.jsxs)(`div`,{className:`projects-counter`,children:[String(t+1).padStart(2,`0`),(0,V.jsx)(`span`,{children:`/`}),String(u).padStart(2,`0`)]})]}),(0,V.jsx)(Wl,{mode:`wait`,children:(0,V.jsxs)(Z.article,{className:`project-layout`,initial:{opacity:0,y:12},animate:{opacity:1,y:0},exit:{opacity:0,y:-8},transition:{duration:.32,ease:`easeOut`},children:[(0,V.jsxs)(`div`,{className:`project-visual-column`,children:[(0,V.jsxs)(`div`,{className:`project-number`,children:[`PROJECT`,` `,String(t+1).padStart(2,`0`)]}),(0,V.jsx)(`div`,{className:`laptop-wrapper`,children:(0,V.jsxs)(`div`,{className:`laptop`,children:[(0,V.jsxs)(`div`,{className:`laptop-lid`,children:[(0,V.jsxs)(`div`,{className:`browser-bar`,children:[(0,V.jsxs)(`div`,{className:`browser-dots`,children:[(0,V.jsx)(`span`,{}),(0,V.jsx)(`span`,{}),(0,V.jsx)(`span`,{})]}),(0,V.jsxs)(`div`,{className:`browser-address`,children:[`naimishsingh.dev /`,` `,i.toLowerCase().replace(/[^a-z0-9]+/g,`-`).replace(/^-+|-+$/g,``)]}),(0,V.jsx)(`div`,{className:`browser-status`,children:`LIVE`})]}),(0,V.jsxs)(`div`,{className:`laptop-screen`,style:l?{backgroundImage:`
                                 linear-gradient(
                                   180deg,
                                   rgba(5, 5, 5, 0.01),
@@ -5207,6 +5207,12 @@ to {
         }
 
         .screen-logo {
+          transition:
+            background 0.3s ease,
+            box-shadow 0.3s ease,
+            border-color 0.3s ease,
+            color 0.3s ease;
+
           width: 30px;
           height: 30px;
 
@@ -5527,15 +5533,11 @@ to {
           z-index: 0;
         }
 
-        .project-layout {
-          transition: transform 0.35s ease;
-        }
-
         .project-layout:hover .laptop-lid {
-          border-color: rgba(213, 170, 80, 0.32);
+          border-color: rgba(213, 170, 80, 0.34);
           box-shadow:
             0 30px 70px rgba(0, 0, 0, 0.65),
-            0 0 45px rgba(213, 170, 80, 0.07),
+            0 0 45px rgba(213, 170, 80, 0.08),
             inset 0 1px 0 rgba(255, 255, 255, 0.2);
         }
 
@@ -5546,7 +5548,7 @@ to {
 
         .project-layout:hover .project-info h2 {
           color: #efc566;
-          transform: translateX(3px);
+          transform: translateX(2px);
         }
 
         .project-info h2 {
@@ -5769,8 +5771,9 @@ to {
 
         .project-button:hover {
           border-color: #d5aa50;
-
+          background: rgba(213, 170, 80, 0.055);
           color: #f5f1e8;
+          box-shadow: 0 8px 24px rgba(213, 170, 80, 0.08);
         }
 
         /* =========================================
@@ -5787,6 +5790,12 @@ to {
         }
 
         .project-navigation button {
+          transition:
+            border-color 0.25s ease,
+            background 0.25s ease,
+            color 0.25s ease,
+            box-shadow 0.25s ease;
+
           width: 38px;
           height: 38px;
 
@@ -5815,6 +5824,13 @@ to {
             rgba(213, 170, 80, 0.05);
 
           color: #d5aa50;
+        }
+
+        .project-navigation button:hover {
+          border-color: rgba(213, 170, 80, 0.55);
+          background: rgba(213, 170, 80, 0.06);
+          color: #efc566;
+          box-shadow: 0 8px 24px rgba(213, 170, 80, 0.07);
         }
 
         .project-navigation > span {
@@ -6351,10 +6367,13 @@ to {
           .projects-section *::before,
           .projects-section *::after {
             scroll-behavior: auto !important;
+            transition-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
           }
         }
 
-      `})]})},Hp=()=>{let e=$.certifications,[t,n]=(0,b.useState)(0),r=e.length,i=()=>{r!==0&&n(e=>(e+1)%r)},a=()=>{r!==0&&n(e=>(e-1+r)%r)};if(r===0)return null;let o=e=>{let n=e-t;return n>r/2&&(n-=r),n<-r/2&&(n+=r),n},s=e[t];return(0,V.jsxs)(`section`,{id:`certifications`,className:`cert-vault-section relative overflow-hidden`,children:[(0,V.jsx)(`div`,{className:`cert-vault-bg`}),(0,V.jsx)(`div`,{className:`cert-vault-grid`}),(0,V.jsx)(`div`,{className:`cert-vault-glow cert-vault-glow-left`}),(0,V.jsx)(`div`,{className:`cert-vault-glow cert-vault-glow-right`}),(0,V.jsxs)(`div`,{className:`relative z-10 mx-auto max-w-7xl px-5 py-24 sm:px-6 lg:px-8`,children:[(0,V.jsx)(jp,{title:`Certifications`,subtitle:`Professional credentials and continuous learning.`}),(0,V.jsxs)(`div`,{className:`cert-vault-heading`,children:[(0,V.jsxs)(`div`,{children:[(0,V.jsxs)(`div`,{className:`cert-eyebrow`,children:[(0,V.jsx)(`span`,{className:`cert-eyebrow-line`}),(0,V.jsx)(`span`,{children:`KNOWLEDGE ARCHIVE`})]}),(0,V.jsxs)(`h2`,{children:[`Credentials`,(0,V.jsx)(`span`,{children:` / `}),`Verified.`]})]}),(0,V.jsxs)(`div`,{className:`cert-vault-counter`,children:[(0,V.jsx)(`span`,{className:`cert-counter-current`,children:String(t+1).padStart(2,`0`)}),(0,V.jsx)(`span`,{className:`cert-counter-line`}),(0,V.jsx)(`span`,{children:String(r).padStart(2,`0`)})]})]}),(0,V.jsxs)(`div`,{className:`cert-vault-stage`,children:[(0,V.jsx)(`div`,{className:`cert-floor`}),(0,V.jsx)(`button`,{type:`button`,onClick:a,className:`cert-nav cert-nav-left`,"aria-label":`Previous certification`,children:(0,V.jsx)(Dp,{})}),(0,V.jsx)(`button`,{type:`button`,onClick:i,className:`cert-nav cert-nav-right`,"aria-label":`Next certification`,children:(0,V.jsx)(Ep,{})}),(0,V.jsx)(`div`,{className:`cert-gallery`,children:e.map((e,t)=>{let n=o(t),i=n===0;return Math.abs(n)>2?null:(0,V.jsx)(Z.div,{className:`cert-gallery-card ${i?`is-active`:``}`,animate:{x:n===0?0:n<0?-390:390,scale:n===0?1:Math.abs(n)===1?.82:.68,opacity:n===0?1:Math.abs(n)===1?.48:.18,rotateY:n===0?0:n<0?12:-12,zIndex:20-Math.abs(n)},transition:{duration:.5,ease:[.22,1,.36,1]},style:{pointerEvents:i?`auto`:`none`},children:(0,V.jsxs)(`div`,{className:`cert-pedestal`,children:[(0,V.jsx)(`div`,{className:`cert-pedestal-top`,children:(0,V.jsxs)(`span`,{children:[String(t+1).padStart(2,`0`),` /`,` `,String(r).padStart(2,`0`)]})}),(0,V.jsx)(`div`,{className:`cert-document`,children:(0,V.jsxs)(`div`,{className:`cert-document-border`,children:[(0,V.jsx)(`div`,{className:`cert-document-corner cert-corner-tl`}),(0,V.jsx)(`div`,{className:`cert-document-corner cert-corner-tr`}),(0,V.jsx)(`div`,{className:`cert-document-corner cert-corner-bl`}),(0,V.jsx)(`div`,{className:`cert-document-corner cert-corner-br`}),(0,V.jsxs)(`div`,{className:`cert-document-content`,children:[(0,V.jsx)(`div`,{className:`cert-document-icon`,children:(0,V.jsx)(xp,{})}),(0,V.jsx)(`span`,{className:`cert-document-small`,children:`CERTIFICATE OF ACHIEVEMENT`}),(0,V.jsx)(`div`,{className:`cert-document-rule`}),(0,V.jsx)(`h3`,{children:e.title}),(0,V.jsx)(`p`,{children:e.issuer}),(0,V.jsxs)(`div`,{className:`cert-document-seal`,children:[(0,V.jsx)(wp,{}),(0,V.jsx)(`span`,{children:`VERIFIED`})]})]})]})}),(0,V.jsx)(`div`,{className:`cert-pedestal-base`,children:(0,V.jsx)(`span`,{children:i?`CURRENT CREDENTIAL`:`CREDENTIAL`})})]})},t)})}),(0,V.jsxs)(Z.div,{initial:{opacity:0,y:15},animate:{opacity:1,y:0},transition:{duration:.35},className:`cert-active-info`,children:[(0,V.jsxs)(`div`,{className:`cert-active-top`,children:[(0,V.jsxs)(`span`,{className:`cert-status`,children:[(0,V.jsx)(`span`,{className:`cert-status-dot`}),`VERIFIED CREDENTIAL`]}),(0,V.jsx)(`span`,{className:`cert-active-number`,children:String(t+1).padStart(2,`0`)})]}),(0,V.jsxs)(`div`,{className:`cert-active-content`,children:[(0,V.jsxs)(`div`,{children:[(0,V.jsx)(`span`,{className:`cert-active-label`,children:`PROFESSIONAL CERTIFICATION`}),(0,V.jsx)(`h3`,{children:s.title}),(0,V.jsxs)(`div`,{className:`cert-issued`,children:[(0,V.jsx)(wp,{}),(0,V.jsxs)(`span`,{children:[`Issued by`,` `,(0,V.jsx)(`strong`,{children:s.issuer})]})]})]}),(0,V.jsx)(`div`,{className:`cert-active-action`,children:s.link?(0,V.jsxs)(`a`,{href:s.link,target:`_blank`,rel:`noopener noreferrer`,className:`cert-view-button`,children:[(0,V.jsx)(`span`,{children:`VIEW CERTIFICATE`}),(0,V.jsx)(dp,{})]}):(0,V.jsx)(`span`,{className:`cert-unavailable`,children:`CERTIFICATE LINK UNAVAILABLE`})})]})]},t)]}),(0,V.jsxs)(`div`,{className:`cert-vault-stats`,children:[(0,V.jsxs)(`div`,{className:`cert-stat`,children:[(0,V.jsx)(`div`,{className:`cert-stat-icon`,children:(0,V.jsx)(xp,{})}),(0,V.jsxs)(`div`,{children:[(0,V.jsx)(`strong`,{children:String(r).padStart(2,`0`)}),(0,V.jsx)(`span`,{children:`TOTAL CERTIFICATIONS`})]})]}),(0,V.jsx)(`div`,{className:`cert-stat-divider`}),(0,V.jsxs)(`div`,{className:`cert-stat`,children:[(0,V.jsx)(`div`,{className:`cert-stat-icon`,children:(0,V.jsx)(yp,{})}),(0,V.jsxs)(`div`,{children:[(0,V.jsx)(`strong`,{children:`100%`}),(0,V.jsx)(`span`,{children:`VERIFIED CREDENTIALS`})]})]}),(0,V.jsx)(`div`,{className:`cert-stat-divider`}),(0,V.jsxs)(`div`,{className:`cert-stat`,children:[(0,V.jsx)(`div`,{className:`cert-stat-icon`,children:(0,V.jsx)(wp,{})}),(0,V.jsxs)(`div`,{children:[(0,V.jsx)(`strong`,{children:`∞`}),(0,V.jsx)(`span`,{children:`LEARNING IN PROGRESS`})]})]})]}),(0,V.jsxs)(`div`,{className:`cert-vault-footer`,children:[(0,V.jsx)(`span`,{children:`// CERTIFICATIONS`}),(0,V.jsx)(`span`,{children:`LIFELONG LEARNER //`})]})]}),(0,V.jsx)(`style`,{children:`
+      `})]})},Hp=()=>{let e=[{title:`2-Hour Ethical Hacking & Cybersecurity Workshop`,issuer:`VaultofCodes`,duration:`17 Sep 2026`,image:`/ns-port/certificates/ethical-hacking-cybersecurity.jpg`,link:`/ns-port/certificates/ethical-hacking-cybersecurity.jpg`},{title:`Generative AI Mastermind`,issuer:`Outskill`,duration:`2026`,image:`/ns-port/certificates/generative-ai-mastermind.jpg`,link:`/ns-port/certificates/generative-ai-mastermind.jpg`},{title:`Introduction to Cloud Job Simulation`,issuer:`Datacom / Forage`,duration:`7 Sep 2026`,image:`/ns-port/certificates/cloud-job-simulation.jpg`,link:`/ns-port/certificates/cloud-job-simulation.jpg`},{title:`AI Tools & Claude Workshop`,issuer:`be10x`,duration:`6 Sep 2026`,image:`/ns-port/certificates/ai-tools-claude-workshop.jpg`,link:`/ns-port/certificates/ai-tools-claude-workshop.jpg`}],t=[...$.certifications.map(e=>({...e,image:void 0,duration:void 0})),...e],[n,r]=(0,b.useState)(0),i=t.length,a=()=>{i!==0&&r(e=>(e+1)%i)},o=()=>{i!==0&&r(e=>(e-1+i)%i)};if(i===0)return null;let s=e=>{let t=e-n;return t>i/2&&(t-=i),t<-i/2&&(t+=i),t},c=t[n];return(0,V.jsxs)(`section`,{id:`certifications`,className:`cert-vault-section relative overflow-hidden`,children:[(0,V.jsx)(`div`,{className:`cert-vault-bg`}),(0,V.jsx)(`div`,{className:`cert-vault-grid`}),(0,V.jsx)(`div`,{className:`cert-vault-glow cert-vault-glow-left`}),(0,V.jsx)(`div`,{className:`cert-vault-glow cert-vault-glow-right`}),(0,V.jsxs)(`div`,{className:`relative z-10 mx-auto max-w-7xl px-5 py-24 sm:px-6 lg:px-8`,children:[(0,V.jsx)(jp,{title:`Certifications`,subtitle:`Professional credentials and continuous learning.`}),(0,V.jsxs)(`div`,{className:`cert-vault-heading`,children:[(0,V.jsxs)(`div`,{children:[(0,V.jsxs)(`div`,{className:`cert-eyebrow`,children:[(0,V.jsx)(`span`,{className:`cert-eyebrow-line`}),(0,V.jsx)(`span`,{children:`KNOWLEDGE ARCHIVE`})]}),(0,V.jsxs)(`h2`,{children:[`Credentials`,(0,V.jsx)(`span`,{children:` / `}),`Verified.`]})]}),(0,V.jsxs)(`div`,{className:`cert-vault-counter`,children:[(0,V.jsx)(`span`,{className:`cert-counter-current`,children:String(n+1).padStart(2,`0`)}),(0,V.jsx)(`span`,{className:`cert-counter-line`}),(0,V.jsx)(`span`,{children:String(i).padStart(2,`0`)})]})]}),(0,V.jsxs)(`div`,{className:`cert-vault-stage`,children:[(0,V.jsx)(`div`,{className:`cert-floor`}),(0,V.jsx)(`button`,{type:`button`,onClick:o,className:`cert-nav cert-nav-left`,"aria-label":`Previous certification`,children:(0,V.jsx)(Dp,{})}),(0,V.jsx)(`button`,{type:`button`,onClick:a,className:`cert-nav cert-nav-right`,"aria-label":`Next certification`,children:(0,V.jsx)(Ep,{})}),(0,V.jsx)(`div`,{className:`cert-gallery`,children:t.map((e,t)=>{let n=s(t),r=n===0;return Math.abs(n)>2?null:(0,V.jsx)(Z.div,{className:`cert-gallery-card ${r?`is-active`:``}`,animate:{x:n===0?0:n<0?-390:390,scale:n===0?1:Math.abs(n)===1?.82:.68,opacity:n===0?1:Math.abs(n)===1?.48:.18,rotateY:n===0?0:n<0?12:-12,zIndex:20-Math.abs(n)},transition:{duration:.5,ease:[.22,1,.36,1]},style:{pointerEvents:r?`auto`:`none`},children:(0,V.jsxs)(`div`,{className:`cert-pedestal`,children:[(0,V.jsx)(`div`,{className:`cert-pedestal-top`,children:(0,V.jsxs)(`span`,{children:[String(t+1).padStart(2,`0`),` /`,` `,String(i).padStart(2,`0`)]})}),(0,V.jsx)(`div`,{className:`cert-document`,children:(0,V.jsxs)(`div`,{className:`cert-document-border`,children:[(0,V.jsx)(`div`,{className:`cert-document-corner cert-corner-tl`}),(0,V.jsx)(`div`,{className:`cert-document-corner cert-corner-tr`}),(0,V.jsx)(`div`,{className:`cert-document-corner cert-corner-bl`}),(0,V.jsx)(`div`,{className:`cert-document-corner cert-corner-br`}),(0,V.jsxs)(`div`,{className:`cert-document-content`,children:[(0,V.jsx)(`div`,{className:`cert-document-icon`,children:(0,V.jsx)(xp,{})}),(0,V.jsx)(`span`,{className:`cert-document-small`,children:`CERTIFICATE OF ACHIEVEMENT`}),(0,V.jsx)(`div`,{className:`cert-document-rule`}),(0,V.jsx)(`h3`,{children:e.title}),(0,V.jsx)(`p`,{children:e.issuer}),(0,V.jsxs)(`div`,{className:`cert-document-seal`,children:[(0,V.jsx)(wp,{}),(0,V.jsx)(`span`,{children:`VERIFIED`})]})]})]})}),(0,V.jsx)(`div`,{className:`cert-pedestal-base`,children:(0,V.jsx)(`span`,{children:r?`CURRENT CREDENTIAL`:`CREDENTIAL`})})]})},t)})}),(0,V.jsxs)(Z.div,{initial:{opacity:0,y:15},animate:{opacity:1,y:0},transition:{duration:.35},className:`cert-active-info`,children:[(0,V.jsxs)(`div`,{className:`cert-active-top`,children:[(0,V.jsxs)(`span`,{className:`cert-status`,children:[(0,V.jsx)(`span`,{className:`cert-status-dot`}),`VERIFIED CREDENTIAL`]}),(0,V.jsx)(`span`,{className:`cert-active-number`,children:String(n+1).padStart(2,`0`)})]}),(0,V.jsxs)(`div`,{className:`cert-active-content`,children:[(0,V.jsxs)(`div`,{children:[(0,V.jsx)(`span`,{className:`cert-active-label`,children:`PROFESSIONAL CERTIFICATION`}),(0,V.jsx)(`h3`,{children:c.title}),(0,V.jsxs)(`div`,{className:`cert-issued`,children:[(0,V.jsx)(wp,{}),(0,V.jsxs)(`span`,{children:[`Issued by`,` `,(0,V.jsx)(`strong`,{children:c.issuer}),c.duration?` • ${c.duration}`:``]})]})]}),(0,V.jsx)(`div`,{className:`cert-active-action`,children:c.link?(0,V.jsxs)(`a`,{href:c.link,target:`_blank`,rel:`noopener noreferrer`,className:`cert-view-button`,children:[(0,V.jsx)(`span`,{children:`VIEW CERTIFICATE`}),(0,V.jsx)(dp,{})]}):(0,V.jsx)(`span`,{className:`cert-unavailable`,children:`CERTIFICATE LINK UNAVAILABLE`})})]})]},n)]}),(0,V.jsxs)(`div`,{className:`cert-vault-stats`,children:[(0,V.jsxs)(`div`,{className:`cert-stat`,children:[(0,V.jsx)(`div`,{className:`cert-stat-icon`,children:(0,V.jsx)(xp,{})}),(0,V.jsxs)(`div`,{children:[(0,V.jsx)(`strong`,{children:String(i).padStart(2,`0`)}),(0,V.jsx)(`span`,{children:`TOTAL CERTIFICATIONS`})]})]}),(0,V.jsx)(`div`,{className:`cert-stat-divider`}),(0,V.jsxs)(`div`,{className:`cert-stat`,children:[(0,V.jsx)(`div`,{className:`cert-stat-icon`,children:(0,V.jsx)(yp,{})}),(0,V.jsxs)(`div`,{children:[(0,V.jsx)(`strong`,{children:`100%`}),(0,V.jsx)(`span`,{children:`VERIFIED CREDENTIALS`})]})]}),(0,V.jsx)(`div`,{className:`cert-stat-divider`}),(0,V.jsxs)(`div`,{className:`cert-stat`,children:[(0,V.jsx)(`div`,{className:`cert-stat-icon`,children:(0,V.jsx)(wp,{})}),(0,V.jsxs)(`div`,{children:[(0,V.jsx)(`strong`,{children:`∞`}),(0,V.jsx)(`span`,{children:`LEARNING IN PROGRESS`})]})]})]}),(0,V.jsxs)(`div`,{className:`cert-vault-footer`,children:[(0,V.jsx)(`span`,{children:`// CERTIFICATIONS`}),(0,V.jsx)(`span`,{children:`LIFELONG LEARNER //`})]})]}),(0,V.jsx)(`style`,{children:`
         .cert-vault-section {
           min-height: 100vh;
           background: #070707;
@@ -6585,6 +6604,7 @@ to {
             0 25px 60px rgba(0, 0, 0, 0.7),
             0 0 40px rgba(213, 170, 80, 0.08);
         }
+
 
         .is-active .cert-document {
           box-shadow:
@@ -7042,6 +7062,7 @@ to {
             height: 235px;
             padding: 9px;
           }
+
 
           .cert-document-content {
             inset: 12px;
@@ -7863,156 +7884,239 @@ to {
             font-size: 21px;
           }
         }
-      `})]})},fm=()=>{let e=[{icon:(0,V.jsx)($f,{}),name:`LinkedIn`,link:$.socials.linkedin},{icon:(0,V.jsx)(tp,{}),name:`GitHub`,link:$.socials.github},{icon:(0,V.jsx)(ep,{}),name:`Instagram`,link:$.socials.instagram}];return(0,V.jsxs)(`footer`,{className:`premium-footer relative overflow-hidden bg-[#070707] text-[#f5f1e8]`,children:[(0,V.jsx)(`div`,{className:`footer-top-line h-px w-full`}),(0,V.jsx)(`div`,{className:`footer-ambient footer-ambient-left`}),(0,V.jsx)(`div`,{className:`footer-ambient footer-ambient-right`}),(0,V.jsxs)(`div`,{className:`relative z-10 mx-auto max-w-7xl px-5 sm:px-6 lg:px-8`,children:[(0,V.jsxs)(`div`,{className:`footer-main flex flex-col gap-10 py-12 md:flex-row md:items-center md:justify-between md:py-14`,children:[(0,V.jsxs)(`div`,{className:`footer-brand`,children:[(0,V.jsx)(`a`,{href:`#home`,className:`footer-brand-link group inline-block`,children:(0,V.jsx)(`h2`,{className:`font-serif text-3xl font-normal tracking-tight text-[#f5f1e8] transition-all duration-300 group-hover:-translate-y-0.5 group-hover:text-[#efc566]`,children:$.name})}),(0,V.jsxs)(`div`,{className:`mt-3 flex items-center gap-3`,children:[(0,V.jsx)(`span`,{className:`footer-brand-line h-px w-8`}),(0,V.jsx)(`p`,{className:`text-xs tracking-wide text-[#77736c] transition-colors duration-300 group-hover:text-[#9a948b]`,children:$.role})]})]}),(0,V.jsx)(`div`,{className:`flex items-center gap-3`,children:e.map(e=>(0,V.jsx)(`a`,{href:e.link,target:`_blank`,rel:`noopener noreferrer`,"aria-label":e.name,className:`footer-social group flex h-11 w-11 items-center justify-center rounded-lg border border-white/[0.08] bg-white/[0.02] text-[#8d8880]`,children:(0,V.jsx)(`span`,{className:`footer-social-icon transition-transform duration-300 group-hover:scale-110`,children:e.icon})},e.name))})]}),(0,V.jsxs)(`div`,{className:`footer-bottom flex flex-col gap-5 border-t border-white/[0.07] py-6 sm:flex-row sm:items-center sm:justify-between`,children:[(0,V.jsxs)(`p`,{className:`text-[11px] text-[#59554f]`,children:[`© `,new Date().getFullYear(),` `,(0,V.jsx)(`span`,{className:`text-[#77736c]`,children:$.name}),`. All Rights Reserved.`]}),(0,V.jsxs)(`a`,{href:`#home`,className:`footer-back-top group flex items-center gap-2 text-[10px] font-medium tracking-[0.14em] text-[#77736c]`,children:[(0,V.jsx)(`span`,{children:`BACK TO TOP`}),(0,V.jsx)(`span`,{className:`footer-top-button flex h-7 w-7 items-center justify-center rounded-md border border-white/[0.08]`,children:(0,V.jsx)(Tp,{className:`text-[9px] transition-transform duration-300 group-hover:-translate-y-0.5`})})]})]})]}),(0,V.jsx)(`div`,{className:`footer-bottom-line h-[2px] w-full`}),(0,V.jsx)(`style`,{children:`
-        .premium-footer {
-          isolation: isolate;
+      `})]})},fm=()=>(0,V.jsxs)(`footer`,{className:`footer-section`,children:[(0,V.jsxs)(`div`,{className:`footer-container`,children:[(0,V.jsxs)(`div`,{className:`footer-main`,children:[(0,V.jsxs)(`div`,{className:`footer-brand`,children:[(0,V.jsx)(`h2`,{children:$.name}),(0,V.jsx)(`p`,{children:$.role})]}),(0,V.jsxs)(`div`,{className:`footer-socials`,children:[(0,V.jsx)(`a`,{href:$.socials.linkedin,target:`_blank`,rel:`noreferrer`,"aria-label":`LinkedIn`,className:`footer-social`,children:(0,V.jsx)($f,{})}),(0,V.jsx)(`a`,{href:$.socials.github,target:`_blank`,rel:`noreferrer`,"aria-label":`GitHub`,className:`footer-social`,children:(0,V.jsx)(tp,{})}),(0,V.jsx)(`a`,{href:$.socials.instagram,target:`_blank`,rel:`noreferrer`,"aria-label":`Instagram`,className:`footer-social`,children:(0,V.jsx)(ep,{})})]})]}),(0,V.jsxs)(`div`,{className:`footer-bottom`,children:[(0,V.jsxs)(`p`,{children:[`© `,new Date().getFullYear(),` `,$.name,`. All Rights Reserved.`]}),(0,V.jsxs)(`a`,{href:`#home`,className:`footer-top-link`,onClick:e=>{e.preventDefault(),window.scrollTo({top:0,behavior:`smooth`})},children:[(0,V.jsx)(`span`,{className:`footer-top-icon`,children:(0,V.jsx)(Tp,{})}),`Back to Top`]})]})]}),(0,V.jsx)(`style`,{children:`
+        .footer-section {
+          position: relative;
+          margin-top: 5rem;
+          overflow: hidden;
+          border-top: 1px solid rgba(213, 170, 80, 0.18);
+          background: #070707;
+          color: #f5f1e8;
         }
 
-        .footer-top-line {
-          background: linear-gradient(
-            90deg,
-            transparent 0%,
-            rgba(213, 170, 80, 0.18) 22%,
-            rgba(213, 170, 80, 0.5) 50%,
-            rgba(213, 170, 80, 0.18) 78%,
-            transparent 100%
-          );
-        }
-
-        .footer-bottom-line {
-          background: linear-gradient(
-            90deg,
-            transparent 0%,
-            rgba(213, 170, 80, 0.05) 30%,
-            rgba(213, 170, 80, 0.2) 50%,
-            rgba(213, 170, 80, 0.05) 70%,
-            transparent 100%
-          );
-        }
-
-        .footer-ambient {
+        .footer-section::before {
+          content: "";
           position: absolute;
-          width: 220px;
-          height: 220px;
-          border-radius: 50%;
-          background: #d5aa50;
-          filter: blur(120px);
-          opacity: 0.025;
+          top: 0;
+          left: 12%;
+          width: 76%;
+          height: 1px;
+          background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(213, 170, 80, 0.38),
+            transparent
+          );
           pointer-events: none;
         }
 
-        .footer-ambient-left {
-          left: -150px;
-          top: 10%;
+        .footer-container {
+          width: min(100%, 80rem);
+          margin: 0 auto;
+          padding: 2.5rem 1.5rem;
         }
 
-        .footer-ambient-right {
-          right: -150px;
-          bottom: 5%;
+        .footer-main {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 1.5rem;
         }
 
-        .footer-brand-line {
+        .footer-brand h2 {
+          position: relative;
+          display: inline-block;
+          margin: 0;
+          color: #f5f1e8;
+          font-size: 1.5rem;
+          font-weight: 700;
+          letter-spacing: -0.025em;
+          transition:
+            color 0.25s ease,
+            transform 0.25s ease;
+        }
+
+        .footer-brand h2::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -5px;
+          width: 28px;
+          height: 1px;
           background: #d5aa50;
           transition:
-            width 0.3s ease,
-            box-shadow 0.3s ease;
+            width 0.25s ease,
+            box-shadow 0.25s ease;
         }
 
-        .footer-brand-link:hover + div .footer-brand-line {
-          width: 42px;
+        .footer-brand:hover h2 {
+          color: #efc566;
+          transform: translateY(-1px);
+        }
+
+        .footer-brand:hover h2::after {
+          width: 52px;
           box-shadow: 0 0 10px rgba(213, 170, 80, 0.35);
         }
 
-        .footer-social {
-          position: relative;
-          overflow: hidden;
-          transition:
-            transform 0.3s ease,
-            border-color 0.3s ease,
-            background 0.3s ease,
-            color 0.3s ease,
-            box-shadow 0.3s ease;
+        .footer-brand p {
+          margin: 0.5rem 0 0;
+          color: #77736c;
+          font-size: 0.9rem;
+          transition: color 0.25s ease;
         }
 
-        .footer-social::before {
-          content: "";
-          position: absolute;
-          inset: 0;
-          background: radial-gradient(
-            circle at 50% 100%,
-            rgba(213, 170, 80, 0.16),
-            transparent 62%
-          );
-          opacity: 0;
-          transition: opacity 0.3s ease;
+        .footer-brand:hover p {
+          color: #9b958b;
+        }
+
+        .footer-socials {
+          display: flex;
+          align-items: center;
+          gap: 0.65rem;
+        }
+
+        .footer-social {
+          display: grid;
+          width: 42px;
+          height: 42px;
+          place-items: center;
+          border: 1px solid rgba(213, 170, 80, 0.2);
+          background: rgba(213, 170, 80, 0.01);
+          color: #8e8981;
+          font-size: 1rem;
+          text-decoration: none;
+          transition:
+            transform 0.25s ease,
+            border-color 0.25s ease,
+            color 0.25s ease,
+            background 0.25s ease,
+            box-shadow 0.25s ease;
         }
 
         .footer-social:hover {
-          transform: translateY(-4px);
-          border-color: rgba(213, 170, 80, 0.55);
+          transform: translateY(-3px);
+          border-color: rgba(213, 170, 80, 0.75);
           background: rgba(213, 170, 80, 0.055);
           color: #efc566;
-          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+          box-shadow: 0 8px 22px rgba(213, 170, 80, 0.1);
         }
 
-        .footer-social:hover::before {
-          opacity: 1;
+        .footer-social:active {
+          transform: translateY(-1px) scale(0.97);
         }
 
-        .footer-social-icon {
-          position: relative;
-          z-index: 1;
+        .footer-bottom {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 1rem;
+          margin-top: 2.5rem;
+          padding-top: 1.5rem;
+          border-top: 1px solid rgba(255, 255, 255, 0.07);
         }
 
-        .footer-back-top {
-          transition: color 0.3s ease;
+        .footer-bottom p {
+          margin: 0;
+          color: #5f5b55;
+          font-size: 0.8rem;
+          line-height: 1.5;
         }
 
-        .footer-back-top:hover {
-          color: #efc566;
-        }
-
-        .footer-top-button {
+        .footer-top-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.55rem;
+          color: #77736c;
+          font-size: 0.8rem;
+          text-decoration: none;
           transition:
-            transform 0.3s ease,
-            border-color 0.3s ease,
-            background 0.3s ease,
-            box-shadow 0.3s ease;
+            color 0.25s ease,
+            transform 0.25s ease;
         }
 
-        .footer-back-top:hover .footer-top-button {
+        .footer-top-link:hover {
+          color: #efc566;
           transform: translateY(-2px);
-          border-color: rgba(213, 170, 80, 0.45);
-          background: rgba(213, 170, 80, 0.055);
-          box-shadow: 0 5px 18px rgba(0, 0, 0, 0.25);
         }
 
-        @media (prefers-reduced-motion: reduce) {
-          .footer-brand-link,
-          .footer-brand-line,
-          .footer-social,
-          .footer-social-icon,
-          .footer-back-top,
-          .footer-top-button {
-            transition: none !important;
-          }
+        .footer-top-icon {
+          display: grid;
+          width: 28px;
+          height: 28px;
+          place-items: center;
+          border: 1px solid rgba(213, 170, 80, 0.22);
+          color: #d5aa50;
+          transition:
+            border-color 0.25s ease,
+            background 0.25s ease,
+            transform 0.25s ease;
+        }
+
+        .footer-top-link:hover .footer-top-icon {
+          border-color: rgba(213, 170, 80, 0.7);
+          background: rgba(213, 170, 80, 0.06);
+          transform: translateY(-1px);
         }
 
         @media (max-width: 640px) {
-          .footer-main {
-            gap: 30px;
+          .footer-section {
+            margin-top: 4rem;
           }
 
-          .footer-social {
-            width: 42px;
-            height: 42px;
+          .footer-container {
+            padding: 2.25rem 1.25rem;
+          }
+
+          .footer-main {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            text-align: left;
           }
 
           .footer-bottom {
-            gap: 16px;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            text-align: left;
+          }
+
+          .footer-socials {
+            gap: 0.55rem;
+            flex-shrink: 0;
+          }
+
+          .footer-social {
+            width: 40px;
+            height: 40px;
+          }
+
+          .footer-bottom {
+            margin-top: 2rem;
+            padding-top: 1.25rem;
+          }
+
+          .footer-bottom p {
+            font-size: 0.72rem;
+          }
+
+          .footer-top-link {
+            font-size: 0.75rem;
           }
         }
-      `})]})},pm=()=>{let[e,t]=(0,b.useState)(!1);return(0,b.useEffect)(()=>{let e=()=>{t(window.scrollY>500)};return e(),window.addEventListener(`scroll`,e,{passive:!0}),()=>{window.removeEventListener(`scroll`,e)}},[]),(0,V.jsxs)(V.Fragment,{children:[(0,V.jsx)(`style`,{children:`
+
+        @media (prefers-reduced-motion: reduce) {
+          .footer-brand h2,
+          .footer-brand h2::after,
+          .footer-brand p,
+          .footer-social,
+          .footer-top-link,
+          .footer-top-icon {
+            transition: none !important;
+          }
+        }
+      `})]}),pm=()=>{let[e,t]=(0,b.useState)(!1);return(0,b.useEffect)(()=>{let e=()=>{t(window.scrollY>500)};return e(),window.addEventListener(`scroll`,e,{passive:!0}),()=>{window.removeEventListener(`scroll`,e)}},[]),(0,V.jsxs)(V.Fragment,{children:[(0,V.jsx)(`style`,{children:`
         .ns-back-top {
           position: fixed;
           right: 28px;
