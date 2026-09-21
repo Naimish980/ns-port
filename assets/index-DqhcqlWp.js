@@ -190,7 +190,222 @@ to {
             ${_}px !important;
             ${v}px !important;
           }
-        `),()=>{s.current?.removeAttribute(`data-motion-pop-id`),b.contains(y)&&b.removeChild(y)}},[t]),(0,V.jsx)(Hl,{isPresent:t,childRef:s,sizeRef:c,pop:a,children:a===!1?e:b.cloneElement(e,{ref:u})})}var U=({children:e,initial:t,isPresent:n,onExitComplete:r,custom:i,presenceAffectsLayout:a,mode:o,anchorX:s,anchorY:c,root:l})=>{let u=ct(W),d=(0,b.useId)(),f=(0,b.useRef)(n),p=(0,b.useRef)(r);lt(()=>{f.current=n,p.current=r});let m=!0,h=(0,b.useMemo)(()=>(m=!1,{id:d,initial:t,isPresent:n,custom:i,onExitComplete:e=>{u.set(e,!0);for(let e of u.values())if(!e)return;r&&r()},register:e=>(u.set(e,!1),()=>{u.delete(e),!f.current&&!u.size&&p.current?.()})}),[n,u,r]);return a&&m&&(h={...h}),(0,b.useMemo)(()=>{u.forEach((e,t)=>u.set(t,!1))},[n]),b.useEffect(()=>{!n&&!u.size&&r&&r()},[n]),e=(0,V.jsx)(H,{pop:o===`popLayout`,isPresent:n,anchorX:s,anchorY:c,root:l,children:e}),(0,V.jsx)(ut.Provider,{value:h,children:e})};function W(){return new Map}function G(e=!0){let t=(0,b.useContext)(ut);if(t===null)return[!0,null];let{isPresent:n,onExitComplete:r,register:i}=t,a=(0,b.useId)();(0,b.useEffect)(()=>{if(e)return i(a)},[e]);let o=(0,b.useCallback)(()=>e&&r&&r(a),[a,r,e]);return!n&&r?[!1,o]:[!0]}var K=e=>e.key||``;function Ul(e){let t=[];return b.Children.forEach(e,e=>{(0,b.isValidElement)(e)&&t.push(e)}),t}var Wl=({children:e,custom:t,initial:n=!0,onExitComplete:r,presenceAffectsLayout:i=!0,mode:a=`sync`,propagate:o=!1,anchorX:s=`left`,anchorY:c=`top`,root:l})=>{let[u,d]=G(o),f=(0,b.useMemo)(()=>Ul(e),[e]),p=o&&!u?[]:f.map(K),m=(0,b.useRef)(!0),h=(0,b.useRef)(f),g=ct(()=>new Map),_=(0,b.useRef)(new Set),[v,y]=(0,b.useState)(f),[x,S]=(0,b.useState)(f);lt(()=>{m.current=!1,h.current=f;for(let e=0;e<x.length;e++){let t=K(x[e]);p.includes(t)?(g.delete(t),_.current.delete(t)):g.get(t)!==!0&&g.set(t,!1)}},[x,p.length,p.join(`-`)]);let C=[];if(f!==v){let e=[...f];for(let t=0;t<x.length;t++){let n=x[t],r=K(n);p.includes(r)||(e.splice(t,0,n),C.push(n))}return a===`wait`&&C.length&&(e=C),S(Ul(e)),y(f),null}let{forceRender:w}=(0,b.useContext)(st);return(0,V.jsx)(V.Fragment,{children:x.map(e=>{let v=K(e),y=o&&!u?!1:f===x||p.includes(v);return(0,V.jsx)(U,{isPresent:y,initial:!m.current||n?void 0:!1,custom:t,presenceAffectsLayout:i,mode:a,root:l,onExitComplete:y?void 0:()=>{if(_.current.has(v))return;if(g.has(v))_.current.add(v),g.set(v,!0);else return;let e=!0;g.forEach(t=>{t||(e=!1)}),e&&(w?.(),S(h.current),o&&d?.(),r&&r())},anchorX:s,anchorY:c,children:e},v)})})},Gl=[`animate`,`circle`,`defs`,`desc`,`ellipse`,`g`,`image`,`line`,`filter`,`marker`,`mask`,`metadata`,`path`,`pattern`,`polygon`,`polyline`,`rect`,`stop`,`switch`,`symbol`,`svg`,`text`,`tspan`,`use`,`view`];function Kl(e){return typeof e!=`string`||e.includes(`-`)?!1:!!(Gl.indexOf(e)>-1||/[A-Z]/u.test(e))}var ql=(e,t)=>t.isSVG??Kl(e)?new zs(t):new ks(t,{allowProjection:e!==b.Fragment}),q=(0,b.createContext)({strict:!1}),Jl=(0,b.createContext)({});function Yl(e,t){if(ts(e)){let{initial:t,animate:n}=e;return{initial:t===!1||Qo(t)?t:void 0,animate:Qo(n)?n:void 0}}return e.inherit===!1?{}:t}function Xl(e){let{initial:t,animate:n}=Yl(e,(0,b.useContext)(Jl));return(0,b.useMemo)(()=>({initial:t,animate:n}),[Zl(t),Zl(n)])}function Zl(e){return Array.isArray(e)?e.join(` `):e}var Ql=()=>({style:{},transform:{},transformOrigin:{},vars:{}});function $l(e,t,n){for(let r in t)!F(t[r])&&!Es(r,n)&&(e[r]=t[r])}function eu({transformTemplate:e},t){return(0,b.useMemo)(()=>{let n=Ql();return bs(n,t,e),Object.assign({},n.vars,n.style)},[t])}function tu(e,t){let n=e.style||{},r={};return $l(r,n,e),Object.assign(r,eu(e,t)),r}function nu(e,t){let n={},r=tu(e,t);return e.drag&&e.dragListener!==!1&&(n.draggable=!1,r.userSelect=r.WebkitUserSelect=r.WebkitTouchCallout=`none`,r.touchAction=e.drag===!0?`none`:`pan-${e.drag===`x`?`y`:`x`}`),e.tabIndex===void 0&&(e.onTap||e.onTapStart||e.whileTap)&&(n.tabIndex=0),n.style=r,n}var ru=()=>({...Ql(),attrs:{}});function iu(e,t,n,r){let i=(0,b.useMemo)(()=>{let n=ru();return Ps(n,t,Is(r),e.transformTemplate,e.style),{...n.attrs,style:{...n.style}}},[t]);if(e.style){let t={};$l(t,e.style,e),i.style={...t,...i.style}}return i}var au=new Set(`animate.exit.variants.initial.style.values.variants.transition.transformTemplate.custom.inherit.onBeforeLayoutMeasure.onAnimationStart.onAnimationComplete.onUpdate.onDragStart.onDrag.onDragEnd.onMeasureDragConstraints.onDirectionLock.onDragTransitionEnd._dragX._dragY.onHoverStart.onHoverEnd.onViewportEnter.onViewportLeave.globalTapTarget.propagate.ignoreStrict.viewport`.split(`.`));function ou(e){return e.startsWith(`while`)||e.startsWith(`drag`)&&e!==`draggable`||e.startsWith(`layout`)||e.startsWith(`onTap`)||e.startsWith(`onPan`)||e.startsWith(`onLayout`)||au.has(e)}var su=c({default:()=>cu}),cu,lu=o((()=>{throw cu={},Error(`Could not resolve "@emotion/is-prop-valid" imported by "framer-motion". Is it installed?`)})),uu=e=>!ou(e);function du(e){typeof e==`function`&&(uu=t=>t.startsWith(`on`)?!ou(t):e(t))}try{du((lu(),d(su)).default)}catch{}function fu(e,t,n){let r={};for(let i in e)i===`values`&&typeof e.values==`object`||F(e[i])||(uu(i)||n===!0&&ou(i)||!t&&!ou(i)||e.draggable&&i.startsWith(`onDrag`))&&(r[i]=e[i]);return r}function pu(e,t,n,{latestValues:r},i,a=!1,o){let s=(o??Kl(e)?iu:nu)(t,r,i,e),c=fu(t,typeof e==`string`,a),l=e===b.Fragment?{}:{...c,...s,ref:n},{children:u}=t,d=(0,b.useMemo)(()=>F(u)?u.get():u,[u]);return(0,b.createElement)(e,{...l,children:d})}function mu({scrapeMotionValuesFromProps:e,createRenderState:t},n,r,i){return{latestValues:hu(n,r,i,e),renderState:t()}}function hu(e,t,n,r){let i={},a=r(e,{});for(let e in a)i[e]=Sc(a[e]);let{initial:o,animate:s}=e,c=ts(e),l=ns(e);t&&l&&!c&&e.inherit!==!1&&(o===void 0&&(o=t.initial),s===void 0&&(s=t.animate));let u=n?n.initial===!1:!1;u||=o===!1;let d=u?s:o;if(d&&typeof d!=`boolean`&&!Zo(d)){let t=Array.isArray(d)?d:[d];for(let n=0;n<t.length;n++){let r=ls(e,t[n]);if(r){let{transitionEnd:e,transition:t,...n}=r;for(let e in n){let t=n[e];if(Array.isArray(t)){let e=u?t.length-1:0;t=t[e]}t!==null&&(i[e]=t)}for(let t in e)i[t]=e[t]}}}return i}var gu=e=>(t,n)=>{let r=(0,b.useContext)(Jl),i=(0,b.useContext)(ut),a=()=>mu(e,t,r,i);return n?a():ct(a)},_u=gu({scrapeMotionValuesFromProps:Ds,createRenderState:Ql}),vu=gu({scrapeMotionValuesFromProps:Rs,createRenderState:ru}),yu={animation:[`animate`,`variants`,`whileHover`,`whileTap`,`exit`,`whileInView`,`whileFocus`,`whileDrag`],exit:[`exit`],drag:[`drag`,`dragControls`],focus:[`whileFocus`],hover:[`whileHover`,`onHoverStart`,`onHoverEnd`],tap:[`whileTap`,`onTap`,`onTapStart`,`onTapCancel`],pan:[`onPan`,`onPanStart`,`onPanSessionStart`,`onPanEnd`],inView:[`whileInView`,`onViewportEnter`,`onViewportLeave`],layout:[`layout`,`layoutId`]},bu=!1;function xu(){if(bu)return;let e={};for(let t in yu)e[t]={isEnabled:e=>yu[t].some(t=>!!e[t])};fs(e),bu=!0}function Su(){return xu(),ps()}function Cu(e){let t=Su();for(let n in e)t[n]={...t[n],...e[n]};fs(t)}var wu=Symbol.for(`motionComponentSymbol`);function Tu(e,t,n){let r=(0,b.useRef)(n);(0,b.useInsertionEffect)(()=>{r.current=n});let i=(0,b.useRef)(null);return(0,b.useCallback)(n=>{n&&e.onMount?.(n),t&&(n?t.mount(n):t.unmount());let a=r.current;if(typeof a==`function`)if(n){let e=a(n);typeof e==`function`&&(i.current=e)}else i.current?(i.current(),i.current=null):a(n);else a&&(a.current=n)},[t])}var Eu=(0,b.createContext)({});function Du(e){return e&&typeof e==`object`&&Object.prototype.hasOwnProperty.call(e,`current`)}function Ou(e,t,n,r,i,a){let{visualElement:o}=(0,b.useContext)(Jl),s=(0,b.useContext)(q),c=(0,b.useContext)(ut),l=(0,b.useContext)(Rl),u=l.reducedMotion,d=l.skipAnimations,f=(0,b.useRef)(null),p=(0,b.useRef)(!1);r||=s.renderer,!f.current&&r&&(f.current=r(e,{visualState:t,parent:o,props:n,presenceContext:c,blockInitialAnimation:c?c.initial===!1:!1,reducedMotionConfig:u,skipAnimations:d,isSVG:a}),p.current&&f.current&&(f.current.manuallyAnimateOnMount=!0));let m=f.current,h=(0,b.useContext)(Eu);m&&!m.projection&&i&&(m.type===`html`||m.type===`svg`)&&ku(f.current,n,i,h);let g=(0,b.useRef)(!1);(0,b.useInsertionEffect)(()=>{m&&g.current&&m.update(n,c)});let _=n[ia],v=(0,b.useRef)(!!_&&typeof window<`u`&&!window.MotionHandoffIsComplete?.(_)&&window.MotionHasOptimisedAnimation?.(_));return lt(()=>{p.current=!0,m&&(g.current=!0,window.MotionIsMounted=!0,m.updateFeatures(),m.scheduleRenderMicrotask(),v.current&&m.animationState&&m.animationState.animateChanges())}),(0,b.useEffect)(()=>{m&&(!v.current&&m.animationState&&m.animationState.animateChanges(),v.current&&=(queueMicrotask(()=>{window.MotionHandoffMarkAsComplete?.(_)}),!1),m.enteringChildren=void 0)}),m}function ku(e,t,n,r){let{layoutId:i,layout:a,drag:o,dragConstraints:s,layoutScroll:c,layoutRoot:l,layoutAnchor:u,layoutCrossfade:d}=t;e.projection=new n(e.latestValues,t[`data-framer-portal-id`]?void 0:Au(e.parent)),e.projection.setOptions({layoutId:i,layout:a,alwaysMeasureLayout:!!o||s&&Du(s),visualElement:e,animationType:typeof a==`string`?a:`both`,initialPromotionConfig:r,crossfade:d,layoutScroll:c,layoutRoot:l,layoutAnchor:u})}function Au(e){if(e)return e.options.allowProjection===!1?Au(e.parent):e.projection}function ju(e,{forwardMotionProps:t=!1,type:n}={},r,i){r&&Cu(r);let a=n?n===`svg`:Kl(e),o=a?vu:_u;function s(n,s){let c,l={...(0,b.useContext)(Rl),...n,layoutId:Mu(n)},{isStatic:u}=l,d=Xl(n),f=o(n,u);if(!u&&typeof window<`u`){Nu(l,r);let t=Pu(l);c=t.MeasureLayout,d.visualElement=Ou(e,f,l,i,t.ProjectionNode,a)}return(0,V.jsxs)(Jl.Provider,{value:d,children:[c&&d.visualElement?(0,V.jsx)(c,{visualElement:d.visualElement,...l}):null,pu(e,n,Tu(f,d.visualElement,s),f,u,t,a)]})}s.displayName=`motion.${typeof e==`string`?e:`create(${e.displayName??e.name??``})`}`;let c=(0,b.forwardRef)(s);return c[wu]=e,c}function Mu({layoutId:e}){let t=(0,b.useContext)(st).id;return t&&e!==void 0?t+`-`+e:e}function Nu(e,t){(0,b.useContext)(q).strict}function Pu(e){let{drag:t,layout:n}=Su();if(!t&&!n)return{};let r={...t,...n};return{MeasureLayout:t?.isEnabled(e)||n?.isEnabled(e)?r.MeasureLayout:void 0,ProjectionNode:r.ProjectionNode}}function Fu(e,t){if(typeof Proxy>`u`)return ju;let n=new Map,r=(n,r)=>ju(n,r,e,t);return new Proxy((e,t)=>r(e,t),{get:(i,a)=>a===`create`?r:(n.has(a)||n.set(a,ju(a,void 0,e,t)),n.get(a))})}var Iu=class extends to{constructor(e){super(e),e.animationState||=ic(e)}updateAnimationControlsSubscription(){let{animate:e}=this.node.getProps();Zo(e)&&(this.unmountControls=e.subscribe(this.node))}mount(){this.updateAnimationControlsSubscription()}update(){let{animate:e}=this.node.getProps(),{animate:t}=this.node.prevProps||{};e!==t&&this.updateAnimationControlsSubscription()}unmount(){this.node.animationState.reset(),this.unmountControls?.()}},Lu=0,Ru={animation:{Feature:Iu},exit:{Feature:class extends to{constructor(){super(...arguments),this.id=Lu++,this.isExitComplete=!1}update(){if(!this.node.presenceContext)return;let{isPresent:e,onExitComplete:t}=this.node.presenceContext,{isPresent:n}=this.node.prevPresenceContext||{};if(!this.node.animationState||e===n)return;if(e&&n===!1){if(this.isExitComplete){let{initial:e,custom:t}=this.node.getProps();if(typeof e==`string`||typeof e==`object`&&e&&!Array.isArray(e)){let n=Bs(this.node,e,t);if(n){let{transition:e,transitionEnd:t,...r}=n;for(let e in r)this.node.getValue(e)?.jump(r[e])}}this.node.animationState.reset(),this.node.animationState.animateChanges()}else this.node.animationState.setActive(`exit`,!1);this.isExitComplete=!1;return}let r=this.node.animationState.setActive(`exit`,!e);t&&!e&&r.then(()=>{this.isExitComplete=!0,t(this.id)})}mount(){let{register:e,onExitComplete:t}=this.node.presenceContext||{};t&&t(this.id),e&&(this.unmount=e(this.id))}unmount(){}}}};function zu(e){return{point:{x:e.pageX,y:e.pageY}}}var Bu=e=>t=>ga(t)&&e(t,zu(t));function Vu(e,t,n,r){return xc(e,t,Bu(n),r)}var Hu=({current:e})=>e?e.ownerDocument.defaultView:null,Uu=(e,t)=>Math.abs(e-t);function Wu(e,t){let n=Uu(e.x,t.x),r=Uu(e.y,t.y);return Math.sqrt(n**2+r**2)}var Gu=new Set([`auto`,`scroll`]),Ku=class{constructor(e,t,{transformPagePoint:n,contextWindow:r=window,dragSnapToOrigin:i=!1,distanceThreshold:a=3,element:o}={}){if(this.startEvent=null,this.lastMoveEvent=null,this.lastMoveEventInfo=null,this.lastRawMoveEventInfo=null,this.handlers={},this.contextWindow=window,this.scrollPositions=new Map,this.removeScrollListeners=null,this.onElementScroll=e=>{this.handleScroll(e.target)},this.onWindowScroll=()=>{this.handleScroll(window)},this.updatePoint=()=>{if(!(this.lastMoveEvent&&this.lastMoveEventInfo))return;this.lastRawMoveEventInfo&&(this.lastMoveEventInfo=qu(this.lastRawMoveEventInfo,this.transformPagePoint));let e=Ju(this.lastMoveEventInfo,this.history),t=this.startEvent!==null,n=Wu(e.offset,{x:0,y:0})>=this.distanceThreshold;if(!t&&!n)return;let{point:r}=e,{timestamp:i}=$t;this.history.push({...r,timestamp:i});let{onStart:a,onMove:o}=this.handlers;t||(a&&a(this.lastMoveEvent,e),this.startEvent=this.lastMoveEvent),o&&o(this.lastMoveEvent,e)},this.handlePointerMove=(e,t)=>{this.lastMoveEvent=e,this.lastRawMoveEventInfo=t,this.lastMoveEventInfo=qu(t,this.transformPagePoint),k.update(this.updatePoint,!0)},this.handlePointerUp=(e,t)=>{this.end();let{onEnd:n,onSessionEnd:r,resumeAnimation:i}=this.handlers;if((this.dragSnapToOrigin||!this.startEvent)&&i&&i(),!(this.lastMoveEvent&&this.lastMoveEventInfo))return;let a=Ju(e.type===`pointercancel`?this.lastMoveEventInfo:qu(t,this.transformPagePoint),this.history);this.startEvent&&n&&n(e,a),r&&r(e,a)},!ga(e))return;this.dragSnapToOrigin=i,this.handlers=t,this.transformPagePoint=n,this.distanceThreshold=a,this.contextWindow=r||window;let s=qu(zu(e),this.transformPagePoint),{point:c}=s,{timestamp:l}=$t;this.history=[{...c,timestamp:l}];let{onSessionStart:u}=t;u&&u(e,Ju(s,this.history));let d={passive:!0,capture:!0};this.removeListeners=bt(Vu(this.contextWindow,`pointermove`,this.handlePointerMove,d),Vu(this.contextWindow,`pointerup`,this.handlePointerUp,d),Vu(this.contextWindow,`pointercancel`,this.handlePointerUp,d)),o&&this.startScrollTracking(o)}startScrollTracking(e){let t=e.parentElement;for(;t;){let e=getComputedStyle(t);(Gu.has(e.overflowX)||Gu.has(e.overflowY))&&this.scrollPositions.set(t,{x:t.scrollLeft,y:t.scrollTop}),t=t.parentElement}this.scrollPositions.set(window,{x:window.scrollX,y:window.scrollY}),window.addEventListener(`scroll`,this.onElementScroll,{capture:!0}),window.addEventListener(`scroll`,this.onWindowScroll),this.removeScrollListeners=()=>{window.removeEventListener(`scroll`,this.onElementScroll,{capture:!0}),window.removeEventListener(`scroll`,this.onWindowScroll)}}handleScroll(e){let t=this.scrollPositions.get(e);if(!t)return;let n=e===window,r=n?{x:window.scrollX,y:window.scrollY}:{x:e.scrollLeft,y:e.scrollTop},i={x:r.x-t.x,y:r.y-t.y};i.x===0&&i.y===0||(n?this.lastMoveEventInfo&&(this.lastMoveEventInfo.point.x+=i.x,this.lastMoveEventInfo.point.y+=i.y):this.history.length>0&&(this.history[0].x-=i.x,this.history[0].y-=i.y),this.scrollPositions.set(e,r),k.update(this.updatePoint,!0))}updateHandlers(e){this.handlers=e}end(){this.removeListeners&&this.removeListeners(),this.removeScrollListeners&&this.removeScrollListeners(),this.scrollPositions.clear(),Qt(this.updatePoint)}};function qu(e,t){return t?{point:t(e.point)}:e}function J(e,t){return{x:e.x-t.x,y:e.y-t.y}}function Ju({point:e},t){return{point:e,delta:J(e,Xu(t)),offset:J(e,Yu(t)),velocity:Zu(t,.1)}}function Yu(e){return e[0]}function Xu(e){return e[e.length-1]}function Zu(e,t){if(e.length<2)return{x:0,y:0};let n=e.length-1,r=null,i=Xu(e);for(;n>=0&&(r=e[n],!(i.timestamp-r.timestamp>Ct(t)));)n--;if(!r)return{x:0,y:0};r===e[0]&&e.length>2&&i.timestamp-r.timestamp>Ct(t)*2&&(r=e[1]);let a=wt(i.timestamp-r.timestamp);if(a===0)return{x:0,y:0};let o={x:(i.x-r.x)/a,y:(i.y-r.y)/a};return o.x===1/0&&(o.x=0),o.y===1/0&&(o.y=0),o}function Qu(e,{min:t,max:n},r){return t!==void 0&&e<t?e=r?j(t,e,r.min):Math.max(e,t):n!==void 0&&e>n&&(e=r?j(n,e,r.max):Math.min(e,n)),e}function $u(e,t,n){return{min:t===void 0?void 0:e.min+t,max:n===void 0?void 0:e.max+n-(e.max-e.min)}}function ed(e,{top:t,left:n,bottom:r,right:i}){return{x:$u(e.x,n,i),y:$u(e.y,t,r)}}function td(e,t){let n=t.min-e.min,r=t.max-e.max;return t.max-t.min<e.max-e.min&&([n,r]=[r,n]),{min:n,max:r}}function nd(e,t){return{x:td(e.x,t.x),y:td(e.y,t.y)}}function rd(e,t){let n=.5,r=fc(e),i=fc(t);return i>r?n=xt(t.min,t.max-r,e.min):r>i&&(n=xt(e.min,e.max-i,t.min)),pt(0,1,n)}function id(e,t){let n={};return t.min!==void 0&&(n.min=t.min-e.min),t.max!==void 0&&(n.max=t.max-e.min),n}var ad=.35;function od(e=ad){return e===!1?e=0:e===!0&&(e=ad),{x:sd(e,`left`,`right`),y:sd(e,`top`,`bottom`)}}function sd(e,t,n){return{min:cd(e,t),max:cd(e,n)}}function cd(e,t){return typeof e==`number`?e:e[t]||0}var ld=new WeakMap,ud=class{constructor(e){this.openDragLock=null,this.isDragging=!1,this.currentDirection=null,this.originPoint={x:0,y:0},this.constraints=!1,this.hasMutatedConstraints=!1,this.elastic=qo(),this.latestPointerEvent=null,this.latestPanInfo=null,this.visualElement=e}start(e,{snapToCursor:t=!1,distanceThreshold:n}={}){let{presenceContext:r}=this.visualElement;if(r&&r.isPresent===!1)return;let i=e=>{t&&this.snapToCursor(zu(e).point),this.stopAnimation()},a=(e,t)=>{let{drag:n,dragPropagation:r,onDragStart:i}=this.getProps();if(n&&!r&&(this.openDragLock&&this.openDragLock(),this.openDragLock=la(n),!this.openDragLock))return;this.latestPointerEvent=e,this.latestPanInfo=t,this.isDragging=!0,this.currentDirection=null,this.resolveConstraints(),this.visualElement.projection&&(this.visualElement.projection.isAnimationBlocked=!0,this.visualElement.projection.target=void 0),bc(e=>{let t=this.getAxisMotionValue(e).get()||0;if(Dn.test(t)){let{projection:n}=this.visualElement;if(n&&n.layout){let r=n.layout.layoutBox[e];r&&(t=fc(r)*(parseFloat(t)/100))}}this.originPoint[e]=t}),i&&k.update(()=>i(e,t),!1,!0),eo(this.visualElement,`transform`);let{animationState:a}=this.visualElement;a&&a.setActive(`whileDrag`,!0)},o=(e,t)=>{this.latestPointerEvent=e,this.latestPanInfo=t;let{dragPropagation:n,dragDirectionLock:r,onDirectionLock:i,onDrag:a}=this.getProps();if(!n&&!this.openDragLock)return;let{offset:o}=t;if(r&&this.currentDirection===null){this.currentDirection=md(o),this.currentDirection!==null&&i&&i(this.currentDirection);return}this.updateAxis(`x`,t.point,o),this.updateAxis(`y`,t.point,o),this.visualElement.render(),a&&k.update(()=>a(e,t),!1,!0)},s=(e,t)=>{this.latestPointerEvent=e,this.latestPanInfo=t,this.stop(e,t),this.latestPointerEvent=null,this.latestPanInfo=null},c=()=>{let{dragSnapToOrigin:e}=this.getProps();(e||this.constraints)&&this.startAnimation({x:0,y:0})},{dragSnapToOrigin:l}=this.getProps();this.panSession=new Ku(e,{onSessionStart:i,onStart:a,onMove:o,onSessionEnd:s,resumeAnimation:c},{transformPagePoint:this.visualElement.getTransformPagePoint(),dragSnapToOrigin:l,distanceThreshold:n,contextWindow:Hu(this.visualElement),element:this.visualElement.current})}stop(e,t){let n=e||this.latestPointerEvent,r=t||this.latestPanInfo,i=this.isDragging;if(this.cancel(),!i||!r||!n)return;let{velocity:a}=r;this.startAnimation(a);let{onDragEnd:o}=this.getProps();o&&k.postRender(()=>o(n,r))}cancel(){this.isDragging=!1;let{projection:e,animationState:t}=this.visualElement;e&&(e.isAnimationBlocked=!1),this.endPanSession();let{dragPropagation:n}=this.getProps();!n&&this.openDragLock&&(this.openDragLock(),this.openDragLock=null),t&&t.setActive(`whileDrag`,!1)}endPanSession(){this.panSession&&this.panSession.end(),this.panSession=void 0}updateAxis(e,t,n){let{drag:r}=this.getProps();if(!n||!pd(e,r,this.currentDirection))return;let i=this.getAxisMotionValue(e),a=this.originPoint[e]+n[e];this.constraints&&this.constraints[e]&&(a=Qu(a,this.constraints[e],this.elastic[e])),i.set(a)}resolveConstraints(){let{dragConstraints:e,dragElastic:t}=this.getProps(),n=this.visualElement.projection&&!this.visualElement.projection.layout?this.visualElement.projection.measure(!1):this.visualElement.projection?.layout,r=this.constraints;e&&Du(e)?this.constraints||=this.resolveRefConstraints():e&&n?this.constraints=ed(n.layoutBox,e):this.constraints=!1,this.elastic=od(t),r!==this.constraints&&!Du(e)&&n&&this.constraints&&!this.hasMutatedConstraints&&bc(e=>{this.constraints!==!1&&this.getAxisMotionValue(e)&&(this.constraints[e]=id(n.layoutBox[e],this.constraints[e]))})}resolveRefConstraints(){let{dragConstraints:e,onMeasureDragConstraints:t}=this.getProps();if(!e||!Du(e))return!1;let n=e.current,{projection:r}=this.visualElement;if(!r||!r.layout)return!1;r.root&&(r.root.scroll=void 0,r.root.updateScroll());let i=xo(n,r.root,this.visualElement.getTransformPagePoint()),a=nd(r.layout.layoutBox,i);if(t){let e=t(ro(a));this.hasMutatedConstraints=!!e,e&&(a=no(e))}return a}startAnimation(e){let{drag:t,dragMomentum:n,dragElastic:r,dragTransition:i,dragSnapToOrigin:a,onDragTransitionEnd:o}=this.getProps(),s=this.constraints||{},c=bc(o=>{if(!pd(o,t,this.currentDirection))return;let c=s&&s[o]||{};(a===!0||a===o)&&(c={min:0,max:0});let l=r?200:1e6,u=r?40:1e7,d={type:`inertia`,velocity:n?e[o]:0,bounceStiffness:l,bounceDamping:u,timeConstant:750,restDelta:1,restSpeed:10,...i,...c};return this.startAxisValueAnimation(o,d)});return Promise.all(c).then(o)}startAxisValueAnimation(e,t){let n=this.getAxisMotionValue(e);return eo(this.visualElement,e),n.start(na(e,n,0,t,this.visualElement,!1))}stopAnimation(){bc(e=>this.getAxisMotionValue(e).stop())}getAxisMotionValue(e){let t=`_drag${e.toUpperCase()}`;return this.visualElement.getProps()[t]||this.visualElement.getValue(e,this.visualElement.latestValues[e]??0)}snapToCursor(e){bc(t=>{let{drag:n}=this.getProps();if(!pd(t,n,this.currentDirection))return;let{projection:r}=this.visualElement,i=this.getAxisMotionValue(t);if(r&&r.layout){let{min:n,max:a}=r.layout.layoutBox[t],o=i.get()||0;i.set(e[t]-j(n,a,.5)+o)}})}scalePositionWithinConstraints(){if(!this.visualElement.current)return;let{drag:e,dragConstraints:t}=this.getProps(),{projection:n}=this.visualElement;if(!Du(t)||!n||!this.constraints)return;this.stopAnimation();let r={x:0,y:0};bc(e=>{let t=this.getAxisMotionValue(e);if(t&&this.constraints!==!1){let n=t.get();r[e]=rd({min:n,max:n},this.constraints[e])}});let{transformTemplate:i}=this.visualElement.getProps();this.visualElement.current.style.transform=i?i({},``):`none`,n.root&&n.root.updateScroll(),n.updateLayout(),this.constraints=!1,this.resolveConstraints(),bc(t=>{if(!pd(t,e,null))return;let n=this.getAxisMotionValue(t),{min:i,max:a}=this.constraints[t];n.set(j(i,a,r[t]))}),this.visualElement.render()}addListeners(){if(!this.visualElement.current)return;ld.set(this.visualElement,this);let e=this.visualElement.current,t=Vu(e,`pointerdown`,t=>{let{drag:n,dragListener:r=!0}=this.getProps(),i=t.target,a=i!==e&&ba(i);n&&r&&!a&&this.start(t)}),n,r=()=>{let{dragConstraints:t}=this.getProps();Du(t)&&t.current&&(this.constraints=this.resolveRefConstraints(),n||=fd(e,t.current,()=>this.scalePositionWithinConstraints()))},{projection:i}=this.visualElement,a=i.addEventListener(`measure`,r);i&&!i.layout&&(i.root&&i.root.updateScroll(),i.updateLayout()),k.read(r);let o=xc(window,`resize`,()=>this.scalePositionWithinConstraints()),s=i.addEventListener(`didUpdate`,(({delta:e,hasLayoutChanged:t})=>{this.isDragging&&t&&(bc(t=>{let n=this.getAxisMotionValue(t);n&&(this.originPoint[t]+=e[t].translate,n.set(n.get()+e[t].translate))}),this.visualElement.render())}));return()=>{o(),t(),a(),s&&s(),n&&n()}}getProps(){let e=this.visualElement.getProps(),{drag:t=!1,dragDirectionLock:n=!1,dragPropagation:r=!1,dragConstraints:i=!1,dragElastic:a=ad,dragMomentum:o=!0}=e;return{...e,drag:t,dragDirectionLock:n,dragPropagation:r,dragConstraints:i,dragElastic:a,dragMomentum:o}}};function dd(e){let t=!0;return()=>{if(t){t=!1;return}e()}}function fd(e,t,n){let r=Ha(e,dd(n)),i=Ha(t,dd(n));return()=>{r(),i()}}function pd(e,t,n){return(t===!0||t===e)&&(n===null||n===e)}function md(e,t=10){let n=null;return Math.abs(e.y)>t?n=`y`:Math.abs(e.x)>t&&(n=`x`),n}var hd=class extends to{constructor(e){super(e),this.removeGroupControls=yt,this.removeListeners=yt,this.controls=new ud(e)}mount(){let{dragControls:e}=this.node.getProps();e&&(this.removeGroupControls=e.subscribe(this.controls)),this.removeListeners=this.controls.addListeners()||yt}update(){let{dragControls:e}=this.node.getProps(),{dragControls:t}=this.node.prevProps||{};e!==t&&(this.removeGroupControls(),e&&(this.removeGroupControls=e.subscribe(this.controls)))}unmount(){this.removeGroupControls(),this.removeListeners(),this.controls.isDragging||this.controls.endPanSession()}},gd=e=>(t,n)=>{e&&k.update(()=>e(t,n),!1,!0)},_d=class extends to{constructor(){super(...arguments),this.removePointerDownListener=yt}onPointerDown(e){this.session=new Ku(e,this.createPanHandlers(),{transformPagePoint:this.node.getTransformPagePoint(),contextWindow:Hu(this.node)})}createPanHandlers(){let{onPanSessionStart:e,onPanStart:t,onPan:n,onPanEnd:r}=this.node.getProps();return{onSessionStart:gd(e),onStart:gd(t),onMove:gd(n),onEnd:(e,t)=>{delete this.session,r&&k.postRender(()=>r(e,t))}}}mount(){this.removePointerDownListener=Vu(this.node.current,`pointerdown`,e=>this.onPointerDown(e))}update(){this.session&&this.session.updateHandlers(this.createPanHandlers())}unmount(){this.removePointerDownListener(),this.session&&this.session.end()}},vd=!1,yd=class extends b.Component{componentDidMount(){let{visualElement:e,layoutGroup:t,switchLayoutGroup:n,layoutId:r}=this.props,{projection:i}=e;i&&(t.group&&t.group.add(i),n&&n.register&&r&&n.register(i),vd&&i.root.didUpdate(),i.addEventListener(`animationComplete`,()=>{this.safeToRemove()}),i.setOptions({...i.options,layoutDependency:this.props.layoutDependency,onExitComplete:()=>this.safeToRemove()})),nl.hasEverUpdated=!0}getSnapshotBeforeUpdate(e){let{layoutDependency:t,visualElement:n,drag:r,isPresent:i}=this.props,{projection:a}=n;return a?(a.isPresent=i,e.layoutDependency!==t&&a.setOptions({...a.options,layoutDependency:t}),vd=!0,r||e.layoutDependency!==t||t===void 0||e.isPresent!==i?a.willUpdate():this.safeToRemove(),e.isPresent!==i&&(i?a.promote():a.relegate()||k.postRender(()=>{let e=a.getStack();(!e||!e.members.length)&&this.safeToRemove()})),null):null}componentDidUpdate(){let{visualElement:e,layoutAnchor:t}=this.props,{projection:n}=e;n&&(n.options.layoutAnchor=t,n.root.didUpdate(),aa.postRender(()=>{!n.currentAnimation&&n.isLead()&&this.safeToRemove()}))}componentWillUnmount(){let{visualElement:e,layoutGroup:t,switchLayoutGroup:n}=this.props,{projection:r}=e;vd=!0,r&&(r.scheduleCheckAfterUnmount(),t&&t.group&&t.group.remove(r),n&&n.deregister&&n.deregister(r))}safeToRemove(){let{safeToRemove:e}=this.props;e&&e()}render(){return null}};function bd(e){let[t,n]=G(),r=(0,b.useContext)(st);return(0,V.jsx)(yd,{...e,layoutGroup:r,switchLayoutGroup:(0,b.useContext)(Eu),isPresent:t,safeToRemove:n})}var xd={pan:{Feature:_d},drag:{Feature:hd,ProjectionNode:Ll,MeasureLayout:bd}};function Sd(e,t,n){let{props:r}=e;e.animationState&&r.whileHover&&e.animationState.setActive(`whileHover`,n===`Start`);let i=r[`onHover`+n];i&&k.postRender(()=>i(t,zu(t)))}var Y=class extends to{mount(){let{current:e}=this.node;e&&(this.unmount=pa(e,(e,t)=>(Sd(this.node,t,`Start`),e=>Sd(this.node,e,`End`))))}unmount(){}},Cd=class extends to{constructor(){super(...arguments),this.isActive=!1}onFocus(){let e=!1;try{e=this.node.current.matches(`:focus-visible`)}catch{e=!0}!e||!this.node.animationState||(this.node.animationState.setActive(`whileFocus`,!0),this.isActive=!0)}onBlur(){!this.isActive||!this.node.animationState||(this.node.animationState.setActive(`whileFocus`,!1),this.isActive=!1)}mount(){this.unmount=bt(xc(this.node.current,`focus`,()=>this.onFocus()),xc(this.node.current,`blur`,()=>this.onBlur()))}unmount(){}};function wd(e,t,n){let{props:r}=e;if(e.current instanceof HTMLButtonElement&&e.current.disabled)return;e.animationState&&r.whileTap&&e.animationState.setActive(`whileTap`,n===`Start`);let i=r[`onTap`+(n===`End`?``:n)];i&&k.postRender(()=>i(t,zu(t)))}var Td=class extends to{mount(){let{current:e}=this.node;if(!e)return;let{globalTapTarget:t,propagate:n}=this.node.props;this.unmount=Da(e,(e,t)=>(wd(this.node,t,`Start`),(e,{success:t})=>wd(this.node,e,t?`End`:`Cancel`)),{useGlobalTarget:t,stopPropagation:n?.tap===!1})}unmount(){}},Ed=new WeakMap,Dd=new WeakMap,Od=e=>{let t=Ed.get(e.target);t&&t(e)},kd=e=>{e.forEach(Od)};function Ad({root:e,...t}){let n=e||document;Dd.has(n)||Dd.set(n,{});let r=Dd.get(n),i=JSON.stringify(t);return r[i]||(r[i]=new IntersectionObserver(kd,{root:e,...t})),r[i]}function jd(e,t,n){let r=Ad(t);return Ed.set(e,n),r.observe(e),()=>{Ed.delete(e),r.unobserve(e)}}var Md={some:0,all:1},Nd=class extends to{constructor(){super(...arguments),this.hasEnteredView=!1,this.isInView=!1}startObserver(){this.stopObserver?.();let{viewport:e={}}=this.node.getProps(),{root:t,margin:n,amount:r=`some`,once:i}=e,a={root:t?t.current:void 0,rootMargin:n,threshold:typeof r==`number`?r:Md[r]},o=e=>{let{isIntersecting:t}=e;if(this.isInView===t||(this.isInView=t,i&&!t&&this.hasEnteredView))return;t&&(this.hasEnteredView=!0),this.node.animationState&&this.node.animationState.setActive(`whileInView`,t);let{onViewportEnter:n,onViewportLeave:r}=this.node.getProps(),a=t?n:r;a&&a(e)};this.stopObserver=jd(this.node.current,a,o)}mount(){this.startObserver()}update(){if(typeof IntersectionObserver>`u`)return;let{props:e,prevProps:t}=this.node;[`amount`,`margin`,`root`].some(Pd(e,t))&&this.startObserver()}unmount(){this.stopObserver?.(),this.hasEnteredView=!1,this.isInView=!1}};function Pd({viewport:e={}},{viewport:t={}}={}){return n=>e[n]!==t[n]}var Fd={inView:{Feature:Nd},tap:{Feature:Td},focus:{Feature:Cd},hover:{Feature:Y}},X={layout:{ProjectionNode:Ll,MeasureLayout:bd}},Z=Fu({...Ru,...Fd,...xd,...X},ql);function Id(e){let t=ct(()=>Ya(e)),{isStatic:n}=(0,b.useContext)(Rl);if(n){let[,n]=(0,b.useState)(e);(0,b.useEffect)(()=>t.on(`change`,n),[])}return t}function Ld(e){return typeof window>`u`?!1:e?Ci():Si()}var Rd=50,zd=()=>({current:0,offset:[],progress:0,scrollLength:0,targetOffset:0,targetLength:0,containerLength:0,velocity:0}),Bd=()=>({time:0,x:zd(),y:zd()}),Vd={x:{length:`Width`,position:`Left`},y:{length:`Height`,position:`Top`}};function Hd(e,t,n,r){let i=n[t],{length:a,position:o}=Vd[t],s=i.current,c=n.time;i.current=Math.abs(e[`scroll${o}`]),i.scrollLength=e[`scroll${a}`]-e[`client${a}`],i.offset.length=0,i.offset[0]=0,i.offset[1]=i.scrollLength,i.progress=xt(0,i.scrollLength,i.current);let l=r-c;i.velocity=l>Rd?0:Tt(i.current-s,l)}function Ud(e,t,n){Hd(e,`x`,t,n),Hd(e,`y`,t,n),t.time=n}function Wd(e,t){let n={x:0,y:0},r=e;for(;r&&r!==t;)if(ma(r))n.x+=r.offsetLeft,n.y+=r.offsetTop,r=r.offsetParent;else if(r.tagName===`svg`){let e=r.getBoundingClientRect();r=r.parentElement;let t=r.getBoundingClientRect();n.x+=e.left-t.left,n.y+=e.top-t.top}else if(r instanceof SVGGraphicsElement){let{x:e,y:t}=r.getBBox();n.x+=e,n.y+=t;let i=null,a=r.parentNode;for(;!i;)a.tagName===`svg`&&(i=a),a=r.parentNode;r=i}else break;return n}var Gd={start:0,center:.5,end:1};function Kd(e,t,n=0){let r=0;if(e in Gd&&(e=Gd[e]),typeof e==`string`){let t=parseFloat(e);e.endsWith(`px`)?r=t:e.endsWith(`%`)?e=t/100:e.endsWith(`vw`)?r=t/100*document.documentElement.clientWidth:e.endsWith(`vh`)?r=t/100*document.documentElement.clientHeight:e=t}return typeof e==`number`&&(r=t*e),n+r}var qd=[0,0];function Jd(e,t,n,r){let i=Array.isArray(e)?e:qd,a=0,o=0;return typeof e==`number`?i=[e,e]:typeof e==`string`&&(e=e.trim(),i=e.includes(` `)?e.split(` `):[e,Gd[e]?e:`0`]),a=Kd(i[0],n,r),o=Kd(i[1],t),a-o}var Yd={Enter:[[0,1],[1,1]],Exit:[[0,0],[1,0]],Any:[[1,0],[0,1]],All:[[0,0],[1,1]]},Xd={x:0,y:0};function Zd(e){return`getBBox`in e&&e.tagName!==`svg`?e.getBBox():{width:e.clientWidth,height:e.clientHeight}}function Qd(e,t,n){let{offset:r=Yd.All}=n,{target:i=e,axis:a=`y`}=n,o=a===`y`?`height`:`width`,s=i===e?Xd:Wd(i,e),c=i===e?{width:e.scrollWidth,height:e.scrollHeight}:Zd(i),l={width:e.clientWidth,height:e.clientHeight};t[a].offset.length=0;let u=!t[a].interpolate,d=r.length;for(let e=0;e<d;e++){let n=Jd(r[e],l[o],c[o],s[a]);!u&&n!==t[a].interpolatorOffsets[e]&&(u=!0),t[a].offset[e]=n}u&&(t[a].interpolate=jr(t[a].offset,Nr(r),{clamp:!1}),t[a].interpolatorOffsets=[...t[a].offset]),t[a].progress=pt(0,1,t[a].interpolate(t[a].current))}function $d(e,t=e,n){if(n.x.targetOffset=0,n.y.targetOffset=0,t!==e){let r=t;for(;r&&r!==e;)n.x.targetOffset+=r.offsetLeft,n.y.targetOffset+=r.offsetTop,r=r.offsetParent}n.x.targetLength=t===e?t.scrollWidth:t.clientWidth,n.y.targetLength=t===e?t.scrollHeight:t.clientHeight,n.x.containerLength=e.clientWidth,n.y.containerLength=e.clientHeight}function ef(e,t,n,r={}){return{measure:t=>{$d(e,r.target,n),Ud(e,n,t),(r.offset||r.target)&&Qd(e,n,r)},notify:()=>t(n)}}var tf=new WeakMap,nf=new WeakMap,rf=new WeakMap,af=new WeakMap,of=new WeakMap,sf=e=>e===document.scrollingElement?window:e;function cf(e,{container:t=document.scrollingElement,trackContentSize:n=!1,...r}={}){if(!t)return yt;let i=rf.get(t);i||(i=new Set,rf.set(t,i));let a=ef(t,e,Bd(),r);if(i.add(a),!tf.has(t)){let e=()=>{for(let e of i)e.measure($t.timestamp);k.preUpdate(n)},n=()=>{for(let e of i)e.notify()},r=()=>k.read(e);tf.set(t,r);let a=sf(t);window.addEventListener(`resize`,r),t!==document.documentElement&&nf.set(t,Ha(t,r)),a.addEventListener(`scroll`,r),r()}if(n&&!of.has(t)){let e=tf.get(t),n={width:t.scrollWidth,height:t.scrollHeight};af.set(t,n);let r=k.read(()=>{let r=t.scrollWidth,i=t.scrollHeight;(n.width!==r||n.height!==i)&&(e(),n.width=r,n.height=i)},!0);of.set(t,r)}let o=tf.get(t);return k.read(o,!1,!0),()=>{Qt(o);let e=rf.get(t);if(!e||(e.delete(a),e.size))return;let n=tf.get(t);tf.delete(t),n&&(sf(t).removeEventListener(`scroll`,n),nf.get(t)?.(),window.removeEventListener(`resize`,n));let r=of.get(t);r&&(Qt(r),of.delete(t)),af.delete(t)}}var lf=[[Yd.Enter,`entry`],[Yd.Exit,`exit`],[Yd.Any,`cover`],[Yd.All,`contain`]],uf={start:0,end:1};function df(e){let t=e.trim().split(/\s+/);if(t.length!==2)return;let n=uf[t[0]],r=uf[t[1]];if(!(n===void 0||r===void 0))return[n,r]}function ff(e){if(e.length!==2)return;let t=[];for(let n of e)if(Array.isArray(n))t.push(n);else if(typeof n==`string`){let e=df(n);if(!e)return;t.push(e)}else return;return t}function pf(e,t){let n=ff(e);if(!n)return!1;for(let e=0;e<2;e++){let r=n[e],i=t[e];if(r[0]!==i[0]||r[1]!==i[1])return!1}return!0}function mf(e){if(!e)return{rangeStart:`contain 0%`,rangeEnd:`contain 100%`};for(let[t,n]of lf)if(pf(e,t))return{rangeStart:`${n} 0%`,rangeEnd:`${n} 100%`}}var hf=new Map;function gf(e){let t={value:0};return{currentTime:t,cancel:cf(n=>{t.value=n[e.axis].progress*100},e)}}function _f({source:e,container:t,...n}){let{axis:r}=n;e&&(t=e);let i=hf.get(t);i||(i=new Map,hf.set(t,i));let a=n.target??`self`,o=i.get(a);o||(o={},i.set(a,o));let s=r+(n.offset??[]).join(`,`);return o[s]||(n.target&&Ld(n.target)?mf(n.offset)?o[s]=new ViewTimeline({subject:n.target,axis:r}):o[s]=gf({container:t,...n}):Ld()?o[s]=new ScrollTimeline({source:t,axis:r}):o[s]=gf({container:t,...n})),o[s]}function vf(e,t){let n=_f(t),r=t.target?mf(t.offset):void 0,i=t.target?Ld(t.target)&&!!r:Ld();return e.attachTimeline({timeline:i?n:void 0,...r&&i&&{rangeStart:r.rangeStart,rangeEnd:r.rangeEnd},observe:e=>(e.pause(),Ua(t=>{e.time=e.iterationDuration*t},n))})}function yf(e){return e&&(e.target||e.offset)}function bf(e){return e.length===2}function xf(e,t){return bf(e)||yf(t)?cf(n=>{e(n[t.axis].progress,n)},t):Ua(e,_f(t))}function Sf(e,{axis:t=`y`,container:n=document.scrollingElement,...r}={}){if(!n)return yt;let i={axis:t,container:n,...r};return typeof e==`function`?xf(e,i):vf(e,i)}var Cf=()=>({scrollX:Ya(0),scrollY:Ya(0),scrollXProgress:Ya(0),scrollYProgress:Ya(0)}),wf=e=>e?!e.current:!1;function Tf(e,t,n,r){return{factory:i=>{let a,o=()=>{if(wf(n)||wf(r)){aa.read(o);return}a=Sf(i,{...t,axis:e,container:n?.current||void 0,target:r?.current||void 0})};return aa.read(o),()=>{oa(o),a?.()}},times:[0,1],keyframes:[0,1],ease:e=>e,duration:1}}function Ef(e,t){return typeof window>`u`?!1:e?Ci()&&!!mf(t):Si()}function Df({container:e,target:t,...n}={}){let r=ct(Cf);Ef(t,n.offset)&&(r.scrollXProgress.accelerate=Tf(`x`,n,e,t),r.scrollYProgress.accelerate=Tf(`y`,n,e,t));let i=(0,b.useRef)(null),a=(0,b.useRef)(!1),o=(0,b.useCallback)(()=>(i.current=Sf((e,{x:t,y:n})=>{r.scrollX.set(t.current),r.scrollXProgress.set(t.progress),r.scrollY.set(n.current),r.scrollYProgress.set(n.progress)},{...n,container:e?.current||void 0,target:t?.current||void 0}),()=>{i.current?.()}),[e,t,JSON.stringify(n.offset)]);return lt(()=>{if(a.current=!1,wf(e)||wf(t)){a.current=!0;return}else return o()},[o]),(0,b.useEffect)(()=>{if(!a.current)return;let n,r=()=>{let r=wf(e),i=wf(t);!r&&!i&&(n=o())};return aa.read(r),()=>{oa(r),n?.()}},[o]),r}function Of(e,t){let n=Id(t()),r=()=>n.set(t());return r(),lt(()=>{let t=()=>k.preRender(r,!1,!0),n=e.map(e=>e.on(`change`,t));return()=>{n.forEach(e=>e()),Qt(r)}}),n}function kf(e){qa.current=[],e();let t=Of(qa.current,e);return qa.current=void 0,t}function Af(e,t,n,r){if(typeof e==`function`)return kf(e);if(n!==void 0&&!Array.isArray(n)&&typeof t!=`function`)return Mf(e,t,n,r);let i=typeof t==`function`?t:Wa(t,n,r),a=Array.isArray(e)?jf(e,i):jf([e],([e])=>i(e)),o=Array.isArray(e)?void 0:e.accelerate;return o&&!o.isTransformed&&typeof t!=`function`&&Array.isArray(n)&&r?.clamp!==!1&&(a.accelerate={...o,times:t,keyframes:n,isTransformed:!0,...r?.ease?{ease:r.ease}:{}}),a}function jf(e,t){let n=ct(()=>[]);return Of(e,()=>{n.length=0;let r=e.length;for(let t=0;t<r;t++)n[t]=e[t].get();return t(n)})}function Mf(e,t,n,r){let i=ct(()=>Object.keys(n)),a=ct(()=>({}));for(let o of i)a[o]=Af(e,t,n[o],r);return a}function Nf(e,t={}){let{isStatic:n}=(0,b.useContext)(Rl),r=()=>F(e)?e.get():e;if(n)return Af(r);let i=Id(r());return(0,b.useInsertionEffect)(()=>Xa(i,e,t),[i,JSON.stringify(t)]),i}function Pf(e,t={}){return Nf(e,{type:`spring`,...t})}var Ff=()=>{let{scrollYProgress:e}=Df();return(0,V.jsx)(Z.div,{className:`fixed left-0 top-0 z-[9999] h-1 origin-left bg-gradient-to-r from-red-500 via-pink-500 to-orange-500`,style:{scaleX:e,width:`100%`}})},If=()=>(0,V.jsxs)(`div`,{className:`aurora-background`,"aria-hidden":`true`,style:{position:`fixed`,inset:0,width:`100%`,height:`100%`,overflow:`hidden`,pointerEvents:`none`,zIndex:0,background:`#070707`},children:[(0,V.jsx)(Z.div,{style:{position:`absolute`,width:`55vw`,height:`55vw`,maxWidth:`900px`,maxHeight:`900px`,minWidth:`400px`,minHeight:`400px`,top:`-18%`,left:`-12%`,borderRadius:`50%`,background:`radial-gradient(circle, rgba(213,170,80,0.08) 0%, rgba(213,170,80,0.035) 32%, transparent 72%)`,filter:`blur(35px)`},animate:{x:[0,35,-20,0],y:[0,25,-15,0],scale:[1,1.06,.97,1],opacity:[.65,.9,.7,.65]},transition:{duration:16,repeat:1/0,ease:`easeInOut`}}),(0,V.jsx)(Z.div,{style:{position:`absolute`,width:`48vw`,height:`48vw`,maxWidth:`800px`,maxHeight:`800px`,minWidth:`350px`,minHeight:`350px`,right:`-15%`,top:`18%`,borderRadius:`50%`,background:`radial-gradient(circle, rgba(239,197,102,0.055) 0%, rgba(213,170,80,0.02) 36%, transparent 72%)`,filter:`blur(45px)`},animate:{x:[0,-25,20,0],y:[0,-20,30,0],scale:[1,.96,1.05,1],opacity:[.5,.75,.55,.5]},transition:{duration:20,repeat:1/0,ease:`easeInOut`,delay:2}}),(0,V.jsx)(Z.div,{style:{position:`absolute`,width:`60vw`,height:`35vw`,maxWidth:`950px`,maxHeight:`550px`,left:`20%`,bottom:`-22%`,borderRadius:`50%`,background:`radial-gradient(ellipse, rgba(213,170,80,0.045) 0%, transparent 70%)`,filter:`blur(50px)`},animate:{x:[-20,25,-10,-20],scale:[1,1.08,.98,1],opacity:[.4,.6,.45,.4]},transition:{duration:18,repeat:1/0,ease:`easeInOut`,delay:1}}),(0,V.jsx)(Z.div,{style:{position:`absolute`,top:0,left:`-15%`,width:`22%`,height:`100%`,transform:`skewX(-18deg)`,background:`linear-gradient(90deg, transparent, rgba(213,170,80,0.018), transparent)`,filter:`blur(18px)`},animate:{x:[`0vw`,`130vw`],opacity:[0,.5,0]},transition:{duration:14,repeat:1/0,repeatDelay:6,ease:`easeInOut`}}),(0,V.jsx)(Z.span,{style:{position:`absolute`,width:`3px`,height:`3px`,borderRadius:`50%`,top:`22%`,left:`14%`,background:`#d5aa50`,boxShadow:`0 0 12px rgba(213,170,80,0.6)`},animate:{y:[0,-18,0],opacity:[.2,.8,.2]},transition:{duration:4,repeat:1/0,ease:`easeInOut`}}),(0,V.jsx)(Z.span,{style:{position:`absolute`,width:`2px`,height:`2px`,borderRadius:`50%`,top:`64%`,left:`76%`,background:`#efc566`,boxShadow:`0 0 10px rgba(239,197,102,0.55)`},animate:{y:[0,15,0],opacity:[.15,.7,.15]},transition:{duration:5,repeat:1/0,ease:`easeInOut`,delay:1}}),(0,V.jsx)(Z.span,{style:{position:`absolute`,width:`2px`,height:`2px`,borderRadius:`50%`,top:`38%`,right:`18%`,background:`#d5aa50`,boxShadow:`0 0 10px rgba(213,170,80,0.5)`},animate:{y:[0,-12,0],opacity:[.15,.65,.15]},transition:{duration:6,repeat:1/0,ease:`easeInOut`,delay:2}}),(0,V.jsx)(`div`,{style:{position:`absolute`,inset:0,background:`radial-gradient(circle at center, transparent 35%, rgba(0,0,0,0.22) 100%)`}}),(0,V.jsx)(`div`,{style:{position:`absolute`,inset:0,opacity:.025,mixBlendMode:`soft-light`,backgroundImage:`url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E")`}})]}),Lf={color:void 0,size:void 0,className:void 0,style:void 0,attr:void 0},Rf=b.createContext&&b.createContext(Lf),zf=[`attr`,`size`,`title`];function Bf(e,t){if(e==null)return{};var n,r,i=Vf(e,t);if(Object.getOwnPropertySymbols){var a=Object.getOwnPropertySymbols(e);for(r=0;r<a.length;r++)n=a[r],t.indexOf(n)===-1&&{}.propertyIsEnumerable.call(e,n)&&(i[n]=e[n])}return i}function Vf(e,t){if(e==null)return{};var n={};for(var r in e)if({}.hasOwnProperty.call(e,r)){if(t.indexOf(r)!==-1)continue;n[r]=e[r]}return n}function Hf(){return Hf=Object.assign?Object.assign.bind():function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var r in n)({}).hasOwnProperty.call(n,r)&&(e[r]=n[r])}return e},Hf.apply(null,arguments)}function Uf(e,t){var n=Object.keys(e);if(Object.getOwnPropertySymbols){var r=Object.getOwnPropertySymbols(e);t&&(r=r.filter(function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable})),n.push.apply(n,r)}return n}function Wf(e){for(var t=1;t<arguments.length;t++){var n=arguments[t]==null?{}:arguments[t];t%2?Uf(Object(n),!0).forEach(function(t){Gf(e,t,n[t])}):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(n)):Uf(Object(n)).forEach(function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(n,t))})}return e}function Gf(e,t,n){return(t=Kf(t))in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function Kf(e){var t=qf(e,`string`);return typeof t==`symbol`?t:t+``}function qf(e,t){if(typeof e!=`object`||!e)return e;var n=e[Symbol.toPrimitive];if(n!==void 0){var r=n.call(e,t||`default`);if(typeof r!=`object`)return r;throw TypeError(`@@toPrimitive must return a primitive value.`)}return(t===`string`?String:Number)(e)}function Jf(e){return e&&e.map((e,t)=>b.createElement(e.tag,Wf({key:t},e.attr),Jf(e.child)))}function Q(e){return t=>b.createElement(Yf,Hf({attr:Wf({},e.attr)},t),Jf(e.child))}function Yf(e){var t=t=>{var{attr:n,size:r,title:i}=e,a=Bf(e,zf),o=r||t.size||`1em`,s;return t.className&&(s=t.className),e.className&&(s=(s?s+` `:``)+e.className),b.createElement(`svg`,Hf({stroke:`currentColor`,fill:`currentColor`,strokeWidth:`0`},t.attr,n,a,{className:s,style:Wf(Wf({color:e.color||t.color},t.style),e.style),height:o,width:o,xmlns:`http://www.w3.org/2000/svg`}),i&&b.createElement(`title`,null,i),e.children)};return Rf===void 0?t(Lf):b.createElement(Rf.Consumer,null,e=>t(e))}function Xf(e){return Q({tag:`svg`,attr:{viewBox:`0 0 448 512`},child:[{tag:`path`,attr:{d:`M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z`},child:[]}]})(e)}function Zf(e){return Q({tag:`svg`,attr:{viewBox:`0 0 448 512`},child:[{tag:`path`,attr:{d:`M0 32h214.6v214.6H0V32zm233.4 0H448v214.6H233.4V32zM0 265.4h214.6V480H0V265.4zm233.4 0H448V480H233.4V265.4z`},child:[]}]})(e)}function Qf(e){return Q({tag:`svg`,attr:{viewBox:`0 0 448 512`},child:[{tag:`path`,attr:{d:`M220.8 123.3c1 .5 1.8 1.7 3 1.7 1.1 0 2.8-.4 2.9-1.5.2-1.4-1.9-2.3-3.2-2.9-1.7-.7-3.9-1-5.5-.1-.4.2-.8.7-.6 1.1.3 1.3 2.3 1.1 3.4 1.7zm-21.9 1.7c1.2 0 2-1.2 3-1.7 1.1-.6 3.1-.4 3.5-1.6.2-.4-.2-.9-.6-1.1-1.6-.9-3.8-.6-5.5.1-1.3.6-3.4 1.5-3.2 2.9.1 1 1.8 1.5 2.8 1.4zM420 403.8c-3.6-4-5.3-11.6-7.2-19.7-1.8-8.1-3.9-16.8-10.5-22.4-1.3-1.1-2.6-2.1-4-2.9-1.3-.8-2.7-1.5-4.1-2 9.2-27.3 5.6-54.5-3.7-79.1-11.4-30.1-31.3-56.4-46.5-74.4-17.1-21.5-33.7-41.9-33.4-72C311.1 85.4 315.7.1 234.8 0 132.4-.2 158 103.4 156.9 135.2c-1.7 23.4-6.4 41.8-22.5 64.7-18.9 22.5-45.5 58.8-58.1 96.7-6 17.9-8.8 36.1-6.2 53.3-6.5 5.8-11.4 14.7-16.6 20.2-4.2 4.3-10.3 5.9-17 8.3s-14 6-18.5 14.5c-2.1 3.9-2.8 8.1-2.8 12.4 0 3.9.6 7.9 1.2 11.8 1.2 8.1 2.5 15.7.8 20.8-5.2 14.4-5.9 24.4-2.2 31.7 3.8 7.3 11.4 10.5 20.1 12.3 17.3 3.6 40.8 2.7 59.3 12.5 19.8 10.4 39.9 14.1 55.9 10.4 11.6-2.6 21.1-9.6 25.9-20.2 12.5-.1 26.3-5.4 48.3-6.6 14.9-1.2 33.6 5.3 55.1 4.1.6 2.3 1.4 4.6 2.5 6.7v.1c8.3 16.7 23.8 24.3 40.3 23 16.6-1.3 34.1-11 48.3-27.9 13.6-16.4 36-23.2 50.9-32.2 7.4-4.5 13.4-10.1 13.9-18.3.4-8.2-4.4-17.3-15.5-29.7zM223.7 87.3c9.8-22.2 34.2-21.8 44-.4 6.5 14.2 3.6 30.9-4.3 40.4-1.6-.8-5.9-2.6-12.6-4.9 1.1-1.2 3.1-2.7 3.9-4.6 4.8-11.8-.2-27-9.1-27.3-7.3-.5-13.9 10.8-11.8 23-4.1-2-9.4-3.5-13-4.4-1-6.9-.3-14.6 2.9-21.8zM183 75.8c10.1 0 20.8 14.2 19.1 33.5-3.5 1-7.1 2.5-10.2 4.6 1.2-8.9-3.3-20.1-9.6-19.6-8.4.7-9.8 21.2-1.8 28.1 1 .8 1.9-.2-5.9 5.5-15.6-14.6-10.5-52.1 8.4-52.1zm-13.6 60.7c6.2-4.6 13.6-10 14.1-10.5 4.7-4.4 13.5-14.2 27.9-14.2 7.1 0 15.6 2.3 25.9 8.9 6.3 4.1 11.3 4.4 22.6 9.3 8.4 3.5 13.7 9.7 10.5 18.2-2.6 7.1-11 14.4-22.7 18.1-11.1 3.6-19.8 16-38.2 14.9-3.9-.2-7-1-9.6-2.1-8-3.5-12.2-10.4-20-15-8.6-4.8-13.2-10.4-14.7-15.3-1.4-4.9 0-9 4.2-12.3zm3.3 334c-2.7 35.1-43.9 34.4-75.3 18-29.9-15.8-68.6-6.5-76.5-21.9-2.4-4.7-2.4-12.7 2.6-26.4v-.2c2.4-7.6.6-16-.6-23.9-1.2-7.8-1.8-15 .9-20 3.5-6.7 8.5-9.1 14.8-11.3 10.3-3.7 11.8-3.4 19.6-9.9 5.5-5.7 9.5-12.9 14.3-18 5.1-5.5 10-8.1 17.7-6.9 8.1 1.2 15.1 6.8 21.9 16l19.6 35.6c9.5 19.9 43.1 48.4 41 68.9zm-1.4-25.9c-4.1-6.6-9.6-13.6-14.4-19.6 7.1 0 14.2-2.2 16.7-8.9 2.3-6.2 0-14.9-7.4-24.9-13.5-18.2-38.3-32.5-38.3-32.5-13.5-8.4-21.1-18.7-24.6-29.9s-3-23.3-.3-35.2c5.2-22.9 18.6-45.2 27.2-59.2 2.3-1.7.8 3.2-8.7 20.8-8.5 16.1-24.4 53.3-2.6 82.4.6-20.7 5.5-41.8 13.8-61.5 12-27.4 37.3-74.9 39.3-112.7 1.1.8 4.6 3.2 6.2 4.1 4.6 2.7 8.1 6.7 12.6 10.3 12.4 10 28.5 9.2 42.4 1.2 6.2-3.5 11.2-7.5 15.9-9 9.9-3.1 17.8-8.6 22.3-15 7.7 30.4 25.7 74.3 37.2 95.7 6.1 11.4 18.3 35.5 23.6 64.6 3.3-.1 7 .4 10.9 1.4 13.8-35.7-11.7-74.2-23.3-84.9-4.7-4.6-4.9-6.6-2.6-6.5 12.6 11.2 29.2 33.7 35.2 59 2.8 11.6 3.3 23.7.4 35.7 16.4 6.8 35.9 17.9 30.7 34.8-2.2-.1-3.2 0-4.2 0 3.2-10.1-3.9-17.6-22.8-26.1-19.6-8.6-36-8.6-38.3 12.5-12.1 4.2-18.3 14.7-21.4 27.3-2.8 11.2-3.6 24.7-4.4 39.9-.5 7.7-3.6 18-6.8 29-32.1 22.9-76.7 32.9-114.3 7.2zm257.4-11.5c-.9 16.8-41.2 19.9-63.2 46.5-13.2 15.7-29.4 24.4-43.6 25.5s-26.5-4.8-33.7-19.3c-4.7-11.1-2.4-23.1 1.1-36.3 3.7-14.2 9.2-28.8 9.9-40.6.8-15.2 1.7-28.5 4.2-38.7 2.6-10.3 6.6-17.2 13.7-21.1.3-.2.7-.3 1-.5.8 13.2 7.3 26.6 18.8 29.5 12.6 3.3 30.7-7.5 38.4-16.3 9-.3 15.7-.9 22.6 5.1 9.9 8.5 7.1 30.3 17.1 41.6 10.6 11.6 14 19.5 13.7 24.6zM173.3 148.7c2 1.9 4.7 4.5 8 7.1 6.6 5.2 15.8 10.6 27.3 10.6 11.6 0 22.5-5.9 31.8-10.8 4.9-2.6 10.9-7 14.8-10.4s5.9-6.3 3.1-6.6-2.6 2.6-6 5.1c-4.4 3.2-9.7 7.4-13.9 9.8-7.4 4.2-19.5 10.2-29.9 10.2s-18.7-4.8-24.9-9.7c-3.1-2.5-5.7-5-7.7-6.9-1.5-1.4-1.9-4.6-4.3-4.9-1.4-.1-1.8 3.7 1.7 6.5z`},child:[]}]})(e)}function $f(e){return Q({tag:`svg`,attr:{viewBox:`0 0 448 512`},child:[{tag:`path`,attr:{d:`M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z`},child:[]}]})(e)}function ep(e){return Q({tag:`svg`,attr:{viewBox:`0 0 448 512`},child:[{tag:`path`,attr:{d:`M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z`},child:[]}]})(e)}function tp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 496 512`},child:[{tag:`path`,attr:{d:`M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z`},child:[]}]})(e)}function np(e){return Q({tag:`svg`,attr:{viewBox:`0 0 640 512`},child:[{tag:`path`,attr:{d:`M180.41 203.01c-.72 22.65 10.6 32.68 10.88 39.05a8.164 8.164 0 0 1-4.1 6.27l-12.8 8.96a10.66 10.66 0 0 1-5.63 1.92c-.43-.02-8.19 1.83-20.48-25.61a78.608 78.608 0 0 1-62.61 29.45c-16.28.89-60.4-9.24-58.13-56.21-1.59-38.28 34.06-62.06 70.93-60.05 7.1.02 21.6.37 46.99 6.27v-15.62c2.69-26.46-14.7-46.99-44.81-43.91-2.4.01-19.4-.5-45.84 10.11-7.36 3.38-8.3 2.82-10.75 2.82-7.41 0-4.36-21.48-2.94-24.2 5.21-6.4 35.86-18.35 65.94-18.18a76.857 76.857 0 0 1 55.69 17.28 70.285 70.285 0 0 1 17.67 52.36l-.01 69.29zM93.99 235.4c32.43-.47 46.16-19.97 49.29-30.47 2.46-10.05 2.05-16.41 2.05-27.4-9.67-2.32-23.59-4.85-39.56-4.87-15.15-1.14-42.82 5.63-41.74 32.26-1.24 16.79 11.12 31.4 29.96 30.48zm170.92 23.05c-7.86.72-11.52-4.86-12.68-10.37l-49.8-164.65c-.97-2.78-1.61-5.65-1.92-8.58a4.61 4.61 0 0 1 3.86-5.25c.24-.04-2.13 0 22.25 0 8.78-.88 11.64 6.03 12.55 10.37l35.72 140.83 33.16-140.83c.53-3.22 2.94-11.07 12.8-10.24h17.16c2.17-.18 11.11-.5 12.68 10.37l33.42 142.63L420.98 80.1c.48-2.18 2.72-11.37 12.68-10.37h19.72c.85-.13 6.15-.81 5.25 8.58-.43 1.85 3.41-10.66-52.75 169.9-1.15 5.51-4.82 11.09-12.68 10.37h-18.69c-10.94 1.15-12.51-9.66-12.68-10.75L328.67 110.7l-32.78 136.99c-.16 1.09-1.73 11.9-12.68 10.75h-18.3zm273.48 5.63c-5.88.01-33.92-.3-57.36-12.29a12.802 12.802 0 0 1-7.81-11.91v-10.75c0-8.45 6.2-6.9 8.83-5.89 10.04 4.06 16.48 7.14 28.81 9.6 36.65 7.53 52.77-2.3 56.72-4.48 13.15-7.81 14.19-25.68 5.25-34.95-10.48-8.79-15.48-9.12-53.13-21-4.64-1.29-43.7-13.61-43.79-52.36-.61-28.24 25.05-56.18 69.52-55.95 12.67-.01 46.43 4.13 55.57 15.62 1.35 2.09 2.02 4.55 1.92 7.04v10.11c0 4.44-1.62 6.66-4.87 6.66-7.71-.86-21.39-11.17-49.16-10.75-6.89-.36-39.89.91-38.41 24.97-.43 18.96 26.61 26.07 29.7 26.89 36.46 10.97 48.65 12.79 63.12 29.58 17.14 22.25 7.9 48.3 4.35 55.44-19.08 37.49-68.42 34.44-69.26 34.42zm40.2 104.86c-70.03 51.72-171.69 79.25-258.49 79.25A469.127 469.127 0 0 1 2.83 327.46c-6.53-5.89-.77-13.96 7.17-9.47a637.37 637.37 0 0 0 316.88 84.12 630.22 630.22 0 0 0 241.59-49.55c11.78-5 21.77 7.8 10.12 16.38zm29.19-33.29c-8.96-11.52-59.28-5.38-81.81-2.69-6.79.77-7.94-5.12-1.79-9.47 40.07-28.17 105.88-20.1 113.44-10.63 7.55 9.47-2.05 75.41-39.56 106.91-5.76 4.87-11.27 2.3-8.71-4.1 8.44-21.25 27.39-68.49 18.43-80.02z`},child:[]}]})(e)}function rp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M501.1 395.7L384 278.6c-23.1-23.1-57.6-27.6-85.4-13.9L192 158.1V96L64 0 0 64l96 128h62.1l106.6 106.6c-13.6 27.8-9.2 62.3 13.9 85.4l117.1 117.1c14.6 14.6 38.2 14.6 52.7 0l52.7-52.7c14.5-14.6 14.5-38.2 0-52.7zM331.7 225c28.3 0 54.9 11 74.9 31l19.4 19.4c15.8-6.9 30.8-16.5 43.8-29.5 37.1-37.1 49.7-89.3 37.9-136.7-2.2-9-13.5-12.1-20.1-5.5l-74.4 74.4-67.9-11.3L334 98.9l74.4-74.4c6.6-6.6 3.4-17.9-5.7-20.2-47.4-11.7-99.6.9-136.6 37.9-28.5 28.5-41.9 66.1-41.2 103.6l82.1 82.1c8.1-1.9 16.5-2.9 24.7-2.9zm-103.9 82l-56.7-56.7L18.7 402.8c-25 25-25 65.5 0 90.5s65.5 25 90.5 0l123.6-123.6c-7.6-19.9-9.9-41.6-5-62.7zM64 472c-13.2 0-24-10.8-24-24 0-13.3 10.7-24 24-24s24 10.7 24 24c0 13.2-10.7 24-24 24z`},child:[]}]})(e)}function ip(e){return Q({tag:`svg`,attr:{viewBox:`0 0 352 512`},child:[{tag:`path`,attr:{d:`M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z`},child:[]}]})(e)}function ap(e){return Q({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M466.5 83.7l-192-80a48.15 48.15 0 0 0-36.9 0l-192 80C27.7 91.1 16 108.6 16 128c0 198.5 114.5 335.7 221.5 380.3 11.8 4.9 25.1 4.9 36.9 0C360.1 472.6 496 349.3 496 128c0-19.4-11.7-36.9-29.5-44.3zM256.1 446.3l-.1-381 175.9 73.3c-3.3 151.4-82.1 261.1-175.8 307.7z`},child:[]}]})(e)}function op(e){return Q({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M480 160H32c-17.673 0-32-14.327-32-32V64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24z`},child:[]}]})(e)}function sp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z`},child:[]}]})(e)}function cp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M476 3.2L12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z`},child:[]}]})(e)}function lp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 640 512`},child:[{tag:`path`,attr:{d:`M640 264v-16c0-8.84-7.16-16-16-16H344v-40h72c17.67 0 32-14.33 32-32V32c0-17.67-14.33-32-32-32H224c-17.67 0-32 14.33-32 32v128c0 17.67 14.33 32 32 32h72v40H16c-8.84 0-16 7.16-16 16v16c0 8.84 7.16 16 16 16h104v40H64c-17.67 0-32 14.33-32 32v128c0 17.67 14.33 32 32 32h160c17.67 0 32-14.33 32-32V352c0-17.67-14.33-32-32-32h-56v-40h304v40h-56c-17.67 0-32 14.33-32 32v128c0 17.67 14.33 32 32 32h160c17.67 0 32-14.33 32-32V352c0-17.67-14.33-32-32-32h-56v-40h104c8.84 0 16-7.16 16-16zM256 128V64h128v64H256zm-64 320H96v-64h96v64zm352 0h-96v-64h96v64z`},child:[]}]})(e)}function up(e){return Q({tag:`svg`,attr:{viewBox:`0 0 384 512`},child:[{tag:`path`,attr:{d:`M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z`},child:[]}]})(e)}function dp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z`},child:[]}]})(e)}function fp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z`},child:[]}]})(e)}function pp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z`},child:[]}]})(e)}function mp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 576 512`},child:[{tag:`path`,attr:{d:`M528 0H48C21.5 0 0 21.5 0 48v320c0 26.5 21.5 48 48 48h192l-16 48h-72c-13.3 0-24 10.7-24 24s10.7 24 24 24h272c13.3 0 24-10.7 24-24s-10.7-24-24-24h-72l-16-48h192c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zm-16 352H64V64h448v288z`},child:[]}]})(e)}function hp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 640 512`},child:[{tag:`path`,attr:{d:`M537.6 226.6c4.1-10.7 6.4-22.4 6.4-34.6 0-53-43-96-96-96-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32c-88.4 0-160 71.6-160 160 0 2.7.1 5.4.2 8.1C40.2 219.8 0 273.2 0 336c0 79.5 64.5 144 144 144h368c70.7 0 128-57.3 128-128 0-61.9-44-113.6-102.4-125.4z`},child:[]}]})(e)}function gp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z`},child:[]}]})(e)}function _p(e){return Q({tag:`svg`,attr:{viewBox:`0 0 320 512`},child:[{tag:`path`,attr:{d:`M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z`},child:[]}]})(e)}function vp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 320 512`},child:[{tag:`path`,attr:{d:`M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z`},child:[]}]})(e)}function yp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z`},child:[]}]})(e)}function bp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z`},child:[]}]})(e)}function xp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M458.622 255.92l45.985-45.005c13.708-12.977 7.316-36.039-10.664-40.339l-62.65-15.99 17.661-62.015c4.991-17.838-11.829-34.663-29.661-29.671l-61.994 17.667-15.984-62.671C337.085.197 313.765-6.276 300.99 7.228L256 53.57 211.011 7.229c-12.63-13.351-36.047-7.234-40.325 10.668l-15.984 62.671-61.995-17.667C74.87 57.907 58.056 74.738 63.046 92.572l17.661 62.015-62.65 15.99C.069 174.878-6.31 197.944 7.392 210.915l45.985 45.005-45.985 45.004c-13.708 12.977-7.316 36.039 10.664 40.339l62.65 15.99-17.661 62.015c-4.991 17.838 11.829 34.663 29.661 29.671l61.994-17.667 15.984 62.671c4.439 18.575 27.696 24.018 40.325 10.668L256 458.61l44.989 46.001c12.5 13.488 35.987 7.486 40.325-10.668l15.984-62.671 61.994 17.667c17.836 4.994 34.651-11.837 29.661-29.671l-17.661-62.015 62.65-15.99c17.987-4.302 24.366-27.367 10.664-40.339l-45.984-45.004z`},child:[]}]})(e)}function Sp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 448 512`},child:[{tag:`path`,attr:{d:`M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm320-196c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM192 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM64 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z`},child:[]}]})(e)}function Cp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 448 512`},child:[{tag:`path`,attr:{d:`M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z`},child:[]}]})(e)}function wp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 384 512`},child:[{tag:`path`,attr:{d:`M97.12 362.63c-8.69-8.69-4.16-6.24-25.12-11.85-9.51-2.55-17.87-7.45-25.43-13.32L1.2 448.7c-4.39 10.77 3.81 22.47 15.43 22.03l52.69-2.01L105.56 507c8 8.44 22.04 5.81 26.43-4.96l52.05-127.62c-10.84 6.04-22.87 9.58-35.31 9.58-19.5 0-37.82-7.59-51.61-21.37zM382.8 448.7l-45.37-111.24c-7.56 5.88-15.92 10.77-25.43 13.32-21.07 5.64-16.45 3.18-25.12 11.85-13.79 13.78-32.12 21.37-51.62 21.37-12.44 0-24.47-3.55-35.31-9.58L252 502.04c4.39 10.77 18.44 13.4 26.43 4.96l36.25-38.28 52.69 2.01c11.62.44 19.82-11.27 15.43-22.03zM263 340c15.28-15.55 17.03-14.21 38.79-20.14 13.89-3.79 24.75-14.84 28.47-28.98 7.48-28.4 5.54-24.97 25.95-45.75 10.17-10.35 14.14-25.44 10.42-39.58-7.47-28.38-7.48-24.42 0-52.83 3.72-14.14-.25-29.23-10.42-39.58-20.41-20.78-18.47-17.36-25.95-45.75-3.72-14.14-14.58-25.19-28.47-28.98-27.88-7.61-24.52-5.62-44.95-26.41-10.17-10.35-25-14.4-38.89-10.61-27.87 7.6-23.98 7.61-51.9 0-13.89-3.79-28.72.25-38.89 10.61-20.41 20.78-17.05 18.8-44.94 26.41-13.89 3.79-24.75 14.84-28.47 28.98-7.47 28.39-5.54 24.97-25.95 45.75-10.17 10.35-14.15 25.44-10.42 39.58 7.47 28.36 7.48 24.4 0 52.82-3.72 14.14.25 29.23 10.42 39.59 20.41 20.78 18.47 17.35 25.95 45.75 3.72 14.14 14.58 25.19 28.47 28.98C104.6 325.96 106.27 325 121 340c13.23 13.47 33.84 15.88 49.74 5.82a39.676 39.676 0 0 1 42.53 0c15.89 10.06 36.5 7.65 49.73-5.82zM97.66 175.96c0-53.03 42.24-96.02 94.34-96.02s94.34 42.99 94.34 96.02-42.24 96.02-94.34 96.02-94.34-42.99-94.34-96.02z`},child:[]}]})(e)}function Tp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 448 512`},child:[{tag:`path`,attr:{d:`M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z`},child:[]}]})(e)}function Ep(e){return Q({tag:`svg`,attr:{viewBox:`0 0 448 512`},child:[{tag:`path`,attr:{d:`M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z`},child:[]}]})(e)}function Dp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 448 512`},child:[{tag:`path`,attr:{d:`M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z`},child:[]}]})(e)}function Op(e){return Q({tag:`svg`,attr:{viewBox:`0 0 448 512`},child:[{tag:`path`,attr:{d:`M413.1 222.5l22.2 22.2c9.4 9.4 9.4 24.6 0 33.9L241 473c-9.4 9.4-24.6 9.4-33.9 0L12.7 278.6c-9.4-9.4-9.4-24.6 0-33.9l22.2-22.2c9.5-9.5 25-9.3 34.3.4L184 343.4V56c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24v287.4l114.8-120.5c9.3-9.8 24.8-10 34.3-.4z`},child:[]}]})(e)}var kp=()=>{let[e,t]=(0,b.useState)(!1),[n,r]=(0,b.useState)(!1),[i,a]=(0,b.useState)(`home`),o=[{label:`Home`,id:`home`},{label:`About`,id:`about`},{label:`Skills`,id:`skills`},{label:`Experience`,id:`experience`},{label:`Projects`,id:`projects`},{label:`Certifications`,id:`certifications`},{label:`Contact`,id:`contact`}];(0,b.useEffect)(()=>{let e=0,n=()=>{e&&cancelAnimationFrame(e),e=requestAnimationFrame(()=>{let e=window.scrollY;t(e>35);let n=o.map(e=>document.getElementById(e.id)).filter(e=>e!==null);if(n.length===0)return;let r=Math.min(180,window.innerHeight*.32),i=`home`;for(let e of n)e.getBoundingClientRect().top<=r&&(i=e.id);a(i)})};return n(),window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),()=>{e&&cancelAnimationFrame(e),window.removeEventListener(`scroll`,n),window.removeEventListener(`resize`,n)}},[]);let s=()=>{let e=window.innerWidth;return e<=600?64:e<=950?66:70},c=e=>{let t=document.getElementById(e);if(!t){console.warn(`Navbar: section #${e} was not found.`);return}r(!1),a(e),requestAnimationFrame(()=>{let n=s(),r=t.getBoundingClientRect().top+window.scrollY,i=e===`home`?0:Math.max(0,r-n-12);window.scrollTo({top:i,behavior:`smooth`})})},l=()=>{r(!1),a(`home`),window.scrollTo({top:0,behavior:`smooth`})},u=()=>{let e=document.createElement(`a`);e.href=`/ns-port/resume.pdf`,e.download=`Naimish-Singh-Resume.pdf`,document.body.appendChild(e),e.click(),document.body.removeChild(e)};return(0,V.jsxs)(V.Fragment,{children:[(0,V.jsx)(`style`,{children:`
+        `),()=>{s.current?.removeAttribute(`data-motion-pop-id`),b.contains(y)&&b.removeChild(y)}},[t]),(0,V.jsx)(Hl,{isPresent:t,childRef:s,sizeRef:c,pop:a,children:a===!1?e:b.cloneElement(e,{ref:u})})}var U=({children:e,initial:t,isPresent:n,onExitComplete:r,custom:i,presenceAffectsLayout:a,mode:o,anchorX:s,anchorY:c,root:l})=>{let u=ct(W),d=(0,b.useId)(),f=(0,b.useRef)(n),p=(0,b.useRef)(r);lt(()=>{f.current=n,p.current=r});let m=!0,h=(0,b.useMemo)(()=>(m=!1,{id:d,initial:t,isPresent:n,custom:i,onExitComplete:e=>{u.set(e,!0);for(let e of u.values())if(!e)return;r&&r()},register:e=>(u.set(e,!1),()=>{u.delete(e),!f.current&&!u.size&&p.current?.()})}),[n,u,r]);return a&&m&&(h={...h}),(0,b.useMemo)(()=>{u.forEach((e,t)=>u.set(t,!1))},[n]),b.useEffect(()=>{!n&&!u.size&&r&&r()},[n]),e=(0,V.jsx)(H,{pop:o===`popLayout`,isPresent:n,anchorX:s,anchorY:c,root:l,children:e}),(0,V.jsx)(ut.Provider,{value:h,children:e})};function W(){return new Map}function G(e=!0){let t=(0,b.useContext)(ut);if(t===null)return[!0,null];let{isPresent:n,onExitComplete:r,register:i}=t,a=(0,b.useId)();(0,b.useEffect)(()=>{if(e)return i(a)},[e]);let o=(0,b.useCallback)(()=>e&&r&&r(a),[a,r,e]);return!n&&r?[!1,o]:[!0]}var K=e=>e.key||``;function Ul(e){let t=[];return b.Children.forEach(e,e=>{(0,b.isValidElement)(e)&&t.push(e)}),t}var Wl=({children:e,custom:t,initial:n=!0,onExitComplete:r,presenceAffectsLayout:i=!0,mode:a=`sync`,propagate:o=!1,anchorX:s=`left`,anchorY:c=`top`,root:l})=>{let[u,d]=G(o),f=(0,b.useMemo)(()=>Ul(e),[e]),p=o&&!u?[]:f.map(K),m=(0,b.useRef)(!0),h=(0,b.useRef)(f),g=ct(()=>new Map),_=(0,b.useRef)(new Set),[v,y]=(0,b.useState)(f),[x,S]=(0,b.useState)(f);lt(()=>{m.current=!1,h.current=f;for(let e=0;e<x.length;e++){let t=K(x[e]);p.includes(t)?(g.delete(t),_.current.delete(t)):g.get(t)!==!0&&g.set(t,!1)}},[x,p.length,p.join(`-`)]);let C=[];if(f!==v){let e=[...f];for(let t=0;t<x.length;t++){let n=x[t],r=K(n);p.includes(r)||(e.splice(t,0,n),C.push(n))}return a===`wait`&&C.length&&(e=C),S(Ul(e)),y(f),null}let{forceRender:w}=(0,b.useContext)(st);return(0,V.jsx)(V.Fragment,{children:x.map(e=>{let v=K(e),y=o&&!u?!1:f===x||p.includes(v);return(0,V.jsx)(U,{isPresent:y,initial:!m.current||n?void 0:!1,custom:t,presenceAffectsLayout:i,mode:a,root:l,onExitComplete:y?void 0:()=>{if(_.current.has(v))return;if(g.has(v))_.current.add(v),g.set(v,!0);else return;let e=!0;g.forEach(t=>{t||(e=!1)}),e&&(w?.(),S(h.current),o&&d?.(),r&&r())},anchorX:s,anchorY:c,children:e},v)})})},Gl=[`animate`,`circle`,`defs`,`desc`,`ellipse`,`g`,`image`,`line`,`filter`,`marker`,`mask`,`metadata`,`path`,`pattern`,`polygon`,`polyline`,`rect`,`stop`,`switch`,`symbol`,`svg`,`text`,`tspan`,`use`,`view`];function Kl(e){return typeof e!=`string`||e.includes(`-`)?!1:!!(Gl.indexOf(e)>-1||/[A-Z]/u.test(e))}var ql=(e,t)=>t.isSVG??Kl(e)?new zs(t):new ks(t,{allowProjection:e!==b.Fragment}),q=(0,b.createContext)({strict:!1}),Jl=(0,b.createContext)({});function Yl(e,t){if(ts(e)){let{initial:t,animate:n}=e;return{initial:t===!1||Qo(t)?t:void 0,animate:Qo(n)?n:void 0}}return e.inherit===!1?{}:t}function Xl(e){let{initial:t,animate:n}=Yl(e,(0,b.useContext)(Jl));return(0,b.useMemo)(()=>({initial:t,animate:n}),[Zl(t),Zl(n)])}function Zl(e){return Array.isArray(e)?e.join(` `):e}var Ql=()=>({style:{},transform:{},transformOrigin:{},vars:{}});function $l(e,t,n){for(let r in t)!F(t[r])&&!Es(r,n)&&(e[r]=t[r])}function eu({transformTemplate:e},t){return(0,b.useMemo)(()=>{let n=Ql();return bs(n,t,e),Object.assign({},n.vars,n.style)},[t])}function tu(e,t){let n=e.style||{},r={};return $l(r,n,e),Object.assign(r,eu(e,t)),r}function nu(e,t){let n={},r=tu(e,t);return e.drag&&e.dragListener!==!1&&(n.draggable=!1,r.userSelect=r.WebkitUserSelect=r.WebkitTouchCallout=`none`,r.touchAction=e.drag===!0?`none`:`pan-${e.drag===`x`?`y`:`x`}`),e.tabIndex===void 0&&(e.onTap||e.onTapStart||e.whileTap)&&(n.tabIndex=0),n.style=r,n}var ru=()=>({...Ql(),attrs:{}});function iu(e,t,n,r){let i=(0,b.useMemo)(()=>{let n=ru();return Ps(n,t,Is(r),e.transformTemplate,e.style),{...n.attrs,style:{...n.style}}},[t]);if(e.style){let t={};$l(t,e.style,e),i.style={...t,...i.style}}return i}var au=new Set(`animate.exit.variants.initial.style.values.variants.transition.transformTemplate.custom.inherit.onBeforeLayoutMeasure.onAnimationStart.onAnimationComplete.onUpdate.onDragStart.onDrag.onDragEnd.onMeasureDragConstraints.onDirectionLock.onDragTransitionEnd._dragX._dragY.onHoverStart.onHoverEnd.onViewportEnter.onViewportLeave.globalTapTarget.propagate.ignoreStrict.viewport`.split(`.`));function ou(e){return e.startsWith(`while`)||e.startsWith(`drag`)&&e!==`draggable`||e.startsWith(`layout`)||e.startsWith(`onTap`)||e.startsWith(`onPan`)||e.startsWith(`onLayout`)||au.has(e)}var su=c({default:()=>cu}),cu,lu=o((()=>{throw cu={},Error(`Could not resolve "@emotion/is-prop-valid" imported by "framer-motion". Is it installed?`)})),uu=e=>!ou(e);function du(e){typeof e==`function`&&(uu=t=>t.startsWith(`on`)?!ou(t):e(t))}try{du((lu(),d(su)).default)}catch{}function fu(e,t,n){let r={};for(let i in e)i===`values`&&typeof e.values==`object`||F(e[i])||(uu(i)||n===!0&&ou(i)||!t&&!ou(i)||e.draggable&&i.startsWith(`onDrag`))&&(r[i]=e[i]);return r}function pu(e,t,n,{latestValues:r},i,a=!1,o){let s=(o??Kl(e)?iu:nu)(t,r,i,e),c=fu(t,typeof e==`string`,a),l=e===b.Fragment?{}:{...c,...s,ref:n},{children:u}=t,d=(0,b.useMemo)(()=>F(u)?u.get():u,[u]);return(0,b.createElement)(e,{...l,children:d})}function mu({scrapeMotionValuesFromProps:e,createRenderState:t},n,r,i){return{latestValues:hu(n,r,i,e),renderState:t()}}function hu(e,t,n,r){let i={},a=r(e,{});for(let e in a)i[e]=Sc(a[e]);let{initial:o,animate:s}=e,c=ts(e),l=ns(e);t&&l&&!c&&e.inherit!==!1&&(o===void 0&&(o=t.initial),s===void 0&&(s=t.animate));let u=n?n.initial===!1:!1;u||=o===!1;let d=u?s:o;if(d&&typeof d!=`boolean`&&!Zo(d)){let t=Array.isArray(d)?d:[d];for(let n=0;n<t.length;n++){let r=ls(e,t[n]);if(r){let{transitionEnd:e,transition:t,...n}=r;for(let e in n){let t=n[e];if(Array.isArray(t)){let e=u?t.length-1:0;t=t[e]}t!==null&&(i[e]=t)}for(let t in e)i[t]=e[t]}}}return i}var gu=e=>(t,n)=>{let r=(0,b.useContext)(Jl),i=(0,b.useContext)(ut),a=()=>mu(e,t,r,i);return n?a():ct(a)},_u=gu({scrapeMotionValuesFromProps:Ds,createRenderState:Ql}),vu=gu({scrapeMotionValuesFromProps:Rs,createRenderState:ru}),yu={animation:[`animate`,`variants`,`whileHover`,`whileTap`,`exit`,`whileInView`,`whileFocus`,`whileDrag`],exit:[`exit`],drag:[`drag`,`dragControls`],focus:[`whileFocus`],hover:[`whileHover`,`onHoverStart`,`onHoverEnd`],tap:[`whileTap`,`onTap`,`onTapStart`,`onTapCancel`],pan:[`onPan`,`onPanStart`,`onPanSessionStart`,`onPanEnd`],inView:[`whileInView`,`onViewportEnter`,`onViewportLeave`],layout:[`layout`,`layoutId`]},bu=!1;function xu(){if(bu)return;let e={};for(let t in yu)e[t]={isEnabled:e=>yu[t].some(t=>!!e[t])};fs(e),bu=!0}function Su(){return xu(),ps()}function Cu(e){let t=Su();for(let n in e)t[n]={...t[n],...e[n]};fs(t)}var wu=Symbol.for(`motionComponentSymbol`);function Tu(e,t,n){let r=(0,b.useRef)(n);(0,b.useInsertionEffect)(()=>{r.current=n});let i=(0,b.useRef)(null);return(0,b.useCallback)(n=>{n&&e.onMount?.(n),t&&(n?t.mount(n):t.unmount());let a=r.current;if(typeof a==`function`)if(n){let e=a(n);typeof e==`function`&&(i.current=e)}else i.current?(i.current(),i.current=null):a(n);else a&&(a.current=n)},[t])}var Eu=(0,b.createContext)({});function Du(e){return e&&typeof e==`object`&&Object.prototype.hasOwnProperty.call(e,`current`)}function Ou(e,t,n,r,i,a){let{visualElement:o}=(0,b.useContext)(Jl),s=(0,b.useContext)(q),c=(0,b.useContext)(ut),l=(0,b.useContext)(Rl),u=l.reducedMotion,d=l.skipAnimations,f=(0,b.useRef)(null),p=(0,b.useRef)(!1);r||=s.renderer,!f.current&&r&&(f.current=r(e,{visualState:t,parent:o,props:n,presenceContext:c,blockInitialAnimation:c?c.initial===!1:!1,reducedMotionConfig:u,skipAnimations:d,isSVG:a}),p.current&&f.current&&(f.current.manuallyAnimateOnMount=!0));let m=f.current,h=(0,b.useContext)(Eu);m&&!m.projection&&i&&(m.type===`html`||m.type===`svg`)&&ku(f.current,n,i,h);let g=(0,b.useRef)(!1);(0,b.useInsertionEffect)(()=>{m&&g.current&&m.update(n,c)});let _=n[ia],v=(0,b.useRef)(!!_&&typeof window<`u`&&!window.MotionHandoffIsComplete?.(_)&&window.MotionHasOptimisedAnimation?.(_));return lt(()=>{p.current=!0,m&&(g.current=!0,window.MotionIsMounted=!0,m.updateFeatures(),m.scheduleRenderMicrotask(),v.current&&m.animationState&&m.animationState.animateChanges())}),(0,b.useEffect)(()=>{m&&(!v.current&&m.animationState&&m.animationState.animateChanges(),v.current&&=(queueMicrotask(()=>{window.MotionHandoffMarkAsComplete?.(_)}),!1),m.enteringChildren=void 0)}),m}function ku(e,t,n,r){let{layoutId:i,layout:a,drag:o,dragConstraints:s,layoutScroll:c,layoutRoot:l,layoutAnchor:u,layoutCrossfade:d}=t;e.projection=new n(e.latestValues,t[`data-framer-portal-id`]?void 0:Au(e.parent)),e.projection.setOptions({layoutId:i,layout:a,alwaysMeasureLayout:!!o||s&&Du(s),visualElement:e,animationType:typeof a==`string`?a:`both`,initialPromotionConfig:r,crossfade:d,layoutScroll:c,layoutRoot:l,layoutAnchor:u})}function Au(e){if(e)return e.options.allowProjection===!1?Au(e.parent):e.projection}function ju(e,{forwardMotionProps:t=!1,type:n}={},r,i){r&&Cu(r);let a=n?n===`svg`:Kl(e),o=a?vu:_u;function s(n,s){let c,l={...(0,b.useContext)(Rl),...n,layoutId:Mu(n)},{isStatic:u}=l,d=Xl(n),f=o(n,u);if(!u&&typeof window<`u`){Nu(l,r);let t=Pu(l);c=t.MeasureLayout,d.visualElement=Ou(e,f,l,i,t.ProjectionNode,a)}return(0,V.jsxs)(Jl.Provider,{value:d,children:[c&&d.visualElement?(0,V.jsx)(c,{visualElement:d.visualElement,...l}):null,pu(e,n,Tu(f,d.visualElement,s),f,u,t,a)]})}s.displayName=`motion.${typeof e==`string`?e:`create(${e.displayName??e.name??``})`}`;let c=(0,b.forwardRef)(s);return c[wu]=e,c}function Mu({layoutId:e}){let t=(0,b.useContext)(st).id;return t&&e!==void 0?t+`-`+e:e}function Nu(e,t){(0,b.useContext)(q).strict}function Pu(e){let{drag:t,layout:n}=Su();if(!t&&!n)return{};let r={...t,...n};return{MeasureLayout:t?.isEnabled(e)||n?.isEnabled(e)?r.MeasureLayout:void 0,ProjectionNode:r.ProjectionNode}}function Fu(e,t){if(typeof Proxy>`u`)return ju;let n=new Map,r=(n,r)=>ju(n,r,e,t);return new Proxy((e,t)=>r(e,t),{get:(i,a)=>a===`create`?r:(n.has(a)||n.set(a,ju(a,void 0,e,t)),n.get(a))})}var Iu=class extends to{constructor(e){super(e),e.animationState||=ic(e)}updateAnimationControlsSubscription(){let{animate:e}=this.node.getProps();Zo(e)&&(this.unmountControls=e.subscribe(this.node))}mount(){this.updateAnimationControlsSubscription()}update(){let{animate:e}=this.node.getProps(),{animate:t}=this.node.prevProps||{};e!==t&&this.updateAnimationControlsSubscription()}unmount(){this.node.animationState.reset(),this.unmountControls?.()}},Lu=0,Ru={animation:{Feature:Iu},exit:{Feature:class extends to{constructor(){super(...arguments),this.id=Lu++,this.isExitComplete=!1}update(){if(!this.node.presenceContext)return;let{isPresent:e,onExitComplete:t}=this.node.presenceContext,{isPresent:n}=this.node.prevPresenceContext||{};if(!this.node.animationState||e===n)return;if(e&&n===!1){if(this.isExitComplete){let{initial:e,custom:t}=this.node.getProps();if(typeof e==`string`||typeof e==`object`&&e&&!Array.isArray(e)){let n=Bs(this.node,e,t);if(n){let{transition:e,transitionEnd:t,...r}=n;for(let e in r)this.node.getValue(e)?.jump(r[e])}}this.node.animationState.reset(),this.node.animationState.animateChanges()}else this.node.animationState.setActive(`exit`,!1);this.isExitComplete=!1;return}let r=this.node.animationState.setActive(`exit`,!e);t&&!e&&r.then(()=>{this.isExitComplete=!0,t(this.id)})}mount(){let{register:e,onExitComplete:t}=this.node.presenceContext||{};t&&t(this.id),e&&(this.unmount=e(this.id))}unmount(){}}}};function zu(e){return{point:{x:e.pageX,y:e.pageY}}}var Bu=e=>t=>ga(t)&&e(t,zu(t));function Vu(e,t,n,r){return xc(e,t,Bu(n),r)}var Hu=({current:e})=>e?e.ownerDocument.defaultView:null,Uu=(e,t)=>Math.abs(e-t);function Wu(e,t){let n=Uu(e.x,t.x),r=Uu(e.y,t.y);return Math.sqrt(n**2+r**2)}var Gu=new Set([`auto`,`scroll`]),Ku=class{constructor(e,t,{transformPagePoint:n,contextWindow:r=window,dragSnapToOrigin:i=!1,distanceThreshold:a=3,element:o}={}){if(this.startEvent=null,this.lastMoveEvent=null,this.lastMoveEventInfo=null,this.lastRawMoveEventInfo=null,this.handlers={},this.contextWindow=window,this.scrollPositions=new Map,this.removeScrollListeners=null,this.onElementScroll=e=>{this.handleScroll(e.target)},this.onWindowScroll=()=>{this.handleScroll(window)},this.updatePoint=()=>{if(!(this.lastMoveEvent&&this.lastMoveEventInfo))return;this.lastRawMoveEventInfo&&(this.lastMoveEventInfo=qu(this.lastRawMoveEventInfo,this.transformPagePoint));let e=Ju(this.lastMoveEventInfo,this.history),t=this.startEvent!==null,n=Wu(e.offset,{x:0,y:0})>=this.distanceThreshold;if(!t&&!n)return;let{point:r}=e,{timestamp:i}=$t;this.history.push({...r,timestamp:i});let{onStart:a,onMove:o}=this.handlers;t||(a&&a(this.lastMoveEvent,e),this.startEvent=this.lastMoveEvent),o&&o(this.lastMoveEvent,e)},this.handlePointerMove=(e,t)=>{this.lastMoveEvent=e,this.lastRawMoveEventInfo=t,this.lastMoveEventInfo=qu(t,this.transformPagePoint),k.update(this.updatePoint,!0)},this.handlePointerUp=(e,t)=>{this.end();let{onEnd:n,onSessionEnd:r,resumeAnimation:i}=this.handlers;if((this.dragSnapToOrigin||!this.startEvent)&&i&&i(),!(this.lastMoveEvent&&this.lastMoveEventInfo))return;let a=Ju(e.type===`pointercancel`?this.lastMoveEventInfo:qu(t,this.transformPagePoint),this.history);this.startEvent&&n&&n(e,a),r&&r(e,a)},!ga(e))return;this.dragSnapToOrigin=i,this.handlers=t,this.transformPagePoint=n,this.distanceThreshold=a,this.contextWindow=r||window;let s=qu(zu(e),this.transformPagePoint),{point:c}=s,{timestamp:l}=$t;this.history=[{...c,timestamp:l}];let{onSessionStart:u}=t;u&&u(e,Ju(s,this.history));let d={passive:!0,capture:!0};this.removeListeners=bt(Vu(this.contextWindow,`pointermove`,this.handlePointerMove,d),Vu(this.contextWindow,`pointerup`,this.handlePointerUp,d),Vu(this.contextWindow,`pointercancel`,this.handlePointerUp,d)),o&&this.startScrollTracking(o)}startScrollTracking(e){let t=e.parentElement;for(;t;){let e=getComputedStyle(t);(Gu.has(e.overflowX)||Gu.has(e.overflowY))&&this.scrollPositions.set(t,{x:t.scrollLeft,y:t.scrollTop}),t=t.parentElement}this.scrollPositions.set(window,{x:window.scrollX,y:window.scrollY}),window.addEventListener(`scroll`,this.onElementScroll,{capture:!0}),window.addEventListener(`scroll`,this.onWindowScroll),this.removeScrollListeners=()=>{window.removeEventListener(`scroll`,this.onElementScroll,{capture:!0}),window.removeEventListener(`scroll`,this.onWindowScroll)}}handleScroll(e){let t=this.scrollPositions.get(e);if(!t)return;let n=e===window,r=n?{x:window.scrollX,y:window.scrollY}:{x:e.scrollLeft,y:e.scrollTop},i={x:r.x-t.x,y:r.y-t.y};i.x===0&&i.y===0||(n?this.lastMoveEventInfo&&(this.lastMoveEventInfo.point.x+=i.x,this.lastMoveEventInfo.point.y+=i.y):this.history.length>0&&(this.history[0].x-=i.x,this.history[0].y-=i.y),this.scrollPositions.set(e,r),k.update(this.updatePoint,!0))}updateHandlers(e){this.handlers=e}end(){this.removeListeners&&this.removeListeners(),this.removeScrollListeners&&this.removeScrollListeners(),this.scrollPositions.clear(),Qt(this.updatePoint)}};function qu(e,t){return t?{point:t(e.point)}:e}function J(e,t){return{x:e.x-t.x,y:e.y-t.y}}function Ju({point:e},t){return{point:e,delta:J(e,Xu(t)),offset:J(e,Yu(t)),velocity:Zu(t,.1)}}function Yu(e){return e[0]}function Xu(e){return e[e.length-1]}function Zu(e,t){if(e.length<2)return{x:0,y:0};let n=e.length-1,r=null,i=Xu(e);for(;n>=0&&(r=e[n],!(i.timestamp-r.timestamp>Ct(t)));)n--;if(!r)return{x:0,y:0};r===e[0]&&e.length>2&&i.timestamp-r.timestamp>Ct(t)*2&&(r=e[1]);let a=wt(i.timestamp-r.timestamp);if(a===0)return{x:0,y:0};let o={x:(i.x-r.x)/a,y:(i.y-r.y)/a};return o.x===1/0&&(o.x=0),o.y===1/0&&(o.y=0),o}function Qu(e,{min:t,max:n},r){return t!==void 0&&e<t?e=r?j(t,e,r.min):Math.max(e,t):n!==void 0&&e>n&&(e=r?j(n,e,r.max):Math.min(e,n)),e}function $u(e,t,n){return{min:t===void 0?void 0:e.min+t,max:n===void 0?void 0:e.max+n-(e.max-e.min)}}function ed(e,{top:t,left:n,bottom:r,right:i}){return{x:$u(e.x,n,i),y:$u(e.y,t,r)}}function td(e,t){let n=t.min-e.min,r=t.max-e.max;return t.max-t.min<e.max-e.min&&([n,r]=[r,n]),{min:n,max:r}}function nd(e,t){return{x:td(e.x,t.x),y:td(e.y,t.y)}}function rd(e,t){let n=.5,r=fc(e),i=fc(t);return i>r?n=xt(t.min,t.max-r,e.min):r>i&&(n=xt(e.min,e.max-i,t.min)),pt(0,1,n)}function id(e,t){let n={};return t.min!==void 0&&(n.min=t.min-e.min),t.max!==void 0&&(n.max=t.max-e.min),n}var ad=.35;function od(e=ad){return e===!1?e=0:e===!0&&(e=ad),{x:sd(e,`left`,`right`),y:sd(e,`top`,`bottom`)}}function sd(e,t,n){return{min:cd(e,t),max:cd(e,n)}}function cd(e,t){return typeof e==`number`?e:e[t]||0}var ld=new WeakMap,ud=class{constructor(e){this.openDragLock=null,this.isDragging=!1,this.currentDirection=null,this.originPoint={x:0,y:0},this.constraints=!1,this.hasMutatedConstraints=!1,this.elastic=qo(),this.latestPointerEvent=null,this.latestPanInfo=null,this.visualElement=e}start(e,{snapToCursor:t=!1,distanceThreshold:n}={}){let{presenceContext:r}=this.visualElement;if(r&&r.isPresent===!1)return;let i=e=>{t&&this.snapToCursor(zu(e).point),this.stopAnimation()},a=(e,t)=>{let{drag:n,dragPropagation:r,onDragStart:i}=this.getProps();if(n&&!r&&(this.openDragLock&&this.openDragLock(),this.openDragLock=la(n),!this.openDragLock))return;this.latestPointerEvent=e,this.latestPanInfo=t,this.isDragging=!0,this.currentDirection=null,this.resolveConstraints(),this.visualElement.projection&&(this.visualElement.projection.isAnimationBlocked=!0,this.visualElement.projection.target=void 0),bc(e=>{let t=this.getAxisMotionValue(e).get()||0;if(Dn.test(t)){let{projection:n}=this.visualElement;if(n&&n.layout){let r=n.layout.layoutBox[e];r&&(t=fc(r)*(parseFloat(t)/100))}}this.originPoint[e]=t}),i&&k.update(()=>i(e,t),!1,!0),eo(this.visualElement,`transform`);let{animationState:a}=this.visualElement;a&&a.setActive(`whileDrag`,!0)},o=(e,t)=>{this.latestPointerEvent=e,this.latestPanInfo=t;let{dragPropagation:n,dragDirectionLock:r,onDirectionLock:i,onDrag:a}=this.getProps();if(!n&&!this.openDragLock)return;let{offset:o}=t;if(r&&this.currentDirection===null){this.currentDirection=md(o),this.currentDirection!==null&&i&&i(this.currentDirection);return}this.updateAxis(`x`,t.point,o),this.updateAxis(`y`,t.point,o),this.visualElement.render(),a&&k.update(()=>a(e,t),!1,!0)},s=(e,t)=>{this.latestPointerEvent=e,this.latestPanInfo=t,this.stop(e,t),this.latestPointerEvent=null,this.latestPanInfo=null},c=()=>{let{dragSnapToOrigin:e}=this.getProps();(e||this.constraints)&&this.startAnimation({x:0,y:0})},{dragSnapToOrigin:l}=this.getProps();this.panSession=new Ku(e,{onSessionStart:i,onStart:a,onMove:o,onSessionEnd:s,resumeAnimation:c},{transformPagePoint:this.visualElement.getTransformPagePoint(),dragSnapToOrigin:l,distanceThreshold:n,contextWindow:Hu(this.visualElement),element:this.visualElement.current})}stop(e,t){let n=e||this.latestPointerEvent,r=t||this.latestPanInfo,i=this.isDragging;if(this.cancel(),!i||!r||!n)return;let{velocity:a}=r;this.startAnimation(a);let{onDragEnd:o}=this.getProps();o&&k.postRender(()=>o(n,r))}cancel(){this.isDragging=!1;let{projection:e,animationState:t}=this.visualElement;e&&(e.isAnimationBlocked=!1),this.endPanSession();let{dragPropagation:n}=this.getProps();!n&&this.openDragLock&&(this.openDragLock(),this.openDragLock=null),t&&t.setActive(`whileDrag`,!1)}endPanSession(){this.panSession&&this.panSession.end(),this.panSession=void 0}updateAxis(e,t,n){let{drag:r}=this.getProps();if(!n||!pd(e,r,this.currentDirection))return;let i=this.getAxisMotionValue(e),a=this.originPoint[e]+n[e];this.constraints&&this.constraints[e]&&(a=Qu(a,this.constraints[e],this.elastic[e])),i.set(a)}resolveConstraints(){let{dragConstraints:e,dragElastic:t}=this.getProps(),n=this.visualElement.projection&&!this.visualElement.projection.layout?this.visualElement.projection.measure(!1):this.visualElement.projection?.layout,r=this.constraints;e&&Du(e)?this.constraints||=this.resolveRefConstraints():e&&n?this.constraints=ed(n.layoutBox,e):this.constraints=!1,this.elastic=od(t),r!==this.constraints&&!Du(e)&&n&&this.constraints&&!this.hasMutatedConstraints&&bc(e=>{this.constraints!==!1&&this.getAxisMotionValue(e)&&(this.constraints[e]=id(n.layoutBox[e],this.constraints[e]))})}resolveRefConstraints(){let{dragConstraints:e,onMeasureDragConstraints:t}=this.getProps();if(!e||!Du(e))return!1;let n=e.current,{projection:r}=this.visualElement;if(!r||!r.layout)return!1;r.root&&(r.root.scroll=void 0,r.root.updateScroll());let i=xo(n,r.root,this.visualElement.getTransformPagePoint()),a=nd(r.layout.layoutBox,i);if(t){let e=t(ro(a));this.hasMutatedConstraints=!!e,e&&(a=no(e))}return a}startAnimation(e){let{drag:t,dragMomentum:n,dragElastic:r,dragTransition:i,dragSnapToOrigin:a,onDragTransitionEnd:o}=this.getProps(),s=this.constraints||{},c=bc(o=>{if(!pd(o,t,this.currentDirection))return;let c=s&&s[o]||{};(a===!0||a===o)&&(c={min:0,max:0});let l=r?200:1e6,u=r?40:1e7,d={type:`inertia`,velocity:n?e[o]:0,bounceStiffness:l,bounceDamping:u,timeConstant:750,restDelta:1,restSpeed:10,...i,...c};return this.startAxisValueAnimation(o,d)});return Promise.all(c).then(o)}startAxisValueAnimation(e,t){let n=this.getAxisMotionValue(e);return eo(this.visualElement,e),n.start(na(e,n,0,t,this.visualElement,!1))}stopAnimation(){bc(e=>this.getAxisMotionValue(e).stop())}getAxisMotionValue(e){let t=`_drag${e.toUpperCase()}`;return this.visualElement.getProps()[t]||this.visualElement.getValue(e,this.visualElement.latestValues[e]??0)}snapToCursor(e){bc(t=>{let{drag:n}=this.getProps();if(!pd(t,n,this.currentDirection))return;let{projection:r}=this.visualElement,i=this.getAxisMotionValue(t);if(r&&r.layout){let{min:n,max:a}=r.layout.layoutBox[t],o=i.get()||0;i.set(e[t]-j(n,a,.5)+o)}})}scalePositionWithinConstraints(){if(!this.visualElement.current)return;let{drag:e,dragConstraints:t}=this.getProps(),{projection:n}=this.visualElement;if(!Du(t)||!n||!this.constraints)return;this.stopAnimation();let r={x:0,y:0};bc(e=>{let t=this.getAxisMotionValue(e);if(t&&this.constraints!==!1){let n=t.get();r[e]=rd({min:n,max:n},this.constraints[e])}});let{transformTemplate:i}=this.visualElement.getProps();this.visualElement.current.style.transform=i?i({},``):`none`,n.root&&n.root.updateScroll(),n.updateLayout(),this.constraints=!1,this.resolveConstraints(),bc(t=>{if(!pd(t,e,null))return;let n=this.getAxisMotionValue(t),{min:i,max:a}=this.constraints[t];n.set(j(i,a,r[t]))}),this.visualElement.render()}addListeners(){if(!this.visualElement.current)return;ld.set(this.visualElement,this);let e=this.visualElement.current,t=Vu(e,`pointerdown`,t=>{let{drag:n,dragListener:r=!0}=this.getProps(),i=t.target,a=i!==e&&ba(i);n&&r&&!a&&this.start(t)}),n,r=()=>{let{dragConstraints:t}=this.getProps();Du(t)&&t.current&&(this.constraints=this.resolveRefConstraints(),n||=fd(e,t.current,()=>this.scalePositionWithinConstraints()))},{projection:i}=this.visualElement,a=i.addEventListener(`measure`,r);i&&!i.layout&&(i.root&&i.root.updateScroll(),i.updateLayout()),k.read(r);let o=xc(window,`resize`,()=>this.scalePositionWithinConstraints()),s=i.addEventListener(`didUpdate`,(({delta:e,hasLayoutChanged:t})=>{this.isDragging&&t&&(bc(t=>{let n=this.getAxisMotionValue(t);n&&(this.originPoint[t]+=e[t].translate,n.set(n.get()+e[t].translate))}),this.visualElement.render())}));return()=>{o(),t(),a(),s&&s(),n&&n()}}getProps(){let e=this.visualElement.getProps(),{drag:t=!1,dragDirectionLock:n=!1,dragPropagation:r=!1,dragConstraints:i=!1,dragElastic:a=ad,dragMomentum:o=!0}=e;return{...e,drag:t,dragDirectionLock:n,dragPropagation:r,dragConstraints:i,dragElastic:a,dragMomentum:o}}};function dd(e){let t=!0;return()=>{if(t){t=!1;return}e()}}function fd(e,t,n){let r=Ha(e,dd(n)),i=Ha(t,dd(n));return()=>{r(),i()}}function pd(e,t,n){return(t===!0||t===e)&&(n===null||n===e)}function md(e,t=10){let n=null;return Math.abs(e.y)>t?n=`y`:Math.abs(e.x)>t&&(n=`x`),n}var hd=class extends to{constructor(e){super(e),this.removeGroupControls=yt,this.removeListeners=yt,this.controls=new ud(e)}mount(){let{dragControls:e}=this.node.getProps();e&&(this.removeGroupControls=e.subscribe(this.controls)),this.removeListeners=this.controls.addListeners()||yt}update(){let{dragControls:e}=this.node.getProps(),{dragControls:t}=this.node.prevProps||{};e!==t&&(this.removeGroupControls(),e&&(this.removeGroupControls=e.subscribe(this.controls)))}unmount(){this.removeGroupControls(),this.removeListeners(),this.controls.isDragging||this.controls.endPanSession()}},gd=e=>(t,n)=>{e&&k.update(()=>e(t,n),!1,!0)},_d=class extends to{constructor(){super(...arguments),this.removePointerDownListener=yt}onPointerDown(e){this.session=new Ku(e,this.createPanHandlers(),{transformPagePoint:this.node.getTransformPagePoint(),contextWindow:Hu(this.node)})}createPanHandlers(){let{onPanSessionStart:e,onPanStart:t,onPan:n,onPanEnd:r}=this.node.getProps();return{onSessionStart:gd(e),onStart:gd(t),onMove:gd(n),onEnd:(e,t)=>{delete this.session,r&&k.postRender(()=>r(e,t))}}}mount(){this.removePointerDownListener=Vu(this.node.current,`pointerdown`,e=>this.onPointerDown(e))}update(){this.session&&this.session.updateHandlers(this.createPanHandlers())}unmount(){this.removePointerDownListener(),this.session&&this.session.end()}},vd=!1,yd=class extends b.Component{componentDidMount(){let{visualElement:e,layoutGroup:t,switchLayoutGroup:n,layoutId:r}=this.props,{projection:i}=e;i&&(t.group&&t.group.add(i),n&&n.register&&r&&n.register(i),vd&&i.root.didUpdate(),i.addEventListener(`animationComplete`,()=>{this.safeToRemove()}),i.setOptions({...i.options,layoutDependency:this.props.layoutDependency,onExitComplete:()=>this.safeToRemove()})),nl.hasEverUpdated=!0}getSnapshotBeforeUpdate(e){let{layoutDependency:t,visualElement:n,drag:r,isPresent:i}=this.props,{projection:a}=n;return a?(a.isPresent=i,e.layoutDependency!==t&&a.setOptions({...a.options,layoutDependency:t}),vd=!0,r||e.layoutDependency!==t||t===void 0||e.isPresent!==i?a.willUpdate():this.safeToRemove(),e.isPresent!==i&&(i?a.promote():a.relegate()||k.postRender(()=>{let e=a.getStack();(!e||!e.members.length)&&this.safeToRemove()})),null):null}componentDidUpdate(){let{visualElement:e,layoutAnchor:t}=this.props,{projection:n}=e;n&&(n.options.layoutAnchor=t,n.root.didUpdate(),aa.postRender(()=>{!n.currentAnimation&&n.isLead()&&this.safeToRemove()}))}componentWillUnmount(){let{visualElement:e,layoutGroup:t,switchLayoutGroup:n}=this.props,{projection:r}=e;vd=!0,r&&(r.scheduleCheckAfterUnmount(),t&&t.group&&t.group.remove(r),n&&n.deregister&&n.deregister(r))}safeToRemove(){let{safeToRemove:e}=this.props;e&&e()}render(){return null}};function bd(e){let[t,n]=G(),r=(0,b.useContext)(st);return(0,V.jsx)(yd,{...e,layoutGroup:r,switchLayoutGroup:(0,b.useContext)(Eu),isPresent:t,safeToRemove:n})}var xd={pan:{Feature:_d},drag:{Feature:hd,ProjectionNode:Ll,MeasureLayout:bd}};function Sd(e,t,n){let{props:r}=e;e.animationState&&r.whileHover&&e.animationState.setActive(`whileHover`,n===`Start`);let i=r[`onHover`+n];i&&k.postRender(()=>i(t,zu(t)))}var Y=class extends to{mount(){let{current:e}=this.node;e&&(this.unmount=pa(e,(e,t)=>(Sd(this.node,t,`Start`),e=>Sd(this.node,e,`End`))))}unmount(){}},Cd=class extends to{constructor(){super(...arguments),this.isActive=!1}onFocus(){let e=!1;try{e=this.node.current.matches(`:focus-visible`)}catch{e=!0}!e||!this.node.animationState||(this.node.animationState.setActive(`whileFocus`,!0),this.isActive=!0)}onBlur(){!this.isActive||!this.node.animationState||(this.node.animationState.setActive(`whileFocus`,!1),this.isActive=!1)}mount(){this.unmount=bt(xc(this.node.current,`focus`,()=>this.onFocus()),xc(this.node.current,`blur`,()=>this.onBlur()))}unmount(){}};function wd(e,t,n){let{props:r}=e;if(e.current instanceof HTMLButtonElement&&e.current.disabled)return;e.animationState&&r.whileTap&&e.animationState.setActive(`whileTap`,n===`Start`);let i=r[`onTap`+(n===`End`?``:n)];i&&k.postRender(()=>i(t,zu(t)))}var Td=class extends to{mount(){let{current:e}=this.node;if(!e)return;let{globalTapTarget:t,propagate:n}=this.node.props;this.unmount=Da(e,(e,t)=>(wd(this.node,t,`Start`),(e,{success:t})=>wd(this.node,e,t?`End`:`Cancel`)),{useGlobalTarget:t,stopPropagation:n?.tap===!1})}unmount(){}},Ed=new WeakMap,Dd=new WeakMap,Od=e=>{let t=Ed.get(e.target);t&&t(e)},kd=e=>{e.forEach(Od)};function Ad({root:e,...t}){let n=e||document;Dd.has(n)||Dd.set(n,{});let r=Dd.get(n),i=JSON.stringify(t);return r[i]||(r[i]=new IntersectionObserver(kd,{root:e,...t})),r[i]}function jd(e,t,n){let r=Ad(t);return Ed.set(e,n),r.observe(e),()=>{Ed.delete(e),r.unobserve(e)}}var Md={some:0,all:1},Nd=class extends to{constructor(){super(...arguments),this.hasEnteredView=!1,this.isInView=!1}startObserver(){this.stopObserver?.();let{viewport:e={}}=this.node.getProps(),{root:t,margin:n,amount:r=`some`,once:i}=e,a={root:t?t.current:void 0,rootMargin:n,threshold:typeof r==`number`?r:Md[r]},o=e=>{let{isIntersecting:t}=e;if(this.isInView===t||(this.isInView=t,i&&!t&&this.hasEnteredView))return;t&&(this.hasEnteredView=!0),this.node.animationState&&this.node.animationState.setActive(`whileInView`,t);let{onViewportEnter:n,onViewportLeave:r}=this.node.getProps(),a=t?n:r;a&&a(e)};this.stopObserver=jd(this.node.current,a,o)}mount(){this.startObserver()}update(){if(typeof IntersectionObserver>`u`)return;let{props:e,prevProps:t}=this.node;[`amount`,`margin`,`root`].some(Pd(e,t))&&this.startObserver()}unmount(){this.stopObserver?.(),this.hasEnteredView=!1,this.isInView=!1}};function Pd({viewport:e={}},{viewport:t={}}={}){return n=>e[n]!==t[n]}var Fd={inView:{Feature:Nd},tap:{Feature:Td},focus:{Feature:Cd},hover:{Feature:Y}},X={layout:{ProjectionNode:Ll,MeasureLayout:bd}},Z=Fu({...Ru,...Fd,...xd,...X},ql);function Id(e){return typeof window>`u`?!1:e?Ci():Si()}var Ld=50,Rd=()=>({current:0,offset:[],progress:0,scrollLength:0,targetOffset:0,targetLength:0,containerLength:0,velocity:0}),zd=()=>({time:0,x:Rd(),y:Rd()}),Bd={x:{length:`Width`,position:`Left`},y:{length:`Height`,position:`Top`}};function Vd(e,t,n,r){let i=n[t],{length:a,position:o}=Bd[t],s=i.current,c=n.time;i.current=Math.abs(e[`scroll${o}`]),i.scrollLength=e[`scroll${a}`]-e[`client${a}`],i.offset.length=0,i.offset[0]=0,i.offset[1]=i.scrollLength,i.progress=xt(0,i.scrollLength,i.current);let l=r-c;i.velocity=l>Ld?0:Tt(i.current-s,l)}function Hd(e,t,n){Vd(e,`x`,t,n),Vd(e,`y`,t,n),t.time=n}function Ud(e,t){let n={x:0,y:0},r=e;for(;r&&r!==t;)if(ma(r))n.x+=r.offsetLeft,n.y+=r.offsetTop,r=r.offsetParent;else if(r.tagName===`svg`){let e=r.getBoundingClientRect();r=r.parentElement;let t=r.getBoundingClientRect();n.x+=e.left-t.left,n.y+=e.top-t.top}else if(r instanceof SVGGraphicsElement){let{x:e,y:t}=r.getBBox();n.x+=e,n.y+=t;let i=null,a=r.parentNode;for(;!i;)a.tagName===`svg`&&(i=a),a=r.parentNode;r=i}else break;return n}var Wd={start:0,center:.5,end:1};function Gd(e,t,n=0){let r=0;if(e in Wd&&(e=Wd[e]),typeof e==`string`){let t=parseFloat(e);e.endsWith(`px`)?r=t:e.endsWith(`%`)?e=t/100:e.endsWith(`vw`)?r=t/100*document.documentElement.clientWidth:e.endsWith(`vh`)?r=t/100*document.documentElement.clientHeight:e=t}return typeof e==`number`&&(r=t*e),n+r}var Kd=[0,0];function qd(e,t,n,r){let i=Array.isArray(e)?e:Kd,a=0,o=0;return typeof e==`number`?i=[e,e]:typeof e==`string`&&(e=e.trim(),i=e.includes(` `)?e.split(` `):[e,Wd[e]?e:`0`]),a=Gd(i[0],n,r),o=Gd(i[1],t),a-o}var Jd={Enter:[[0,1],[1,1]],Exit:[[0,0],[1,0]],Any:[[1,0],[0,1]],All:[[0,0],[1,1]]},Yd={x:0,y:0};function Xd(e){return`getBBox`in e&&e.tagName!==`svg`?e.getBBox():{width:e.clientWidth,height:e.clientHeight}}function Zd(e,t,n){let{offset:r=Jd.All}=n,{target:i=e,axis:a=`y`}=n,o=a===`y`?`height`:`width`,s=i===e?Yd:Ud(i,e),c=i===e?{width:e.scrollWidth,height:e.scrollHeight}:Xd(i),l={width:e.clientWidth,height:e.clientHeight};t[a].offset.length=0;let u=!t[a].interpolate,d=r.length;for(let e=0;e<d;e++){let n=qd(r[e],l[o],c[o],s[a]);!u&&n!==t[a].interpolatorOffsets[e]&&(u=!0),t[a].offset[e]=n}u&&(t[a].interpolate=jr(t[a].offset,Nr(r),{clamp:!1}),t[a].interpolatorOffsets=[...t[a].offset]),t[a].progress=pt(0,1,t[a].interpolate(t[a].current))}function Qd(e,t=e,n){if(n.x.targetOffset=0,n.y.targetOffset=0,t!==e){let r=t;for(;r&&r!==e;)n.x.targetOffset+=r.offsetLeft,n.y.targetOffset+=r.offsetTop,r=r.offsetParent}n.x.targetLength=t===e?t.scrollWidth:t.clientWidth,n.y.targetLength=t===e?t.scrollHeight:t.clientHeight,n.x.containerLength=e.clientWidth,n.y.containerLength=e.clientHeight}function $d(e,t,n,r={}){return{measure:t=>{Qd(e,r.target,n),Hd(e,n,t),(r.offset||r.target)&&Zd(e,n,r)},notify:()=>t(n)}}var ef=new WeakMap,tf=new WeakMap,nf=new WeakMap,rf=new WeakMap,af=new WeakMap,of=e=>e===document.scrollingElement?window:e;function sf(e,{container:t=document.scrollingElement,trackContentSize:n=!1,...r}={}){if(!t)return yt;let i=nf.get(t);i||(i=new Set,nf.set(t,i));let a=$d(t,e,zd(),r);if(i.add(a),!ef.has(t)){let e=()=>{for(let e of i)e.measure($t.timestamp);k.preUpdate(n)},n=()=>{for(let e of i)e.notify()},r=()=>k.read(e);ef.set(t,r);let a=of(t);window.addEventListener(`resize`,r),t!==document.documentElement&&tf.set(t,Ha(t,r)),a.addEventListener(`scroll`,r),r()}if(n&&!af.has(t)){let e=ef.get(t),n={width:t.scrollWidth,height:t.scrollHeight};rf.set(t,n);let r=k.read(()=>{let r=t.scrollWidth,i=t.scrollHeight;(n.width!==r||n.height!==i)&&(e(),n.width=r,n.height=i)},!0);af.set(t,r)}let o=ef.get(t);return k.read(o,!1,!0),()=>{Qt(o);let e=nf.get(t);if(!e||(e.delete(a),e.size))return;let n=ef.get(t);ef.delete(t),n&&(of(t).removeEventListener(`scroll`,n),tf.get(t)?.(),window.removeEventListener(`resize`,n));let r=af.get(t);r&&(Qt(r),af.delete(t)),rf.delete(t)}}var cf=[[Jd.Enter,`entry`],[Jd.Exit,`exit`],[Jd.Any,`cover`],[Jd.All,`contain`]],lf={start:0,end:1};function uf(e){let t=e.trim().split(/\s+/);if(t.length!==2)return;let n=lf[t[0]],r=lf[t[1]];if(!(n===void 0||r===void 0))return[n,r]}function df(e){if(e.length!==2)return;let t=[];for(let n of e)if(Array.isArray(n))t.push(n);else if(typeof n==`string`){let e=uf(n);if(!e)return;t.push(e)}else return;return t}function ff(e,t){let n=df(e);if(!n)return!1;for(let e=0;e<2;e++){let r=n[e],i=t[e];if(r[0]!==i[0]||r[1]!==i[1])return!1}return!0}function pf(e){if(!e)return{rangeStart:`contain 0%`,rangeEnd:`contain 100%`};for(let[t,n]of cf)if(ff(e,t))return{rangeStart:`${n} 0%`,rangeEnd:`${n} 100%`}}var mf=new Map;function hf(e){let t={value:0};return{currentTime:t,cancel:sf(n=>{t.value=n[e.axis].progress*100},e)}}function gf({source:e,container:t,...n}){let{axis:r}=n;e&&(t=e);let i=mf.get(t);i||(i=new Map,mf.set(t,i));let a=n.target??`self`,o=i.get(a);o||(o={},i.set(a,o));let s=r+(n.offset??[]).join(`,`);return o[s]||(n.target&&Id(n.target)?pf(n.offset)?o[s]=new ViewTimeline({subject:n.target,axis:r}):o[s]=hf({container:t,...n}):Id()?o[s]=new ScrollTimeline({source:t,axis:r}):o[s]=hf({container:t,...n})),o[s]}function _f(e,t){let n=gf(t),r=t.target?pf(t.offset):void 0,i=t.target?Id(t.target)&&!!r:Id();return e.attachTimeline({timeline:i?n:void 0,...r&&i&&{rangeStart:r.rangeStart,rangeEnd:r.rangeEnd},observe:e=>(e.pause(),Ua(t=>{e.time=e.iterationDuration*t},n))})}function vf(e){return e&&(e.target||e.offset)}function yf(e){return e.length===2}function bf(e,t){return yf(e)||vf(t)?sf(n=>{e(n[t.axis].progress,n)},t):Ua(e,gf(t))}function xf(e,{axis:t=`y`,container:n=document.scrollingElement,...r}={}){if(!n)return yt;let i={axis:t,container:n,...r};return typeof e==`function`?bf(e,i):_f(e,i)}var Sf=()=>({scrollX:Ya(0),scrollY:Ya(0),scrollXProgress:Ya(0),scrollYProgress:Ya(0)}),Cf=e=>e?!e.current:!1;function wf(e,t,n,r){return{factory:i=>{let a,o=()=>{if(Cf(n)||Cf(r)){aa.read(o);return}a=xf(i,{...t,axis:e,container:n?.current||void 0,target:r?.current||void 0})};return aa.read(o),()=>{oa(o),a?.()}},times:[0,1],keyframes:[0,1],ease:e=>e,duration:1}}function Tf(e,t){return typeof window>`u`?!1:e?Ci()&&!!pf(t):Si()}function Ef({container:e,target:t,...n}={}){let r=ct(Sf);Tf(t,n.offset)&&(r.scrollXProgress.accelerate=wf(`x`,n,e,t),r.scrollYProgress.accelerate=wf(`y`,n,e,t));let i=(0,b.useRef)(null),a=(0,b.useRef)(!1),o=(0,b.useCallback)(()=>(i.current=xf((e,{x:t,y:n})=>{r.scrollX.set(t.current),r.scrollXProgress.set(t.progress),r.scrollY.set(n.current),r.scrollYProgress.set(n.progress)},{...n,container:e?.current||void 0,target:t?.current||void 0}),()=>{i.current?.()}),[e,t,JSON.stringify(n.offset)]);return lt(()=>{if(a.current=!1,Cf(e)||Cf(t)){a.current=!0;return}else return o()},[o]),(0,b.useEffect)(()=>{if(!a.current)return;let n,r=()=>{let r=Cf(e),i=Cf(t);!r&&!i&&(n=o())};return aa.read(r),()=>{oa(r),n?.()}},[o]),r}function Df(e){let t=ct(()=>Ya(e)),{isStatic:n}=(0,b.useContext)(Rl);if(n){let[,n]=(0,b.useState)(e);(0,b.useEffect)(()=>t.on(`change`,n),[])}return t}function Of(e,t){let n=Df(t()),r=()=>n.set(t());return r(),lt(()=>{let t=()=>k.preRender(r,!1,!0),n=e.map(e=>e.on(`change`,t));return()=>{n.forEach(e=>e()),Qt(r)}}),n}function kf(e){qa.current=[],e();let t=Of(qa.current,e);return qa.current=void 0,t}function Af(e,t,n,r){if(typeof e==`function`)return kf(e);if(n!==void 0&&!Array.isArray(n)&&typeof t!=`function`)return Mf(e,t,n,r);let i=typeof t==`function`?t:Wa(t,n,r),a=Array.isArray(e)?jf(e,i):jf([e],([e])=>i(e)),o=Array.isArray(e)?void 0:e.accelerate;return o&&!o.isTransformed&&typeof t!=`function`&&Array.isArray(n)&&r?.clamp!==!1&&(a.accelerate={...o,times:t,keyframes:n,isTransformed:!0,...r?.ease?{ease:r.ease}:{}}),a}function jf(e,t){let n=ct(()=>[]);return Of(e,()=>{n.length=0;let r=e.length;for(let t=0;t<r;t++)n[t]=e[t].get();return t(n)})}function Mf(e,t,n,r){let i=ct(()=>Object.keys(n)),a=ct(()=>({}));for(let o of i)a[o]=Af(e,t,n[o],r);return a}function Nf(e,t={}){let{isStatic:n}=(0,b.useContext)(Rl),r=()=>F(e)?e.get():e;if(n)return Af(r);let i=Df(r());return(0,b.useInsertionEffect)(()=>Xa(i,e,t),[i,JSON.stringify(t)]),i}function Pf(e,t={}){return Nf(e,{type:`spring`,...t})}var Ff=()=>{let{scrollYProgress:e}=Ef(),t=Pf(e,{stiffness:140,damping:28,mass:.15});return(0,V.jsx)(Z.div,{"aria-hidden":`true`,className:`fixed left-0 top-0 z-[9999] h-[2px] origin-left`,style:{scaleX:t,width:`100%`,background:`linear-gradient(90deg, #d5aa50 0%, #efc566 55%, #d5aa50 100%)`,boxShadow:`0 0 8px rgba(213,170,80,0.28)`}})},If=()=>(0,V.jsxs)(`div`,{className:`aurora-background`,"aria-hidden":`true`,style:{position:`fixed`,inset:0,width:`100%`,height:`100%`,overflow:`hidden`,pointerEvents:`none`,zIndex:0,background:`#070707`,contain:`paint`},children:[(0,V.jsx)(`div`,{className:`aurora-orb aurora-orb-left`,style:{position:`absolute`,width:`55vw`,height:`55vw`,maxWidth:`900px`,maxHeight:`900px`,minWidth:`400px`,minHeight:`400px`,top:`-18%`,left:`-12%`,borderRadius:`50%`,background:`radial-gradient(circle, rgba(213,170,80,0.07) 0%, rgba(213,170,80,0.025) 34%, transparent 72%)`,filter:`blur(38px)`,transform:`translate3d(0,0,0)`}}),(0,V.jsx)(`div`,{className:`aurora-orb aurora-orb-right`,style:{position:`absolute`,width:`48vw`,height:`48vw`,maxWidth:`800px`,maxHeight:`800px`,minWidth:`350px`,minHeight:`350px`,right:`-15%`,top:`18%`,borderRadius:`50%`,background:`radial-gradient(circle, rgba(239,197,102,0.045) 0%, rgba(213,170,80,0.018) 36%, transparent 72%)`,filter:`blur(45px)`,transform:`translate3d(0,0,0)`}}),(0,V.jsx)(`div`,{className:`aurora-orb aurora-orb-bottom`,style:{position:`absolute`,width:`60vw`,height:`35vw`,maxWidth:`950px`,maxHeight:`550px`,left:`20%`,bottom:`-22%`,borderRadius:`50%`,background:`radial-gradient(ellipse, rgba(213,170,80,0.035) 0%, transparent 70%)`,filter:`blur(50px)`,transform:`translate3d(0,0,0)`}}),(0,V.jsx)(`div`,{className:`aurora-sweep`}),(0,V.jsx)(`span`,{className:`aurora-particle aurora-particle-one`}),(0,V.jsx)(`span`,{className:`aurora-particle aurora-particle-two`}),(0,V.jsx)(`span`,{className:`aurora-particle aurora-particle-three`}),(0,V.jsx)(`div`,{style:{position:`absolute`,inset:0,background:`radial-gradient(circle at center, transparent 38%, rgba(0,0,0,0.2) 100%)`}}),(0,V.jsx)(`div`,{className:`aurora-grain`}),(0,V.jsx)(`style`,{children:`
+        .aurora-background {
+          isolation: isolate;
+        }
+
+        .aurora-orb {
+          will-change: transform;
+        }
+
+        .aurora-orb-left {
+          animation: auroraLeft 24s ease-in-out infinite;
+        }
+
+        .aurora-orb-right {
+          animation: auroraRight 29s ease-in-out infinite;
+          animation-delay: -6s;
+        }
+
+        .aurora-orb-bottom {
+          animation: auroraBottom 26s ease-in-out infinite;
+          animation-delay: -3s;
+        }
+
+        .aurora-sweep {
+          position: absolute;
+          top: 0;
+          left: -18%;
+          width: 20%;
+          height: 100%;
+          transform: skewX(-18deg);
+          background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(213,170,80,0.012),
+            transparent
+          );
+          filter: blur(18px);
+          animation: auroraSweep 22s ease-in-out infinite;
+          animation-delay: -4s;
+        }
+
+        .aurora-particle {
+          position: absolute;
+          display: block;
+          border-radius: 50%;
+          background: #d5aa50;
+          will-change: transform, opacity;
+        }
+
+        .aurora-particle-one {
+          width: 2px;
+          height: 2px;
+          top: 22%;
+          left: 14%;
+          opacity: 0.25;
+          box-shadow: 0 0 9px rgba(213,170,80,0.45);
+          animation: auroraParticleOne 7s ease-in-out infinite;
+        }
+
+        .aurora-particle-two {
+          width: 2px;
+          height: 2px;
+          top: 64%;
+          left: 76%;
+          background: #efc566;
+          opacity: 0.2;
+          box-shadow: 0 0 8px rgba(239,197,102,0.4);
+          animation: auroraParticleTwo 8s ease-in-out infinite;
+          animation-delay: -2s;
+        }
+
+        .aurora-particle-three {
+          width: 2px;
+          height: 2px;
+          top: 38%;
+          right: 18%;
+          opacity: 0.2;
+          box-shadow: 0 0 8px rgba(213,170,80,0.4);
+          animation: auroraParticleThree 9s ease-in-out infinite;
+          animation-delay: -4s;
+        }
+
+        .aurora-grain {
+          position: absolute;
+          inset: 0;
+          opacity: 0.018;
+          mix-blend-mode: soft-light;
+          background-image:
+            url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.3'/%3E%3C/svg%3E");
+          pointer-events: none;
+        }
+
+        @keyframes auroraLeft {
+          0%, 100% {
+            transform: translate3d(0, 0, 0) scale(1);
+            opacity: 0.62;
+          }
+          50% {
+            transform: translate3d(24px, 18px, 0) scale(1.035);
+            opacity: 0.76;
+          }
+        }
+
+        @keyframes auroraRight {
+          0%, 100% {
+            transform: translate3d(0, 0, 0) scale(1);
+            opacity: 0.48;
+          }
+          50% {
+            transform: translate3d(-18px, 22px, 0) scale(1.025);
+            opacity: 0.64;
+          }
+        }
+
+        @keyframes auroraBottom {
+          0%, 100% {
+            transform: translate3d(0, 0, 0) scale(1);
+            opacity: 0.38;
+          }
+          50% {
+            transform: translate3d(18px, 0, 0) scale(1.035);
+            opacity: 0.5;
+          }
+        }
+
+        @keyframes auroraSweep {
+          0%, 20% {
+            transform: translate3d(-5vw, 0, 0) skewX(-18deg);
+            opacity: 0;
+          }
+          42% {
+            opacity: 0.32;
+          }
+          62%, 100% {
+            transform: translate3d(125vw, 0, 0) skewX(-18deg);
+            opacity: 0;
+          }
+        }
+
+        @keyframes auroraParticleOne {
+          0%, 100% {
+            transform: translate3d(0, 0, 0);
+            opacity: 0.15;
+          }
+          50% {
+            transform: translate3d(0, -10px, 0);
+            opacity: 0.48;
+          }
+        }
+
+        @keyframes auroraParticleTwo {
+          0%, 100% {
+            transform: translate3d(0, 0, 0);
+            opacity: 0.12;
+          }
+          50% {
+            transform: translate3d(0, 9px, 0);
+            opacity: 0.4;
+          }
+        }
+
+        @keyframes auroraParticleThree {
+          0%, 100% {
+            transform: translate3d(0, 0, 0);
+            opacity: 0.12;
+          }
+          50% {
+            transform: translate3d(0, -8px, 0);
+            opacity: 0.36;
+          }
+        }
+
+        @media (max-width: 640px) {
+          .aurora-orb-left {
+            width: 90vw !important;
+            height: 90vw !important;
+            min-width: 0 !important;
+            min-height: 0 !important;
+            filter: blur(32px) !important;
+          }
+
+          .aurora-orb-right {
+            width: 78vw !important;
+            height: 78vw !important;
+            min-width: 0 !important;
+            min-height: 0 !important;
+            filter: blur(36px) !important;
+          }
+
+          .aurora-orb-bottom {
+            width: 90vw !important;
+            height: 50vw !important;
+            filter: blur(40px) !important;
+          }
+
+          .aurora-sweep {
+            display: none;
+          }
+
+          .aurora-grain {
+            opacity: 0.012;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .aurora-orb-left,
+          .aurora-orb-right,
+          .aurora-orb-bottom,
+          .aurora-sweep,
+          .aurora-particle-one,
+          .aurora-particle-two,
+          .aurora-particle-three {
+            animation: none !important;
+          }
+        }
+      `})]}),Lf={color:void 0,size:void 0,className:void 0,style:void 0,attr:void 0},Rf=b.createContext&&b.createContext(Lf),zf=[`attr`,`size`,`title`];function Bf(e,t){if(e==null)return{};var n,r,i=Vf(e,t);if(Object.getOwnPropertySymbols){var a=Object.getOwnPropertySymbols(e);for(r=0;r<a.length;r++)n=a[r],t.indexOf(n)===-1&&{}.propertyIsEnumerable.call(e,n)&&(i[n]=e[n])}return i}function Vf(e,t){if(e==null)return{};var n={};for(var r in e)if({}.hasOwnProperty.call(e,r)){if(t.indexOf(r)!==-1)continue;n[r]=e[r]}return n}function Hf(){return Hf=Object.assign?Object.assign.bind():function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var r in n)({}).hasOwnProperty.call(n,r)&&(e[r]=n[r])}return e},Hf.apply(null,arguments)}function Uf(e,t){var n=Object.keys(e);if(Object.getOwnPropertySymbols){var r=Object.getOwnPropertySymbols(e);t&&(r=r.filter(function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable})),n.push.apply(n,r)}return n}function Wf(e){for(var t=1;t<arguments.length;t++){var n=arguments[t]==null?{}:arguments[t];t%2?Uf(Object(n),!0).forEach(function(t){Gf(e,t,n[t])}):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(n)):Uf(Object(n)).forEach(function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(n,t))})}return e}function Gf(e,t,n){return(t=Kf(t))in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function Kf(e){var t=qf(e,`string`);return typeof t==`symbol`?t:t+``}function qf(e,t){if(typeof e!=`object`||!e)return e;var n=e[Symbol.toPrimitive];if(n!==void 0){var r=n.call(e,t||`default`);if(typeof r!=`object`)return r;throw TypeError(`@@toPrimitive must return a primitive value.`)}return(t===`string`?String:Number)(e)}function Jf(e){return e&&e.map((e,t)=>b.createElement(e.tag,Wf({key:t},e.attr),Jf(e.child)))}function Q(e){return t=>b.createElement(Yf,Hf({attr:Wf({},e.attr)},t),Jf(e.child))}function Yf(e){var t=t=>{var{attr:n,size:r,title:i}=e,a=Bf(e,zf),o=r||t.size||`1em`,s;return t.className&&(s=t.className),e.className&&(s=(s?s+` `:``)+e.className),b.createElement(`svg`,Hf({stroke:`currentColor`,fill:`currentColor`,strokeWidth:`0`},t.attr,n,a,{className:s,style:Wf(Wf({color:e.color||t.color},t.style),e.style),height:o,width:o,xmlns:`http://www.w3.org/2000/svg`}),i&&b.createElement(`title`,null,i),e.children)};return Rf===void 0?t(Lf):b.createElement(Rf.Consumer,null,e=>t(e))}function Xf(e){return Q({tag:`svg`,attr:{viewBox:`0 0 448 512`},child:[{tag:`path`,attr:{d:`M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z`},child:[]}]})(e)}function Zf(e){return Q({tag:`svg`,attr:{viewBox:`0 0 448 512`},child:[{tag:`path`,attr:{d:`M0 32h214.6v214.6H0V32zm233.4 0H448v214.6H233.4V32zM0 265.4h214.6V480H0V265.4zm233.4 0H448V480H233.4V265.4z`},child:[]}]})(e)}function Qf(e){return Q({tag:`svg`,attr:{viewBox:`0 0 448 512`},child:[{tag:`path`,attr:{d:`M220.8 123.3c1 .5 1.8 1.7 3 1.7 1.1 0 2.8-.4 2.9-1.5.2-1.4-1.9-2.3-3.2-2.9-1.7-.7-3.9-1-5.5-.1-.4.2-.8.7-.6 1.1.3 1.3 2.3 1.1 3.4 1.7zm-21.9 1.7c1.2 0 2-1.2 3-1.7 1.1-.6 3.1-.4 3.5-1.6.2-.4-.2-.9-.6-1.1-1.6-.9-3.8-.6-5.5.1-1.3.6-3.4 1.5-3.2 2.9.1 1 1.8 1.5 2.8 1.4zM420 403.8c-3.6-4-5.3-11.6-7.2-19.7-1.8-8.1-3.9-16.8-10.5-22.4-1.3-1.1-2.6-2.1-4-2.9-1.3-.8-2.7-1.5-4.1-2 9.2-27.3 5.6-54.5-3.7-79.1-11.4-30.1-31.3-56.4-46.5-74.4-17.1-21.5-33.7-41.9-33.4-72C311.1 85.4 315.7.1 234.8 0 132.4-.2 158 103.4 156.9 135.2c-1.7 23.4-6.4 41.8-22.5 64.7-18.9 22.5-45.5 58.8-58.1 96.7-6 17.9-8.8 36.1-6.2 53.3-6.5 5.8-11.4 14.7-16.6 20.2-4.2 4.3-10.3 5.9-17 8.3s-14 6-18.5 14.5c-2.1 3.9-2.8 8.1-2.8 12.4 0 3.9.6 7.9 1.2 11.8 1.2 8.1 2.5 15.7.8 20.8-5.2 14.4-5.9 24.4-2.2 31.7 3.8 7.3 11.4 10.5 20.1 12.3 17.3 3.6 40.8 2.7 59.3 12.5 19.8 10.4 39.9 14.1 55.9 10.4 11.6-2.6 21.1-9.6 25.9-20.2 12.5-.1 26.3-5.4 48.3-6.6 14.9-1.2 33.6 5.3 55.1 4.1.6 2.3 1.4 4.6 2.5 6.7v.1c8.3 16.7 23.8 24.3 40.3 23 16.6-1.3 34.1-11 48.3-27.9 13.6-16.4 36-23.2 50.9-32.2 7.4-4.5 13.4-10.1 13.9-18.3.4-8.2-4.4-17.3-15.5-29.7zM223.7 87.3c9.8-22.2 34.2-21.8 44-.4 6.5 14.2 3.6 30.9-4.3 40.4-1.6-.8-5.9-2.6-12.6-4.9 1.1-1.2 3.1-2.7 3.9-4.6 4.8-11.8-.2-27-9.1-27.3-7.3-.5-13.9 10.8-11.8 23-4.1-2-9.4-3.5-13-4.4-1-6.9-.3-14.6 2.9-21.8zM183 75.8c10.1 0 20.8 14.2 19.1 33.5-3.5 1-7.1 2.5-10.2 4.6 1.2-8.9-3.3-20.1-9.6-19.6-8.4.7-9.8 21.2-1.8 28.1 1 .8 1.9-.2-5.9 5.5-15.6-14.6-10.5-52.1 8.4-52.1zm-13.6 60.7c6.2-4.6 13.6-10 14.1-10.5 4.7-4.4 13.5-14.2 27.9-14.2 7.1 0 15.6 2.3 25.9 8.9 6.3 4.1 11.3 4.4 22.6 9.3 8.4 3.5 13.7 9.7 10.5 18.2-2.6 7.1-11 14.4-22.7 18.1-11.1 3.6-19.8 16-38.2 14.9-3.9-.2-7-1-9.6-2.1-8-3.5-12.2-10.4-20-15-8.6-4.8-13.2-10.4-14.7-15.3-1.4-4.9 0-9 4.2-12.3zm3.3 334c-2.7 35.1-43.9 34.4-75.3 18-29.9-15.8-68.6-6.5-76.5-21.9-2.4-4.7-2.4-12.7 2.6-26.4v-.2c2.4-7.6.6-16-.6-23.9-1.2-7.8-1.8-15 .9-20 3.5-6.7 8.5-9.1 14.8-11.3 10.3-3.7 11.8-3.4 19.6-9.9 5.5-5.7 9.5-12.9 14.3-18 5.1-5.5 10-8.1 17.7-6.9 8.1 1.2 15.1 6.8 21.9 16l19.6 35.6c9.5 19.9 43.1 48.4 41 68.9zm-1.4-25.9c-4.1-6.6-9.6-13.6-14.4-19.6 7.1 0 14.2-2.2 16.7-8.9 2.3-6.2 0-14.9-7.4-24.9-13.5-18.2-38.3-32.5-38.3-32.5-13.5-8.4-21.1-18.7-24.6-29.9s-3-23.3-.3-35.2c5.2-22.9 18.6-45.2 27.2-59.2 2.3-1.7.8 3.2-8.7 20.8-8.5 16.1-24.4 53.3-2.6 82.4.6-20.7 5.5-41.8 13.8-61.5 12-27.4 37.3-74.9 39.3-112.7 1.1.8 4.6 3.2 6.2 4.1 4.6 2.7 8.1 6.7 12.6 10.3 12.4 10 28.5 9.2 42.4 1.2 6.2-3.5 11.2-7.5 15.9-9 9.9-3.1 17.8-8.6 22.3-15 7.7 30.4 25.7 74.3 37.2 95.7 6.1 11.4 18.3 35.5 23.6 64.6 3.3-.1 7 .4 10.9 1.4 13.8-35.7-11.7-74.2-23.3-84.9-4.7-4.6-4.9-6.6-2.6-6.5 12.6 11.2 29.2 33.7 35.2 59 2.8 11.6 3.3 23.7.4 35.7 16.4 6.8 35.9 17.9 30.7 34.8-2.2-.1-3.2 0-4.2 0 3.2-10.1-3.9-17.6-22.8-26.1-19.6-8.6-36-8.6-38.3 12.5-12.1 4.2-18.3 14.7-21.4 27.3-2.8 11.2-3.6 24.7-4.4 39.9-.5 7.7-3.6 18-6.8 29-32.1 22.9-76.7 32.9-114.3 7.2zm257.4-11.5c-.9 16.8-41.2 19.9-63.2 46.5-13.2 15.7-29.4 24.4-43.6 25.5s-26.5-4.8-33.7-19.3c-4.7-11.1-2.4-23.1 1.1-36.3 3.7-14.2 9.2-28.8 9.9-40.6.8-15.2 1.7-28.5 4.2-38.7 2.6-10.3 6.6-17.2 13.7-21.1.3-.2.7-.3 1-.5.8 13.2 7.3 26.6 18.8 29.5 12.6 3.3 30.7-7.5 38.4-16.3 9-.3 15.7-.9 22.6 5.1 9.9 8.5 7.1 30.3 17.1 41.6 10.6 11.6 14 19.5 13.7 24.6zM173.3 148.7c2 1.9 4.7 4.5 8 7.1 6.6 5.2 15.8 10.6 27.3 10.6 11.6 0 22.5-5.9 31.8-10.8 4.9-2.6 10.9-7 14.8-10.4s5.9-6.3 3.1-6.6-2.6 2.6-6 5.1c-4.4 3.2-9.7 7.4-13.9 9.8-7.4 4.2-19.5 10.2-29.9 10.2s-18.7-4.8-24.9-9.7c-3.1-2.5-5.7-5-7.7-6.9-1.5-1.4-1.9-4.6-4.3-4.9-1.4-.1-1.8 3.7 1.7 6.5z`},child:[]}]})(e)}function $f(e){return Q({tag:`svg`,attr:{viewBox:`0 0 448 512`},child:[{tag:`path`,attr:{d:`M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z`},child:[]}]})(e)}function ep(e){return Q({tag:`svg`,attr:{viewBox:`0 0 448 512`},child:[{tag:`path`,attr:{d:`M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z`},child:[]}]})(e)}function tp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 496 512`},child:[{tag:`path`,attr:{d:`M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z`},child:[]}]})(e)}function np(e){return Q({tag:`svg`,attr:{viewBox:`0 0 640 512`},child:[{tag:`path`,attr:{d:`M180.41 203.01c-.72 22.65 10.6 32.68 10.88 39.05a8.164 8.164 0 0 1-4.1 6.27l-12.8 8.96a10.66 10.66 0 0 1-5.63 1.92c-.43-.02-8.19 1.83-20.48-25.61a78.608 78.608 0 0 1-62.61 29.45c-16.28.89-60.4-9.24-58.13-56.21-1.59-38.28 34.06-62.06 70.93-60.05 7.1.02 21.6.37 46.99 6.27v-15.62c2.69-26.46-14.7-46.99-44.81-43.91-2.4.01-19.4-.5-45.84 10.11-7.36 3.38-8.3 2.82-10.75 2.82-7.41 0-4.36-21.48-2.94-24.2 5.21-6.4 35.86-18.35 65.94-18.18a76.857 76.857 0 0 1 55.69 17.28 70.285 70.285 0 0 1 17.67 52.36l-.01 69.29zM93.99 235.4c32.43-.47 46.16-19.97 49.29-30.47 2.46-10.05 2.05-16.41 2.05-27.4-9.67-2.32-23.59-4.85-39.56-4.87-15.15-1.14-42.82 5.63-41.74 32.26-1.24 16.79 11.12 31.4 29.96 30.48zm170.92 23.05c-7.86.72-11.52-4.86-12.68-10.37l-49.8-164.65c-.97-2.78-1.61-5.65-1.92-8.58a4.61 4.61 0 0 1 3.86-5.25c.24-.04-2.13 0 22.25 0 8.78-.88 11.64 6.03 12.55 10.37l35.72 140.83 33.16-140.83c.53-3.22 2.94-11.07 12.8-10.24h17.16c2.17-.18 11.11-.5 12.68 10.37l33.42 142.63L420.98 80.1c.48-2.18 2.72-11.37 12.68-10.37h19.72c.85-.13 6.15-.81 5.25 8.58-.43 1.85 3.41-10.66-52.75 169.9-1.15 5.51-4.82 11.09-12.68 10.37h-18.69c-10.94 1.15-12.51-9.66-12.68-10.75L328.67 110.7l-32.78 136.99c-.16 1.09-1.73 11.9-12.68 10.75h-18.3zm273.48 5.63c-5.88.01-33.92-.3-57.36-12.29a12.802 12.802 0 0 1-7.81-11.91v-10.75c0-8.45 6.2-6.9 8.83-5.89 10.04 4.06 16.48 7.14 28.81 9.6 36.65 7.53 52.77-2.3 56.72-4.48 13.15-7.81 14.19-25.68 5.25-34.95-10.48-8.79-15.48-9.12-53.13-21-4.64-1.29-43.7-13.61-43.79-52.36-.61-28.24 25.05-56.18 69.52-55.95 12.67-.01 46.43 4.13 55.57 15.62 1.35 2.09 2.02 4.55 1.92 7.04v10.11c0 4.44-1.62 6.66-4.87 6.66-7.71-.86-21.39-11.17-49.16-10.75-6.89-.36-39.89.91-38.41 24.97-.43 18.96 26.61 26.07 29.7 26.89 36.46 10.97 48.65 12.79 63.12 29.58 17.14 22.25 7.9 48.3 4.35 55.44-19.08 37.49-68.42 34.44-69.26 34.42zm40.2 104.86c-70.03 51.72-171.69 79.25-258.49 79.25A469.127 469.127 0 0 1 2.83 327.46c-6.53-5.89-.77-13.96 7.17-9.47a637.37 637.37 0 0 0 316.88 84.12 630.22 630.22 0 0 0 241.59-49.55c11.78-5 21.77 7.8 10.12 16.38zm29.19-33.29c-8.96-11.52-59.28-5.38-81.81-2.69-6.79.77-7.94-5.12-1.79-9.47 40.07-28.17 105.88-20.1 113.44-10.63 7.55 9.47-2.05 75.41-39.56 106.91-5.76 4.87-11.27 2.3-8.71-4.1 8.44-21.25 27.39-68.49 18.43-80.02z`},child:[]}]})(e)}function rp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M501.1 395.7L384 278.6c-23.1-23.1-57.6-27.6-85.4-13.9L192 158.1V96L64 0 0 64l96 128h62.1l106.6 106.6c-13.6 27.8-9.2 62.3 13.9 85.4l117.1 117.1c14.6 14.6 38.2 14.6 52.7 0l52.7-52.7c14.5-14.6 14.5-38.2 0-52.7zM331.7 225c28.3 0 54.9 11 74.9 31l19.4 19.4c15.8-6.9 30.8-16.5 43.8-29.5 37.1-37.1 49.7-89.3 37.9-136.7-2.2-9-13.5-12.1-20.1-5.5l-74.4 74.4-67.9-11.3L334 98.9l74.4-74.4c6.6-6.6 3.4-17.9-5.7-20.2-47.4-11.7-99.6.9-136.6 37.9-28.5 28.5-41.9 66.1-41.2 103.6l82.1 82.1c8.1-1.9 16.5-2.9 24.7-2.9zm-103.9 82l-56.7-56.7L18.7 402.8c-25 25-25 65.5 0 90.5s65.5 25 90.5 0l123.6-123.6c-7.6-19.9-9.9-41.6-5-62.7zM64 472c-13.2 0-24-10.8-24-24 0-13.3 10.7-24 24-24s24 10.7 24 24c0 13.2-10.7 24-24 24z`},child:[]}]})(e)}function ip(e){return Q({tag:`svg`,attr:{viewBox:`0 0 352 512`},child:[{tag:`path`,attr:{d:`M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z`},child:[]}]})(e)}function ap(e){return Q({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M466.5 83.7l-192-80a48.15 48.15 0 0 0-36.9 0l-192 80C27.7 91.1 16 108.6 16 128c0 198.5 114.5 335.7 221.5 380.3 11.8 4.9 25.1 4.9 36.9 0C360.1 472.6 496 349.3 496 128c0-19.4-11.7-36.9-29.5-44.3zM256.1 446.3l-.1-381 175.9 73.3c-3.3 151.4-82.1 261.1-175.8 307.7z`},child:[]}]})(e)}function op(e){return Q({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M480 160H32c-17.673 0-32-14.327-32-32V64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24z`},child:[]}]})(e)}function sp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z`},child:[]}]})(e)}function cp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M476 3.2L12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z`},child:[]}]})(e)}function lp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 640 512`},child:[{tag:`path`,attr:{d:`M640 264v-16c0-8.84-7.16-16-16-16H344v-40h72c17.67 0 32-14.33 32-32V32c0-17.67-14.33-32-32-32H224c-17.67 0-32 14.33-32 32v128c0 17.67 14.33 32 32 32h72v40H16c-8.84 0-16 7.16-16 16v16c0 8.84 7.16 16 16 16h104v40H64c-17.67 0-32 14.33-32 32v128c0 17.67 14.33 32 32 32h160c17.67 0 32-14.33 32-32V352c0-17.67-14.33-32-32-32h-56v-40h304v40h-56c-17.67 0-32 14.33-32 32v128c0 17.67 14.33 32 32 32h160c17.67 0 32-14.33 32-32V352c0-17.67-14.33-32-32-32h-56v-40h104c8.84 0 16-7.16 16-16zM256 128V64h128v64H256zm-64 320H96v-64h96v64zm352 0h-96v-64h96v64z`},child:[]}]})(e)}function up(e){return Q({tag:`svg`,attr:{viewBox:`0 0 384 512`},child:[{tag:`path`,attr:{d:`M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z`},child:[]}]})(e)}function dp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z`},child:[]}]})(e)}function fp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z`},child:[]}]})(e)}function pp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z`},child:[]}]})(e)}function mp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 576 512`},child:[{tag:`path`,attr:{d:`M528 0H48C21.5 0 0 21.5 0 48v320c0 26.5 21.5 48 48 48h192l-16 48h-72c-13.3 0-24 10.7-24 24s10.7 24 24 24h272c13.3 0 24-10.7 24-24s-10.7-24-24-24h-72l-16-48h192c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zm-16 352H64V64h448v288z`},child:[]}]})(e)}function hp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 640 512`},child:[{tag:`path`,attr:{d:`M537.6 226.6c4.1-10.7 6.4-22.4 6.4-34.6 0-53-43-96-96-96-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32c-88.4 0-160 71.6-160 160 0 2.7.1 5.4.2 8.1C40.2 219.8 0 273.2 0 336c0 79.5 64.5 144 144 144h368c70.7 0 128-57.3 128-128 0-61.9-44-113.6-102.4-125.4z`},child:[]}]})(e)}function gp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z`},child:[]}]})(e)}function _p(e){return Q({tag:`svg`,attr:{viewBox:`0 0 320 512`},child:[{tag:`path`,attr:{d:`M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z`},child:[]}]})(e)}function vp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 320 512`},child:[{tag:`path`,attr:{d:`M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z`},child:[]}]})(e)}function yp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z`},child:[]}]})(e)}function bp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z`},child:[]}]})(e)}function xp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M458.622 255.92l45.985-45.005c13.708-12.977 7.316-36.039-10.664-40.339l-62.65-15.99 17.661-62.015c4.991-17.838-11.829-34.663-29.661-29.671l-61.994 17.667-15.984-62.671C337.085.197 313.765-6.276 300.99 7.228L256 53.57 211.011 7.229c-12.63-13.351-36.047-7.234-40.325 10.668l-15.984 62.671-61.995-17.667C74.87 57.907 58.056 74.738 63.046 92.572l17.661 62.015-62.65 15.99C.069 174.878-6.31 197.944 7.392 210.915l45.985 45.005-45.985 45.004c-13.708 12.977-7.316 36.039 10.664 40.339l62.65 15.99-17.661 62.015c-4.991 17.838 11.829 34.663 29.661 29.671l61.994-17.667 15.984 62.671c4.439 18.575 27.696 24.018 40.325 10.668L256 458.61l44.989 46.001c12.5 13.488 35.987 7.486 40.325-10.668l15.984-62.671 61.994 17.667c17.836 4.994 34.651-11.837 29.661-29.671l-17.661-62.015 62.65-15.99c17.987-4.302 24.366-27.367 10.664-40.339l-45.984-45.004z`},child:[]}]})(e)}function Sp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 448 512`},child:[{tag:`path`,attr:{d:`M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm320-196c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM192 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM64 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z`},child:[]}]})(e)}function Cp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 448 512`},child:[{tag:`path`,attr:{d:`M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z`},child:[]}]})(e)}function wp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 384 512`},child:[{tag:`path`,attr:{d:`M97.12 362.63c-8.69-8.69-4.16-6.24-25.12-11.85-9.51-2.55-17.87-7.45-25.43-13.32L1.2 448.7c-4.39 10.77 3.81 22.47 15.43 22.03l52.69-2.01L105.56 507c8 8.44 22.04 5.81 26.43-4.96l52.05-127.62c-10.84 6.04-22.87 9.58-35.31 9.58-19.5 0-37.82-7.59-51.61-21.37zM382.8 448.7l-45.37-111.24c-7.56 5.88-15.92 10.77-25.43 13.32-21.07 5.64-16.45 3.18-25.12 11.85-13.79 13.78-32.12 21.37-51.62 21.37-12.44 0-24.47-3.55-35.31-9.58L252 502.04c4.39 10.77 18.44 13.4 26.43 4.96l36.25-38.28 52.69 2.01c11.62.44 19.82-11.27 15.43-22.03zM263 340c15.28-15.55 17.03-14.21 38.79-20.14 13.89-3.79 24.75-14.84 28.47-28.98 7.48-28.4 5.54-24.97 25.95-45.75 10.17-10.35 14.14-25.44 10.42-39.58-7.47-28.38-7.48-24.42 0-52.83 3.72-14.14-.25-29.23-10.42-39.58-20.41-20.78-18.47-17.36-25.95-45.75-3.72-14.14-14.58-25.19-28.47-28.98-27.88-7.61-24.52-5.62-44.95-26.41-10.17-10.35-25-14.4-38.89-10.61-27.87 7.6-23.98 7.61-51.9 0-13.89-3.79-28.72.25-38.89 10.61-20.41 20.78-17.05 18.8-44.94 26.41-13.89 3.79-24.75 14.84-28.47 28.98-7.47 28.39-5.54 24.97-25.95 45.75-10.17 10.35-14.15 25.44-10.42 39.58 7.47 28.36 7.48 24.4 0 52.82-3.72 14.14.25 29.23 10.42 39.59 20.41 20.78 18.47 17.35 25.95 45.75 3.72 14.14 14.58 25.19 28.47 28.98C104.6 325.96 106.27 325 121 340c13.23 13.47 33.84 15.88 49.74 5.82a39.676 39.676 0 0 1 42.53 0c15.89 10.06 36.5 7.65 49.73-5.82zM97.66 175.96c0-53.03 42.24-96.02 94.34-96.02s94.34 42.99 94.34 96.02-42.24 96.02-94.34 96.02-94.34-42.99-94.34-96.02z`},child:[]}]})(e)}function Tp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 448 512`},child:[{tag:`path`,attr:{d:`M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z`},child:[]}]})(e)}function Ep(e){return Q({tag:`svg`,attr:{viewBox:`0 0 448 512`},child:[{tag:`path`,attr:{d:`M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z`},child:[]}]})(e)}function Dp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 448 512`},child:[{tag:`path`,attr:{d:`M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z`},child:[]}]})(e)}function Op(e){return Q({tag:`svg`,attr:{viewBox:`0 0 448 512`},child:[{tag:`path`,attr:{d:`M413.1 222.5l22.2 22.2c9.4 9.4 9.4 24.6 0 33.9L241 473c-9.4 9.4-24.6 9.4-33.9 0L12.7 278.6c-9.4-9.4-9.4-24.6 0-33.9l22.2-22.2c9.5-9.5 25-9.3 34.3.4L184 343.4V56c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24v287.4l114.8-120.5c9.3-9.8 24.8-10 34.3-.4z`},child:[]}]})(e)}var kp=()=>{let[e,t]=(0,b.useState)(!1),[n,r]=(0,b.useState)(!1),[i,a]=(0,b.useState)(`home`),o=[{label:`Home`,id:`home`},{label:`About`,id:`about`},{label:`Skills`,id:`skills`},{label:`Experience`,id:`experience`},{label:`Projects`,id:`projects`},{label:`Certifications`,id:`certifications`},{label:`Contact`,id:`contact`}];(0,b.useEffect)(()=>{let e=0,n=()=>{e&&cancelAnimationFrame(e),e=requestAnimationFrame(()=>{let e=window.scrollY;t(e>35);let n=o.map(e=>document.getElementById(e.id)).filter(e=>e!==null);if(n.length===0)return;let r=Math.min(180,window.innerHeight*.32),i=`home`;for(let e of n)e.getBoundingClientRect().top<=r&&(i=e.id);a(i)})};return n(),window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),()=>{e&&cancelAnimationFrame(e),window.removeEventListener(`scroll`,n),window.removeEventListener(`resize`,n)}},[]);let s=()=>{let e=window.innerWidth;return e<=600?64:e<=950?66:70},c=e=>{let t=document.getElementById(e);if(!t){console.warn(`Navbar: section #${e} was not found.`);return}r(!1),a(e),requestAnimationFrame(()=>{let n=s(),r=t.getBoundingClientRect().top+window.scrollY,i=e===`home`?0:Math.max(0,r-n-12);window.scrollTo({top:i,behavior:`smooth`})})},l=()=>{r(!1),a(`home`),window.scrollTo({top:0,behavior:`smooth`})},u=()=>{let e=document.createElement(`a`);e.href=`/ns-port/resume.pdf`,e.download=`Naimish-Singh-Resume.pdf`,document.body.appendChild(e),e.click(),document.body.removeChild(e)};return(0,V.jsxs)(V.Fragment,{children:[(0,V.jsx)(`style`,{children:`
         /* =====================================================
            NAVBAR
         ===================================================== */
@@ -198,7 +413,7 @@ to {
         @keyframes nsNavbarIn {
           from {
             opacity: 0;
-            transform: translateY(-14px);
+            transform: translateY(-10px);
           }
 
           to {
@@ -209,20 +424,10 @@ to {
 
         .ns-navbar {
           position: fixed;
-
           top: 0;
-
-          animation:
-            nsNavbarIn 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
           left: 0;
           right: 0;
-
-          /*
-           * FIX:
-           * Keep navbar height constant.
-           */
           height: 70px;
-
           z-index: 99999;
 
           display: grid;
@@ -231,23 +436,15 @@ to {
           column-gap: 18px;
           padding: 0 5.2vw;
 
-          background:
-            rgba(7, 7, 7, 0.18);
+          background: rgba(7, 7, 7, 0.2);
 
-          border-bottom:
-            1px solid
-            rgba(255, 255, 255, 0.07);
+          border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 
-          backdrop-filter:
-            blur(12px);
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
 
-          -webkit-backdrop-filter:
-            blur(12px);
+          animation: nsNavbarIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
 
-          /*
-           * Height transition removed intentionally.
-           * Background and shadow can still animate.
-           */
           transition:
             background 0.35s ease,
             border-color 0.35s ease,
@@ -255,61 +452,46 @@ to {
         }
 
         .ns-navbar.scrolled {
-          /*
-           * SAME HEIGHT.
-           */
-          height: 70px;
-
           background:
             linear-gradient(
               180deg,
-              rgba(7, 7, 7, 0.94),
-              rgba(7, 7, 7, 0.82)
+              rgba(7, 7, 7, 0.95),
+              rgba(7, 7, 7, 0.86)
             );
 
-          border-bottom-color:
-            rgba(213, 170, 80, 0.18);
+          border-bottom-color: rgba(213, 170, 80, 0.16);
 
           box-shadow:
-            0 10px 40px
-            rgba(0, 0, 0, 0.35),
-
-            0 1px 0
-            rgba(213, 170, 80, 0.05);
+            0 10px 34px rgba(0, 0, 0, 0.32),
+            0 1px 0 rgba(213, 170, 80, 0.04);
         }
 
         .ns-navbar::after {
           content: "";
-
           position: absolute;
-
           left: 0;
           right: 0;
-
           bottom: -1px;
-
           height: 1px;
 
           background:
             linear-gradient(
               90deg,
-              transparent 0%,
-              rgba(213, 170, 80, 0.18) 30%,
-              rgba(239, 197, 102, 0.45) 50%,
-              rgba(213, 170, 80, 0.18) 70%,
-              transparent 100%
+              transparent,
+              rgba(213, 170, 80, 0.16) 30%,
+              rgba(239, 197, 102, 0.38) 50%,
+              rgba(213, 170, 80, 0.16) 70%,
+              transparent
             );
 
-          opacity: 0.35;
-
+          opacity: 0.28;
           pointer-events: none;
         }
-
 
         @keyframes nsNavItemIn {
           from {
             opacity: 0;
-            transform: translateY(-6px);
+            transform: translateY(-5px);
           }
 
           to {
@@ -327,37 +509,31 @@ to {
           justify-self: start;
 
           display: inline-flex;
-
-          animation:
-            nsNavItemIn 0.55s 0.12s cubic-bezier(0.22, 1, 0.36, 1) both;
           align-items: center;
-
-          gap: 8px;
+          gap: 7px;
 
           border: 0;
-
           background: transparent;
 
           color: #f5f1e8;
-
           font-size: 27px;
-
           font-weight: 900;
-
           line-height: 1;
-
           letter-spacing: -0.09em;
 
           cursor: pointer;
 
+          animation:
+            nsNavItemIn 0.5s 0.08s cubic-bezier(0.22, 1, 0.36, 1) both;
+
           transition:
-            transform 0.3s ease,
-            color 0.3s ease;
+            color 0.25s ease,
+            transform 0.25s ease;
         }
 
         .ns-nav-logo:hover {
-          transform:
-            translateY(-1px);
+          color: #efc566;
+          transform: translateY(-1px);
         }
 
         .ns-nav-logo-main {
@@ -366,75 +542,33 @@ to {
 
         .ns-nav-logo-accent {
           position: relative;
-
           color: #efc566;
         }
 
         .ns-nav-logo-accent::after {
           content: "";
-
           position: absolute;
-
           left: 0;
           right: 0;
-
           bottom: -4px;
-
           height: 1px;
-
-          background:
-            linear-gradient(
-              90deg,
-              transparent,
-              #efc566,
-              transparent
-            );
-
-          opacity: 0.75;
+          background: linear-gradient(
+            90deg,
+            transparent,
+            #efc566,
+            transparent
+          );
+          opacity: 0.65;
         }
 
         .ns-nav-logo-dot {
-          width: 5px;
-          height: 5px;
-
+          width: 4px;
+          height: 4px;
           margin-top: 3px;
-
           border-radius: 50%;
-
-          background:
-            #efc566;
-
-          box-shadow:
-            0 0 8px
-            rgba(239, 197, 102, 0.85),
-
-            0 0 18px
-            rgba(213, 170, 80, 0.4);
-
-          animation:
-            nsNavPulse
-            2.8s
-            ease-in-out
-            infinite;
+          background: #efc566;
+          box-shadow: 0 0 8px rgba(239, 197, 102, 0.7);
         }
-
-        @keyframes nsNavPulse {
-          0%,
-          100% {
-            opacity: 0.65;
-
-            transform:
-              scale(0.8);
-          }
-
-          50% {
-            opacity: 1;
-
-            transform:
-              scale(1.15);
-          }
-        }
-
 
         /* =====================================================
            DESKTOP NAV
@@ -443,55 +577,52 @@ to {
         .ns-nav-center {
           position: relative;
           z-index: 10;
+
           display: flex;
           align-items: center;
           justify-content: center;
+
           gap: 2px;
           min-width: 0;
-          animation: nsNavItemIn 0.55s 0.18s cubic-bezier(0.22, 1, 0.36, 1) both;
+
+          animation:
+            nsNavItemIn 0.5s 0.14s cubic-bezier(0.22, 1, 0.36, 1) both;
         }
 
         .ns-nav-link {
           position: relative;
-
           z-index: 1;
 
           border: 0;
-
+          border-radius: 6px;
           background: transparent;
 
           padding: 10px 9px;
           min-width: max-content;
+
           color: #858078;
           font-size: 9px;
-
           font-weight: 600;
-
           letter-spacing: 0.13em;
-
           text-transform: uppercase;
 
           cursor: pointer;
 
           transition:
             color 0.25s ease,
+            background 0.25s ease,
             transform 0.25s ease;
         }
 
         .ns-nav-link:hover {
           color: #f5f1e8;
-
-          transform:
-            translateY(-1px);
+          background: rgba(213, 170, 80, 0.025);
+          transform: translateY(-1px);
         }
 
         .ns-nav-link.active {
           color: #efc566;
-
-          background:
-            rgba(213, 170, 80, 0.045);
-
-          border-radius: 6px;
+          background: rgba(213, 170, 80, 0.045);
         }
 
         .ns-nav-link::before {
@@ -499,37 +630,29 @@ to {
           pointer-events: none;
 
           position: absolute;
-
           left: 50%;
-
           bottom: 2px;
 
           width: 0;
-
           height: 1px;
 
-          transform:
-            translateX(-50%);
+          transform: translateX(-50%);
 
-          background:
-            linear-gradient(
-              90deg,
-              transparent,
-              #efc566,
-              transparent
-            );
+          background: linear-gradient(
+            90deg,
+            transparent,
+            #efc566,
+            transparent
+          );
 
-          box-shadow:
-            0 0 8px
-            rgba(239, 197, 102, 0.35);
+          box-shadow: 0 0 7px rgba(239, 197, 102, 0.3);
 
-          transition:
-            width 0.3s ease;
+          transition: width 0.25s ease;
         }
 
         .ns-nav-link:hover::before,
         .ns-nav-link.active::before {
-          width: 70%;
+          width: 68%;
         }
 
         .ns-nav-link.active::after {
@@ -537,27 +660,18 @@ to {
           pointer-events: none;
 
           position: absolute;
-
           left: 50%;
-
           bottom: -3px;
 
           width: 3px;
           height: 3px;
 
-          transform:
-            translateX(-50%);
-
+          transform: translateX(-50%);
           border-radius: 50%;
 
-          background:
-            #efc566;
-
-          box-shadow:
-            0 0 7px
-            rgba(239, 197, 102, 0.8);
+          background: #efc566;
+          box-shadow: 0 0 7px rgba(239, 197, 102, 0.65);
         }
-
 
         /* =====================================================
            RIGHT SIDE
@@ -566,20 +680,19 @@ to {
         .ns-nav-right {
           position: relative;
           z-index: 20;
-          justify-self: end;
-          display: flex;
 
+          justify-self: end;
+
+          display: flex;
           align-items: center;
+          gap: 20px;
 
           animation:
-            nsNavItemIn 0.55s 0.24s cubic-bezier(0.22, 1, 0.36, 1) both;
-
-          gap: 20px;
+            nsNavItemIn 0.5s 0.2s cubic-bezier(0.22, 1, 0.36, 1) both;
         }
 
         .ns-nav-status {
           display: flex;
-
           align-items: center;
 
           color: #77736c;
@@ -591,54 +704,37 @@ to {
             monospace;
 
           font-size: 8px;
-
           font-weight: 500;
-
           letter-spacing: 0.15em;
-
           text-transform: uppercase;
         }
 
         .ns-nav-status-dot {
-          width: 6px;
-          height: 6px;
-
+          width: 5px;
+          height: 5px;
           margin-right: 8px;
 
           border-radius: 50%;
+          background: #d5aa50;
 
-          background:
-            #d5aa50;
-
-          box-shadow:
-            0 0 8px
-            rgba(213, 170, 80, 0.75),
-
-            0 0 16px
-            rgba(213, 170, 80, 0.28);
+          box-shadow: 0 0 7px rgba(213, 170, 80, 0.65);
         }
 
-
         /* =====================================================
-           RESUME
+           CV
         ===================================================== */
 
         .ns-nav-resume {
           position: relative;
 
           display: inline-flex;
-
           align-items: center;
-
           gap: 8px;
 
           padding: 9px 14px;
-
           overflow: hidden;
 
-          border:
-            1px solid
-            rgba(213, 170, 80, 0.38);
+          border: 1px solid rgba(213, 170, 80, 0.38);
 
           background:
             linear-gradient(
@@ -650,74 +746,58 @@ to {
           color: #e8c777;
 
           font-size: 8px;
-
           font-weight: 600;
-
           letter-spacing: 0.11em;
-
           text-transform: uppercase;
 
           cursor: pointer;
 
           transition:
-            color 0.3s ease,
-            border-color 0.3s ease,
-            background 0.3s ease,
-            transform 0.3s ease;
+            color 0.25s ease,
+            border-color 0.25s ease,
+            background 0.25s ease,
+            transform 0.25s ease,
+            box-shadow 0.25s ease;
         }
 
         .ns-nav-resume::before {
           content: "";
-
           position: absolute;
-
           top: 0;
           bottom: 0;
-
           left: -100%;
+          width: 65%;
 
-          width: 70%;
+          background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(239, 197, 102, 0.16),
+            transparent
+          );
 
-          background:
-            linear-gradient(
-              90deg,
-              transparent,
-              rgba(239, 197, 102, 0.2),
-              transparent
-            );
-
-          transform:
-            skewX(-20deg);
-
-          transition:
-            left 0.6s ease;
+          transform: skewX(-20deg);
+          transition: left 0.55s ease;
         }
 
         .ns-nav-resume:hover::before {
-          left: 130%;
+          left: 135%;
         }
 
         .ns-nav-resume:hover {
           color: #fff;
+          border-color: rgba(239, 197, 102, 0.68);
+          background: rgba(213, 170, 80, 0.085);
 
-          border-color:
-            rgba(239, 197, 102, 0.72);
-
-          background:
-            rgba(213, 170, 80, 0.1);
-
-          transform:
-            translateY(-1px);
+          transform: translateY(-1px);
 
           box-shadow:
-            0 0 20px
-            rgba(213, 170, 80, 0.08);
+            0 7px 20px rgba(0, 0, 0, 0.2),
+            0 0 16px rgba(213, 170, 80, 0.06);
         }
 
         .ns-nav-resume svg {
           font-size: 8px;
         }
-
 
         /* =====================================================
            MOBILE BUTTON
@@ -732,13 +812,10 @@ to {
           align-items: center;
           justify-content: center;
 
-          border:
-            1px solid
-            rgba(213, 170, 80, 0.25);
+          border: 1px solid rgba(213, 170, 80, 0.25);
+          border-radius: 6px;
 
-          background:
-            rgba(213, 170, 80, 0.035);
-
+          background: rgba(213, 170, 80, 0.035);
           color: #efc566;
 
           cursor: pointer;
@@ -750,16 +827,10 @@ to {
         }
 
         .ns-mobile-button:hover {
-          background:
-            rgba(213, 170, 80, 0.1);
-
-          border-color:
-            rgba(239, 197, 102, 0.55);
-
-          transform:
-            translateY(-1px);
+          background: rgba(213, 170, 80, 0.085);
+          border-color: rgba(239, 197, 102, 0.52);
+          transform: translateY(-1px);
         }
-
 
         /* =====================================================
            MOBILE MENU
@@ -767,15 +838,9 @@ to {
 
         .ns-mobile-menu {
           position: fixed;
-
-          /*
-           * Matches the fixed navbar height.
-           */
           top: 70px;
-
           left: 0;
           right: 0;
-
           z-index: 99998;
 
           padding: 15px;
@@ -783,36 +848,22 @@ to {
           background:
             linear-gradient(
               180deg,
-              rgba(7, 7, 7, 0.98),
-              rgba(7, 7, 7, 0.94)
+              rgba(7, 7, 7, 0.985),
+              rgba(7, 7, 7, 0.95)
             );
 
-          border-bottom:
-            1px solid
-            rgba(213, 170, 80, 0.2);
+          border-bottom: 1px solid rgba(213, 170, 80, 0.18);
 
-          box-shadow:
-            0 25px 55px
-            rgba(0, 0, 0, 0.6);
+          box-shadow: 0 22px 50px rgba(0, 0, 0, 0.55);
 
-          backdrop-filter:
-            blur(18px);
-
-          -webkit-backdrop-filter:
-            blur(18px);
+          backdrop-filter: blur(18px);
+          -webkit-backdrop-filter: blur(18px);
 
           transform-origin: top;
 
-          animation:
-            nsMobileMenuIn
-            0.28s
-            ease
-            forwards;
+          animation: nsMobileMenuIn 0.25s ease forwards;
         }
 
-        /*
-         * Same position even when scrolled.
-         */
         .ns-mobile-menu.scrolled {
           top: 70px;
         }
@@ -820,107 +871,7 @@ to {
         @keyframes nsMobileMenuIn {
           from {
             opacity: 0;
-
-            transform:
-              translateY(-12px);
-          }
-
-          to {
-            opacity: 1;
-
-            transform:
-              translateY(0);
-          }
-        }
-
-        .ns-mobile-menu-inner {
-          display: grid;
-
-          grid-template-columns:
-            1fr 1fr;
-
-          gap: 8px;
-
-          max-width: 720px;
-
-          margin: 0 auto;
-        }
-
-        .ns-mobile-link {
-          position: relative;
-
-          display: flex;
-
-          align-items: center;
-
-          justify-content: space-between;
-
-          min-height: 48px;
-
-          padding: 0 15px;
-
-          border:
-            1px solid
-            rgba(255, 255, 255, 0.06);
-
-          background:
-            rgba(255, 255, 255, 0.018);
-
-          color: #99958c;
-
-          font-size: 9px;
-
-          font-weight: 600;
-
-          letter-spacing: 0.13em;
-
-          text-transform: uppercase;
-
-          cursor: pointer;
-
-          transition:
-            color 0.25s ease,
-            border-color 0.25s ease,
-            background 0.25s ease;
-        }
-
-        .ns-mobile-link {
-          animation:
-            nsMobileLinkIn 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
-        }
-
-        .ns-mobile-link:nth-child(1) {
-          animation-delay: 0.03s;
-        }
-
-        .ns-mobile-link:nth-child(2) {
-          animation-delay: 0.06s;
-        }
-
-        .ns-mobile-link:nth-child(3) {
-          animation-delay: 0.09s;
-        }
-
-        .ns-mobile-link:nth-child(4) {
-          animation-delay: 0.12s;
-        }
-
-        .ns-mobile-link:nth-child(5) {
-          animation-delay: 0.15s;
-        }
-
-        .ns-mobile-link:nth-child(6) {
-          animation-delay: 0.18s;
-        }
-
-        .ns-mobile-link:nth-child(7) {
-          animation-delay: 0.21s;
-        }
-
-        @keyframes nsMobileLinkIn {
-          from {
-            opacity: 0;
-            transform: translateY(-5px);
+            transform: translateY(-8px);
           }
 
           to {
@@ -929,105 +880,131 @@ to {
           }
         }
 
-        .ns-mobile-link:hover,
+        .ns-mobile-menu-inner {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 8px;
+
+          max-width: 720px;
+          margin: 0 auto;
+        }
+
+        .ns-mobile-link {
+          position: relative;
+
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          min-height: 48px;
+          padding: 0 15px;
+
+          border: 1px solid rgba(255, 255, 255, 0.06);
+          border-radius: 5px;
+
+          background: rgba(255, 255, 255, 0.018);
+
+          color: #99958c;
+
+          font-size: 9px;
+          font-weight: 600;
+          letter-spacing: 0.13em;
+          text-transform: uppercase;
+
+          cursor: pointer;
+
+          transition:
+            color 0.22s ease,
+            border-color 0.22s ease,
+            background 0.22s ease,
+            transform 0.22s ease;
+        }
+
+        .ns-mobile-link:hover {
+          color: #efc566;
+          border-color: rgba(213, 170, 80, 0.25);
+          background: rgba(213, 170, 80, 0.04);
+          transform: translateY(-1px);
+        }
+
         .ns-mobile-link.active {
           color: #efc566;
-
-          border-color:
-            rgba(213, 170, 80, 0.28);
-
-          background:
-            rgba(213, 170, 80, 0.045);
+          border-color: rgba(213, 170, 80, 0.28);
+          background: rgba(213, 170, 80, 0.045);
         }
 
         .ns-mobile-link.active::before {
           content: "";
 
           position: absolute;
-
           left: 0;
-
           top: 8px;
           bottom: 8px;
 
           width: 2px;
 
-          background:
-            #efc566;
-
-          box-shadow:
-            0 0 10px
-            rgba(239, 197, 102, 0.65);
+          background: #efc566;
+          box-shadow: 0 0 9px rgba(239, 197, 102, 0.55);
         }
 
         .ns-mobile-arrow {
           color: #d5aa50;
-
           font-size: 9px;
+
+          transition: transform 0.22s ease;
+        }
+
+        .ns-mobile-link:hover .ns-mobile-arrow {
+          transform: translateX(2px);
         }
 
         .ns-mobile-resume {
           grid-column: 1 / -1;
 
           display: flex;
-
           align-items: center;
-
           justify-content: center;
-
           gap: 8px;
 
           min-height: 46px;
-
           margin-top: 4px;
 
-          border:
-            1px solid
-            rgba(213, 170, 80, 0.38);
+          border: 1px solid rgba(213, 170, 80, 0.38);
+          border-radius: 5px;
 
-          background:
-            rgba(213, 170, 80, 0.055);
-
+          background: rgba(213, 170, 80, 0.055);
           color: #efc566;
 
           font-size: 8px;
-
           font-weight: 700;
-
           letter-spacing: 0.14em;
-
           text-transform: uppercase;
 
           cursor: pointer;
+
+          transition:
+            background 0.25s ease,
+            border-color 0.25s ease,
+            transform 0.25s ease;
         }
 
+        .ns-mobile-resume:hover {
+          background: rgba(213, 170, 80, 0.1);
+          border-color: rgba(239, 197, 102, 0.58);
+          transform: translateY(-1px);
+        }
 
         /* =====================================================
            TABLET
         ===================================================== */
 
         @media (max-width: 1180px) {
-          .ns-nav-center {
-            gap: 0;
-          }
-
           .ns-nav-link {
             padding-left: 7px;
             padding-right: 7px;
-
             font-size: 8px;
           }
-
-          .ns-nav-status {
-            display: none;
-          }
         }
-
-
-        /* =====================================================
-           TABLET / MOBILE
-        ===================================================== */
-
 
         @media (max-width: 1200px) {
           .ns-nav-status {
@@ -1035,7 +1012,11 @@ to {
           }
 
           .ns-navbar {
-            grid-template-columns: minmax(80px, 1fr) auto minmax(120px, 1fr);
+            grid-template-columns:
+              minmax(80px, 1fr)
+              auto
+              minmax(120px, 1fr);
+
             column-gap: 12px;
           }
         }
@@ -1044,7 +1025,6 @@ to {
           .ns-navbar {
             height: 66px;
 
-            /* Mobile uses only logo + menu columns. */
             grid-template-columns: 1fr auto;
             column-gap: 12px;
 
@@ -1071,15 +1051,11 @@ to {
             display: none;
           }
 
-          .ns-mobile-menu {
-            top: 66px;
-          }
-
+          .ns-mobile-menu,
           .ns-mobile-menu.scrolled {
             top: 66px;
           }
         }
-
 
         /* =====================================================
            MOBILE
@@ -1088,11 +1064,8 @@ to {
         @media (max-width: 600px) {
           .ns-navbar {
             height: 64px;
-
-            /* Keep the hamburger pinned to the right edge. */
             grid-template-columns: 1fr auto;
             column-gap: 10px;
-
             padding: 0 5.5vw;
           }
 
@@ -1104,24 +1077,15 @@ to {
             font-size: 24px;
           }
 
-          .ns-nav-logo-dot {
-            width: 4px;
-            height: 4px;
-          }
-
           .ns-mobile-button {
             width: 37px;
             height: 37px;
           }
 
-          .ns-mobile-menu {
-            top: 64px;
-
-            padding: 12px;
-          }
-
+          .ns-mobile-menu,
           .ns-mobile-menu.scrolled {
             top: 64px;
+            padding: 12px;
           }
 
           .ns-mobile-menu-inner {
@@ -1133,7 +1097,6 @@ to {
           }
         }
 
-
         /* =====================================================
            REDUCED MOTION
         ===================================================== */
@@ -1143,30 +1106,32 @@ to {
           .ns-nav-logo,
           .ns-nav-center,
           .ns-nav-right,
-          .ns-mobile-link {
+          .ns-mobile-menu {
             animation: none !important;
-          }
-
-          .ns-nav-logo-dot {
-            animation: none;
           }
 
           .ns-nav-resume::before {
             display: none;
           }
 
-          .ns-navbar {
-            transition: none;
+          .ns-navbar,
+          .ns-nav-logo,
+          .ns-nav-link,
+          .ns-nav-resume,
+          .ns-mobile-button,
+          .ns-mobile-link,
+          .ns-mobile-resume {
+            transition: none !important;
           }
         }
-      `}),(0,V.jsxs)(`header`,{className:`ns-navbar ${e?`scrolled`:``}`,children:[(0,V.jsxs)(`button`,{type:`button`,className:`ns-nav-logo`,onClick:l,"aria-label":`Go to home`,children:[(0,V.jsx)(`span`,{className:`ns-nav-logo-main`,children:`NS`}),(0,V.jsx)(`span`,{className:`ns-nav-logo-accent`,children:`.`}),(0,V.jsx)(`span`,{className:`ns-nav-logo-dot`})]}),(0,V.jsx)(`nav`,{className:`ns-nav-center`,children:o.map(e=>(0,V.jsx)(`button`,{type:`button`,className:`ns-nav-link ${i===e.id?`active`:``}`,onClick:()=>c(e.id),children:e.label},e.id))}),(0,V.jsxs)(`div`,{className:`ns-nav-right`,children:[(0,V.jsxs)(`div`,{className:`ns-nav-status`,children:[(0,V.jsx)(`span`,{className:`ns-nav-status-dot`}),`Available for opportunities`]}),(0,V.jsxs)(`button`,{type:`button`,className:`ns-nav-resume`,onClick:u,children:[(0,V.jsx)(pp,{}),`CV`]}),(0,V.jsx)(`button`,{type:`button`,className:`ns-mobile-button`,onClick:()=>r(e=>!e),"aria-label":n?`Close menu`:`Open menu`,"aria-expanded":n,children:n?(0,V.jsx)(ip,{}):(0,V.jsx)(Cp,{})})]})]}),n&&(0,V.jsx)(`div`,{className:`ns-mobile-menu ${e?`scrolled`:``}`,children:(0,V.jsxs)(`div`,{className:`ns-mobile-menu-inner`,children:[o.map(e=>(0,V.jsxs)(`button`,{type:`button`,className:`ns-mobile-link ${i===e.id?`active`:``}`,onClick:()=>c(e.id),children:[(0,V.jsx)(`span`,{children:e.label}),(0,V.jsx)(`span`,{className:`ns-mobile-arrow`,children:(0,V.jsx)(Ep,{})})]},e.id)),(0,V.jsxs)(`button`,{type:`button`,className:`ns-mobile-resume`,onClick:()=>{u(),r(!1)},children:[(0,V.jsx)(pp,{}),`Download CV`]})]})})]})},$={name:`Naimish Singh`,role:`IT Engineer | Desktop Support Engineer | Hardware & Networking`,tagline:`Passionate IT Engineer specializing in Desktop Support, Hardware & Networking, Windows Administration, and IT Infrastructure.`,about:`
+      `}),(0,V.jsxs)(`header`,{className:`ns-navbar ${e?`scrolled`:``}`,children:[(0,V.jsxs)(`button`,{type:`button`,className:`ns-nav-logo`,onClick:l,"aria-label":`Go to home`,children:[(0,V.jsx)(`span`,{className:`ns-nav-logo-main`,children:`NS`}),(0,V.jsx)(`span`,{className:`ns-nav-logo-accent`,children:`.`}),(0,V.jsx)(`span`,{className:`ns-nav-logo-dot`})]}),(0,V.jsx)(`nav`,{className:`ns-nav-center`,"aria-label":`Primary navigation`,children:o.map(e=>(0,V.jsx)(`button`,{type:`button`,className:`ns-nav-link ${i===e.id?`active`:``}`,onClick:()=>c(e.id),children:e.label},e.id))}),(0,V.jsxs)(`div`,{className:`ns-nav-right`,children:[(0,V.jsxs)(`div`,{className:`ns-nav-status`,children:[(0,V.jsx)(`span`,{className:`ns-nav-status-dot`}),`Available for opportunities`]}),(0,V.jsxs)(`button`,{type:`button`,className:`ns-nav-resume`,onClick:u,children:[(0,V.jsx)(pp,{}),`CV`]}),(0,V.jsx)(`button`,{type:`button`,className:`ns-mobile-button`,onClick:()=>r(e=>!e),"aria-label":n?`Close menu`:`Open menu`,"aria-expanded":n,"aria-controls":`mobile-navigation`,children:n?(0,V.jsx)(ip,{}):(0,V.jsx)(Cp,{})})]})]}),n&&(0,V.jsx)(`div`,{id:`mobile-navigation`,className:`ns-mobile-menu ${e?`scrolled`:``}`,children:(0,V.jsxs)(`nav`,{className:`ns-mobile-menu-inner`,"aria-label":`Mobile navigation`,children:[o.map(e=>(0,V.jsxs)(`button`,{type:`button`,className:`ns-mobile-link ${i===e.id?`active`:``}`,onClick:()=>c(e.id),children:[(0,V.jsx)(`span`,{children:e.label}),(0,V.jsx)(`span`,{className:`ns-mobile-arrow`,children:(0,V.jsx)(Ep,{})})]},e.id)),(0,V.jsxs)(`button`,{type:`button`,className:`ns-mobile-resume`,onClick:()=>{u(),r(!1)},children:[(0,V.jsx)(pp,{}),`Download CV`]})]})})]})},$={name:`Naimish Singh`,role:`IT Engineer | Desktop Support Engineer | Hardware & Networking`,tagline:`Passionate IT Engineer specializing in Desktop Support, Hardware & Networking, Windows Administration, and IT Infrastructure.`,about:`
   I am an IT Engineer with experience in Desktop Support, Hardware & Networking,
   Windows Administration, Active Directory, Microsoft 365, and Network Troubleshooting.
   
   I enjoy solving technical problems, improving IT infrastructure, and delivering
   fast support to end users. My goal is to grow as a System Administrator and
   Cloud Engineer while continuously learning new technologies.
-  `,location:`India`,email:`naimishsingh855@gmail.com`,phone:`+91 8009464355`,resume:`/ns-port/resume.pdf`,profileImage:`/ns-port/profile.jpeg`,socials:{linkedin:`https://www.linkedin.com/in/naimish-singh-aws`,github:`https://github.com/Naimish980`,instagram:`https://www.instagram.com/naimish_353`},skills:[`Windows 10/11`,`Desktop Support`,`Hardware Troubleshooting`,`Networking`,`TCP/IP`,`DNS`,`DHCP`,`Active Directory`,`Office 365`,`Microsoft Outlook`,`Linux`,`AWS`,`VMware`,`VirtualBox`,`Remote Support`,`LAN/WAN`,`Printer Support`,`Ticketing System`],experience:[{company:`Indira IVF`,role:`IT Engineer`,duration:`May 2026 - Present`,description:`Managing desktop support, networking, hardware troubleshooting, Windows systems, user support, and IT infrastructure.`,responsibilities:[`Provided L1 IT support for hardware, software, and network-related issues.`,`Troubleshot Windows OS, application, and login-related problems.`,`Managed Active Directory user accounts and password resets.`,`Diagnosed and resolved LAN, Wi-Fi, DNS, DHCP and VPN connectivity issues.`,`Installed and configured Microsoft Office, Outlook and business applications.`,`Supported printers, desktops, laptops and peripheral devices.`,`Maintained SLA through ticketing system.`,`Provided remote support and collaborated with infrastructure teams.`]},{company:`CM Solutions`,role:`Desktop Support Engineer`,duration:`Sep 2024 - Jan 2026`,description:`Provided desktop support, OS installation, hardware maintenance, networking, printer support, and software troubleshooting.`,responsibilities:[`Installed and configured Windows desktops and laptops.`,`Performed hardware troubleshooting and preventive maintenance.`,`Resolved LAN, Wi-Fi, DNS, DHCP and TCP/IP issues.`,`Supported Microsoft Office 365 and Outlook.`,`Installed software, drivers and security updates.`,`Provided remote and onsite technical support.`,`Maintained IT asset inventory.`,`Resolved incidents through ticketing system.`]}],projects:[{title:`Enterprise IT Infrastructure Support`,description:`Provided end-to-end IT support for desktops, laptops, printers, scanners and peripherals.`,technologies:[`Windows 11`,`Active Directory`,`Office 365`,`Outlook`,`Networking`]},{title:`Active Directory & User Management`,description:`Managed Active Directory users, password resets, account unlocks and domain joining.`,technologies:[`Active Directory`,`Windows Server`,`Group Policy`,`User Management`]},{title:`Microsoft 365 & Outlook Administration`,description:`Configured Outlook profiles, resolved mailbox issues and supported Microsoft 365 applications.`,technologies:[`Microsoft 365`,`Outlook`,`Exchange`,`Office Apps`]},{title:`Enterprise Network Infrastructure`,description:`Resolved LAN/WAN, DNS, DHCP, TCP/IP, VPN and Wi-Fi connectivity issues.`,technologies:[`Networking`,`TCP/IP`,`DNS`,`DHCP`,`VPN`]},{title:`Windows Deployment & System Administration`,description:`Installed Windows 10/11, drivers, security patches and optimized systems.`,technologies:[`Windows 10`,`Windows 11`,`Drivers`,`System Administration`]},{title:`IT Asset Management System`,description:`Managed desktops, laptops, printers and maintained IT inventory records.`,technologies:[`Asset Management`,`Hardware`,`Inventory`]},{title:`AWS Cloud Learning Lab`,description:`Hands-on practice with EC2, IAM, S3, VPC, Security Groups and CloudWatch.`,technologies:[`AWS EC2`,`IAM`,`S3`,`VPC`,`CloudWatch`]},{title:`Virtualization Lab`,description:`Created Windows and Linux virtual machines using VMware Workstation and VirtualBox.`,technologies:[`VMware`,`VirtualBox`,`Windows`,`Linux`]}],certifications:[{title:`Hardware & Networking`,issuer:`CM Solutions`,year:`2024`},{title:`AWS Solutions Architecture Job Simulation`,issuer:`AWS | Forage`,year:`2024`,link:`/ns-port/certificates/aws-solution-architecture.pdf`},{title:`Linux Administration`,issuer:`Udemy`,year:`2025`},{title:`Microsoft Office`,issuer:`Microsoft`,year:`2024`},{title:`Software Engineering Job Simulation`,issuer:`Goldman Sachs | Forage`,year:`December 2024`,description:`Completed Goldman Sachs' Software Engineering Job Simulation through Forage. Performed a cybersecurity task involving analysis of a leaked password database and gained exposure to secure software engineering and enterprise information security practices.`,link:`/ns-port/certificates/Goaldman.pdf`},{title:`Network Security Engineer`,issuer:`Skill India Digital Hub / NASSCOM`,year:`2026`,description:`Successfully completed the Network Security Engineer online skilling course through Skill India Digital Hub.`,link:`/ns-port/certificates/network-security-engineer.pdf`}]},Ap=()=>{let e=Id(0),t=Id(0),n=Pf(e,{stiffness:80,damping:20,mass:.6}),r=Pf(t,{stiffness:80,damping:20,mass:.6}),i=Af(n,[-1,1],[-7,7]),a=Af(r,[-1,1],[7,-7]);(0,b.useEffect)(()=>{let n=n=>{let r=n.clientX/window.innerWidth,i=n.clientY/window.innerHeight;e.set((r-.5)*2),t.set((i-.5)*2)};return window.addEventListener(`mousemove`,n),()=>{window.removeEventListener(`mousemove`,n)}},[e,t]);let o=e=>{let t=document.getElementById(e);if(!t)return;let n=document.querySelector(`.ns-navbar`),r=n?n.getBoundingClientRect().height:70,i=t.getBoundingClientRect().top+window.scrollY,a=e===`home`?0:Math.max(0,i-r-8);window.scrollTo({top:a,behavior:`smooth`})};return(0,V.jsxs)(V.Fragment,{children:[(0,V.jsxs)(`section`,{id:`home`,className:`reel-hero`,children:[(0,V.jsx)(`div`,{className:`reel-noise`}),(0,V.jsx)(`div`,{className:`hero-ambient hero-ambient-one`}),(0,V.jsx)(`div`,{className:`hero-ambient hero-ambient-two`}),(0,V.jsx)(Z.div,{className:`hero-light-beam`,animate:{x:[`-20%`,`120%`],opacity:[0,.7,0]},transition:{duration:8,repeat:1/0,ease:`easeInOut`}}),(0,V.jsxs)(`div`,{className:`reel-hero-grid`,children:[(0,V.jsxs)(Z.div,{className:`reel-copy`,initial:{opacity:0,x:-70},animate:{opacity:1,x:0},transition:{duration:1,ease:[.16,1,.3,1]},children:[(0,V.jsx)(Z.p,{className:`reel-kicker`,initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{delay:.2,duration:.7},children:`IT ENGINEER · CYBERSECURITY · INFRASTRUCTURE`}),(0,V.jsxs)(`h1`,{className:`reel-title`,children:[(0,V.jsx)(Z.span,{initial:{opacity:0,y:50},animate:{opacity:1,y:0},transition:{delay:.25,duration:.8},children:`NAIMISH`}),(0,V.jsx)(Z.span,{initial:{opacity:0,y:50},animate:{opacity:1,y:0},transition:{delay:.38,duration:.8},children:`SINGH`}),(0,V.jsx)(Z.span,{className:`reel-outline`,initial:{opacity:0,y:50},animate:{opacity:1,y:0},transition:{delay:.51,duration:.8},children:`ENGINEER.`})]}),(0,V.jsx)(Z.p,{className:`reel-intro`,initial:{opacity:0,y:25},animate:{opacity:1,y:0},transition:{delay:.65,duration:.8},children:$.tagline}),(0,V.jsxs)(Z.div,{className:`reel-actions`,initial:{opacity:0,y:25},animate:{opacity:1,y:0},transition:{delay:.8,duration:.7},children:[(0,V.jsxs)(`a`,{href:$.resume,target:`_blank`,rel:`noreferrer`,className:`reel-btn reel-btn-primary`,children:[(0,V.jsx)(pp,{}),`Download CV`]}),(0,V.jsxs)(`button`,{onClick:()=>o(`contact`),className:`reel-btn reel-btn-secondary`,children:[(0,V.jsx)(fp,{}),`Contact Me`]})]}),(0,V.jsxs)(Z.div,{className:`reel-stats`,initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{delay:1,duration:.8},children:[(0,V.jsxs)(`div`,{children:[(0,V.jsx)(`strong`,{children:`2.5+`}),(0,V.jsx)(`span`,{children:`YEARS EXPERIENCE`})]}),(0,V.jsxs)(`div`,{children:[(0,V.jsx)(`strong`,{children:`18+`}),(0,V.jsx)(`span`,{children:`TECHNOLOGIES`})]}),(0,V.jsxs)(`div`,{children:[(0,V.jsx)(`strong`,{children:`8+`}),(0,V.jsx)(`span`,{children:`PROJECTS`})]})]})]}),(0,V.jsxs)(Z.div,{className:`reel-portrait hero-portrait-right`,style:{rotateX:a,rotateY:i},initial:{opacity:0,scale:.75,y:50},animate:{opacity:1,scale:1,y:0},transition:{duration:1.2,delay:.2,ease:[.16,1,.3,1]},children:[(0,V.jsx)(Z.div,{className:`portrait-aura`,animate:{scale:[.9,1.08,.9],opacity:[.55,1,.55]},transition:{duration:4,repeat:1/0,ease:`easeInOut`}}),(0,V.jsxs)(Z.div,{className:`hero-floating-card hero-card-one`,animate:{y:[-8,8,-8]},transition:{duration:4,repeat:1/0,ease:`easeInOut`},children:[(0,V.jsx)(op,{}),(0,V.jsx)(`span`,{children:`INFRASTRUCTURE`})]}),(0,V.jsxs)(Z.div,{className:`hero-floating-card hero-card-two`,animate:{y:[8,-8,8]},transition:{duration:4.5,repeat:1/0,ease:`easeInOut`},children:[(0,V.jsx)(ap,{}),(0,V.jsx)(`span`,{children:`SECURITY`})]}),(0,V.jsxs)(`div`,{className:`orbit orbit-one`,children:[(0,V.jsx)(`i`,{}),(0,V.jsx)(`i`,{}),(0,V.jsx)(`i`,{})]}),(0,V.jsxs)(`div`,{className:`orbit orbit-two`,children:[(0,V.jsx)(`i`,{}),(0,V.jsx)(`i`,{})]}),(0,V.jsx)(`div`,{className:`orbit orbit-three`}),(0,V.jsxs)(Z.div,{className:`portrait-frame`,animate:{y:[-5,5,-5]},transition:{duration:5,repeat:1/0,ease:`easeInOut`},children:[(0,V.jsx)(`img`,{src:$.profileImage,alt:$.name}),(0,V.jsx)(`div`,{className:`portrait-scan`})]}),(0,V.jsxs)(`div`,{className:`portrait-caption`,children:[(0,V.jsx)(`span`,{children:`01`}),(0,V.jsx)(`span`,{children:`NAIMISH SINGH`})]})]})]}),(0,V.jsxs)(Z.div,{className:`reel-footer`,initial:{opacity:0},animate:{opacity:1},transition:{delay:1.2,duration:.8},children:[(0,V.jsxs)(`button`,{onClick:()=>o(`about`),className:`scroll-label`,children:[(0,V.jsx)(`span`,{children:`SCROLL TO EXPLORE`}),(0,V.jsx)(Op,{})]}),(0,V.jsx)(`div`,{className:`footer-line`,children:(0,V.jsx)(`span`,{})}),(0,V.jsxs)(`span`,{children:[`INDIA · `,new Date().getFullYear()]})]})]}),(0,V.jsx)(`style`,{children:`
+  `,location:`India`,email:`naimishsingh855@gmail.com`,phone:`+91 8009464355`,resume:`/ns-port/resume.pdf`,profileImage:`/ns-port/profile.jpeg`,socials:{linkedin:`https://www.linkedin.com/in/naimish-singh-aws`,github:`https://github.com/Naimish980`,instagram:`https://www.instagram.com/naimish_353`},skills:[`Windows 10/11`,`Desktop Support`,`Hardware Troubleshooting`,`Networking`,`TCP/IP`,`DNS`,`DHCP`,`Active Directory`,`Office 365`,`Microsoft Outlook`,`Linux`,`AWS`,`VMware`,`VirtualBox`,`Remote Support`,`LAN/WAN`,`Printer Support`,`Ticketing System`],experience:[{company:`Indira IVF`,role:`IT Engineer`,duration:`May 2026 - Present`,description:`Managing desktop support, networking, hardware troubleshooting, Windows systems, user support, and IT infrastructure.`,responsibilities:[`Provided L1 IT support for hardware, software, and network-related issues.`,`Troubleshot Windows OS, application, and login-related problems.`,`Managed Active Directory user accounts and password resets.`,`Diagnosed and resolved LAN, Wi-Fi, DNS, DHCP and VPN connectivity issues.`,`Installed and configured Microsoft Office, Outlook and business applications.`,`Supported printers, desktops, laptops and peripheral devices.`,`Maintained SLA through ticketing system.`,`Provided remote support and collaborated with infrastructure teams.`]},{company:`CM Solutions`,role:`Desktop Support Engineer`,duration:`Sep 2024 - Jan 2026`,description:`Provided desktop support, OS installation, hardware maintenance, networking, printer support, and software troubleshooting.`,responsibilities:[`Installed and configured Windows desktops and laptops.`,`Performed hardware troubleshooting and preventive maintenance.`,`Resolved LAN, Wi-Fi, DNS, DHCP and TCP/IP issues.`,`Supported Microsoft Office 365 and Outlook.`,`Installed software, drivers and security updates.`,`Provided remote and onsite technical support.`,`Maintained IT asset inventory.`,`Resolved incidents through ticketing system.`]}],projects:[{title:`Enterprise IT Infrastructure Support`,description:`Provided end-to-end IT support for desktops, laptops, printers, scanners and peripherals.`,technologies:[`Windows 11`,`Active Directory`,`Office 365`,`Outlook`,`Networking`]},{title:`Active Directory & User Management`,description:`Managed Active Directory users, password resets, account unlocks and domain joining.`,technologies:[`Active Directory`,`Windows Server`,`Group Policy`,`User Management`]},{title:`Microsoft 365 & Outlook Administration`,description:`Configured Outlook profiles, resolved mailbox issues and supported Microsoft 365 applications.`,technologies:[`Microsoft 365`,`Outlook`,`Exchange`,`Office Apps`]},{title:`Enterprise Network Infrastructure`,description:`Resolved LAN/WAN, DNS, DHCP, TCP/IP, VPN and Wi-Fi connectivity issues.`,technologies:[`Networking`,`TCP/IP`,`DNS`,`DHCP`,`VPN`]},{title:`Windows Deployment & System Administration`,description:`Installed Windows 10/11, drivers, security patches and optimized systems.`,technologies:[`Windows 10`,`Windows 11`,`Drivers`,`System Administration`]},{title:`IT Asset Management System`,description:`Managed desktops, laptops, printers and maintained IT inventory records.`,technologies:[`Asset Management`,`Hardware`,`Inventory`]},{title:`AWS Cloud Learning Lab`,description:`Hands-on practice with EC2, IAM, S3, VPC, Security Groups and CloudWatch.`,technologies:[`AWS EC2`,`IAM`,`S3`,`VPC`,`CloudWatch`]},{title:`Virtualization Lab`,description:`Created Windows and Linux virtual machines using VMware Workstation and VirtualBox.`,technologies:[`VMware`,`VirtualBox`,`Windows`,`Linux`]}],certifications:[{title:`Hardware & Networking`,issuer:`CM Solutions`,year:`2024`},{title:`AWS Solutions Architecture Job Simulation`,issuer:`AWS | Forage`,year:`2024`,link:`/ns-port/certificates/aws-solution-architecture.pdf`},{title:`Linux Administration`,issuer:`Udemy`,year:`2025`},{title:`Microsoft Office`,issuer:`Microsoft`,year:`2024`},{title:`Software Engineering Job Simulation`,issuer:`Goldman Sachs | Forage`,year:`December 2024`,description:`Completed Goldman Sachs' Software Engineering Job Simulation through Forage. Performed a cybersecurity task involving analysis of a leaked password database and gained exposure to secure software engineering and enterprise information security practices.`,link:`/ns-port/certificates/Goaldman.pdf`},{title:`Network Security Engineer`,issuer:`Skill India Digital Hub / NASSCOM`,year:`2026`,description:`Successfully completed the Network Security Engineer online skilling course through Skill India Digital Hub.`,link:`/ns-port/certificates/network-security-engineer.pdf`}]},Ap=()=>{let e=e=>{let t=document.getElementById(e);if(!t)return;let n=document.querySelector(`.ns-navbar`),r=n?n.getBoundingClientRect().height:70,i=t.getBoundingClientRect().top+window.scrollY,a=e===`home`?0:Math.max(0,i-r-8);window.scrollTo({top:a,behavior:`smooth`})};return(0,V.jsxs)(V.Fragment,{children:[(0,V.jsxs)(`section`,{id:`home`,className:`reel-hero`,children:[(0,V.jsx)(`div`,{className:`reel-noise`}),(0,V.jsx)(`div`,{className:`hero-ambient hero-ambient-one`}),(0,V.jsx)(`div`,{className:`hero-ambient hero-ambient-two`}),(0,V.jsx)(`div`,{className:`hero-light-beam`}),(0,V.jsxs)(`div`,{className:`reel-hero-grid`,children:[(0,V.jsxs)(Z.div,{className:`reel-copy`,initial:{opacity:0,x:-70},animate:{opacity:1,x:0},transition:{duration:1,ease:[.16,1,.3,1]},children:[(0,V.jsx)(Z.p,{className:`reel-kicker`,initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{delay:.2,duration:.7},children:`IT ENGINEER · CYBERSECURITY · INFRASTRUCTURE`}),(0,V.jsxs)(`h1`,{className:`reel-title`,children:[(0,V.jsx)(Z.span,{initial:{opacity:0,y:50},animate:{opacity:1,y:0},transition:{delay:.25,duration:.8},children:`NAIMISH`}),(0,V.jsx)(Z.span,{initial:{opacity:0,y:50},animate:{opacity:1,y:0},transition:{delay:.38,duration:.8},children:`SINGH`}),(0,V.jsx)(Z.span,{className:`reel-outline`,initial:{opacity:0,y:50},animate:{opacity:1,y:0},transition:{delay:.51,duration:.8},children:`ENGINEER.`})]}),(0,V.jsx)(Z.p,{className:`reel-intro`,initial:{opacity:0,y:25},animate:{opacity:1,y:0},transition:{delay:.65,duration:.8},children:$.tagline}),(0,V.jsxs)(Z.div,{className:`reel-actions`,initial:{opacity:0,y:25},animate:{opacity:1,y:0},transition:{delay:.8,duration:.7},children:[(0,V.jsxs)(Z.a,{href:$.resume,whileHover:{y:-2},whileTap:{scale:.98},target:`_blank`,rel:`noreferrer`,className:`reel-btn reel-btn-primary`,children:[(0,V.jsx)(pp,{}),`Download CV`]}),(0,V.jsxs)(Z.button,{type:`button`,onClick:()=>e(`contact`),whileHover:{y:-2},whileTap:{scale:.98},className:`reel-btn reel-btn-secondary`,children:[(0,V.jsx)(fp,{}),`Contact Me`]})]}),(0,V.jsxs)(Z.div,{className:`reel-stats`,initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{delay:1,duration:.8},children:[(0,V.jsxs)(Z.div,{whileHover:{y:-3},children:[(0,V.jsx)(`strong`,{children:`2.5+`}),(0,V.jsx)(`span`,{children:`YEARS EXPERIENCE`})]}),(0,V.jsxs)(Z.div,{whileHover:{y:-3},children:[(0,V.jsx)(`strong`,{children:`18+`}),(0,V.jsx)(`span`,{children:`TECHNOLOGIES`})]}),(0,V.jsxs)(Z.div,{whileHover:{y:-3},children:[(0,V.jsx)(`strong`,{children:`8+`}),(0,V.jsx)(`span`,{children:`PROJECTS`})]})]})]}),(0,V.jsxs)(Z.div,{className:`reel-portrait hero-portrait-right`,whileHover:{scale:1.012},initial:{opacity:0,scale:.75,y:50},animate:{opacity:1,scale:1,y:0},transition:{duration:1.2,delay:.2,ease:[.16,1,.3,1]},children:[(0,V.jsx)(`div`,{className:`portrait-aura`}),(0,V.jsxs)(Z.div,{className:`hero-floating-card hero-card-one`,whileHover:{y:-8,scale:1.05,rotate:-1},transition:{duration:.25,ease:[.22,1,.36,1]},children:[(0,V.jsx)(op,{}),(0,V.jsx)(`span`,{children:`INFRASTRUCTURE`})]}),(0,V.jsxs)(Z.div,{className:`hero-floating-card hero-card-two`,whileHover:{y:-8,scale:1.05,rotate:1},transition:{duration:.25,ease:[.22,1,.36,1]},children:[(0,V.jsx)(ap,{}),(0,V.jsx)(`span`,{children:`SECURITY`})]}),(0,V.jsxs)(`div`,{className:`orbit orbit-one`,children:[(0,V.jsx)(`i`,{}),(0,V.jsx)(`i`,{}),(0,V.jsx)(`i`,{})]}),(0,V.jsxs)(`div`,{className:`orbit orbit-two`,children:[(0,V.jsx)(`i`,{}),(0,V.jsx)(`i`,{})]}),(0,V.jsx)(`div`,{className:`orbit orbit-three`}),(0,V.jsxs)(`div`,{className:`portrait-frame`,children:[(0,V.jsx)(`img`,{src:$.profileImage,alt:$.name}),(0,V.jsx)(`div`,{className:`portrait-scan`})]}),(0,V.jsxs)(`div`,{className:`portrait-caption`,children:[(0,V.jsx)(`span`,{children:`01`}),(0,V.jsx)(`span`,{children:`NAIMISH SINGH`})]})]})]}),(0,V.jsxs)(Z.div,{className:`reel-footer`,initial:{opacity:0},animate:{opacity:1},transition:{delay:1.2,duration:.8},children:[(0,V.jsxs)(`button`,{type:`button`,onClick:()=>e(`about`),className:`scroll-label`,children:[(0,V.jsx)(`span`,{children:`SCROLL TO EXPLORE`}),(0,V.jsx)(Op,{})]}),(0,V.jsx)(`div`,{className:`footer-line`,children:(0,V.jsx)(`span`,{})}),(0,V.jsxs)(`span`,{children:[`INDIA · `,new Date().getFullYear()]})]})]}),(0,V.jsx)(`style`,{children:`
         /* =======================================================
            DESKTOP CINEMATIC HERO
         ======================================================= */
@@ -1228,6 +1193,14 @@ to {
         }
 
 
+        .reel-hero {
+          overflow: hidden;
+        }
+
+        .hero-floating-card {
+          backface-visibility: hidden;
+        }
+
         /* =======================================================
            TABLET
         ======================================================= */
@@ -1285,6 +1258,15 @@ to {
         ======================================================= */
 
         @media (max-width: 650px) {
+
+          .reel-portrait:hover {
+            transform: none !important;
+          }
+
+          .reel-btn-primary:hover,
+          .reel-btn-secondary:hover {
+            box-shadow: none !important;
+          }
 
           /*
            * IMPORTANT:
@@ -1528,6 +1510,122 @@ to {
           }
         }
 
+
+        /* =======================================================
+           PREMIUM FINAL POLISH
+        ======================================================= */
+
+        .reel-btn {
+          transition:
+            transform 220ms ease,
+            border-color 220ms ease,
+            background 220ms ease,
+            box-shadow 220ms ease,
+            color 220ms ease;
+        }
+
+        .reel-btn-primary:hover {
+          box-shadow: 0 12px 30px rgba(213, 170, 80, 0.13);
+        }
+
+        .reel-btn-secondary:hover {
+          box-shadow: 0 10px 26px rgba(213, 170, 80, 0.08);
+        }
+
+        .hero-floating-card {
+          cursor: default;
+          transition:
+            transform 220ms ease,
+            border-color 220ms ease,
+            box-shadow 220ms ease,
+            background 220ms ease;
+        }
+
+        .hero-floating-card:hover {
+          border-color: rgba(213, 170, 80, 0.52);
+          background: rgba(213, 170, 80, 0.05);
+          box-shadow:
+            0 12px 32px rgba(0, 0, 0, 0.27),
+            0 0 22px rgba(213, 170, 80, 0.09);
+        }
+
+        .reel-stats > div {
+          transition:
+            transform 220ms ease,
+            border-color 220ms ease,
+            background 220ms ease;
+        }
+
+        .reel-stats > div:hover {
+          border-color: rgba(213, 170, 80, 0.4);
+          background: rgba(213, 170, 80, 0.022);
+        }
+
+        .portrait-frame {
+          transition:
+            box-shadow 350ms ease,
+            border-color 350ms ease;
+        }
+
+        .reel-portrait:hover .portrait-frame {
+          box-shadow:
+            0 0 0 1px rgba(213, 170, 80, 0.22),
+            0 24px 65px rgba(0, 0, 0, 0.32);
+        }
+
+        /* Keep the background light almost imperceptible. */
+        .hero-light-beam {
+          opacity: 0.16 !important;
+          animation: heroLightSweep 24s ease-in-out infinite;
+        }
+
+        @keyframes heroLightSweep {
+          0%, 18% {
+            transform: translate3d(-20%, 0, 0);
+            opacity: 0;
+          }
+
+          45% {
+            opacity: 0.16;
+          }
+
+          68%, 100% {
+            transform: translate3d(120%, 0, 0);
+            opacity: 0;
+          }
+        }
+
+        /* Static aura: glow without a continuous breathing animation. */
+        .portrait-aura {
+          opacity: 0.68 !important;
+          transform: scale(0.99);
+        }
+
+        /* Keep the scan line subtle and slow. */
+        .portrait-scan {
+          animation-duration: 9s !important;
+          opacity: 0.38 !important;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .hero-light-beam,
+          .portrait-scan {
+            animation: none !important;
+          }
+
+          .reel-btn,
+          .reel-stats > div,
+          .hero-floating-card,
+          .portrait-frame {
+            transition: none !important;
+          }
+
+          .reel-btn:hover,
+          .reel-stats > div:hover,
+          .hero-floating-card:hover {
+            transform: none !important;
+          }
+        }
 
         /* =======================================================
            VERY SMALL PHONES
@@ -2299,23 +2397,98 @@ to {
 
           background: rgba(255, 255, 255, 0.018);
 
+          isolation: isolate;
+
           transition:
-            transform 0.3s ease,
-            border-color 0.3s ease,
-            background 0.3s ease,
-            box-shadow 0.3s ease;
+            transform 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+            border-color 0.35s ease,
+            background 0.35s ease,
+            box-shadow 0.42s ease;
+        }
+
+        /* Soft cursor-like spotlight */
+        .about-card::before {
+          content: "";
+
+          position: absolute;
+
+          inset: -35%;
+
+          z-index: -1;
+
+          background:
+            radial-gradient(
+              circle at 50% 50%,
+              rgba(239, 197, 102, 0.13),
+              rgba(213, 170, 80, 0.045) 22%,
+              transparent 58%
+            );
+
+          opacity: 0;
+
+          transform: scale(0.72);
+
+          transition:
+            opacity 0.45s ease,
+            transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+
+          pointer-events: none;
+        }
+
+        .about-card::after {
+          content: "";
+
+          position: absolute;
+
+          left: -55%;
+
+          top: -25%;
+
+          width: 35%;
+
+          height: 150%;
+
+          background:
+            linear-gradient(
+              90deg,
+              transparent,
+              rgba(239, 197, 102, 0.16),
+              transparent
+            );
+
+          transform: rotate(16deg);
+
+          opacity: 0;
+
+          transition:
+            left 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+            opacity 0.25s ease;
+
+          pointer-events: none;
         }
 
         .about-card:hover {
-          transform: translateY(-5px);
+          transform: translateY(-7px) scale(1.018);
 
-          border-color: rgba(213, 170, 80, 0.35);
+          border-color: rgba(239, 197, 102, 0.55);
 
-          background: rgba(213, 170, 80, 0.035);
+          background: rgba(213, 170, 80, 0.045);
 
           box-shadow:
-            0 15px 35px rgba(0, 0, 0, 0.3),
-            0 0 25px rgba(213, 170, 80, 0.04);
+            0 18px 42px rgba(0, 0, 0, 0.38),
+            0 0 28px rgba(213, 170, 80, 0.075);
+        }
+
+        .about-card:hover::before {
+          opacity: 1;
+
+          transform: scale(1);
+        }
+
+        .about-card:hover::after {
+          left: 125%;
+
+          opacity: 1;
         }
 
         .about-card-header {
@@ -2356,11 +2529,19 @@ to {
 
         .about-card:hover .about-card-icon {
           transform:
-            scale(1.08)
-            rotate(5deg);
+            translateY(-1px)
+            scale(1.1)
+            rotate(4deg);
+
+          color: #efc566;
+
+          border-color: rgba(239, 197, 102, 0.48);
 
           background:
-            rgba(213, 170, 80, 0.08);
+            rgba(213, 170, 80, 0.1);
+
+          box-shadow:
+            0 0 18px rgba(213, 170, 80, 0.09);
         }
 
         .about-card h3 {
@@ -2371,6 +2552,16 @@ to {
           font-size: 14px;
 
           font-weight: 600;
+
+          transition:
+            color 0.3s ease,
+            transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .about-card:hover h3 {
+          color: #efc566;
+
+          transform: translateX(2px);
         }
 
         .about-card p {
@@ -2398,7 +2589,12 @@ to {
         }
 
         .about-card:hover .about-card-line {
-          width: 48px;
+          width: 54px;
+
+          background: #efc566;
+
+          box-shadow:
+            0 0 10px rgba(239, 197, 102, 0.35);
         }
 
         /* =====================================================
@@ -2828,7 +3024,7 @@ to {
             transition: none !important;
           }
         }
-      `})]})};function Np(e){return Q({tag:`svg`,attr:{viewBox:`0 0 24 24`},child:[{tag:`path`,attr:{fill:`none`,d:`M0 0h24v24H0z`},child:[]},{tag:`path`,attr:{d:`M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z`},child:[]}]})(e)}function Pp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 24 24`},child:[{tag:`path`,attr:{fill:`none`,d:`M0 0h24v24H0z`},child:[]},{tag:`path`,attr:{d:`M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z`},child:[]}]})(e)}function Fp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 24 24`},child:[{tag:`path`,attr:{fill:`none`,d:`M0 0h24v24H0z`},child:[]},{tag:`path`,attr:{d:`M20 13H4c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h16c.55 0 1-.45 1-1v-6c0-.55-.45-1-1-1zM7 19c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM20 3H4c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h16c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zM7 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z`},child:[]}]})(e)}function Ip(e){return Q({tag:`svg`,attr:{role:`img`,viewBox:`0 0 24 24`},child:[{tag:`path`,attr:{d:`M.5 10.1a.505.505 0 00-.197.048.497.497 0 00-.25.68l1.138 2.475c.179.38.38.592.721.592.342 0 .542-.22.72-.592l1.003-2.186a.144.144 0 01.144-.092.16.16 0 01.157.16v2.118a.535.535 0 101.066 0v-1.73a.531.531 0 01.566-.552.52.52 0 01.541.551v1.73a.531.531 0 00.53.593.539.539 0 00.535-.592v-1.73a.531.531 0 01.564-.552.52.52 0 01.543.551v1.73a.531.531 0 00.528.593.535.535 0 00.535-.592v-1.969a1.234 1.234 0 00-1.283-1.23 1.647 1.647 0 00-1.14.486 1.26 1.26 0 00-1.095-.483 1.807 1.807 0 00-1.074.483 1.287 1.287 0 00-.961-.483 1.177 1.177 0 00-1.158.786l-.729 1.716-.933-2.203.011-.004A.505.505 0 00.5 10.1zm18.43.06a.27.27 0 00-.266.274h.002v3.142a.27.27 0 10.535 0v-1.222c0-1.037.571-1.56 1.27-1.643a.266.266 0 00.238-.274.258.258 0 00-.266-.269 1.465 1.465 0 00-1.242.88v-.614a.266.266 0 00-.271-.274zm-6.735.008a.273.273 0 00-.25.217l-.912 2.627-.902-2.62a.28.28 0 00-.274-.22.266.266 0 00-.27.258.493.493 0 00.034.144l1.09 3.037.02-.007a.319.319 0 00.298.242.3.3 0 00.293-.242l.903-2.583.896 2.583a.3.3 0 00.293.242h.018a.319.319 0 00.293-.242l1.097-3.038a.512.512 0 00.033-.144.258.258 0 00-.265-.25.262.262 0 00-.258.209l-.918 2.63-.904-2.626a.285.285 0 00-.278-.217h-.025a.273.273 0 00-.012 0zm10.168.008a1.75 1.75 0 00-1.691 1.851 1.765 1.765 0 001.76 1.858l-.008.013a1.784 1.784 0 001.33-.539.228.228 0 00.082-.17.228.228 0 00-.379-.168 1.435 1.435 0 01-1.018.415 1.237 1.237 0 01-1.24-1.207h2.555a.247.247 0 00.246-.247c0-.945-.593-1.806-1.637-1.806zm-5.744.002a1.571 1.571 0 00-.158.006 2.384 2.384 0 00-1.078.205.22.22 0 00-.143.222.24.24 0 00.235.229.266.266 0 00.095-.024 1.822 1.822 0 01.834-.162c.691 0 1.07.334 1.07.979v.125a3.796 3.796 0 00-1.103-.15c-.892 0-1.52.4-1.52 1.16l-.003-.004c0 .736.671 1.117 1.34 1.117a1.575 1.575 0 001.298-.62v.343a.247.247 0 00.254.25.254.254 0 00.258-.262v-1.983a1.416 1.416 0 00-.379-1.046 1.571 1.571 0 00-1-.385zm5.719.43c.714 0 1.085.565 1.139 1.214h-2.278a1.222 1.222 0 011.139-1.215zm-5.885 1.382a3.75 3.75 0 011.057.153V12.49c0 .57-.539.973-1.2.973-.485 0-.904-.261-.904-.713 0-.467.375-.76 1.047-.76Z`},child:[]}]})(e)}var Lp=[{number:`01`,name:`Windows 10/11`,category:`OPERATING SYSTEM`,level:95,icon:(0,V.jsx)(Xf,{}),color:`#00adef`},{number:`02`,name:`Desktop Support`,category:`IT SUPPORT`,level:96,icon:(0,V.jsx)(mp,{}),color:`#7c3aed`},{number:`03`,name:`Hardware Troubleshooting`,category:`HARDWARE`,level:92,icon:(0,V.jsx)(rp,{}),color:`#f59e0b`},{number:`04`,name:`Networking`,category:`NETWORK`,level:90,icon:(0,V.jsx)(lp,{}),color:`#06b6d4`},{number:`05`,name:`TCP/IP`,category:`NETWORK PROTOCOL`,level:88,icon:(0,V.jsx)(op,{}),color:`#22c55e`},{number:`06`,name:`DNS / DHCP`,category:`NETWORK SERVICES`,level:90,icon:(0,V.jsx)(Fp,{}),color:`#3b82f6`},{number:`07`,name:`Active Directory`,category:`IDENTITY & ACCESS`,level:90,icon:(0,V.jsx)(Np,{}),color:`#2563eb`},{number:`08`,name:`Office 365`,category:`MICROSOFT 365`,level:90,icon:(0,V.jsx)(Zf,{}),color:`#f25022`},{number:`09`,name:`Outlook`,category:`PRODUCTIVITY`,level:89,icon:(0,V.jsx)(Pp,{}),color:`#0078d4`},{number:`10`,name:`Linux`,category:`OPERATING SYSTEM`,level:80,icon:(0,V.jsx)(Qf,{}),color:`#f7c843`},{number:`11`,name:`AWS`,category:`CLOUD`,level:85,icon:(0,V.jsx)(np,{}),color:`#ff9900`},{number:`12`,name:`VMware`,category:`VIRTUALIZATION`,level:82,icon:(0,V.jsx)(Ip,{}),color:`#607078`}],Rp=()=>(0,V.jsxs)(`section`,{id:`skills`,className:`skills-section`,children:[(0,V.jsx)(`div`,{className:`skills-background-glow skills-glow-left`}),(0,V.jsx)(`div`,{className:`skills-background-glow skills-glow-right`}),(0,V.jsxs)(`div`,{className:`skills-container`,children:[(0,V.jsxs)(Z.div,{className:`skills-header`,initial:{opacity:0,y:30},whileInView:{opacity:1,y:0},viewport:{once:!0,amount:.25},transition:{duration:.7,ease:[.22,1,.36,1]},children:[(0,V.jsxs)(`div`,{className:`skills-index`,children:[(0,V.jsx)(Z.span,{className:`skills-index-line`,initial:{width:0},whileInView:{width:35},viewport:{once:!0},transition:{duration:.6}}),(0,V.jsx)(`span`,{children:`02 / EXPERTISE`})]}),(0,V.jsx)(jp,{title:`TECHNICAL SKILLS`,subtitle:`Technologies and tools I use to build, support and maintain reliable IT environments.`}),(0,V.jsxs)(`div`,{className:`skills-header-meta`,children:[(0,V.jsx)(`span`,{children:`IT ENGINEER`}),(0,V.jsx)(`span`,{children:`•`}),(0,V.jsx)(`span`,{children:`2026`})]})]}),(0,V.jsx)(`div`,{className:`skills-grid`,children:Lp.map((e,t)=>(0,V.jsxs)(Z.article,{className:`skill-card`,style:{"--skill-color":e.color},initial:{opacity:0,y:45,scale:.97},whileInView:{opacity:1,y:0,scale:1},viewport:{once:!0,amount:.15},transition:{duration:.55,delay:t%2*.1,ease:[.22,1,.36,1]},whileHover:{y:-5},children:[(0,V.jsxs)(`div`,{className:`skill-card-top`,children:[(0,V.jsx)(`span`,{className:`skill-number`,children:e.number}),(0,V.jsx)(`span`,{className:`skill-category`,children:e.category})]}),(0,V.jsxs)(`div`,{className:`skill-main`,children:[(0,V.jsx)(Z.div,{className:`skill-icon`,whileHover:{scale:1.08,rotate:2},transition:{duration:.25},children:e.icon}),(0,V.jsxs)(`div`,{className:`skill-name-area`,children:[(0,V.jsx)(`h3`,{children:e.name}),(0,V.jsx)(`span`,{children:`PROFICIENCY`})]}),(0,V.jsxs)(`div`,{className:`skill-percentage`,children:[(0,V.jsx)(Z.span,{initial:{opacity:0},whileInView:{opacity:1},viewport:{once:!0},transition:{delay:.25+t%2*.1,duration:.4},children:e.level}),(0,V.jsx)(`small`,{children:`%`})]})]}),(0,V.jsxs)(`div`,{className:`skill-progress-area`,children:[(0,V.jsx)(`div`,{className:`skill-progress-track`,children:(0,V.jsx)(Z.div,{className:`skill-progress-fill`,initial:{width:0},whileInView:{width:`${e.level}%`},viewport:{once:!0,amount:.2},transition:{duration:1.1,delay:.25+t%2*.1,ease:[.22,1,.36,1]}})}),(0,V.jsxs)(`div`,{className:`skill-progress-labels`,children:[(0,V.jsx)(`span`,{children:`0`}),(0,V.jsx)(`span`,{children:`100`})]})]}),(0,V.jsxs)(`div`,{className:`skill-card-bottom`,children:[(0,V.jsx)(Z.span,{className:`skill-status-dot`,animate:{opacity:[.45,1,.45],scale:[.9,1.15,.9]},transition:{duration:2,repeat:1/0,ease:`easeInOut`}}),(0,V.jsx)(`span`,{children:`ACTIVE SKILLSET`}),(0,V.jsx)(`span`,{className:`skill-bottom-line`})]})]},e.name))}),(0,V.jsxs)(Z.div,{className:`skills-footer`,initial:{opacity:0,y:25},whileInView:{opacity:1,y:0},viewport:{once:!0,amount:.3},transition:{duration:.7,delay:.15},children:[(0,V.jsxs)(`div`,{className:`skills-footer-left`,children:[(0,V.jsx)(`span`,{className:`skills-footer-number`,children:`12`}),(0,V.jsxs)(`div`,{children:[(0,V.jsx)(`strong`,{children:`CORE TECHNOLOGIES`}),(0,V.jsx)(`span`,{children:`WINDOWS • NETWORKING • CLOUD • LINUX • VIRTUALIZATION`})]})]}),(0,V.jsxs)(`div`,{className:`skills-footer-right`,children:[(0,V.jsx)(`span`,{children:`CONTINUOUSLY`}),(0,V.jsx)(`strong`,{children:`LEARNING`})]})]})]}),(0,V.jsx)(`style`,{children:`
+      `})]})};function Np(e){return Q({tag:`svg`,attr:{viewBox:`0 0 24 24`},child:[{tag:`path`,attr:{fill:`none`,d:`M0 0h24v24H0z`},child:[]},{tag:`path`,attr:{d:`M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z`},child:[]}]})(e)}function Pp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 24 24`},child:[{tag:`path`,attr:{fill:`none`,d:`M0 0h24v24H0z`},child:[]},{tag:`path`,attr:{d:`M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z`},child:[]}]})(e)}function Fp(e){return Q({tag:`svg`,attr:{viewBox:`0 0 24 24`},child:[{tag:`path`,attr:{fill:`none`,d:`M0 0h24v24H0z`},child:[]},{tag:`path`,attr:{d:`M20 13H4c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h16c.55 0 1-.45 1-1v-6c0-.55-.45-1-1-1zM7 19c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM20 3H4c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h16c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zM7 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z`},child:[]}]})(e)}function Ip(e){return Q({tag:`svg`,attr:{role:`img`,viewBox:`0 0 24 24`},child:[{tag:`path`,attr:{d:`M.5 10.1a.505.505 0 00-.197.048.497.497 0 00-.25.68l1.138 2.475c.179.38.38.592.721.592.342 0 .542-.22.72-.592l1.003-2.186a.144.144 0 01.144-.092.16.16 0 01.157.16v2.118a.535.535 0 101.066 0v-1.73a.531.531 0 01.566-.552.52.52 0 01.541.551v1.73a.531.531 0 00.53.593.539.539 0 00.535-.592v-1.73a.531.531 0 01.564-.552.52.52 0 01.543.551v1.73a.531.531 0 00.528.593.535.535 0 00.535-.592v-1.969a1.234 1.234 0 00-1.283-1.23 1.647 1.647 0 00-1.14.486 1.26 1.26 0 00-1.095-.483 1.807 1.807 0 00-1.074.483 1.287 1.287 0 00-.961-.483 1.177 1.177 0 00-1.158.786l-.729 1.716-.933-2.203.011-.004A.505.505 0 00.5 10.1zm18.43.06a.27.27 0 00-.266.274h.002v3.142a.27.27 0 10.535 0v-1.222c0-1.037.571-1.56 1.27-1.643a.266.266 0 00.238-.274.258.258 0 00-.266-.269 1.465 1.465 0 00-1.242.88v-.614a.266.266 0 00-.271-.274zm-6.735.008a.273.273 0 00-.25.217l-.912 2.627-.902-2.62a.28.28 0 00-.274-.22.266.266 0 00-.27.258.493.493 0 00.034.144l1.09 3.037.02-.007a.319.319 0 00.298.242.3.3 0 00.293-.242l.903-2.583.896 2.583a.3.3 0 00.293.242h.018a.319.319 0 00.293-.242l1.097-3.038a.512.512 0 00.033-.144.258.258 0 00-.265-.25.262.262 0 00-.258.209l-.918 2.63-.904-2.626a.285.285 0 00-.278-.217h-.025a.273.273 0 00-.012 0zm10.168.008a1.75 1.75 0 00-1.691 1.851 1.765 1.765 0 001.76 1.858l-.008.013a1.784 1.784 0 001.33-.539.228.228 0 00.082-.17.228.228 0 00-.379-.168 1.435 1.435 0 01-1.018.415 1.237 1.237 0 01-1.24-1.207h2.555a.247.247 0 00.246-.247c0-.945-.593-1.806-1.637-1.806zm-5.744.002a1.571 1.571 0 00-.158.006 2.384 2.384 0 00-1.078.205.22.22 0 00-.143.222.24.24 0 00.235.229.266.266 0 00.095-.024 1.822 1.822 0 01.834-.162c.691 0 1.07.334 1.07.979v.125a3.796 3.796 0 00-1.103-.15c-.892 0-1.52.4-1.52 1.16l-.003-.004c0 .736.671 1.117 1.34 1.117a1.575 1.575 0 001.298-.62v.343a.247.247 0 00.254.25.254.254 0 00.258-.262v-1.983a1.416 1.416 0 00-.379-1.046 1.571 1.571 0 00-1-.385zm5.719.43c.714 0 1.085.565 1.139 1.214h-2.278a1.222 1.222 0 011.139-1.215zm-5.885 1.382a3.75 3.75 0 011.057.153V12.49c0 .57-.539.973-1.2.973-.485 0-.904-.261-.904-.713 0-.467.375-.76 1.047-.76Z`},child:[]}]})(e)}var Lp=[{number:`01`,name:`Windows 10/11`,category:`OPERATING SYSTEM`,level:95,icon:(0,V.jsx)(Xf,{}),color:`#00adef`},{number:`02`,name:`Desktop Support`,category:`IT SUPPORT`,level:96,icon:(0,V.jsx)(mp,{}),color:`#7c3aed`},{number:`03`,name:`Hardware Troubleshooting`,category:`HARDWARE`,level:92,icon:(0,V.jsx)(rp,{}),color:`#f59e0b`},{number:`04`,name:`Networking`,category:`NETWORK`,level:90,icon:(0,V.jsx)(lp,{}),color:`#06b6d4`},{number:`05`,name:`TCP/IP`,category:`NETWORK PROTOCOL`,level:88,icon:(0,V.jsx)(op,{}),color:`#22c55e`},{number:`06`,name:`DNS / DHCP`,category:`NETWORK SERVICES`,level:90,icon:(0,V.jsx)(Fp,{}),color:`#3b82f6`},{number:`07`,name:`Active Directory`,category:`IDENTITY & ACCESS`,level:90,icon:(0,V.jsx)(Np,{}),color:`#2563eb`},{number:`08`,name:`Office 365`,category:`MICROSOFT 365`,level:90,icon:(0,V.jsx)(Zf,{}),color:`#f25022`},{number:`09`,name:`Outlook`,category:`PRODUCTIVITY`,level:89,icon:(0,V.jsx)(Pp,{}),color:`#0078d4`},{number:`10`,name:`Linux`,category:`OPERATING SYSTEM`,level:80,icon:(0,V.jsx)(Qf,{}),color:`#f7c843`},{number:`11`,name:`AWS`,category:`CLOUD`,level:85,icon:(0,V.jsx)(np,{}),color:`#ff9900`},{number:`12`,name:`VMware`,category:`VIRTUALIZATION`,level:82,icon:(0,V.jsx)(Ip,{}),color:`#607078`}],Rp=()=>(0,V.jsxs)(`section`,{id:`skills`,className:`skills-section`,children:[(0,V.jsx)(`div`,{className:`skills-background-glow skills-glow-left`}),(0,V.jsx)(`div`,{className:`skills-background-glow skills-glow-right`}),(0,V.jsxs)(`div`,{className:`skills-container`,children:[(0,V.jsxs)(Z.div,{className:`skills-header`,initial:{opacity:0,y:30},whileInView:{opacity:1,y:0},viewport:{once:!0,amount:.25},transition:{duration:.7,ease:[.22,1,.36,1]},children:[(0,V.jsxs)(`div`,{className:`skills-index`,children:[(0,V.jsx)(Z.span,{className:`skills-index-line`,initial:{width:0},whileInView:{width:35},viewport:{once:!0},transition:{duration:.6}}),(0,V.jsx)(`span`,{children:`02 / EXPERTISE`})]}),(0,V.jsx)(jp,{title:`TECHNICAL SKILLS`,subtitle:`Technologies and tools I use to build, support and maintain reliable IT environments.`}),(0,V.jsxs)(`div`,{className:`skills-header-meta`,children:[(0,V.jsx)(`span`,{children:`IT ENGINEER`}),(0,V.jsx)(`span`,{children:`•`}),(0,V.jsx)(`span`,{children:`2026`})]})]}),(0,V.jsx)(`div`,{className:`skills-grid`,children:Lp.map((e,t)=>(0,V.jsxs)(Z.article,{className:`skill-card`,style:{"--skill-color":e.color},initial:{opacity:0,y:45,scale:.97},whileInView:{opacity:1,y:0,scale:1},viewport:{once:!0,amount:.15},transition:{duration:.55,delay:t%2*.1,ease:[.22,1,.36,1]},whileHover:{y:-5},children:[(0,V.jsxs)(`div`,{className:`skill-card-top`,children:[(0,V.jsx)(`span`,{className:`skill-number`,children:e.number}),(0,V.jsx)(`span`,{className:`skill-category`,children:e.category})]}),(0,V.jsxs)(`div`,{className:`skill-main`,children:[(0,V.jsx)(Z.div,{className:`skill-icon`,whileHover:{scale:1.08,rotate:2},transition:{duration:.25},children:e.icon}),(0,V.jsxs)(`div`,{className:`skill-name-area`,children:[(0,V.jsx)(`h3`,{children:e.name}),(0,V.jsx)(`span`,{children:`PROFICIENCY`})]}),(0,V.jsxs)(`div`,{className:`skill-percentage`,children:[(0,V.jsx)(Z.span,{initial:{opacity:0},whileInView:{opacity:1},viewport:{once:!0},transition:{delay:.25+t%2*.1,duration:.4},children:e.level}),(0,V.jsx)(`small`,{children:`%`})]})]}),(0,V.jsxs)(`div`,{className:`skill-progress-area`,children:[(0,V.jsx)(`div`,{className:`skill-progress-track`,children:(0,V.jsx)(Z.div,{className:`skill-progress-fill`,initial:{width:0},whileInView:{width:`${e.level}%`},viewport:{once:!0,amount:.2},transition:{duration:1.1,delay:.25+t%2*.1,ease:[.22,1,.36,1]}})}),(0,V.jsxs)(`div`,{className:`skill-progress-labels`,children:[(0,V.jsx)(`span`,{children:`0`}),(0,V.jsx)(`span`,{children:`100`})]})]}),(0,V.jsxs)(`div`,{className:`skill-card-bottom`,children:[(0,V.jsx)(`span`,{className:`skill-status-dot`}),(0,V.jsx)(`span`,{children:`ACTIVE SKILLSET`}),(0,V.jsx)(`span`,{className:`skill-bottom-line`})]})]},e.name))}),(0,V.jsxs)(Z.div,{className:`skills-footer`,initial:{opacity:0,y:25},whileInView:{opacity:1,y:0},viewport:{once:!0,amount:.3},transition:{duration:.7,delay:.15},children:[(0,V.jsxs)(`div`,{className:`skills-footer-left`,children:[(0,V.jsx)(`span`,{className:`skills-footer-number`,children:`12`}),(0,V.jsxs)(`div`,{children:[(0,V.jsx)(`strong`,{children:`CORE TECHNOLOGIES`}),(0,V.jsx)(`span`,{children:`WINDOWS • NETWORKING • CLOUD • LINUX • VIRTUALIZATION`})]})]}),(0,V.jsxs)(`div`,{className:`skills-footer-right`,children:[(0,V.jsx)(`span`,{children:`CONTINUOUSLY`}),(0,V.jsx)(`strong`,{children:`LEARNING`})]})]})]}),(0,V.jsx)(`style`,{children:`
         .skills-section {
           position: relative;
           width: 100%;
@@ -2946,9 +3142,10 @@ to {
             );
 
           transition:
+            transform 0.42s cubic-bezier(0.22, 1, 0.36, 1),
             border-color 0.3s ease,
             background 0.3s ease,
-            box-shadow 0.3s ease;
+            box-shadow 0.42s ease;
         }
 
         .skill-card::before {
@@ -2990,18 +3187,33 @@ to {
         }
 
         .skill-card:hover {
-          border-color: rgba(213, 170, 80, 0.32);
+          transform: translateY(-6px) scale(1.012);
+
+          border-color: rgba(239, 197, 102, 0.52);
 
           background:
             linear-gradient(
               145deg,
-              rgba(213, 170, 80, 0.035),
-              rgba(255, 255, 255, 0.012)
+              rgba(213, 170, 80, 0.055),
+              rgba(255, 255, 255, 0.014)
             );
 
           box-shadow:
-            0 18px 45px rgba(0, 0, 0, 0.3),
-            0 0 25px rgba(213, 170, 80, 0.035);
+            0 20px 45px rgba(0, 0, 0, 0.38),
+            0 0 30px rgba(213, 170, 80, 0.07);
+        }
+
+        .skill-card:hover::before {
+          opacity: 0.8;
+          height: 2px;
+        }
+
+        .skill-card:hover::after {
+          opacity: 0.055;
+          transform: scale(1.12);
+          transition:
+            opacity 0.35s ease,
+            transform 0.45s ease;
         }
 
         /* =========================
@@ -3066,6 +3278,16 @@ to {
           font-size: 22px;
         }
 
+        .skill-card:hover .skill-icon {
+          transform: translateY(-1px) scale(1.08) rotate(3deg);
+
+          border-color: rgba(239, 197, 102, 0.45);
+
+          background: rgba(213, 170, 80, 0.08);
+
+          box-shadow: 0 0 18px rgba(213, 170, 80, 0.08);
+        }
+
         .skill-name-area {
           min-width: 0;
           flex: 1;
@@ -3085,6 +3307,15 @@ to {
 
           text-overflow: ellipsis;
           white-space: nowrap;
+
+          transition:
+            color 0.3s ease,
+            transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .skill-card:hover .skill-name-area h3 {
+          color: #efc566;
+          transform: translateX(2px);
         }
 
         .skill-name-area span {
@@ -3148,6 +3379,17 @@ to {
 
           box-shadow:
             0 0 8px rgba(213, 170, 80, 0.22);
+
+          transition:
+            filter 0.35s ease,
+            box-shadow 0.35s ease;
+        }
+
+        .skill-card:hover .skill-progress-fill {
+          filter: brightness(1.12);
+
+          box-shadow:
+            0 0 12px rgba(239, 197, 102, 0.35);
         }
 
         .skill-progress-labels {
@@ -3193,6 +3435,17 @@ to {
 
           box-shadow:
             0 0 7px rgba(213, 170, 80, 0.5);
+
+          transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+        }
+
+        .skill-card:hover .skill-status-dot {
+          transform: scale(1.45);
+
+          box-shadow:
+            0 0 10px rgba(239, 197, 102, 0.8);
         }
 
         .skill-bottom-line {
@@ -3454,11 +3707,15 @@ to {
         ========================= */
 
         @media (prefers-reduced-motion: reduce) {
-          .skill-status-dot {
-            animation: none !important;
+          .skill-status-dot,
+          .skill-card,
+          .skill-icon,
+          .skill-name-area h3,
+          .skill-progress-fill {
+            transition: none !important;
           }
         }
-      `})]}),zp=()=>(0,V.jsxs)(`section`,{id:`experience`,className:`experience-video-section`,children:[(0,V.jsx)(`div`,{className:`experience-background-glow experience-glow-left`}),(0,V.jsx)(`div`,{className:`experience-background-glow experience-glow-right`}),(0,V.jsxs)(`div`,{className:`experience-container`,children:[(0,V.jsxs)(Z.div,{className:`experience-heading`,initial:{opacity:0,y:30},whileInView:{opacity:1,y:0},viewport:{once:!0,amount:.25},transition:{duration:.7,ease:[.22,1,.36,1]},children:[(0,V.jsxs)(`div`,{className:`experience-index`,children:[(0,V.jsx)(Z.span,{className:`experience-index-line`,initial:{width:0},whileInView:{width:35},viewport:{once:!0},transition:{duration:.6}}),(0,V.jsx)(`span`,{children:`03 / EXPERIENCE`})]}),(0,V.jsx)(jp,{title:`Experience`,subtitle:`My professional journey and responsibilities.`})]}),(0,V.jsxs)(`div`,{className:`experience-video-stage`,children:[(0,V.jsx)(`div`,{className:`experience-video-grid`}),(0,V.jsx)(`div`,{className:`experience-video-vignette`}),(0,V.jsx)(Z.div,{className:`experience-timeline-line`,initial:{height:0},whileInView:{height:`100%`},viewport:{once:!0,amount:.1},transition:{duration:1.6,ease:[.22,1,.36,1]}}),(0,V.jsxs)(`div`,{className:`experience-video-scene`,children:[(0,V.jsxs)(Z.div,{className:`experience-scene-label`,initial:{opacity:0,x:-15},whileInView:{opacity:1,x:0},viewport:{once:!0},transition:{duration:.5},children:[(0,V.jsx)(`span`,{children:`CAREER TIMELINE`}),(0,V.jsxs)(`span`,{children:[`01 — 0`,$.experience.length]})]}),$.experience.map((e,t)=>(0,V.jsxs)(Z.article,{className:`experience-video-frame`,initial:{opacity:0,y:55,scale:.97},whileInView:{opacity:1,y:0,scale:1},viewport:{once:!0,amount:.18},transition:{duration:.7,delay:t*.12,ease:[.22,1,.36,1]},whileHover:{y:-4},children:[(0,V.jsx)(Z.div,{className:`experience-timeline-dot`,initial:{scale:0,opacity:0},whileInView:{scale:1,opacity:1},viewport:{once:!0},transition:{duration:.45,delay:.25+t*.12,ease:[.22,1,.36,1]},children:(0,V.jsx)(`span`,{})}),(0,V.jsxs)(`div`,{className:`experience-frame-content`,children:[(0,V.jsxs)(Z.div,{className:`experience-frame-number`,initial:{opacity:0,x:-15},whileInView:{opacity:1,x:0},viewport:{once:!0},transition:{duration:.45,delay:.15+t*.12},children:[`0`,t+1]}),(0,V.jsx)(`div`,{className:`experience-frame-light`}),(0,V.jsxs)(`div`,{className:`experience-frame-header`,children:[(0,V.jsxs)(Z.div,{className:`experience-role-block`,initial:{opacity:0,x:-20},whileInView:{opacity:1,x:0},viewport:{once:!0},transition:{duration:.5,delay:.18+t*.12},children:[(0,V.jsx)(`span`,{className:`experience-overline`,children:`PROFESSIONAL EXPERIENCE`}),(0,V.jsx)(`h3`,{children:e.role}),(0,V.jsx)(`div`,{className:`experience-company-line`,children:(0,V.jsx)(`span`,{children:e.company})})]}),(0,V.jsxs)(Z.div,{className:`experience-date`,initial:{opacity:0,x:20},whileInView:{opacity:1,x:0},viewport:{once:!0},transition:{duration:.5,delay:.25+t*.12},children:[(0,V.jsx)(Sp,{}),(0,V.jsx)(`span`,{children:e.duration})]})]}),(0,V.jsx)(Z.div,{className:`experience-frame-divider`,initial:{width:0},whileInView:{width:`100%`},viewport:{once:!0},transition:{duration:.7,delay:.3+t*.12}}),(0,V.jsx)(Z.p,{className:`experience-frame-description`,initial:{opacity:0,y:12},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5,delay:.35+t*.12},children:e.description}),e.responsibilities&&(0,V.jsx)(`div`,{className:`experience-points`,children:e.responsibilities.map((e,n)=>(0,V.jsxs)(Z.div,{className:`experience-point`,initial:{opacity:0,x:-18},whileInView:{opacity:1,x:0},viewport:{once:!0,amount:.2},transition:{duration:.4,delay:.42+t*.12+n*.06,ease:`easeOut`},children:[(0,V.jsx)(Z.span,{className:`experience-point-icon`,initial:{scale:0},whileInView:{scale:1},viewport:{once:!0},transition:{duration:.3,delay:.45+t*.12+n*.06},children:(0,V.jsx)(bp,{})}),(0,V.jsx)(`span`,{children:e})]},n))}),(0,V.jsxs)(Z.div,{className:`experience-frame-bottom`,initial:{opacity:0},whileInView:{opacity:1},viewport:{once:!0},transition:{duration:.5,delay:.55+t*.12},children:[(0,V.jsx)(`span`,{children:`IT / INFRASTRUCTURE / SECURITY`}),(0,V.jsx)(Z.span,{className:`experience-frame-arrow`,animate:{y:[0,4,0]},transition:{duration:2,repeat:1/0,ease:`easeInOut`},children:(0,V.jsx)(Op,{})})]})]})]},t)),(0,V.jsxs)(Z.div,{className:`experience-scene-end`,initial:{opacity:0,y:15},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.6},children:[(0,V.jsx)(`span`,{}),(0,V.jsx)(`p`,{children:`END OF EXPERIENCE`}),(0,V.jsx)(`span`,{})]})]})]})]}),(0,V.jsx)(`style`,{children:`
+      `})]}),zp=()=>(0,V.jsxs)(`section`,{id:`experience`,className:`experience-video-section`,children:[(0,V.jsx)(`div`,{className:`experience-background-glow experience-glow-left`}),(0,V.jsx)(`div`,{className:`experience-background-glow experience-glow-right`}),(0,V.jsxs)(`div`,{className:`experience-container`,children:[(0,V.jsxs)(Z.div,{className:`experience-heading`,initial:{opacity:0,y:30},whileInView:{opacity:1,y:0},viewport:{once:!0,amount:.25},transition:{duration:.7,ease:[.22,1,.36,1]},children:[(0,V.jsxs)(`div`,{className:`experience-index`,children:[(0,V.jsx)(Z.span,{className:`experience-index-line`,initial:{width:0},whileInView:{width:35},viewport:{once:!0},transition:{duration:.6}}),(0,V.jsx)(`span`,{children:`03 / EXPERIENCE`})]}),(0,V.jsx)(jp,{title:`Experience`,subtitle:`My professional journey and responsibilities.`})]}),(0,V.jsxs)(`div`,{className:`experience-video-stage`,children:[(0,V.jsx)(`div`,{className:`experience-video-grid`}),(0,V.jsx)(`div`,{className:`experience-video-vignette`}),(0,V.jsx)(Z.div,{className:`experience-timeline-line`,initial:{height:0},whileInView:{height:`100%`},viewport:{once:!0,amount:.1},transition:{duration:1.6,ease:[.22,1,.36,1]}}),(0,V.jsxs)(`div`,{className:`experience-video-scene`,children:[(0,V.jsxs)(Z.div,{className:`experience-scene-label`,initial:{opacity:0,x:-15},whileInView:{opacity:1,x:0},viewport:{once:!0},transition:{duration:.5},children:[(0,V.jsx)(`span`,{children:`CAREER TIMELINE`}),(0,V.jsxs)(`span`,{children:[`01 — 0`,$.experience.length]})]}),$.experience.map((e,t)=>(0,V.jsxs)(Z.article,{className:`experience-video-frame`,initial:{opacity:0,y:55,scale:.97},whileInView:{opacity:1,y:0,scale:1},viewport:{once:!0,amount:.18},transition:{duration:.7,delay:t*.12,ease:[.22,1,.36,1]},whileHover:{y:-4},children:[(0,V.jsx)(Z.div,{className:`experience-timeline-dot`,initial:{scale:0,opacity:0},whileInView:{scale:1,opacity:1},viewport:{once:!0},transition:{duration:.45,delay:.25+t*.12,ease:[.22,1,.36,1]},children:(0,V.jsx)(`span`,{})}),(0,V.jsxs)(`div`,{className:`experience-frame-content`,children:[(0,V.jsxs)(Z.div,{className:`experience-frame-number`,initial:{opacity:0,x:-15},whileInView:{opacity:1,x:0},viewport:{once:!0},transition:{duration:.45,delay:.15+t*.12},children:[`0`,t+1]}),(0,V.jsx)(`div`,{className:`experience-frame-light`}),(0,V.jsxs)(`div`,{className:`experience-frame-header`,children:[(0,V.jsxs)(Z.div,{className:`experience-role-block`,initial:{opacity:0,x:-20},whileInView:{opacity:1,x:0},viewport:{once:!0},transition:{duration:.5,delay:.18+t*.12},children:[(0,V.jsx)(`span`,{className:`experience-overline`,children:`PROFESSIONAL EXPERIENCE`}),(0,V.jsx)(`h3`,{children:e.role}),(0,V.jsx)(`div`,{className:`experience-company-line`,children:(0,V.jsx)(`span`,{children:e.company})})]}),(0,V.jsxs)(Z.div,{className:`experience-date`,initial:{opacity:0,x:20},whileInView:{opacity:1,x:0},viewport:{once:!0},transition:{duration:.5,delay:.25+t*.12},children:[(0,V.jsx)(Sp,{}),(0,V.jsx)(`span`,{children:e.duration})]})]}),(0,V.jsx)(Z.div,{className:`experience-frame-divider`,initial:{width:0},whileInView:{width:`100%`},viewport:{once:!0},transition:{duration:.7,delay:.3+t*.12}}),(0,V.jsx)(Z.p,{className:`experience-frame-description`,initial:{opacity:0,y:12},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5,delay:.35+t*.12},children:e.description}),e.responsibilities&&(0,V.jsx)(`div`,{className:`experience-points`,children:e.responsibilities.map((e,n)=>(0,V.jsxs)(Z.div,{className:`experience-point`,initial:{opacity:0,x:-18},whileInView:{opacity:1,x:0},viewport:{once:!0,amount:.2},transition:{duration:.4,delay:.42+t*.12+n*.06,ease:`easeOut`},children:[(0,V.jsx)(Z.span,{className:`experience-point-icon`,initial:{scale:0},whileInView:{scale:1},viewport:{once:!0},transition:{duration:.3,delay:.45+t*.12+n*.06},children:(0,V.jsx)(bp,{})}),(0,V.jsx)(`span`,{children:e})]},n))}),(0,V.jsxs)(Z.div,{className:`experience-frame-bottom`,initial:{opacity:0},whileInView:{opacity:1},viewport:{once:!0},transition:{duration:.5,delay:.55+t*.12},children:[(0,V.jsx)(`span`,{children:`IT / INFRASTRUCTURE / SECURITY`}),(0,V.jsx)(`span`,{className:`experience-frame-arrow`,children:(0,V.jsx)(Op,{})})]})]})]},t)),(0,V.jsxs)(Z.div,{className:`experience-scene-end`,initial:{opacity:0,y:15},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.6},children:[(0,V.jsx)(`span`,{}),(0,V.jsx)(`p`,{children:`END OF EXPERIENCE`}),(0,V.jsx)(`span`,{})]})]})]})]}),(0,V.jsx)(`style`,{children:`
         .experience-video-section {
           position: relative;
           width: 100%;
@@ -4334,6 +4591,154 @@ to {
         }
 
         /* =========================
+           PREMIUM HOVER POLISH
+        ========================= */
+
+        .experience-frame-content {
+          transition:
+            transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+            border-color 0.35s ease,
+            background 0.35s ease,
+            box-shadow 0.35s ease;
+        }
+
+        .experience-frame-content::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          pointer-events: none;
+          opacity: 0;
+          background:
+            radial-gradient(
+              circle at 18% 20%,
+              rgba(213, 170, 80, 0.08),
+              transparent 32%
+            );
+          transition: opacity 0.35s ease;
+        }
+
+        .experience-video-frame:hover .experience-frame-content {
+          transform: translateY(-5px);
+          border-color: rgba(213, 170, 80, 0.42);
+          background:
+            linear-gradient(
+              145deg,
+              rgba(213, 170, 80, 0.045),
+              rgba(255, 255, 255, 0.012)
+            );
+          box-shadow:
+            0 22px 55px rgba(0, 0, 0, 0.32),
+            0 0 28px rgba(213, 170, 80, 0.055);
+        }
+
+        .experience-video-frame:hover .experience-frame-content::after {
+          opacity: 1;
+        }
+
+        .experience-video-frame:hover .experience-frame-number {
+          color: rgba(213, 170, 80, 0.34);
+          transition: color 0.3s ease;
+        }
+
+        .experience-video-frame:hover .experience-role-block h3 {
+          color: #efc566;
+          transform: translateX(3px);
+          transition:
+            color 0.3s ease,
+            transform 0.3s ease;
+        }
+
+        .experience-role-block h3 {
+          transition:
+            color 0.3s ease,
+            transform 0.3s ease;
+        }
+
+        .experience-video-frame:hover .experience-company-line::before {
+          width: 28px;
+          box-shadow: 0 0 9px rgba(213, 170, 80, 0.3);
+        }
+
+        .experience-company-line::before {
+          transition:
+            width 0.3s ease,
+            box-shadow 0.3s ease;
+        }
+
+        .experience-video-frame:hover .experience-date {
+          border-color: rgba(213, 170, 80, 0.3);
+          color: #c8c1b4;
+          box-shadow: 0 0 18px rgba(213, 170, 80, 0.045);
+        }
+
+        .experience-date {
+          transition:
+            border-color 0.3s ease,
+            color 0.3s ease,
+            box-shadow 0.3s ease;
+        }
+
+        .experience-video-frame:hover .experience-timeline-dot {
+          border-color: rgba(239, 197, 102, 0.9);
+          box-shadow:
+            0 0 0 4px rgba(213, 170, 80, 0.035),
+            0 0 20px rgba(213, 170, 80, 0.22);
+        }
+
+        .experience-timeline-dot {
+          transition:
+            border-color 0.3s ease,
+            box-shadow 0.3s ease;
+        }
+
+        .experience-point {
+          transition:
+            transform 0.25s ease,
+            border-color 0.25s ease,
+            background 0.25s ease,
+            color 0.25s ease;
+        }
+
+        .experience-point:hover {
+          transform: translateX(3px);
+          border-color: rgba(213, 170, 80, 0.24);
+          background: rgba(213, 170, 80, 0.035);
+          color: #d0cabf;
+        }
+
+        .experience-point-icon {
+          transition:
+            transform 0.25s ease,
+            filter 0.25s ease;
+        }
+
+        .experience-point:hover .experience-point-icon {
+          transform: scale(1.12);
+          filter: drop-shadow(0 0 5px rgba(213, 170, 80, 0.35));
+        }
+
+        .experience-frame-arrow {
+          transition:
+            transform 0.3s ease,
+            color 0.3s ease,
+            filter 0.3s ease;
+        }
+
+        .experience-video-frame:hover .experience-frame-arrow {
+          transform: translateY(2px);
+          color: #efc566;
+          filter: drop-shadow(0 0 6px rgba(213, 170, 80, 0.35));
+        }
+
+        .experience-frame-bottom {
+          transition: color 0.3s ease;
+        }
+
+        .experience-video-frame:hover .experience-frame-bottom {
+          color: #6f685d;
+        }
+
+        /* =========================
            REDUCED MOTION
         ========================= */
 
@@ -5120,6 +5525,65 @@ to {
           filter: blur(20px);
 
           z-index: 0;
+        }
+
+        .project-layout {
+          transition: transform 0.35s ease;
+        }
+
+        .project-layout:hover .laptop-lid {
+          border-color: rgba(213, 170, 80, 0.32);
+          box-shadow:
+            0 30px 70px rgba(0, 0, 0, 0.65),
+            0 0 45px rgba(213, 170, 80, 0.07),
+            inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+
+        .project-layout:hover .screen-logo {
+          background: rgba(213, 170, 80, 0.08);
+          box-shadow: 0 0 18px rgba(213, 170, 80, 0.08);
+        }
+
+        .project-layout:hover .project-info h2 {
+          color: #efc566;
+          transform: translateX(3px);
+        }
+
+        .project-info h2 {
+          transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .project-layout:hover .screen-divider {
+          width: 85px;
+          opacity: 0.8;
+        }
+
+        .screen-divider {
+          transition: width 0.35s ease, opacity 0.35s ease;
+        }
+
+        .project-tech-list span {
+          transition:
+            border-color 0.25s ease,
+            color 0.25s ease,
+            background 0.25s ease,
+            transform 0.25s ease;
+        }
+
+        .project-tech-list span:hover {
+          transform: translateY(-2px);
+        }
+
+        .project-button {
+          transition:
+            border-color 0.25s ease,
+            background 0.25s ease,
+            color 0.25s ease,
+            box-shadow 0.25s ease;
+        }
+
+        .project-button:hover {
+          box-shadow: 0 8px 24px rgba(213, 170, 80, 0.08);
         }
 
         /* =========================================
@@ -6102,6 +6566,10 @@ to {
 
         .cert-document {
           position: relative;
+          transition:
+            transform 0.35s ease,
+            border-color 0.35s ease,
+            box-shadow 0.35s ease;
           width: 100%;
           height: 295px;
           padding: 12px;
@@ -6122,6 +6590,25 @@ to {
           box-shadow:
             0 35px 80px rgba(0, 0, 0, 0.8),
             0 0 55px rgba(213, 170, 80, 0.16);
+        }
+
+        .cert-gallery-card.is-active:hover .cert-document {
+          transform: translateY(-6px) scale(1.012);
+          border-color: rgba(239, 197, 102, 0.72);
+          box-shadow:
+            0 40px 90px rgba(0, 0, 0, 0.82),
+            0 0 65px rgba(213, 170, 80, 0.2);
+        }
+
+        .cert-gallery-card.is-active:hover .cert-document-icon {
+          transform: scale(1.06) rotate(3deg);
+          background: rgba(213, 170, 80, 0.06);
+          box-shadow: 0 0 18px rgba(213, 170, 80, 0.12);
+        }
+
+        .cert-gallery-card.is-active:hover .cert-document-seal {
+          transform: translateY(-2px);
+          color: #d5aa50;
         }
 
         .cert-document-border {
@@ -6154,6 +6641,10 @@ to {
 
         .cert-document-icon {
           display: flex;
+          transition:
+            transform 0.3s ease,
+            background 0.3s ease,
+            box-shadow 0.3s ease;
           align-items: center;
           justify-content: center;
           width: 44px;
@@ -6194,6 +6685,9 @@ to {
 
         .cert-document-seal {
           display: flex;
+          transition:
+            transform 0.3s ease,
+            color 0.3s ease;
           align-items: center;
           gap: 6px;
           margin-top: 14px;
@@ -6240,6 +6734,10 @@ to {
 
         .cert-pedestal-base {
           display: flex;
+          transition:
+            border-color 0.3s ease,
+            color 0.3s ease,
+            background 0.3s ease;
           align-items: center;
           justify-content: center;
           height: 35px;
@@ -6254,6 +6752,11 @@ to {
 
         .is-active .cert-pedestal-base {
           color: #d5aa50;
+        }
+
+        .cert-gallery-card.is-active:hover .cert-pedestal-base {
+          border-color: rgba(213, 170, 80, 0.55);
+          background: rgba(213, 170, 80, 0.035);
         }
 
         .cert-nav {
@@ -6279,7 +6782,8 @@ to {
         .cert-nav:hover {
           border-color: #d5aa50;
           background: rgba(213, 170, 80, 0.1);
-          transform: scale(1.08);
+          transform: scale(1.06);
+          box-shadow: 0 0 20px rgba(213, 170, 80, 0.12);
         }
 
         .cert-nav-left {
@@ -6422,6 +6926,11 @@ to {
 
         .cert-stat-icon {
           display: flex;
+          transition:
+            transform 0.3s ease,
+            border-color 0.3s ease,
+            background 0.3s ease,
+            box-shadow 0.3s ease;
           align-items: center;
           justify-content: center;
           width: 40px;
@@ -6441,6 +6950,13 @@ to {
           font-family: Georgia, "Times New Roman", serif;
           font-size: 25px;
           font-weight: 400;
+        }
+
+        .cert-stat:hover .cert-stat-icon {
+          transform: translateY(-3px) scale(1.04);
+          border-color: rgba(213, 170, 80, 0.5);
+          background: rgba(213, 170, 80, 0.04);
+          box-shadow: 0 0 18px rgba(213, 170, 80, 0.1);
         }
 
         .cert-stat span {
@@ -6828,6 +7344,35 @@ to {
           gap: 11px;
           min-height: 78px;
           border-bottom: 1px solid rgba(255,255,255,0.045);
+           transition:
+             transform 0.25s ease,
+             border-color 0.25s ease,
+             background 0.25s ease;
+           position: relative;
+        }
+
+        .editorial-contact-item::before {
+           content: "";
+           position: absolute;
+           left: 0;
+           top: 10px;
+           bottom: 10px;
+           width: 1px;
+           background: #d5aa50;
+           opacity: 0;
+           transform: scaleY(0.35);
+           transform-origin: center;
+           transition: opacity 0.25s ease, transform 0.25s ease;
+        }
+
+        .editorial-contact-item:hover {
+           border-bottom-color: rgba(213,170,80,0.16);
+           background: rgba(213,170,80,0.018);
+        }
+
+        .editorial-contact-item:hover::before {
+           opacity: 0.75;
+           transform: scaleY(1);
         }
 
         .editorial-contact-number {
@@ -6927,6 +7472,8 @@ to {
           border-color: #d5aa50;
           background: rgba(213, 170, 80, 0.07);
           color: #efc566;
+           transform: translateY(-2px);
+           box-shadow: 0 8px 24px rgba(213,170,80,0.08);
         }
 
         /* =====================================================
@@ -7066,6 +7613,7 @@ to {
         .editorial-field input:focus,
         .editorial-field textarea:focus {
           border-color: #d5aa50;
+           background: rgba(213,170,80,0.018);
         }
 
         /* =====================================================
@@ -7277,6 +7825,16 @@ to {
           }
         }
 
+        @media (prefers-reduced-motion: reduce) {
+          .editorial-contact-item,
+          .editorial-contact-icon,
+          .editorial-social,
+          .editorial-submit,
+          .editorial-form-wrapper::before {
+            transition: none !important;
+          }
+        }
+
         /* =====================================================
            SMALL MOBILE
         ===================================================== */
@@ -7305,7 +7863,156 @@ to {
             font-size: 21px;
           }
         }
-      `})]})},fm=()=>{let e=[{icon:(0,V.jsx)($f,{}),name:`LinkedIn`,link:$.socials.linkedin},{icon:(0,V.jsx)(tp,{}),name:`GitHub`,link:$.socials.github},{icon:(0,V.jsx)(ep,{}),name:`Instagram`,link:$.socials.instagram}];return(0,V.jsxs)(`footer`,{className:`relative overflow-hidden bg-[#070707] text-[#f5f1e8]`,children:[(0,V.jsx)(`div`,{className:`h-px w-full bg-gradient-to-r from-transparent via-[#d5aa50]/40 to-transparent`}),(0,V.jsxs)(`div`,{className:`mx-auto max-w-7xl px-5 sm:px-6 lg:px-8`,children:[(0,V.jsxs)(`div`,{className:`flex flex-col gap-10 py-12 md:flex-row md:items-center md:justify-between md:py-14`,children:[(0,V.jsxs)(`div`,{children:[(0,V.jsx)(`a`,{href:`#home`,className:`group inline-block`,children:(0,V.jsx)(`h2`,{className:`font-serif text-3xl font-normal tracking-tight text-[#f5f1e8] transition-colors duration-300 group-hover:text-[#efc566]`,children:$.name})}),(0,V.jsxs)(`div`,{className:`mt-3 flex items-center gap-3`,children:[(0,V.jsx)(`span`,{className:`h-px w-8 bg-[#d5aa50]`}),(0,V.jsx)(`p`,{className:`text-xs tracking-wide text-[#77736c]`,children:$.role})]})]}),(0,V.jsx)(`div`,{className:`flex items-center gap-3`,children:e.map(e=>(0,V.jsx)(`a`,{href:e.link,target:`_blank`,rel:`noopener noreferrer`,"aria-label":e.name,className:`group flex h-11 w-11 items-center justify-center rounded-lg border border-white/[0.08] bg-white/[0.02] text-[#8d8880] transition-all duration-300 hover:-translate-y-1 hover:border-[#d5aa50]/50 hover:bg-[#d5aa50]/5 hover:text-[#efc566]`,children:e.icon},e.name))})]}),(0,V.jsxs)(`div`,{className:`flex flex-col gap-5 border-t border-white/[0.07] py-6 sm:flex-row sm:items-center sm:justify-between`,children:[(0,V.jsxs)(`p`,{className:`text-[11px] text-[#59554f]`,children:[`© `,new Date().getFullYear(),` `,(0,V.jsx)(`span`,{className:`text-[#77736c]`,children:$.name}),`. All Rights Reserved.`]}),(0,V.jsxs)(`a`,{href:`#home`,className:`group flex items-center gap-2 text-[10px] font-medium tracking-[0.14em] text-[#77736c] transition-colors duration-300 hover:text-[#efc566]`,children:[(0,V.jsx)(`span`,{children:`BACK TO TOP`}),(0,V.jsx)(`span`,{className:`flex h-7 w-7 items-center justify-center rounded-md border border-white/[0.08] transition-all duration-300 group-hover:border-[#d5aa50]/40 group-hover:bg-[#d5aa50]/5`,children:(0,V.jsx)(Tp,{className:`text-[9px]`})})]})]})]}),(0,V.jsx)(`div`,{className:`h-[2px] w-full bg-gradient-to-r from-transparent via-[#d5aa50]/15 to-transparent`})]})},pm=()=>{let[e,t]=(0,b.useState)(!1);return(0,b.useEffect)(()=>{let e=()=>{t(window.scrollY>500)};return e(),window.addEventListener(`scroll`,e,{passive:!0}),()=>{window.removeEventListener(`scroll`,e)}},[]),(0,V.jsxs)(V.Fragment,{children:[(0,V.jsx)(`style`,{children:`
+      `})]})},fm=()=>{let e=[{icon:(0,V.jsx)($f,{}),name:`LinkedIn`,link:$.socials.linkedin},{icon:(0,V.jsx)(tp,{}),name:`GitHub`,link:$.socials.github},{icon:(0,V.jsx)(ep,{}),name:`Instagram`,link:$.socials.instagram}];return(0,V.jsxs)(`footer`,{className:`premium-footer relative overflow-hidden bg-[#070707] text-[#f5f1e8]`,children:[(0,V.jsx)(`div`,{className:`footer-top-line h-px w-full`}),(0,V.jsx)(`div`,{className:`footer-ambient footer-ambient-left`}),(0,V.jsx)(`div`,{className:`footer-ambient footer-ambient-right`}),(0,V.jsxs)(`div`,{className:`relative z-10 mx-auto max-w-7xl px-5 sm:px-6 lg:px-8`,children:[(0,V.jsxs)(`div`,{className:`footer-main flex flex-col gap-10 py-12 md:flex-row md:items-center md:justify-between md:py-14`,children:[(0,V.jsxs)(`div`,{className:`footer-brand`,children:[(0,V.jsx)(`a`,{href:`#home`,className:`footer-brand-link group inline-block`,children:(0,V.jsx)(`h2`,{className:`font-serif text-3xl font-normal tracking-tight text-[#f5f1e8] transition-all duration-300 group-hover:-translate-y-0.5 group-hover:text-[#efc566]`,children:$.name})}),(0,V.jsxs)(`div`,{className:`mt-3 flex items-center gap-3`,children:[(0,V.jsx)(`span`,{className:`footer-brand-line h-px w-8`}),(0,V.jsx)(`p`,{className:`text-xs tracking-wide text-[#77736c] transition-colors duration-300 group-hover:text-[#9a948b]`,children:$.role})]})]}),(0,V.jsx)(`div`,{className:`flex items-center gap-3`,children:e.map(e=>(0,V.jsx)(`a`,{href:e.link,target:`_blank`,rel:`noopener noreferrer`,"aria-label":e.name,className:`footer-social group flex h-11 w-11 items-center justify-center rounded-lg border border-white/[0.08] bg-white/[0.02] text-[#8d8880]`,children:(0,V.jsx)(`span`,{className:`footer-social-icon transition-transform duration-300 group-hover:scale-110`,children:e.icon})},e.name))})]}),(0,V.jsxs)(`div`,{className:`footer-bottom flex flex-col gap-5 border-t border-white/[0.07] py-6 sm:flex-row sm:items-center sm:justify-between`,children:[(0,V.jsxs)(`p`,{className:`text-[11px] text-[#59554f]`,children:[`© `,new Date().getFullYear(),` `,(0,V.jsx)(`span`,{className:`text-[#77736c]`,children:$.name}),`. All Rights Reserved.`]}),(0,V.jsxs)(`a`,{href:`#home`,className:`footer-back-top group flex items-center gap-2 text-[10px] font-medium tracking-[0.14em] text-[#77736c]`,children:[(0,V.jsx)(`span`,{children:`BACK TO TOP`}),(0,V.jsx)(`span`,{className:`footer-top-button flex h-7 w-7 items-center justify-center rounded-md border border-white/[0.08]`,children:(0,V.jsx)(Tp,{className:`text-[9px] transition-transform duration-300 group-hover:-translate-y-0.5`})})]})]})]}),(0,V.jsx)(`div`,{className:`footer-bottom-line h-[2px] w-full`}),(0,V.jsx)(`style`,{children:`
+        .premium-footer {
+          isolation: isolate;
+        }
+
+        .footer-top-line {
+          background: linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(213, 170, 80, 0.18) 22%,
+            rgba(213, 170, 80, 0.5) 50%,
+            rgba(213, 170, 80, 0.18) 78%,
+            transparent 100%
+          );
+        }
+
+        .footer-bottom-line {
+          background: linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(213, 170, 80, 0.05) 30%,
+            rgba(213, 170, 80, 0.2) 50%,
+            rgba(213, 170, 80, 0.05) 70%,
+            transparent 100%
+          );
+        }
+
+        .footer-ambient {
+          position: absolute;
+          width: 220px;
+          height: 220px;
+          border-radius: 50%;
+          background: #d5aa50;
+          filter: blur(120px);
+          opacity: 0.025;
+          pointer-events: none;
+        }
+
+        .footer-ambient-left {
+          left: -150px;
+          top: 10%;
+        }
+
+        .footer-ambient-right {
+          right: -150px;
+          bottom: 5%;
+        }
+
+        .footer-brand-line {
+          background: #d5aa50;
+          transition:
+            width 0.3s ease,
+            box-shadow 0.3s ease;
+        }
+
+        .footer-brand-link:hover + div .footer-brand-line {
+          width: 42px;
+          box-shadow: 0 0 10px rgba(213, 170, 80, 0.35);
+        }
+
+        .footer-social {
+          position: relative;
+          overflow: hidden;
+          transition:
+            transform 0.3s ease,
+            border-color 0.3s ease,
+            background 0.3s ease,
+            color 0.3s ease,
+            box-shadow 0.3s ease;
+        }
+
+        .footer-social::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: radial-gradient(
+            circle at 50% 100%,
+            rgba(213, 170, 80, 0.16),
+            transparent 62%
+          );
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+
+        .footer-social:hover {
+          transform: translateY(-4px);
+          border-color: rgba(213, 170, 80, 0.55);
+          background: rgba(213, 170, 80, 0.055);
+          color: #efc566;
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+        }
+
+        .footer-social:hover::before {
+          opacity: 1;
+        }
+
+        .footer-social-icon {
+          position: relative;
+          z-index: 1;
+        }
+
+        .footer-back-top {
+          transition: color 0.3s ease;
+        }
+
+        .footer-back-top:hover {
+          color: #efc566;
+        }
+
+        .footer-top-button {
+          transition:
+            transform 0.3s ease,
+            border-color 0.3s ease,
+            background 0.3s ease,
+            box-shadow 0.3s ease;
+        }
+
+        .footer-back-top:hover .footer-top-button {
+          transform: translateY(-2px);
+          border-color: rgba(213, 170, 80, 0.45);
+          background: rgba(213, 170, 80, 0.055);
+          box-shadow: 0 5px 18px rgba(0, 0, 0, 0.25);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .footer-brand-link,
+          .footer-brand-line,
+          .footer-social,
+          .footer-social-icon,
+          .footer-back-top,
+          .footer-top-button {
+            transition: none !important;
+          }
+        }
+
+        @media (max-width: 640px) {
+          .footer-main {
+            gap: 30px;
+          }
+
+          .footer-social {
+            width: 42px;
+            height: 42px;
+          }
+
+          .footer-bottom {
+            gap: 16px;
+          }
+        }
+      `})]})},pm=()=>{let[e,t]=(0,b.useState)(!1);return(0,b.useEffect)(()=>{let e=()=>{t(window.scrollY>500)};return e(),window.addEventListener(`scroll`,e,{passive:!0}),()=>{window.removeEventListener(`scroll`,e)}},[]),(0,V.jsxs)(V.Fragment,{children:[(0,V.jsx)(`style`,{children:`
         .ns-back-top {
           position: fixed;
           right: 28px;
@@ -7477,4 +8184,4 @@ to {
             transition: none;
           }
         }
-      `}),(0,V.jsx)(Wl,{children:e&&(0,V.jsxs)(Z.button,{type:`button`,className:`ns-back-top`,onClick:()=>{window.scrollTo({top:0,behavior:`smooth`})},"aria-label":`Back to top`,title:`Back to top`,initial:{opacity:0,scale:.7,y:20},animate:{opacity:1,scale:1,y:0},exit:{opacity:0,scale:.7,y:20},transition:{duration:.35,ease:[.22,1,.36,1]},whileTap:{scale:.92},children:[(0,V.jsx)(`span`,{className:`ns-back-top-label`,children:`BACK TO TOP`}),(0,V.jsx)(`span`,{className:`ns-back-top-icon`,children:(0,V.jsx)(Tp,{})})]})})]})};function mm(){return(0,V.jsxs)(`div`,{className:`relative min-h-screen overflow-x-hidden bg-[#070707] text-white`,children:[(0,V.jsx)(Ff,{}),(0,V.jsx)(rt,{position:`top-right`,toastOptions:{style:{background:`#111111`,color:`#f5f1e8`,border:`1px solid rgba(213,170,80,0.35)`},success:{duration:3e3},error:{duration:3e3}}}),(0,V.jsx)(If,{}),(0,V.jsxs)(`div`,{className:`relative z-10`,children:[(0,V.jsx)(`div`,{className:`relative z-[99999]`,children:(0,V.jsx)(kp,{})}),(0,V.jsxs)(`main`,{children:[(0,V.jsx)(Ap,{}),(0,V.jsx)(Mp,{}),(0,V.jsx)(Rp,{}),(0,V.jsx)(zp,{}),(0,V.jsx)(Vp,{}),(0,V.jsx)(Hp,{}),(0,V.jsx)(dm,{})]}),(0,V.jsx)(pm,{}),(0,V.jsx)(fm,{})]})]})}var hm=document.getElementById(`root`);if(!hm)throw Error(`Root element not found`);(0,x.createRoot)(hm).render((0,V.jsx)(b.StrictMode,{children:(0,V.jsx)(mm,{})}));
+      `}),(0,V.jsx)(Wl,{children:e&&(0,V.jsxs)(Z.button,{type:`button`,className:`ns-back-top`,onClick:()=>{window.scrollTo({top:0,behavior:`smooth`})},"aria-label":`Back to top`,title:`Back to top`,initial:{opacity:0,scale:.7,y:20},animate:{opacity:1,scale:1,y:0},exit:{opacity:0,scale:.7,y:20},transition:{duration:.35,ease:[.22,1,.36,1]},whileTap:{scale:.92},children:[(0,V.jsx)(`span`,{className:`ns-back-top-label`,children:`BACK TO TOP`}),(0,V.jsx)(`span`,{className:`ns-back-top-icon`,children:(0,V.jsx)(Tp,{})})]})})]})};function mm(){return(0,V.jsxs)(`div`,{className:`min-h-screen overflow-x-hidden bg-[#070707] text-white antialiased`,children:[(0,V.jsx)(Ff,{}),(0,V.jsx)(rt,{position:`top-right`,gutter:10,toastOptions:{duration:3e3,style:{background:`#111111`,color:`#f5f1e8`,border:`1px solid rgba(213,170,80,0.28)`,borderRadius:`8px`,boxShadow:`0 12px 35px rgba(0,0,0,0.35)`,fontSize:`13px`},success:{iconTheme:{primary:`#d5aa50`,secondary:`#111111`}},error:{iconTheme:{primary:`#efc566`,secondary:`#111111`}}}}),(0,V.jsx)(If,{}),(0,V.jsxs)(`div`,{className:`relative z-10`,children:[(0,V.jsx)(`div`,{className:`relative z-50`,children:(0,V.jsx)(kp,{})}),(0,V.jsxs)(`main`,{className:`relative`,children:[(0,V.jsx)(Ap,{}),(0,V.jsx)(Mp,{}),(0,V.jsx)(Rp,{}),(0,V.jsx)(zp,{}),(0,V.jsx)(Vp,{}),(0,V.jsx)(Hp,{}),(0,V.jsx)(dm,{})]}),(0,V.jsx)(pm,{}),(0,V.jsx)(fm,{})]})]})}var hm=document.getElementById(`root`);if(!hm)throw Error(`Root element not found`);(0,x.createRoot)(hm).render((0,V.jsx)(b.StrictMode,{children:(0,V.jsx)(mm,{})}));
